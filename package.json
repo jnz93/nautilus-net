@@ -1,0 +1,33 @@
+{
+  "name": "nautilus-net",
+  "version": "1.0.0",
+  "description": "wordpress theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joanezandrades/nautilus-net.git"
+  },
+  "keywords": [
+    "responsive",
+    "wordpress",
+    "theme",
+    "premium"
+  ],
+  "author": "@joanezandrades",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joanezandrades/nautilus-net/issues"
+  },
+  "homepage": "https://github.com/joanezandrades/nautilus-net#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0"
+  },
+  "dependencies": {
+    "gulp-clean-dir": "^1.0.2"
+  }
+}
