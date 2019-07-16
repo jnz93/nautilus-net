@@ -1,0 +1,155 @@
+/*
+ Theme Name: nautilus-net
+ Description: estilos de botões padrões do site
+ Pattern: BEM(Block, Element & Modifier)
+ */
+@import '../theme-configs.sass'
+// ---Primários
+// .btn
+// .btn__primary
+// .btn__primary--small
+
+// ---- Primários ghost
+// .btn
+// .btn__primaryGhost
+// .btn__primaryGhost--small
+
+// ---- Secundários
+// .btn
+// .btn__secondary
+// .btn__secondary--small
+.btn
+    margin: 0
+    padding: 0
+    display: flex
+    align-content: center
+    align-items: center
+    transition: .2s ease-in-out
+
+    // Botões primários
+    &__primary
+        background: $blueMain
+        border: none
+        border-radius: 6px
+        color: $white
+        font-size: $fs-16
+
+        // Estado hover
+        &:hover
+            background: $blueDark
+
+        // Tamanhos padrões
+        &--small
+            height: 32px
+            padding-right: 16px
+            padding-left: 16px
+
+        &--medium
+            height: 40px
+            padding-right: 20px
+            padding-left: 20px
+        
+        &--normal
+            height: 48px
+            padding-right: 24px
+            padding-left: 24px
+
+        &--big
+            height: 56px
+            padding-right: 28px
+            padding-left: 28px
+        
+        &--extra
+            height: 64px
+            padding-right: 32px
+            padding-left: 32px
+        
+        // Custom sizes = &--cs128
+        // cs = custom size
+        // 128 = tamanho desejado
+
+    // Botões primários ghost
+    &__primaryGhost
+        background: none
+        border: 1px solid $white
+        border-radius: 6px
+        color: $white
+        font-size: $fs-16
+
+        // Estado hover
+        &:hover
+            background: $white
+            color: $blueMain
+
+        // Tamanhos padrões
+        &--small
+            height: 32px
+            padding-right: 16px
+            padding-left: 16px
+
+        &--medium
+            height: 40px
+            padding-right: 20px
+            padding-left: 20px
+        
+        &--normal
+            height: 48px
+            padding-right: 24px
+            padding-left: 24px
+
+        &--big
+            height: 56px
+            padding-right: 28px
+            padding-left: 28px
+        
+        &--extra
+            height: 64px
+            padding-right: 32px
+            padding-left: 32px
+        
+        // Custom sizes = &--cs128
+        // cs = custom size
+        // 128 = tamanho desejado
+
+    // Botões primários ghost
+    &__secondary
+        background: none
+        border: 1px solid $blueMain
+        border-radius: 16px
+        color: $blueMain
+        font-size: $fs-16
+
+        // Estado hover
+        &:hover
+            background: $blueDark
+            color: $white
+
+        // Tamanhos padrões
+        &--small
+            height: 32px
+            padding-right: 16px
+            padding-left: 16px
+
+        &--medium
+            height: 40px
+            padding-right: 20px
+            padding-left: 20px
+        
+        &--normal
+            height: 48px
+            padding-right: 24px
+            padding-left: 24px
+
+        &--big
+            height: 56px
+            padding-right: 28px
+            padding-left: 28px
+        
+        &--extra
+            height: 64px
+            padding-right: 32px
+            padding-left: 32px
+
+        // Custom sizes = &--cs128
+        // cs = custom size
+        // 128 = tamanho desejado

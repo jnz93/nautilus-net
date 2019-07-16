@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/*
+ Theme Name: nautilus-net
+ Description: estilos de botões padrões do site
+ Pattern: BEM(Block, Element & Modifier)
+ */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62.5%; }
+
+.btn {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  transition: .2s ease-in-out; }
+  .btn__primary {
+    background: #2340BC;
+    border: none;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 1.6em; }
+    .btn__primary:hover {
+      background: #062573; }
+    .btn__primary--small {
+      height: 32px;
+      padding-right: 16px;
+      padding-left: 16px; }
+    .btn__primary--medium {
+      height: 40px;
+      padding-right: 20px;
+      padding-left: 20px; }
+    .btn__primary--normal {
+      height: 48px;
+      padding-right: 24px;
+      padding-left: 24px; }
+    .btn__primary--big {
+      height: 56px;
+      padding-right: 28px;
+      padding-left: 28px; }
+    .btn__primary--extra {
+      height: 64px;
+      padding-right: 32px;
+      padding-left: 32px; }
+  .btn__primaryGhost {
+    background: none;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 1.6em; }
+    .btn__primaryGhost:hover {
+      background: #FFFFFF;
+      color: #2340BC; }
+    .btn__primaryGhost--small {
+      height: 32px;
+      padding-right: 16px;
+      padding-left: 16px; }
+    .btn__primaryGhost--medium {
+      height: 40px;
+      padding-right: 20px;
+      padding-left: 20px; }
+    .btn__primaryGhost--normal {
+      height: 48px;
+      padding-right: 24px;
+      padding-left: 24px; }
+    .btn__primaryGhost--big {
+      height: 56px;
+      padding-right: 28px;
+      padding-left: 28px; }
+    .btn__primaryGhost--extra {
+      height: 64px;
+      padding-right: 32px;
+      padding-left: 32px; }
+  .btn__secondary {
+    background: none;
+    border: 1px solid #2340BC;
+    border-radius: 16px;
+    color: #2340BC;
+    font-size: 1.6em; }
+    .btn__secondary:hover {
+      background: #062573;
+      color: #FFFFFF; }
+    .btn__secondary--small {
+      height: 32px;
+      padding-right: 16px;
+      padding-left: 16px; }
+    .btn__secondary--medium {
+      height: 40px;
+      padding-right: 20px;
+      padding-left: 20px; }
+    .btn__secondary--normal {
+      height: 48px;
+      padding-right: 24px;
+      padding-left: 24px; }
+    .btn__secondary--big {
+      height: 56px;
+      padding-right: 28px;
+      padding-left: 28px; }
+    .btn__secondary--extra {
+      height: 64px;
+      padding-right: 32px;
+      padding-left: 32px; }
