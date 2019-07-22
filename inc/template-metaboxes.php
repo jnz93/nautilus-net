@@ -115,7 +115,7 @@ function nautilusnet_save_metaboxes($post_id){
     $plan_price                     = $_POST['plan_price'];
     $plan_tag                       = $_POST['payment_tag'];
     $plan_button_text               = $_POST['plan_button_text'];
-    $plan_button_text               = $_POST['post_subtitle'];
+    $post_subtitle                  = $_POST['post_subtitle'];
 
     # Update dos meta-campos
     update_post_meta($post_id, 'benefit_icon', $benefit_icon);
