@@ -20,6 +20,9 @@ function nautilusnet_register_metaboxes(){
     add_meta_box('mb-price-plan', 'Valor do plano', 'render_ipt_plan_price', 'planos');
     add_meta_box('mb-tag-payment', 'Regime do plano', 'render_ipt_tag_payment', 'planos');
     add_meta_box('mb-text-button', 'Texto do botão de conversão', 'render_ipt_text_button', 'planos');
+
+    #post-type: avisos
+    add_meta_box('mb-subtitle', 'Subtitulo', 'render_subtitle', 'avisos');
 }
 add_action('add_meta_boxes', 'nautilusnet_register_metaboxes');
 
@@ -30,6 +33,7 @@ function render_ipt_icon($post){
     $curr_val       = get_post_meta($post->ID, 'benefit_icon', true);
     ?>
     <input type="text" name="benefit_icon" id="benefit_icon" class="" placeholder="<?php echo ($curr_val != "" ? $curr_val : 'Selecione o ícone para este plano') ?>"value="<?php echo ($curr_val != "" ? $curr_val : "")?>">
+    <!-- Adicionar um bloco com todos os ícones que abre quando clicar no input -->
     <?php
 }
 
@@ -80,6 +84,15 @@ function render_ipt_text_button($post){
     <?php
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Callback input subtitle
+////////////////////////////////////////////////////////////////////////////////////////////////
+function render_subtitle($post){
+    $curr_val      = get_post_meta($post->ID, 'post_subtitle', true);
+    ?>
+    <input type="text" name="post_subtitle" id="post_subtitle" class="" placeholder="<?php echo ($curr_val != "" ? $curr_val : 'Adicione o subtitulo do aviso') ?>"value="<?php echo ($curr_val != "" ? $curr_val : "")?>">
+    <?php
+}
 
 /**
  * Função que salva e faz update nos meta-campos registrados acima
@@ -102,6 +115,7 @@ function nautilusnet_save_metaboxes($post_id){
     $plan_price                     = $_POST['plan_price'];
     $plan_tag                       = $_POST['payment_tag'];
     $plan_button_text               = $_POST['plan_button_text'];
+    $plan_button_text               = $_POST['post_subtitle'];
 
     # Update dos meta-campos
     update_post_meta($post_id, 'benefit_icon', $benefit_icon);
@@ -110,5 +124,6 @@ function nautilusnet_save_metaboxes($post_id){
     update_post_meta($post_id, 'plan_price', $plan_price);
     update_post_meta($post_id, 'payment_tag', $plan_tag);
     update_post_meta($post_id, 'plan_button_text', $plan_button_text);
+    update_post_meta($post_id, 'post_subtitle', $post_subtitle);
 }
 add_action('save_post', 'nautilusnet_save_metaboxes');
