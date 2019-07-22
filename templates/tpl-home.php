@@ -5,7 +5,7 @@
  * @package nautilusnet
  */
 ?>
-<section id="" class="">
+<section id="" class="container-fluid">
     <?php 
     if( shortcode_exists('show_notifications') ){
         do_shortcode('[show_notifications]');
