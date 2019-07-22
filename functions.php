@@ -41,8 +41,8 @@ if( ! function_exists('nautilus_setup') ){
          * O tema vai utilizar o wp_nav_menu() em dois locais
          */
         register_nav_menus(array(
-            'menu-1'        => 'Menu de navegação',
-            'menu-2'        => 'Menu institucional'
+            'menu-navegacao'        => 'Menu de navegação',
+            'menu-institucional'    => 'Menu institucional'
         ));
 
         /**
