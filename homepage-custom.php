@@ -11,3 +11,7 @@ if(true){
 if(true){
     get_template_part('templates/tpl', 'benefits');
 }
+
+if(true){
+    get_template_part('templates/tpl', 'plans');
+}

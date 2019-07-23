@@ -211,7 +211,7 @@ if( !function_exists('get_article_benefits') ){
                 $post_content   = apply_filters('the_content', get_the_content());
                 $post_icon      = get_post_meta($post_id, 'benefit_icon', true);
 
-                $output .= '<article id="benefit-'. $post_id .'" class="benefitCard">
+                $output .= '<article id="benefit-'. $post_id .'" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 benefitCard">
                                 <div class="col-12">
                                     <span class="benefitCard__wrapIcon"><i class="benefitCard__icon" data-eva="'. $post_icon .'" data-fill=""  data-height="" data-width=""></i></span>
                                 </div>
@@ -228,4 +228,62 @@ if( !function_exists('get_article_benefits') ){
         }
     }
     add_shortcode('show_article_benefits', 'get_article_benefits');
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Homepage Plans articles
+////////////////////////////////////////////////////////////////////////////////////////////////
+if( !function_exists('get_plans') ){
+    function get_plans(){
+        $post_type      = 'planos';
+        $order          = 'DESC';
+        $orderby        = 'date';
+        $status         = 'publish';
+        $number_posts   = '5';
+        
+        $args = array(
+            'post_type'         => $post_type,
+            // 'cat'               => $category,
+            // 'order'             => $order,
+            // 'orderby'           => $orderby,
+            'post_status'       => $status,
+            'posts_per_page'    => $number_posts
+        );
+    
+        $plans = new WP_Query($args);
+        $output = '';
+        if( $plans->have_posts() ){
+            while( $plans->have_posts() ){
+                $plans->the_post();
+                $post_id        = get_the_ID();
+                $publish_date   = get_the_date('l,j,F', $post_id);
+                $post_title     = get_the_title($post_id);
+                $post_content   = apply_filters('the_content', get_the_content());
+
+                $plan_download  = get_post_meta($post_id, 'speed_download', true);
+                $plan_upload    = get_post_meta($post_id, 'speed_upload', true);
+                $plan_price     = get_post_meta($post_id, 'plan_price', true);
+                $plan_txt_btn   = get_post_meta($post_id, 'plan_button_text', true);
+                $plan_payment_tag   = get_post_meta($post_id, 'payment_tag', true);
+
+                $output .= '<article id="plano-'. $post_id .'" class="col-xs-10 col-sm-10 col-md-2 col-lg-2 planCard">
+                                <h1 class="planCard__title" title="'. $post_title .'">'. $post_title .'</h1>
+                                <span class="planCard__label">tipo da conxeção</span>
+                                <div class="">
+                                    <p class="planCard__content">'. $post_content .'</p>
+                                </div>
+                                <div class="">
+                                    <span class="planCard__tag">R$</span>
+                                    <h2 class="planCard__price" title="'. $plan_price .'">'. $plan_price .'</h2>
+                                    <span class="planCard__tag">'. $plan_payment_tag .'</span>
+                                </div>
+                                <button id="submit-'. $post_id .'" class="btn btn__primary btn__primary--medium">'. $plan_txt_btn .'</button>
+                            </article>';   
+            }
+            echo $output;
+        } else {
+            echo "Não encontramos planos cadastrados";
+        }
+    }
+    add_shortcode('show_plans', 'get_plans');
 }
