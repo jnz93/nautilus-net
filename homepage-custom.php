@@ -15,3 +15,7 @@ if(true){
 if(true){
     get_template_part('templates/tpl', 'plans');
 }
+
+if(true){
+    get_template_part('templates/tpl', 'contact');
+}

@@ -18,4 +18,9 @@ $page_thumb_url     = get_the_post_thumbnail_url($page);
         <h1 class="sctHeader__title sctHeader__title--big" title=""><?php echo $page_title ?></h1>
         <p class="sctHeader__subtitle"><?php echo $page_content ?></p>
     </header>
+    <?php 
+    if( shortcode_exists('show_contact_section') ){
+        do_shortcode('[show_contact_section]');
+    }
+    ?>
 </section>

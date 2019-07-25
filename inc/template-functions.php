@@ -69,7 +69,7 @@ if( !function_exists('theme_options_page') ){
                 <div class="col-lg-6">
                     <div class="formSetup__wrapInput">
                         <label for="contact_email" class="">E-mail para contato</label>
-                        <input type="email" id="contact_email" name="contact_email" class="" placeholder="" value="<?php echo ( empty($curr_contact_email) ? '' : $curr_contact_email ) ?>">
+                        <input type="text" id="contact_email" name="contact_email" class="" placeholder="" value="<?php echo ( empty($curr_contact_email) ? '' : $curr_contact_email ) ?>">
                     </div>
                 </div>
 
@@ -94,14 +94,14 @@ if( !function_exists('theme_options_page') ){
                 <div class="col-lg-6">
                     <div class="formSetup__wrapInput">
                         <label for="contact_cep" class="">CEP</label>
-                        <input type="number" id="contact_cep" name="contact_cep" class="" placeholder="" value="<?php echo ( empty($curr_contact_cep) ? '' : $curr_contact_cep ) ?>">
+                        <input type="text" id="contact_cep" name="contact_cep" class="" placeholder="" value="<?php echo ( empty($curr_contact_cep) ? '' : $curr_contact_cep ) ?>">
                     </div>
                 </div>
 
                 <div class="col-lg-6">
                     <div class="formSetup__wrapInput">
                         <label for="contact_cnpj" class="">CNPJ</label>
-                        <input type="number" id="contact_cnpj" name="contact_cnpj" class="" placeholder="" value="<?php echo ( empty($curr_contact_cnpj) ? '' : $curr_contact_cnpj ) ?>">
+                        <input type="text" id="contact_cnpj" name="contact_cnpj" class="" placeholder="" value="<?php echo ( empty($curr_contact_cnpj) ? '' : $curr_contact_cnpj ) ?>">
                     </div>
                 </div>
 
@@ -116,5 +116,32 @@ if( !function_exists('theme_options_page') ){
         </section>
         <?php
     }
+}
+
+/**
+ * Card contact
+ * @param $icon = string
+ * @param $title = string
+ * @param $arr = array
+ */
+function card_contact($icon, $title, $arr){
+    
+    $html = '';
+    $html .= '<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 contactCard">
+                <div class="contactCard__header">
+                    <span class="contactCard__icon"><i data-eva="'. $icon .'" data-width="" data-height="" data-fill=""></i></span>
+                    <h3 class="contactCard__title">'. $title .'</h3>
+                </div>
+                <div class="contactCard__body">';
+                if( is_array($arr) ){
+                    foreach( $arr as $item ){
+                        $html .= '<p class="contactCard__info">'.$item.'</p>';
+                    }
+                    
+                }
+        $html .= '</div>
+            </div>';
+
+    echo $html ;
 }
 ?>

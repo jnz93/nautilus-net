@@ -287,3 +287,42 @@ if( !function_exists('get_plans') ){
     }
     add_shortcode('show_plans', 'get_plans');
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Homepage Contact section
+////////////////////////////////////////////////////////////////////////////////////////////////
+if( !function_exists('create_contact_section') ){
+    function create_contact_section(){
+
+        // Armazenamento das informações
+        $contact_email      = get_option('contact_email');
+        $contact_phone      = get_option('contact_phone');
+        $contact_whatsapp   = get_option('contact_whatsapp');
+        $contact_address    = get_option('contact_address');
+        $contact_cep        = get_option('contact_cep');
+        $contact_cnpj       = get_option('contact_cnpj');
+        $office_hours       = get_option('contact_office_hours');
+
+        // Tratamento de arrays de informações separados por 'grupos'
+        $arr_email          = explode(',', $contact_email);
+        $arr_tel            = array($contact_phone, $contact_whatsapp);
+        $arr_office_hours   = explode('~', $office_hours);
+        $arr_address        = explode('~', $contact_address);
+
+        ?>
+        <!-- Container dos cards -->
+        <div id="" class="row col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <?php
+            // Chamada dos cards
+            card_contact('mail', 'E-mail', $arr_email);
+            card_contact('phone', 'Telefone/Whatsapp', $arr_tel);
+            card_contact('clock', 'Horário de atendimento', $arr_office_hours);
+            card_contact('map-pin', 'Endereço', $arr_address);
+            ?>
+        </div>
+        <?php      
+        // Adicionar botão pro formulário 
+    }
+
+    add_shortcode('show_contact_section', 'create_contact_section');
+}
