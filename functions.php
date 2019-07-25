@@ -116,3 +116,8 @@ require get_template_directory() . '/inc/template-functions.php';
  * Shortcodes
  */
 require get_template_directory() . '/inc/template-shortcodes.php';
+
+/**
+ * Template register options
+ */
+require get_template_directory() . '/inc/template-options.php';
