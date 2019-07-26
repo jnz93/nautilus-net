@@ -6,8 +6,13 @@
  */
 html {
   scroll-behavior: smooth;
-  font-family: 'Montserrat', sans-serif;
   font-size: 62.5%; }
+
+h1, h2, h3, h4, h5, h6, figcaption {
+  font-family: 'Poppins'; }
+
+p, ul, ol, li, span, input, label, textarea {
+  font-family: 'Hind'; }
 
 .btn {
   margin: 0;

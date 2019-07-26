@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/*
+ Theme Name: nautilus-net
+ Description: folha de estilos do header do site
+ Pattern: BEM(Block, Element & Modifier)
+ */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; }
+
+h1, h2, h3, h4, h5, h6, figcaption {
+  font-family: 'Poppins'; }
+
+p, ul, ol, li, span, input, label, textarea {
+  font-family: 'Hind'; }
+
+.mainHeader {
+  background: none; }
+  @media (min-width: 576px) {
+    .mainHeader {
+      height: 90px; } }
+
+@media (min-width: 992px) {
+  .logo {
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; } }
+
+@media (min-width: 992px) {
+  .logo__image {
+    width: auto;
+    height: 80px;
+    margin-right: 15px; } }
+
+@media (min-width: 992px) {
+  .logo__title {
+    font-size: 3.6em;
+    font-weight: 900;
+    color: #2340BC; } }
+
+@media (min-width: 992px) {
+  .mainMenuContainer {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end; } }
+
+/**
+    Menu list / UL
+    Por conta de uma defiência do wordpress em passar uma classe css custom para os items do menu, esse bloco será diferente dos outros
+    tendo seu próprio padrão.
+ */
+.menuList {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center; }
+  .menuList .menu-item {
+    height: 64px;
+    padding-right: 32px;
+    padding-left: 32px;
+    display: flex;
+    align-items: center; }
+    .menuList .menu-item a {
+      font-size: 1.8em;
+      font-weight: 500;
+      color: #404040;
+      text-decoration: none; }

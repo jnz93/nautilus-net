@@ -19,8 +19,8 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header id="" class="">
-        <div> <!-- Container-->
+    <header id="" class="mainHeader">
+        <div class="row container-fluid"> <!-- Container-->
             <div class="col-xs-10 col-sm-6 col-md-4 col-lg-4">
                 <?php 
                     if( has_custom_logo() ){
@@ -28,9 +28,9 @@
                         $logo_url       = wp_get_attachment_image_src($logo_id, 'medium');
                         $site_name      = get_bloginfo('name');
 
-                        $output =   '<figure id="" class="">
-                                        <img src="'. $logo_url[0] .'" id="" class="" alt="'. $site_name .'">
-                                        <figcaption class="">'. $site_name .'</figcaption>
+                        $output =   '<figure id="" class="logo">
+                                        <img src="'. $logo_url[0] .'" id="" class="logo__image" alt="'. $site_name .'">
+                                        <figcaption class="logo__title">'. $site_name .'</figcaption>
                                     </figure>';
                         
                         echo $output;
@@ -45,8 +45,8 @@
                 <span id="" class=""><i class="" data-eva=""></i></span>
                 <span id="" class=""><i class="" data-eva=""></i></span>
                 <?php 
-                if( shortcode_exists('menu_navegacao') ){
-                    do_shortcode('[menu_navegacao]');
+                if( shortcode_exists('show_menu_navegacao') ){
+                    do_shortcode('[show_menu_navegacao]');
                 } else {
                     echo "Menu principal ainda não foi criado pela administração.";
                 }

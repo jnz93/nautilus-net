@@ -1,0 +1,72 @@
+/*
+ Theme Name: nautilus-net
+ Description: folha de estilos do header do site
+ Pattern: BEM(Block, Element & Modifier)
+ */
+@import '../theme-configs.sass'
+
+// Header
+.mainHeader
+    background: none
+
+    @include respond-above('xs')
+        height: 90px
+
+// Logotipo
+.logo
+    @include respond-above('md')
+        height: 90px
+        margin: 0
+        padding: 0
+
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+
+    &__image
+        @include respond-above('md')
+            width: auto
+            height: 80px
+            margin-right: 15px
+
+    &__title
+        @include respond-above('md')
+            font-size: $fs-36
+            font-weight: $bold
+            color: $blueMain
+
+// Main menu container
+.mainMenuContainer
+    @include respond-above('md')
+        height: 100%
+        display: flex
+        justify-content: flex-end
+
+/**
+    Menu list / UL
+    Por conta de uma defiência do wordpress em passar uma classe css custom para os items do menu, esse bloco será diferente dos outros
+    tendo seu próprio padrão.
+ */
+.menuList
+    height: 100%
+    margin: 0
+    padding: 0
+
+    list-style: none
+
+    display: flex
+    align-items: center
+
+    .menu-item
+        height: 64px
+        padding-right: 32px
+        padding-left: 32px
+
+        display: flex
+        align-items: center
+
+        a
+            font-size: $fs-18
+            font-weight: $regular
+            color: $blackLight
+            text-decoration: none

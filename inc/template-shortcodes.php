@@ -12,10 +12,10 @@ if( ! function_exists('get_menu_navigation') ){
     function get_menu_navigation(){
         $args_menu = array(
             'menu'              => 'Menu de navegação',
-            'menu_class'        => 'container__flex headerMenu',
+            'menu_class'        => 'container__flex menuList',
             'menu_id'           => '',
             'container'         => 'div',
-            'container_class'   => 'container__flex headerMenu__mobile--disabled',
+            'container_class'   => 'container__flex mainMenuContainer mainMenuContainer__mobile--disabled',
             'container_id'      => 'main-menu',
             'fallback_cb'       => '', #Se não existir o menu chama uma função que será executada. Padrão 'wp_page_menu'.
             'before'            => '',
@@ -31,7 +31,7 @@ if( ! function_exists('get_menu_navigation') ){
 
         return wp_nav_menu($args_menu);
     }
-    add_shortcode('menu_navegacao', 'get_menu_navigation');
+    add_shortcode('show_menu_navegacao', 'get_menu_navigation');
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
