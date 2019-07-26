@@ -5,7 +5,7 @@
  * @package nautilusnet
  */
 ?>
-<section id="" class="container-fluid">
+<section id="" class="container-fluid sct__homepage">
     <?php 
     if( shortcode_exists('show_notifications') ){
         do_shortcode('[show_notifications]');
@@ -13,10 +13,14 @@
         echo "Shortcode de notificações não existe.";
     }
 
-    if( shortcode_exists('show_article_sliders') ){
-        do_shortcode('[show_article_sliders]');
-    }else{
-        echo "Shortcode de sliders não existe";
-    }
     ?>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sliderWrapper">
+        <?php 
+        if( shortcode_exists('show_article_sliders') ){
+            do_shortcode('[show_article_sliders]');
+        }else{
+            echo "Shortcode de sliders não existe";
+        }
+        ?>
+    </div>
 </section>

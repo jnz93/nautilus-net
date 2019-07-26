@@ -156,20 +156,18 @@ if( !function_exists('get_article_sliders') ){
                 $post_excerpt   = get_the_excerpt($post_id);
                 $post_thumb_url = get_the_post_thumbnail_url($post_id, 'large');
 
-                $output .= '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 articleWrapper">
-                                <article class="articleSlider">
-                                    <div class="col-md-6 col-lg-6">
-                                        <h1 class="articleSlider__title" title="'. $post_title .'">'. $post_title .'</h1>
-                                        <p class="articleSlider__excerpt">'. $post_excerpt .'</p>
-                                        <button class="btn btn__primary btn__primary--big">Ver publicação</button>
-                                    </div>
-                                    <div class="col-md-6 col-lg-6">
-                                        <figure class="articleSlider__thumb">
-                                            <img src="'. $post_thumb_url .'" class="articleSlider__img" />
-                                        </figure>
-                                    </div>
-                                </article>
-                            </div>';
+                $output .= '<article class="articleSlider">
+                                <div class="col-md-6 col-lg-6">
+                                    <h1 class="articleSlider__title" title="'. $post_title .'">'. $post_title .'</h1>
+                                    <p class="articleSlider__excerpt">'. $post_excerpt .'</p>
+                                    <button class="btn btn__primary btn__primary--big">Ver publicação</button>
+                                </div>
+                                <div class="col-md-6 col-lg-6">
+                                    <figure class="articleSlider__thumb">
+                                        <img src="'. $post_thumb_url .'" class="articleSlider__img" />
+                                    </figure>
+                                </div>
+                            </article>';
                 
             }
             echo $output;
