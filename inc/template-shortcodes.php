@@ -303,26 +303,49 @@ if( !function_exists('create_contact_section') ){
         $contact_cnpj       = get_option('contact_cnpj');
         $office_hours       = get_option('contact_office_hours');
 
-        // Tratamento de arrays de informações separados por 'grupos'
+        // Tratamento de grupos de informações para enviar na função de construção do card
         $arr_email          = explode(',', $contact_email);
         $arr_tel            = array($contact_phone, $contact_whatsapp);
         $arr_office_hours   = explode('~', $office_hours);
         $arr_address        = explode('~', $contact_address);
 
         ?>
-        <!-- Container dos cards -->
-        <div id="" class="row col-xs-12 col-sm-12 col-md-8 col-lg-8">
-            <?php
-            // Chamada dos cards
-            card_contact('mail', 'E-mail', $arr_email);
-            card_contact('phone', 'Telefone/Whatsapp', $arr_tel);
-            card_contact('clock', 'Horário de atendimento', $arr_office_hours);
-            card_contact('map-pin', 'Endereço', $arr_address);
-            ?>
+        <!-- Container content -->
+        <div id="" class="row container-fluid">
+            <div id="" class="row col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <?php
+                // Chamada dos cards
+                card_contact('mail', 'E-mail', $arr_email);
+                card_contact('phone', 'Telefone/Whatsapp', $arr_tel);
+                card_contact('clock', 'Horário de atendimento', $arr_office_hours);
+                card_contact('map-pin', 'Endereço', $arr_address);
+                ?>
+            </div>
+
+            <div class="row col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="cardContact">
+                    <h3 class="cardContact__title">Precisa de um especialista?</h3>
+                    <p class="cardContact__text">Não encontrou o que estava procurando? Está precisando de ajuda? Não tem problema, abre um chamado que nós vamos solucionar seu problema o mais rápido possível!</p>
+                    <button id="" class="btn btn-primary btn-primary__medium">Abrir chamado</button>
+                </div>
+            </div>
         </div>
-        <?php      
-        // Adicionar botão pro formulário 
+        <?php
     }
 
     add_shortcode('show_contact_section', 'create_contact_section');
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Footer type 1
+////////////////////////////////////////////////////////////////////////////////////////////////
+if( !function_exists('create_footer_type1') ){
+    function create_footer_type1(){
+        ?>
+        <div class="row container-fluid">
+            <p class="footer__text footer__text--copyright">Todos os direitos reservados NautilusNet 2019</p>
+        </div>
+        <?php
+    }
+    add_shortcode('show_footer_type_1', 'create_footer_type1');
 }

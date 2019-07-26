@@ -5,8 +5,8 @@
 ?>
     <footer class="container-fluid footer-t1">
         <?php 
-        if( shortcode_exists('get_footer_type_1')){
-            do_shortcode('[get_footer_type_1]');
+        if( shortcode_exists('show_footer_type_1')){
+            do_shortcode('[show_footer_type_1]');
         } else {
             echo "Shortcode inexistente";
         }
