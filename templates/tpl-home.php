@@ -6,6 +6,7 @@
  */
 ?>
 <section id="" class="container-fluid sct__homepage">
+    <!-- Notificações -->
     <?php 
     if( shortcode_exists('show_notifications') ){
         do_shortcode('[show_notifications]');
@@ -14,7 +15,7 @@
     }
 
     ?>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sliderWrapper" style="height: 100%;">
+    <div class="row sliderWrapper" style="height: 100%;">
         <?php 
         if( shortcode_exists('show_article_sliders') ){
             do_shortcode('[show_article_sliders]');

@@ -14,6 +14,39 @@ p, ul, ol, li, span, input, label, textarea, button
 
 // Seções
 .sct
+    // Home/Sliders
     &__homepage
         @include respond-above('md')
             height: calc(100vh - 90px)
+
+    // Beneficios
+    &__benefits
+        @include respond-above('md')
+            min-height: calc(100vh - 100px)
+
+
+// Header das seções
+.sctHeader
+    @include respond-above('md')
+        min-height: 120px
+        text-align: center
+
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+
+    // Título
+    &__title
+        @include respond-above('md')
+            font-size: $fs-36
+            font-weight: $bold
+            color: $blackLight
+            line-height: 1.8
+
+            max-width: 960px
+            margin: 15px auto
+
+    &__subtitle
+        @extend .sctHeader__title
+        font-size: $fs-21
+        font-weight: $regular
