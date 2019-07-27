@@ -77,13 +77,17 @@ if( ! function_exists('nautilus_enqueue_scripts') ){
         wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0.1', 'all');
         wp_register_style('flexbox', get_template_directory_uri() . '/css/flexboxgrid.min.css', array(), '6.3.1', 'all');
         wp_register_style('slick-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '1.8.1', 'all' );
+        wp_register_style('buttons-css', get_template_directory_uri() . '/css/parts/buttons.css', array(), '1.0.0', 'all');
         wp_register_style('header-css', get_template_directory_uri() . '/css/parts/header.css', array(), '1.0.0', 'all');
+        wp_register_style('section-home', get_template_directory_uri() . '/css/parts/section-home.css', array(), '1.0.0', 'all');
 
         // Lista de folhas a serem carregadas
         wp_enqueue_style('normalize');
         wp_enqueue_style('flexbox');
         wp_enqueue_style('slick-css');
+        wp_enqueue_style('buttons-css');
         wp_enqueue_style('header-css');
+        wp_enqueue_style('section-home');
 
 
         // Registro de scripts JS

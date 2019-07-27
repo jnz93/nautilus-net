@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/*
+ Theme Name: nautilus-net
+ Description: folha de estilos da seção home, onde temos as notificações e sliders
+ Pattern: BEM(Block, Element & Modifier)
+ */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; }
+
+h1, h2, h3, h4, h5, h6, figcaption {
+  font-family: 'Poppins'; }
+
+p, ul, ol, li, span, input, label, textarea, button {
+  font-family: 'Hind'; }
+
+@media (min-width: 992px) {
+  .sct__homepage {
+    height: calc(100vh - 90px); } }
+
+@media (min-width: 992px) {
+  .articleHome {
+    height: 90%;
+    margin: 2.5% auto; } }
+
+.articleHome__wrapperContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center; }
+
+.articleHome__title {
+  margin: 0; }
+  @media (min-width: 992px) {
+    .articleHome__title {
+      font-size: 4.6em;
+      font-weight: 900;
+      color: #404040;
+      line-height: 1.6;
+      margin-bottom: 15px; } }
+
+.articleHome__excerpt {
+  margin: 0; }
+  @media (min-width: 992px) {
+    .articleHome__excerpt {
+      font-size: 2.1em;
+      font-weight: 500;
+      color: #404040;
+      line-height: 1.7;
+      margin-bottom: 45px; } }
+
+.articleHome__thumbContainer {
+  margin: 0;
+  padding: 0; }
+
+.articleHome__img {
+  width: 100%; }

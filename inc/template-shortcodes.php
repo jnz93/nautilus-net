@@ -156,15 +156,15 @@ if( !function_exists('get_article_sliders') ){
                 $post_excerpt   = get_the_excerpt($post_id);
                 $post_thumb_url = get_the_post_thumbnail_url($post_id, 'large');
 
-                $output .= '<article class="articleSlider">
-                                <div class="col-md-6 col-lg-6">
-                                    <h1 class="articleSlider__title" title="'. $post_title .'">'. $post_title .'</h1>
-                                    <p class="articleSlider__excerpt">'. $post_excerpt .'</p>
+                $output .= '<article class="row articleHome">
+                                <div class="col-md-6 col-lg-6 articleHome__wrapperContent">
+                                    <h1 class="articleHome__title" title="'. $post_title .'">'. $post_title .'</h1>
+                                    <p class="articleHome__excerpt">'. $post_excerpt .'</p>
                                     <button class="btn btn__primary btn__primary--big">Ver publicação</button>
                                 </div>
-                                <div class="col-md-6 col-lg-6">
-                                    <figure class="articleSlider__thumb">
-                                        <img src="'. $post_thumb_url .'" class="articleSlider__img" />
+                                <div class="col-md-6 col-lg-6 articleHome__wrapperContent">
+                                    <figure class="articleHome__thumbContainer">
+                                        <img src="'. $post_thumb_url .'" class="articleHome__img" />
                                     </figure>
                                 </div>
                             </article>';

@@ -14,7 +14,7 @@
     }
 
     ?>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sliderWrapper">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sliderWrapper" style="height: 100%;">
         <?php 
         if( shortcode_exists('show_article_sliders') ){
             do_shortcode('[show_article_sliders]');

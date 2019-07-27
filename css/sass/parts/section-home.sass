@@ -1,0 +1,47 @@
+/*
+ Theme Name: nautilus-net
+ Description: folha de estilos da seção home, onde temos as notificações e sliders
+ Pattern: BEM(Block, Element & Modifier)
+ */
+@import '../theme-configs.sass'
+
+// Articles dos sliders
+.articleHome
+    @include respond-above('md')
+        height: 90%
+        margin: 2.5% auto
+        // display: flex
+        // align-content: center
+
+    &__wrapperContent
+        display: flex
+        flex-wrap: wrap
+        align-content: center
+
+    // Título
+    &__title
+        margin: 0
+        @include respond-above('md')
+            font-size: $fs-46
+            font-weight: $bold
+            color: $blackLight
+            line-height: 1.6
+            margin-bottom: 15px
+
+    // Subtitulo
+    &__excerpt
+        margin: 0
+        @include respond-above('md')
+            font-size: $fs-21
+            font-weight: $regular
+            color: $blackLight
+            line-height: 1.7
+            margin-bottom: 45px
+
+    // Imagem/thumb
+    &__thumbContainer
+        margin: 0
+        padding: 0
+
+    &__img
+        width: 100%

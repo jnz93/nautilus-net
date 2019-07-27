@@ -11,7 +11,7 @@ html {
 h1, h2, h3, h4, h5, h6, figcaption {
   font-family: 'Poppins'; }
 
-p, ul, ol, li, span, input, label, textarea {
+p, ul, ol, li, span, input, label, textarea, button {
   font-family: 'Hind'; }
 
 @media (min-width: 992px) {
@@ -41,9 +41,9 @@ p, ul, ol, li, span, input, label, textarea {
 
 @media (min-width: 992px) {
   .logo__title {
-    font-size: 3.6em;
+    font-size: 2.4em;
     font-weight: 900;
-    color: #2340BC; } }
+    color: #404040; } }
 
 @media (min-width: 992px) {
   .mainMenuContainer {
@@ -70,7 +70,7 @@ p, ul, ol, li, span, input, label, textarea {
     display: flex;
     align-items: center; }
     .menuList .menu-item a {
-      font-size: 1.8em;
+      font-size: 1.6em;
       font-weight: 500;
       color: #404040;
       text-decoration: none; }

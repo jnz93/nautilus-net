@@ -11,7 +11,7 @@ html {
 h1, h2, h3, h4, h5, h6, figcaption {
   font-family: 'Poppins'; }
 
-p, ul, ol, li, span, input, label, textarea {
+p, ul, ol, li, span, input, label, textarea, button {
   font-family: 'Hind'; }
 
 @media (min-width: 992px) {
