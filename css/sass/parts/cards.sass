@@ -10,9 +10,9 @@
     @include respond-above('lg')
         background: $grayLight
         border-radius: 6px
-        width: calc(100% - 60px)
+        width: calc(100% - 110px)
         margin: 0 auto
-        padding: 25px
+        padding: 30px
 
     // span.wrapIcon
     &__wrapIcon
@@ -21,10 +21,16 @@
             width: 48px
             height: 48px
             border-radius: 100%
-            display: block
             margin: 0
             margin-bottom: 15px
+            
+            display: flex
+            align-items: center
+            justify-content: center
     
+    &__icon
+        fill: $blueMain
+
     // Título
     &__title
         @include respond-above('md')
@@ -41,7 +47,7 @@
         @include respond-above('md')
             font-size: $fs-16
             font-weight: $thin
-            color: $blueMain
+            color: $blackMedium
             line-height: 1.6
 
 // Plancard
@@ -178,6 +184,8 @@
     // Ícone
     &__icon
         @include respond-above('md')
+            width: 22px
+            fill: $blueMain
             margin-right: 15px
 
     // Título do card

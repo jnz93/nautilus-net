@@ -41,9 +41,9 @@
             </div> <!-- #End logotipo -->
 
             <div class="col-xs-2 col-sm-6 col-md-8 col-lg-8">
-                <!-- Botões mobile -->
-                <span id="" class=""><i class="" data-eva=""></i></span>
-                <span id="" class=""><i class="" data-eva=""></i></span>
+                <!-- Botões menu mobile -->
+                <!-- <span id="" class=""><i class="" data-eva=""></i></span>
+                <span id="" class=""><i class="" data-eva=""></i></span> -->
                 <?php 
                 if( shortcode_exists('show_menu_navegacao') ){
                     do_shortcode('[show_menu_navegacao]');

@@ -213,7 +213,7 @@ if( !function_exists('get_article_benefits') ){
                                 <article id="benefit-'. $post_id .'" class="benefitCard">
                                     <div class="col-12">
                                         <span class="benefitCard__wrapIcon">
-                                            <i class="benefitCard__icon" data-eva="'. $post_icon .'" data-fill=""  data-height="" data-width=""></i>
+                                            <i class="benefitCard__icon" data-eva="'. $post_icon .'" data-fill=""  data-eva-height="28" data-eva-width="28"></i>
                                         </span>
                                     </div>
                                     <div class="col-12">
@@ -320,10 +320,10 @@ if( !function_exists('create_contact_section') ){
             <div id="" class="row col-xs-12 col-sm-12 col-md-7 col-lg-7">
                 <?php
                 // Chamada dos cards
-                card_contact('mail', 'E-mail', $arr_email);
+                card_contact('email', 'E-mail', $arr_email);
                 card_contact('phone', 'Telefone/Whatsapp', $arr_tel);
                 card_contact('clock', 'Horário de atendimento', $arr_office_hours);
-                card_contact('map-pin', 'Endereço', $arr_address);
+                card_contact('map', 'Endereço', $arr_address);
                 ?>
             </div>
 

@@ -5,7 +5,8 @@
  */
 html {
   scroll-behavior: smooth;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, h6, figcaption {
   font-family: 'Poppins'; }
@@ -68,9 +69,9 @@ p, ul, ol, li, span, input, label, textarea, button {
   .benefitCard {
     background: #F2F2F2;
     border-radius: 6px;
-    width: calc(100% - 60px);
+    width: calc(100% - 110px);
     margin: 0 auto;
-    padding: 25px; } }
+    padding: 30px; } }
 
 @media (min-width: 1200px) {
   .benefitCard__wrapIcon {
@@ -78,9 +79,14 @@ p, ul, ol, li, span, input, label, textarea, button {
     width: 48px;
     height: 48px;
     border-radius: 100%;
-    display: block;
     margin: 0;
-    margin-bottom: 15px; } }
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; } }
+
+.benefitCard__icon {
+  fill: #2340BC; }
 
 @media (min-width: 992px) {
   .benefitCard__title {
@@ -96,7 +102,7 @@ p, ul, ol, li, span, input, label, textarea, button {
   .benefitCard__text {
     font-size: 1.6em;
     font-weight: 300;
-    color: #2340BC;
+    color: #333333;
     line-height: 1.6; } }
 
 @media (min-width: 992px) {
@@ -217,6 +223,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 992px) {
   .contactCard__icon {
+    width: 22px;
+    fill: #2340BC;
     margin-right: 15px; } }
 
 @media (min-width: 992px) {
