@@ -39,7 +39,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (min-width: 992px) {
   .sct__contentWrapper {
     margin: 80px auto;
-    justify-content: center; } }
+    justify-content: center;
+    position: relative; } }
 
 .sct__contentWrapper--noMargin {
   margin: 0 auto; }

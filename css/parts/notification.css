@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/*
+ Theme Name: nautilus-net
+ Description: Folha de estilos do popup de notificações
+ Pattern: BEM(Block, Element & Modifier)
+ v1.0
+ */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  overflow-x: hidden; }
+
+h1, h2, h3, h4, h5, h6, figcaption {
+  font-family: 'Poppins'; }
+
+p, ul, ol, li, span, input, label, textarea, button {
+  font-family: 'Hind'; }
+
+@media (min-width: 992px) {
+  .sct__homepage {
+    height: calc(100vh - 90px); } }
+
+@media (min-width: 992px) {
+  .sct__benefits {
+    min-height: calc(100vh - 100px);
+    padding: 50px 0;
+    margin: 50px 0; } }
+
+@media (min-width: 992px) {
+  .sct__plans {
+    min-height: calc(100vh - 100px);
+    padding: 50px 0;
+    margin: 50px 0; } }
+
+@media (min-width: 992px) {
+  .sct__contact {
+    min-height: calc(100vh - 100px);
+    padding: 50px 0;
+    margin: 50px 0; } }
+
+@media (min-width: 992px) {
+  .sct__contentWrapper {
+    margin: 80px auto;
+    justify-content: center;
+    position: relative; } }
+
+.sct__contentWrapper--noMargin {
+  margin: 0 auto; }
+
+@media (min-width: 992px) {
+  .sctHeader {
+    min-height: 120px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; } }
+
+@media (min-width: 992px) {
+  .sctHeader__title, .sctHeader__subtitle {
+    font-size: 3.6em;
+    font-weight: 700;
+    color: #333333;
+    line-height: 1.8;
+    max-width: 960px;
+    margin: 15px auto; } }
+
+.sctHeader__subtitle {
+  font-size: 1.8em;
+  font-weight: 300; }
+
+@media (min-width: 992px) {
+  .notification {
+    position: absolute;
+    top: 80px;
+    left: 0px; } }
+
+@media (min-width: 992px) {
+  .notification__spacer {
+    width: 100%;
+    height: 1px;
+    background: #EDEDED;
+    margin: 15px auto;
+    display: block; } }
+
+.notification__wrapper {
+  transition: .4s; }
+  @media (min-width: 992px) {
+    .notification__wrapper--normal {
+      width: 48px;
+      height: 48px;
+      transform: rotate(360deg); } }
+  @media (min-width: 992px) {
+    .notification__wrapper--expand {
+      width: 390px;
+      height: auto;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 6px #EDEDED;
+      border: 1px solid #EDEDED;
+      border-radius: 6px;
+      z-index: 99;
+      transform: rotate(360deg); } }
+
+@media (min-width: 992px) {
+  .notification__iconWrap {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #2340BC;
+    border-radius: 100%;
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; } }
+
+@media (min-width: 992px) {
+  .notification__icon {
+    fill: #2340BC; } }
+
+@media (min-width: 992px) {
+  .notification__date {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #333333; } }
+
+@media (min-width: 992px) {
+  .notification__title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    margin-top: 15px; } }
+
+@media (min-width: 992px) {
+  .notification__subtitle {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #404040;
+    line-height: 1.6;
+    margin: 0; } }
+
+@media (min-width: 992px) {
+  .notification__text {
+    font-size: 1.4em;
+    font-weight: 300;
+    color: #333333;
+    line-height: 1.6; } }
+
+@media (min-width: 992px) {
+  .notification__content {
+    width: calc(100% - 50px);
+    padding: 20px;
+    margin: 0 auto; } }
+
+.notification__content--hide {
+  display: none; }
+
+.notification__content--show {
+  display: block; }

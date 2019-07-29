@@ -1,0 +1,118 @@
+/*
+ Theme Name: nautilus-net
+ Description: Folha de estilos do popup de notificações
+ Pattern: BEM(Block, Element & Modifier)
+ v1.0
+ */
+@import '../theme-configs.sass'
+
+    
+.notification
+    @include respond-above('md')
+        position: absolute
+        top: 80px
+        left: 0px
+    
+    // Spacer/borda
+    &__spacer
+        @include respond-above('md')
+            width: 100%
+            height: 1px 
+            background: $graySecondary
+            margin: 15px auto
+            display: block
+
+    // Wrapper do bloco
+    &__wrapper
+        transition: .4s
+
+        // Tamanho normal
+        &--normal
+            @include respond-above('md')
+                width: 48px
+                height: 48px
+                transform: rotate(360deg)
+
+        // Tamanho aberto
+        &--expand
+            @include respond-above('md')
+                width: 390px
+                height: auto
+                background: $white
+                box-shadow: 0px 0px 6px $graySecondary
+                border: 1px solid $graySecondary
+                border-radius: 6px
+                z-index: 99
+                transform: rotate(360deg)
+
+    // Wrapper dos icones
+    &__iconWrap
+        @include respond-above('md')
+            width: 36px
+            height: 36px
+
+            border: 2px solid $blueMain
+            border-radius: 100%
+
+            position: absolute
+            top: -30px
+            left: -20px
+
+            display: flex
+            align-items: center
+            justify-content: center
+
+            cursor: pointer
+
+    // Icones
+    &__icon
+        @include respond-above('md')
+            fill: $blueMain
+    
+    // Data
+    &__date
+        @include respond-above('md')
+            font-size: $fs-12
+            font-weight: $thin
+            color: $blackMedium
+
+    // Título
+    &__title
+        @include respond-above('md')
+            font-size: $fs-18
+            font-weight: $semi-bold
+            color: $blackMedium
+            line-height: 1.6
+            margin: 0
+            margin-top: 15px
+    
+    // Subtitulo
+    &__subtitle
+        @include respond-above('md')
+            font-size: $fs-14
+            font-weight: $regular
+            color: $blackLight
+            line-height: 1.6
+            margin: 0
+
+    // Texto
+    &__text
+        @include respond-above('md')
+            font-size: $fs-14
+            font-weight: $thin
+            color: $blackMedium
+            line-height: 1.6
+
+    // article/content
+    &__content
+        @include respond-above('md')
+            width: calc(100% - 50px)
+            padding: 20px
+            margin: 0 auto
+
+        // Opções de visualização
+        &--hide
+            display: none
+
+        &--show
+            display: block
