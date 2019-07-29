@@ -131,8 +131,9 @@ function card_contact($icon, $title, $arr){
                 <div class="contactCard">
                     <div class="contactCard__header">
                         <i class="contactCard__icon" data-eva="'. $icon .'" data-width="" data-height="" data-fill=""></i>
-                        <h3 class="contactCard__title">'. $title .'</h3>
+                        <h3 class="contactCard__title contactCard__title--small contactCard__title--semiBold">'. $title .'</h3>
                     </div>
+                    <span class="contactCard__spacer"></span>
                     <div class="contactCard__body">';
                     if( is_array($arr) ){
                         foreach( $arr as $item ){

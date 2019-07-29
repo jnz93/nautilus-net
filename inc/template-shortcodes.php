@@ -317,7 +317,7 @@ if( !function_exists('create_contact_section') ){
         ?>
         <!-- Container content -->
         <div id="" class="row col-xs-12 col-sm-12 col-md-10 col-lg-10">
-            <div id="" class="row col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <div id="" class="row col-xs-12 col-sm-12 col-md-7 col-lg-7">
                 <?php
                 // Chamada dos cards
                 card_contact('mail', 'E-mail', $arr_email);
@@ -327,11 +327,11 @@ if( !function_exists('create_contact_section') ){
                 ?>
             </div>
 
-            <div class="row col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <div class="cardContact">
-                    <h3 class="cardContact__title">Precisa de um especialista?</h3>
-                    <p class="cardContact__text">Não encontrou o que estava procurando? Está precisando de ajuda? Não tem problema, abre um chamado que nós vamos solucionar seu problema o mais rápido possível!</p>
-                    <button id="" class="btn btn-primary btn-primary__medium">Abrir chamado</button>
+            <div class="row col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                <div class="contactCard__wrapperFlexMid">
+                    <h3 class="contactCard__title contactCard__title--medium contactCard__title--semiBold">Precisa de um especialista?</h3>
+                    <p class="contactCard__text contactCard__text--center">Não encontrou o que estava procurando? Está precisando de ajuda? Não tem problema, abre um chamado que nós vamos solucionar seu problema o mais rápido possível!</p>
+                    <button id="" class="btn btn__primary btn__primary--medium">Abrir chamado</button>
                 </div>
             </div>
         </div>

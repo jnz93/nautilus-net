@@ -6,17 +6,16 @@
  */
 ?>
 <section id="" class="container-fluid sct__homepage">
-    <!-- Notificações -->
-    <?php 
-    if( shortcode_exists('show_notifications') ){
-        do_shortcode('[show_notifications]');
-    }else{
-        echo "Shortcode de notificações não existe.";
-    }
-
-    ?>
-    <div class="row sliderWrapper" style="height: 100%;">
+    <div class="col-lg-11 row sct__contentWrapper sct__contentWrapper--noMargin" style="height: 100%;">
         <?php 
+        // Notificações
+        if( shortcode_exists('show_notifications') ){
+            do_shortcode('[show_notifications]');
+        }else{
+            echo "Shortcode de notificações não existe.";
+        }
+
+        // Sliders
         if( shortcode_exists('show_article_sliders') ){
             do_shortcode('[show_article_sliders]');
         }else{

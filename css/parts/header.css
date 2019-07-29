@@ -38,8 +38,11 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 992px) {
   .sct__contentWrapper {
-    margin: 75px auto;
+    margin: 80px auto;
     justify-content: center; } }
+
+.sct__contentWrapper--noMargin {
+  margin: 0 auto; }
 
 @media (min-width: 992px) {
   .sctHeader {
@@ -52,15 +55,15 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (min-width: 992px) {
   .sctHeader__title, .sctHeader__subtitle {
     font-size: 3.6em;
-    font-weight: 900;
-    color: #404040;
+    font-weight: 700;
+    color: #333333;
     line-height: 1.8;
     max-width: 960px;
     margin: 15px auto; } }
 
 .sctHeader__subtitle {
-  font-size: 2.1em;
-  font-weight: 500; }
+  font-size: 1.8em;
+  font-weight: 300; }
 
 .mainHeader {
   background: none; }
@@ -86,7 +89,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (min-width: 992px) {
   .logo__title {
     font-size: 2.4em;
-    font-weight: 900;
+    font-weight: 700;
     color: #404040; } }
 
 @media (min-width: 992px) {
@@ -115,6 +118,6 @@ p, ul, ol, li, span, input, label, textarea, button {
     align-items: center; }
     .menuList .menu-item a {
       font-size: 1.6em;
-      font-weight: 500;
+      font-weight: 300;
       color: #404040;
       text-decoration: none; }

@@ -42,9 +42,11 @@ p, ul, ol, li, span, input, label, textarea, button
 
     &__contentWrapper
         @include respond-above('md')
-            margin: 75px auto
+            margin: 80px auto
             justify-content: center
 
+        &--noMargin
+            margin: 0 auto
 // Header das seções
 .sctHeader
     @include respond-above('md')
@@ -59,8 +61,8 @@ p, ul, ol, li, span, input, label, textarea, button
     &__title
         @include respond-above('md')
             font-size: $fs-36
-            font-weight: $bold
-            color: $blackLight
+            font-weight: $semi-bold
+            color: $blackMedium
             line-height: 1.8
 
             max-width: 960px
@@ -68,5 +70,5 @@ p, ul, ol, li, span, input, label, textarea, button
 
     &__subtitle
         @extend .sctHeader__title
-        font-size: $fs-21
-        font-weight: $regular
+        font-size: $fs-18
+        font-weight: $thin
