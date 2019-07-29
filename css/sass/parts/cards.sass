@@ -1,0 +1,179 @@
+/*
+ Theme Name: nautilus-net
+ Description: folha de estilos dos varios tipos de cards utilizados no tema
+ Pattern: BEM(Block, Element & Modifier)
+ */
+@import '../theme-configs.sass'
+
+// Benefit card
+.benefitCard
+    @include respond-above('lg')
+        background: $grayLight
+        border-radius: 6px
+        width: calc(100% - 60px)
+        margin: 0 auto
+        padding: 25px
+
+    // span.wrapIcon
+    &__wrapIcon
+        @include respond-above('lg')
+            background: $white
+            width: 48px
+            height: 48px
+            border-radius: 100%
+            display: block
+            margin: 0
+            margin-bottom: 15px
+    
+    // Título
+    &__title
+        @include respond-above('md')
+            font-size: $fs-18
+            font-weight: $semi-bold
+            line-height: 1.7
+            color: $blueMain
+            text-transform: uppercase
+            margin: 0
+            margin-bottom: 15px
+
+    // Texto
+    &__text
+        @include respond-above('md')
+            font-size: $fs-16
+            font-weight: $thin
+            color: $blueMain
+            line-height: 1.7
+
+// Plancard
+.planCard
+    @include respond-above('md')
+        width: calc(100% - 30px)
+        height: auto
+        padding: 15px
+        text-align: center
+        border-radius: 6px
+
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+        box-shadow: 0px 0px 3px $graySecondary
+
+    // Borda
+    &__spacer
+        @include respond-above('md')
+            width: 100%
+            height: 1px
+            background: $graySecondary
+
+    // Título
+    &__title
+        @include respond-above('md')
+            font-size: $fs-24
+            text-transform: uppercase
+            color: $blueMain
+            margin: 0
+            margin-bottom: 15px
+
+    // Label tipo da conexão
+    &__label
+        @include respond-above('md')
+            font-size: $fs-14
+            color: $blackLight
+            border: 1px solid $grayDark
+            border-radius: 4px
+            padding: 5px 10px
+            display: inline-block
+            margin: 15px auto
+
+    // Conteúdo
+    &__content
+        @include respond-above('md')
+            margin: 5px auto
+
+        ul
+            list-style: none
+            padding: 0
+            margin: 0
+
+        li
+            font-size: $fs-12
+            color: $blackLight
+            line-height: 1.7
+            margin: 12px auto
+
+    &__wrap
+        @include respond-above('md')
+            display: flex
+            align-items: flex-end
+            justify-content: center
+            margin: 20px auto
+            width: 100%
+
+    // Valor e tags de preço
+    &__tag
+        @include respond-above('md')
+            font-size: $fs-14
+            font-weight: $regular
+            color: $blackLight
+
+        &--alignStart
+            align-self: flex-start
+            margin-top: 10px
+
+        &--alignEnd
+            align-self: flex-end
+            
+    &__price
+        @include respond-above('md')
+            font-size: $fs-36
+            color: $blackDark
+            margin: 0 3px
+
+    
+// Card contact
+.contactCard
+    @include respond-above('md')
+        width: calc(100% - 50px)
+        height: auto
+        margin: 25px auto
+        padding: 10px
+        border-radius: 3px
+        box-shadow: 0px 0px 3px $graySecondary
+
+    // Cabeçalho do card
+    &__header
+        @include respond-above('md')
+            margin-bottom: 10px
+            display: flex
+            align-content: center
+
+    // Corpo do card
+    &__body
+        @include respond-above('md')
+            width: 100%
+            margin-top: 10px
+            padding-left: 30px
+
+    // Ícone
+    &__icon
+        @include respond-above('md')
+            margin-right: 15px
+
+    // Título do card
+    &__title
+        @include respond-above('md')
+            font-size: $fs-18
+            font-weight: $semi-bold
+            color: $blueMain
+            text-transform: uppercase
+    
+    // Informação
+    &__info
+        @include respond-above('md')
+            font-size: $fs-14
+            font-weight: $thin
+            color: $blackDark
+            margin: 8px 0
+
+    

@@ -20,7 +20,26 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 992px) {
   .sct__benefits {
-    min-height: calc(100vh - 100px); } }
+    min-height: calc(100vh - 100px);
+    padding: 50px 0;
+    margin: 50px 0; } }
+
+@media (min-width: 992px) {
+  .sct__plans {
+    min-height: calc(100vh - 100px);
+    padding: 50px 0;
+    margin: 50px 0; } }
+
+@media (min-width: 992px) {
+  .sct__contact {
+    min-height: calc(100vh - 100px);
+    padding: 50px 0;
+    margin: 50px 0; } }
+
+@media (min-width: 992px) {
+  .sct__contentWrapper {
+    margin: 75px auto;
+    justify-content: center; } }
 
 @media (min-width: 992px) {
   .sctHeader {

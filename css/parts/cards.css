@@ -1,0 +1,214 @@
+/*
+ Theme Name: nautilus-net
+ Description: folha de estilos dos varios tipos de cards utilizados no tema
+ Pattern: BEM(Block, Element & Modifier)
+ */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; }
+
+h1, h2, h3, h4, h5, h6, figcaption {
+  font-family: 'Poppins'; }
+
+p, ul, ol, li, span, input, label, textarea, button {
+  font-family: 'Hind'; }
+
+@media (min-width: 992px) {
+  .sct__homepage {
+    height: calc(100vh - 90px); } }
+
+@media (min-width: 992px) {
+  .sct__benefits {
+    min-height: calc(100vh - 100px);
+    padding: 50px 0;
+    margin: 50px 0; } }
+
+@media (min-width: 992px) {
+  .sct__plans {
+    min-height: calc(100vh - 100px);
+    padding: 50px 0;
+    margin: 50px 0; } }
+
+@media (min-width: 992px) {
+  .sct__contact {
+    min-height: calc(100vh - 100px);
+    padding: 50px 0;
+    margin: 50px 0; } }
+
+@media (min-width: 992px) {
+  .sct__contentWrapper {
+    margin: 75px auto;
+    justify-content: center; } }
+
+@media (min-width: 992px) {
+  .sctHeader {
+    min-height: 120px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; } }
+
+@media (min-width: 992px) {
+  .sctHeader__title, .sctHeader__subtitle {
+    font-size: 3.6em;
+    font-weight: 900;
+    color: #404040;
+    line-height: 1.8;
+    max-width: 960px;
+    margin: 15px auto; } }
+
+.sctHeader__subtitle {
+  font-size: 2.1em;
+  font-weight: 500; }
+
+@media (min-width: 1200px) {
+  .benefitCard {
+    background: #F2F2F2;
+    border-radius: 6px;
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    padding: 25px; } }
+
+@media (min-width: 1200px) {
+  .benefitCard__wrapIcon {
+    background: #FFFFFF;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    display: block;
+    margin: 0;
+    margin-bottom: 15px; } }
+
+@media (min-width: 992px) {
+  .benefitCard__title {
+    font-size: 1.8em;
+    font-weight: 700;
+    line-height: 1.7;
+    color: #2340BC;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 15px; } }
+
+@media (min-width: 992px) {
+  .benefitCard__text {
+    font-size: 1.6em;
+    font-weight: 300;
+    color: #2340BC;
+    line-height: 1.7; } }
+
+@media (min-width: 992px) {
+  .planCard {
+    width: calc(100% - 30px);
+    height: auto;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0px 0px 3px #EDEDED; } }
+
+@media (min-width: 992px) {
+  .planCard__spacer {
+    width: 100%;
+    height: 1px;
+    background: #EDEDED; } }
+
+@media (min-width: 992px) {
+  .planCard__title {
+    font-size: 2.4em;
+    text-transform: uppercase;
+    color: #2340BC;
+    margin: 0;
+    margin-bottom: 15px; } }
+
+@media (min-width: 992px) {
+  .planCard__label {
+    font-size: 1.4em;
+    color: #404040;
+    border: 1px solid #E8E8E8;
+    border-radius: 4px;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 15px auto; } }
+
+@media (min-width: 992px) {
+  .planCard__content {
+    margin: 5px auto; } }
+
+.planCard__content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.planCard__content li {
+  font-size: 1.2em;
+  color: #404040;
+  line-height: 1.7;
+  margin: 12px auto; }
+
+@media (min-width: 992px) {
+  .planCard__wrap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 20px auto;
+    width: 100%; } }
+
+@media (min-width: 992px) {
+  .planCard__tag {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #404040; } }
+
+.planCard__tag--alignStart {
+  align-self: flex-start;
+  margin-top: 10px; }
+
+.planCard__tag--alignEnd {
+  align-self: flex-end; }
+
+@media (min-width: 992px) {
+  .planCard__price {
+    font-size: 3.6em;
+    color: #262626;
+    margin: 0 3px; } }
+
+@media (min-width: 992px) {
+  .contactCard {
+    width: calc(100% - 50px);
+    height: auto;
+    margin: 25px auto;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px #EDEDED; } }
+
+@media (min-width: 992px) {
+  .contactCard__header {
+    margin-bottom: 10px;
+    display: flex;
+    align-content: center; } }
+
+@media (min-width: 992px) {
+  .contactCard__body {
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 30px; } }
+
+@media (min-width: 992px) {
+  .contactCard__icon {
+    margin-right: 15px; } }
+
+@media (min-width: 992px) {
+  .contactCard__title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #2340BC;
+    text-transform: uppercase; } }
+
+@media (min-width: 992px) {
+  .contactCard__info {
+    font-size: 1.4em;
+    font-weight: 300;
+    color: #262626;
+    margin: 8px 0; } }
