@@ -22,7 +22,6 @@ jQuery(document).ready(function(){
     
             // O target existe?
             if(target.length) {
-                console.log(target)
                 // Previne o padrão apenas se animação acontecer
                 event.preventDefault();
                 
@@ -34,4 +33,24 @@ jQuery(document).ready(function(){
         }
     
     });
+});
+
+/**
+ * Fixed Header - Após determinada rolagem da página adiciona ao main header a classe fixed. O contrário acontece quando o usuário voltar ao inicio.
+ * 
+ */
+// Elementos a serem manipulados
+
+// Rolagem da página
+jQuery(window).scroll(function(){
+    var mainHeader = jQuery('.mainHeader');
+    var offSetTop = jQuery(this).scrollTop();
+    
+    if( offSetTop >= 250){
+        mainHeader.removeClass('mainHeader__desktop--normal').addClass('mainHeader__desktop--fixed');
+        console.log(offSetTop);
+    } else{
+        mainHeader.removeClass('mainHeader__desktop--fixed').addClass('mainHeader__desktop--normal');
+    }
+
 })
