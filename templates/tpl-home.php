@@ -5,7 +5,7 @@
  * @package nautilusnet
  */
 ?>
-<section id="" class="container-fluid sct__homepage">
+<section id="homepage" class="container-fluid sct__homepage">
     <div class="col-lg-11 row sct__contentWrapper sct__contentWrapper--noMargin" style="height: 100%;">
         <?php 
         // Notificações

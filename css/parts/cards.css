@@ -71,7 +71,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     background: #F2F2F2;
     border-radius: 6px;
     width: calc(100% - 110px);
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 30px; } }
 
 @media (min-width: 1200px) {

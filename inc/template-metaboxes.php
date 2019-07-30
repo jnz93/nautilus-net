@@ -60,7 +60,7 @@ function render_ipt_speed_upload($post){
 function render_ipt_plan_price($post){
     $curr_val       = get_post_meta($post->ID, 'plan_price', true);
     ?>
-    <input type="number" name="plan_price" id="plan_price" class="" placeholder="<?php echo ($curr_val != "" ? $curr_val : "Apenas números") ?>" value="<?php echo ($curr_val != "" ? $curr_val : "")?>">
+    <input type="text" name="plan_price" id="plan_price" class="" placeholder="<?php echo ($curr_val != "" ? $curr_val : "Apenas números") ?>" value="<?php echo ($curr_val != "" ? $curr_val : "")?>">
     <?php
 }
 

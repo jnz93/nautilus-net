@@ -89,7 +89,7 @@ if( !function_exists('get_notifications') ){
             while( $notifications->have_posts() ){
                 $notifications->the_post();
                 $post_id        = get_the_ID();
-                $publish_date   = get_the_date('l,j,F', $post_id);
+                $publish_date   = get_the_date('l, j, F', $post_id);
                 $post_title     = get_the_title($post_id);
                 $post_subtitle  = get_post_meta($post_id, 'post_subtitle', true);
                 $post_content   = get_the_content();
