@@ -3,12 +3,12 @@
  * v1.0.0
  */
 
-/**
- * Smooth scroll na rolagem das seções clicando nos links
- * @link https://css-tricks.com/snippets/jquery/smooth-scrolling/
- */
 jQuery(document).ready(function(){
-
+    
+    /**
+     * Smooth scroll na rolagem das seções clicando nos links
+     * @link https://css-tricks.com/snippets/jquery/smooth-scrolling/
+     */
     jQuery('a[href*="#"]')
     // Remover links desnecessários da seleção
     .not('a[href="#"]')
@@ -33,15 +33,34 @@ jQuery(document).ready(function(){
         }
     
     });
+
+
+    /**
+     * Abrir e fechar a notificação
+     * 
+     */
+    // Elementos
+    var btnOpenNotification = jQuery('#openNotification'),
+        appNotification = jQuery('#appNotification'),
+        contentNotification = jQuery('.notification__content');
+
+    // Ações mediante ao clique no botão
+    btnOpenNotification.click(function(){
+
+        // Troca dos icones no botão
+        jQuery('#ico-show').toggleClass('notification__icon--show notification__icon--disabled');
+        jQuery('#ico-close').toggleClass('notification__icon--disabled notification__icon--show');
+
+        // Mostrar o conteúdo
+        appNotification.toggleClass('notification__wrapper--expand');
+        contentNotification.toggleClass('notification__content--show');
+    });
 });
 
 /**
  * Fixed Header - Após determinada rolagem da página adiciona ao main header a classe fixed. O contrário acontece quando o usuário voltar ao inicio.
  * 
  */
-// Elementos a serem manipulados
-
-// Rolagem da página
 jQuery(window).scroll(function(){
     var mainHeader = jQuery('.mainHeader');
     var offSetTop = jQuery(this).scrollTop();
@@ -53,4 +72,4 @@ jQuery(window).scroll(function(){
         mainHeader.removeClass('mainHeader__desktop--fixed').addClass('mainHeader__desktop--normal');
     }
 
-})
+});
