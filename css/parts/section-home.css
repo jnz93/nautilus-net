@@ -55,7 +55,9 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 992px) {
   .sctHeader {
+    max-width: 960px;
     min-height: 120px;
+    margin: auto;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -67,7 +69,6 @@ p, ul, ol, li, span, input, label, textarea, button {
     font-weight: 700;
     color: #333333;
     line-height: 1.8;
-    max-width: 960px;
     margin: 15px auto; } }
 
 .sctHeader__subtitle {

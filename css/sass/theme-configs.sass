@@ -60,12 +60,15 @@ p, ul, ol, li, span, input, label, textarea, button
 // Header das seções
 .sctHeader
     @include respond-above('md')
+        max-width: 960px
         min-height: 120px
+        margin: auto
         text-align: center
 
         display: flex
         flex-wrap: wrap
         align-items: center
+        
 
     // Título
     &__title
@@ -75,7 +78,6 @@ p, ul, ol, li, span, input, label, textarea, button
             color: $blackMedium
             line-height: 1.8
 
-            max-width: 960px
             margin: 15px auto
 
     &__subtitle
