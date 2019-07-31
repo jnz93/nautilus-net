@@ -16,25 +16,32 @@ p, ul, ol, li, span, input, label, textarea, button {
   font-family: 'Hind'; }
 
 @media (min-width: 992px) {
+  .body-content {
+    margin-top: 90px; } }
+
+@media (min-width: 992px) {
   .sct__homepage {
     height: calc(100vh - 90px); } }
 
 @media (min-width: 992px) {
   .sct__benefits {
     min-height: calc(100vh - 100px);
-    padding: 50px 0;
+    padding: 0;
+    padding-top: 100px;
     margin: 50px 0; } }
 
 @media (min-width: 992px) {
   .sct__plans {
     min-height: calc(100vh - 100px);
-    padding: 50px 0;
+    padding: 0;
+    padding-top: 100px;
     margin: 50px 0; } }
 
 @media (min-width: 992px) {
   .sct__contact {
     min-height: calc(100vh - 100px);
-    padding: 50px 0;
+    padding: 0;
+    padding-top: 100px;
     margin: 50px 0; } }
 
 @media (min-width: 992px) {
@@ -56,7 +63,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 992px) {
   .sctHeader__title, .sctHeader__subtitle {
-    font-size: 3.6em;
+    font-size: 3.2em;
     font-weight: 700;
     color: #333333;
     line-height: 1.8;
@@ -69,9 +76,21 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 .mainHeader {
   background: none; }
-  @media (min-width: 576px) {
-    .mainHeader {
-      height: 90px; } }
+  @media (min-width: 992px) {
+    .mainHeader__desktop {
+      width: 100%;
+      height: 90px;
+      z-index: 999; } }
+  @media (min-width: 992px) {
+    .mainHeader__desktop--normal {
+      top: 0;
+      position: absolute; } }
+  @media (min-width: 992px) {
+    .mainHeader__desktop--fixed {
+      background: #FFFFFF;
+      box-shadow: 0px 0px 3px #F2F2F2;
+      top: 0;
+      position: fixed; } }
 
 @media (min-width: 992px) {
   .logo {

@@ -19,7 +19,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header id="" class="mainHeader">
+    <header id="" class="mainHeader mainHeader__desktop mainHeader__desktop--normal">
         <div class="row container-fluid"> <!-- Container-->
             <div class="col-xs-10 col-sm-6 col-md-4 col-lg-4">
                 <?php 

@@ -13,6 +13,11 @@ h1, h2, h3, h4, h5, h6, figcaption
 p, ul, ol, li, span, input, label, textarea, button
     font-family: 'Hind'
 
+// body site
+.body-content
+    @include respond-above('md')
+        margin-top: 90px
+
 // Seções
 .sct
     // Home/Sliders
@@ -24,21 +29,24 @@ p, ul, ol, li, span, input, label, textarea, button
     &__benefits
         @include respond-above('md')
             min-height: calc(100vh - 100px)
-            padding: 50px 0
+            padding: 0
+            padding-top: 100px
             margin: 50px 0
 
     // Planos
     &__plans
         @include respond-above('md')
             min-height: calc(100vh - 100px)
-            padding: 50px 0
+            padding: 0
+            padding-top: 100px
             margin: 50px 0
     
     // Contato
     &__contact
         @include respond-above('md')
             min-height: calc(100vh - 100px)
-            padding: 50px 0
+            padding: 0
+            padding-top: 100px
             margin: 50px 0
 
     &__contentWrapper
@@ -62,7 +70,7 @@ p, ul, ol, li, span, input, label, textarea, button
     // Título
     &__title
         @include respond-above('md')
-            font-size: $fs-36
+            font-size: $fs-32
             font-weight: $semi-bold
             color: $blackMedium
             line-height: 1.8

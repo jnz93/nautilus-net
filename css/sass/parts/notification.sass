@@ -48,10 +48,11 @@
     // Wrapper dos icones
     &__iconWrap
         @include respond-above('md')
+            background: $white
             width: 36px
             height: 36px
 
-            border: 2px solid $blueMain
+            border: 1px solid $blueMain
             border-radius: 100%
 
             position: absolute
@@ -63,11 +64,25 @@
             justify-content: center
 
             cursor: pointer
+            outline: none
+
+        &--disabled
+            @include respond-above('md')
+                display: none
 
     // Icones
     &__icon
         @include respond-above('md')
             fill: $blueMain
+            transition: .4s
+
+        &--disabled
+            opacity: 0
+            display: none
+
+        &--show
+            opacity: 1
+            display: block
     
     // Data
     &__date

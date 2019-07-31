@@ -17,25 +17,32 @@ p, ul, ol, li, span, input, label, textarea, button {
   font-family: 'Hind'; }
 
 @media (min-width: 992px) {
+  .body-content {
+    margin-top: 90px; } }
+
+@media (min-width: 992px) {
   .sct__homepage {
     height: calc(100vh - 90px); } }
 
 @media (min-width: 992px) {
   .sct__benefits {
     min-height: calc(100vh - 100px);
-    padding: 50px 0;
+    padding: 0;
+    padding-top: 100px;
     margin: 50px 0; } }
 
 @media (min-width: 992px) {
   .sct__plans {
     min-height: calc(100vh - 100px);
-    padding: 50px 0;
+    padding: 0;
+    padding-top: 100px;
     margin: 50px 0; } }
 
 @media (min-width: 992px) {
   .sct__contact {
     min-height: calc(100vh - 100px);
-    padding: 50px 0;
+    padding: 0;
+    padding-top: 100px;
     margin: 50px 0; } }
 
 @media (min-width: 992px) {
@@ -57,7 +64,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 992px) {
   .sctHeader__title, .sctHeader__subtitle {
-    font-size: 3.6em;
+    font-size: 3.2em;
     font-weight: 700;
     color: #333333;
     line-height: 1.8;
@@ -102,9 +109,10 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 992px) {
   .notification__iconWrap {
+    background: #FFFFFF;
     width: 36px;
     height: 36px;
-    border: 2px solid #2340BC;
+    border: 1px solid #2340BC;
     border-radius: 100%;
     position: absolute;
     top: -30px;
@@ -112,11 +120,25 @@ p, ul, ol, li, span, input, label, textarea, button {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer; } }
+    cursor: pointer;
+    outline: none; } }
+
+@media (min-width: 992px) {
+  .notification__iconWrap--disabled {
+    display: none; } }
 
 @media (min-width: 992px) {
   .notification__icon {
-    fill: #2340BC; } }
+    fill: #2340BC;
+    transition: .4s; } }
+
+.notification__icon--disabled {
+  opacity: 0;
+  display: none; }
+
+.notification__icon--show {
+  opacity: 1;
+  display: block; }
 
 @media (min-width: 992px) {
   .notification__date {

@@ -8,10 +8,24 @@
 // Header
 .mainHeader
     background: none
+    
+    &__desktop
+        @include respond-above('md')
+            width: 100%
+            height: 90px
+            z-index: 999
 
-    @include respond-above('xs')
-        height: 90px
+        &--normal
+            @include respond-above('md')
+                top: 0
+                position: absolute
 
+        &--fixed
+            @include respond-above('md')
+                background: $white
+                box-shadow: 0px 0px 3px $grayLight
+                top: 0
+                position: fixed
 // Logotipo
 .logo
     @include respond-above('md')

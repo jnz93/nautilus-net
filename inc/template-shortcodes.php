@@ -95,9 +95,11 @@ if( !function_exists('get_notifications') ){
                 $post_content   = get_the_content();
                 // $post_thumb_url = get_the_post_thumbnail_url($post_id, 'large');
 
-                $output .= '<div id="" class="notification notification__wrapper--normal">';
-                $output .= '<span id="" class="notification__iconWrap"><i class="notification__icon" data-eva="bell" data-eva-fill="" data-eva-height="24" data-eva-width="24" data-eva-animation=""></i></span>
-                            <span id="" class="notification__iconWrap" style="display: none;"><i class="notificationWrapper__icon" data-eva="close" data-eva-fill="" data-eva-height="24" data-eva-width="24" data-eva-animation=""></i></span>';
+                $output .= '<div id="appNotification" class="notification notification__wrapper--normal">';
+                $output .= '<button id="openNotification" class="notification__iconWrap">
+                                <i id="ico-show" class="notification__icon notification__icon--show" data-eva="bell" data-eva-fill="" data-eva-height="24" data-eva-width="24" data-eva-animation=""></i>
+                                <i id="ico-close" class="notification__icon notification__icon--disabled" data-eva="close" data-eva-fill="" data-eva-height="24" data-eva-width="24" data-eva-animation=""></i>
+                            </button>';
                 
                 $output .= '<article id="notification-'. $post_id .'" class="notification__content notification__content--hide">';
                 $output .= '<div id="" class="col-md-12 col-lg-12">
