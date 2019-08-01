@@ -92,6 +92,12 @@ p, ul, ol, li, span, input, label, textarea, button {
   font-size: 1.8em;
   font-weight: 300; }
 
+@media (max-width: 767px) {
+  .articleHome {
+    width: 100%;
+    height: calc(100vh - 30vh);
+    margin-top: 40px; } }
+
 @media (min-width: 992px) {
   .articleHome {
     height: 90%;
@@ -103,24 +109,36 @@ p, ul, ol, li, span, input, label, textarea, button {
   align-content: center; }
 
 .articleHome__title {
-  margin: 0; }
+  margin: 0;
+  font-weight: 900;
+  color: #333333;
+  line-height: 1.8; }
+  @media (max-width: 767px) {
+    .articleHome__title {
+      font-size: 2.4em;
+      margin-bottom: 10px; } }
   @media (min-width: 992px) {
     .articleHome__title {
       font-size: 4.6em;
-      font-weight: 900;
-      color: #333333;
-      line-height: 1.6;
       margin-bottom: 15px; } }
 
 .articleHome__excerpt {
-  margin: 0; }
+  margin: 0;
+  font-weight: 300;
+  color: #404040;
+  line-height: 1.7; }
+  @media (max-width: 767px) {
+    .articleHome__excerpt {
+      font-size: 1.6em;
+      margin-bottom: 15px; } }
   @media (min-width: 992px) {
     .articleHome__excerpt {
       font-size: 1.8em;
-      font-weight: 300;
-      color: #404040;
-      line-height: 1.7;
       margin-bottom: 45px; } }
+
+@media (max-width: 767px) {
+  .articleHome button {
+    display: none; } }
 
 .articleHome__thumbContainer {
   margin: 0;
@@ -128,3 +146,6 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 .articleHome__img {
   width: 100%; }
+  @media (max-width: 767px) {
+    .articleHome__img {
+      box-shadow: -10px 10px 10px #E8E8E8; } }

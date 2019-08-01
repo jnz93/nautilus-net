@@ -96,8 +96,9 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (max-width: 767px) {
   .notification {
     position: absolute;
-    top: 120px;
-    left: 15px; } }
+    top: 100px;
+    right: auto;
+    z-index: 9999; } }
 
 @media (min-width: 992px) {
   .notification {
@@ -125,8 +126,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       background: #FFFFFF;
       box-shadow: 0px 0px 4px #EDEDED;
       border: none;
-      border-radius: 4px;
-      z-index: 99; } }
+      border-radius: 4px; } }
   @media (min-width: 992px) {
     .notification__wrapper--expand {
       width: 390px;
@@ -152,8 +152,8 @@ p, ul, ol, li, span, input, label, textarea, button {
   outline: none; }
   @media (max-width: 767px) {
     .notification__iconWrap {
-      top: -40px;
-      left: 0; } }
+      top: -80px;
+      right: 60px; } }
   @media (min-width: 992px) {
     .notification__iconWrap {
       top: -30px;

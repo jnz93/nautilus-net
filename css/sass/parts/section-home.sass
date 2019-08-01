@@ -7,6 +7,11 @@
 
 // Articles dos sliders
 .articleHome
+    @include respond-below('sm')
+        width: 100%
+        height: calc(100vh - 30vh)
+        margin-top: 40px
+        
     @include respond-above('md')
         height: 90%
         margin: 2.5% auto
@@ -21,22 +26,36 @@
     // Título
     &__title
         margin: 0
+        font-weight: $bold
+        color: $blackMedium
+        line-height: 1.8
+        
+        @include respond-below('sm')
+            font-size: $fs-24
+            margin-bottom: 10px
+
         @include respond-above('md')
             font-size: $fs-46
-            font-weight: $bold
-            color: $blackMedium
-            line-height: 1.6
             margin-bottom: 15px
 
     // Subtitulo
     &__excerpt
         margin: 0
+        font-weight: $thin
+        color: $blackLight
+        line-height: 1.7
+
+        @include respond-below('sm')
+            font-size: $fs-16
+            margin-bottom: 15px
+            
         @include respond-above('md')
             font-size: $fs-18
-            font-weight: $thin
-            color: $blackLight
-            line-height: 1.7
             margin-bottom: 45px
+
+    button
+        @include respond-below('sm')
+            display: none
 
     // Imagem/thumb
     &__thumbContainer
@@ -45,3 +64,6 @@
 
     &__img
         width: 100%
+
+        @include respond-below('sm')
+            box-shadow: -10px 10px 10px $grayDark
