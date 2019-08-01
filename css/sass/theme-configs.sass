@@ -32,7 +32,7 @@ p, ul, ol, li, span, input, label, textarea, button
     // Beneficios
     &__benefits
         @include respond-below('sm')
-            display: none
+            // display: none
 
         @include respond-above('md')
             min-height: calc(100vh - 100px)
@@ -72,28 +72,41 @@ p, ul, ol, li, span, input, label, textarea, button
             margin: 0 auto
 // Header das seções
 .sctHeader
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    
+    margin: auto
+    text-align: center
+
+    @include respond-below('sm')
+        width: 90%
+
     @include respond-above('md')
         max-width: 960px
         min-height: 120px
-        margin: auto
-        text-align: center
 
-        display: flex
-        flex-wrap: wrap
-        align-items: center
-        
 
     // Título
     &__title
+        font-weight: $semi-bold
+        color: $blackMedium
+        line-height: 1.8
+
+        @include respond-below('sm')
+            font-size: $fs-21
+            margin: 0 auto
+            margin-bottom: 10px
+            
         @include respond-above('md')
             font-size: $fs-32
-            font-weight: $semi-bold
-            color: $blackMedium
-            line-height: 1.8
-
-            margin: 15px auto
+            margin: 0 auto
+            margin-top: 15px
 
     &__subtitle
         @extend .sctHeader__title
         font-size: $fs-18
         font-weight: $thin
+
+        @include respond-below('sm')
+            font-size: $fs-16
