@@ -22,11 +22,18 @@ p, ul, ol, li, span, input, label, textarea, button
 .sct
     // Home/Sliders
     &__homepage
+        @include respond-below('sm')
+            height: calc(100vh - 80px)
+            margin-top: 80px
+            
         @include respond-above('md')
             height: calc(100vh - 90px)
 
     // Beneficios
     &__benefits
+        @include respond-below('sm')
+            display: none
+
         @include respond-above('md')
             min-height: calc(100vh - 100px)
             padding: 0
@@ -35,6 +42,9 @@ p, ul, ol, li, span, input, label, textarea, button
 
     // Planos
     &__plans
+        @include respond-below('sm')
+            display: none
+
         @include respond-above('md')
             min-height: calc(100vh - 100px)
             padding: 0
@@ -43,6 +53,9 @@ p, ul, ol, li, span, input, label, textarea, button
     
     // Contato
     &__contact
+        @include respond-below('sm')
+            display: none
+
         @include respond-above('md')
             min-height: calc(100vh - 100px)
             padding: 0

@@ -8,49 +8,101 @@
 // Header
 .mainHeader
     background: none
+    z-index: 999
+    position: absolute
+    top: 0
+    left: 0
+
+    @include respond-below('sm')
+        width: 100%
+        height: 75px        
+
+    @include respond-above('md')
+        width: 100%
+        height: 90px
     
-    &__desktop
-        @include respond-above('md')
-            width: 100%
-            height: 90px
-            z-index: 999
-
-        &--normal
-            @include respond-above('md')
-                top: 0
-                position: absolute
-
+    // Tipos do header conforme a rolagem da página
+    &__type
+        
         &--fixed
             @include respond-above('md')
                 background: $white
                 box-shadow: 0px 0px 3px $grayLight
                 top: 0
                 position: fixed
+    // Container flex
+    &__flexContainer
+        display: flex
+        
+
+    // Botões do menu mobile
+    &__btnMenu
+        @include respond-below('sm')
+            background: none
+            width: 48px
+            height: 48px
+            border: none
+
+            margin: auto
+            margin-top: 15px
+
+            display: flex
+            align-items: center
+
+        @include respond-above('md')
+            display: none
+
+    &__icoMenu
+        fill: $blueMain
+        width: 36px
+        height: 36px
+
+        &--disabled
+            display: none
+            
 // Logotipo
 .logo
+    margin: 0
+    padding: 0
+
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    
+    @include respond-below('sm')
+        height: 80px
+        
     @include respond-above('md')
         height: 90px
-        margin: 0
-        padding: 0
-
-        display: flex
-        flex-wrap: wrap
-        align-items: center
 
     &__image
+        @include respond-below('sm')
+            width: auto
+            height: 60px
+            margin-right: 5px
+
         @include respond-above('md')
             width: auto
             height: 80px
             margin-right: 15px
 
     &__title
-        @include respond-above('md')
+        @include respond-below('sm')
             font-size: $fs-24
             font-weight: $semi-bold
             color: $blackLight
 
+        @include respond-above('md')
+            font-size: $fs-32
+            font-weight: $semi-bold
+            color: $blackLight
+            text-transform: capitalize
+
 // Main menu container
 .mainMenuContainer
+    @include respond-below('sm')
+        display: none
+
     @include respond-above('md')
         height: 100%
         display: flex

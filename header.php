@@ -19,9 +19,9 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header id="" class="mainHeader mainHeader__desktop mainHeader__desktop--normal">
-        <div class="row container-fluid"> <!-- Container-->
-            <div class="col-xs-10 col-sm-6 col-md-4 col-lg-4">
+    <header id="" class="mainHeader">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mainHeader__flexContainer"> <!-- Container-->
+            <div class="col-xs-9 col-sm-6 col-md-4 col-lg-4">
                 <?php 
                     if( has_custom_logo() ){
                         $logo_id        = get_theme_mod('custom_logo');
@@ -40,10 +40,13 @@
                 ?>
             </div> <!-- #End logotipo -->
 
-            <div class="col-xs-2 col-sm-6 col-md-8 col-lg-8">
+            <div class="col-xs-3 col-sm-6 col-md-8 col-lg-8">
                 <!-- Botões menu mobile -->
-                <!-- <span id="" class=""><i class="" data-eva=""></i></span>
-                <span id="" class=""><i class="" data-eva=""></i></span> -->
+                <button id="btn-menu-mobile" class="mainHeader__btnMenu">
+                    <i class="mainHeader__icoMenu" data-eva="menu" data-eva-width="" data-eva-height=""></i>
+                    <i class="mainHeader__icoMenu mainHeader__icoMenu--disabled" data-eva="close" data-eva-width="" data-eva-height=""></i>
+                </button>
+                
                 <?php 
                 if( shortcode_exists('show_menu_navegacao') ){
                     do_shortcode('[show_menu_navegacao]');

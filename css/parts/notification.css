@@ -20,9 +20,18 @@ p, ul, ol, li, span, input, label, textarea, button {
   .body-content {
     margin-top: 90px; } }
 
+@media (max-width: 767px) {
+  .sct__homepage {
+    height: calc(100vh - 80px);
+    margin-top: 80px; } }
+
 @media (min-width: 992px) {
   .sct__homepage {
     height: calc(100vh - 90px); } }
+
+@media (max-width: 767px) {
+  .sct__benefits {
+    display: none; } }
 
 @media (min-width: 992px) {
   .sct__benefits {
@@ -31,12 +40,20 @@ p, ul, ol, li, span, input, label, textarea, button {
     padding-top: 100px;
     margin: 50px 0; } }
 
+@media (max-width: 767px) {
+  .sct__plans {
+    display: none; } }
+
 @media (min-width: 992px) {
   .sct__plans {
     min-height: calc(100vh - 100px);
     padding: 0;
     padding-top: 100px;
     margin: 50px 0; } }
+
+@media (max-width: 767px) {
+  .sct__contact {
+    display: none; } }
 
 @media (min-width: 992px) {
   .sct__contact {
