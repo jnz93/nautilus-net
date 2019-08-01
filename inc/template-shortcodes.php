@@ -211,7 +211,7 @@ if( !function_exists('get_article_benefits') ){
                 $post_content   = get_the_content();
                 $post_icon      = get_post_meta($post_id, 'benefit_icon', true);
 
-                $output .= '<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                $output .= '<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
                                 <article id="benefit-'. $post_id .'" class="benefitCard">
                                     <div class="col-12">
                                         <span class="benefitCard__wrapIcon">

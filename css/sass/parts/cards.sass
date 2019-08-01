@@ -10,6 +10,19 @@
 // -> v1.0
 /////////////////////////////////////////////
 .benefitCard
+    @include respond-below('sm')
+        background: $grayLight
+        border-radius: 3px
+        width: calc(100% - 10px)
+        min-height: 140px
+        padding: 5px
+        margin: 12px auto
+
+        display: flex
+        flex-wrap: wrap
+        align-content: center
+        justify-content: center
+
     @include respond-above('lg')
         background: $grayLight
         border-radius: 6px
@@ -19,23 +32,40 @@
 
     // span.wrapIcon
     &__wrapIcon
+        background: $white
+        width: 48px
+        height: 48px
+        border-radius: 100%
+
+        display: flex
+        align-items: center
+        justify-content: center
+        
+        @include respond-below('sm')
+            margin: auto
+            background: $blueMain
+
         @include respond-above('lg')
-            background: $white
-            width: 48px
-            height: 48px
-            border-radius: 100%
             margin: 0
             margin-bottom: 15px
             
-            display: flex
-            align-items: center
-            justify-content: center
     
     &__icon
-        fill: $blueMain
+        @include respond-below('sm')
+            fill: $white
+
+        @include respond-above('md')
+            fill: $blueMain
 
     // Título
     &__title
+        @include respond-below('sm')
+            font-size: $fs-12
+            font-weight: $regular
+            line-height: 1.6
+            color: $blueMain
+            text-align: center
+
         @include respond-above('md')
             font-size: $fs-16
             font-weight: $semi-bold
@@ -47,6 +77,9 @@
 
     // Texto
     &__text
+        @include respond-below('sm')
+            display: none
+
         @include respond-above('md')
             font-size: $fs-16
             font-weight: $thin

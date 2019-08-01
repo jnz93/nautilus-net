@@ -99,6 +99,19 @@ p, ul, ol, li, span, input, label, textarea, button {
       .sctHeader__subtitle {
         font-size: 1.6em; } }
 
+@media (max-width: 767px) {
+  .benefitCard {
+    background: #F2F2F2;
+    border-radius: 3px;
+    width: calc(100% - 10px);
+    min-height: 140px;
+    padding: 5px;
+    margin: 12px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center; } }
+
 @media (min-width: 1200px) {
   .benefitCard {
     background: #F2F2F2;
@@ -107,20 +120,38 @@ p, ul, ol, li, span, input, label, textarea, button {
     margin: 50px auto;
     padding: 30px; } }
 
-@media (min-width: 1200px) {
-  .benefitCard__wrapIcon {
-    background: #FFFFFF;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    margin: 0;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center; } }
+.benefitCard__wrapIcon {
+  background: #FFFFFF;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media (max-width: 767px) {
+    .benefitCard__wrapIcon {
+      margin: auto;
+      background: #2340BC; } }
+  @media (min-width: 1200px) {
+    .benefitCard__wrapIcon {
+      margin: 0;
+      margin-bottom: 15px; } }
 
-.benefitCard__icon {
-  fill: #2340BC; }
+@media (max-width: 767px) {
+  .benefitCard__icon {
+    fill: #FFFFFF; } }
+
+@media (min-width: 992px) {
+  .benefitCard__icon {
+    fill: #2340BC; } }
+
+@media (max-width: 767px) {
+  .benefitCard__title {
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #2340BC;
+    text-align: center; } }
 
 @media (min-width: 992px) {
   .benefitCard__title {
@@ -131,6 +162,10 @@ p, ul, ol, li, span, input, label, textarea, button {
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 15px; } }
+
+@media (max-width: 767px) {
+  .benefitCard__text {
+    display: none; } }
 
 @media (min-width: 992px) {
   .benefitCard__text {
