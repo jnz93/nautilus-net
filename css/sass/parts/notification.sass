@@ -8,6 +8,11 @@
 
     
 .notification
+    @include respond-below('sm')
+        position: absolute
+        top: 120px
+        left: 15px
+
     @include respond-above('md')
         position: absolute
         top: 80px
@@ -15,12 +20,11 @@
     
     // Spacer/borda
     &__spacer
-        @include respond-above('md')
-            width: 100%
-            height: 1px 
-            background: $graySecondary
-            margin: 15px auto
-            display: block
+        width: 100%
+        height: 1px 
+        background: $graySecondary
+        margin: 15px auto
+        display: block
 
     // Wrapper do bloco
     &__wrapper
@@ -35,6 +39,14 @@
 
         // Tamanho aberto
         &--expand
+            @include respond-below('sm')
+                width: calc(100% - 40px)
+                background: $white
+                box-shadow: 0px 0px 4px $graySecondary
+                border: none
+                border-radius: 4px
+                z-index: 99
+
             @include respond-above('md')
                 width: 390px
                 height: auto
@@ -47,24 +59,28 @@
 
     // Wrapper dos icones
     &__iconWrap
+        background: $white
+        width: 36px
+        height: 36px
+
+        border: 1px solid $blueMain
+        border-radius: 100%
+
+        position: absolute
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+        cursor: pointer
+        outline: none
+        @include respond-below('sm')
+            top: -40px
+            left: 0
+
         @include respond-above('md')
-            background: $white
-            width: 36px
-            height: 36px
-
-            border: 1px solid $blueMain
-            border-radius: 100%
-
-            position: absolute
             top: -30px
             left: -20px
-
-            display: flex
-            align-items: center
-            justify-content: center
-
-            cursor: pointer
-            outline: none
 
         &--disabled
             @include respond-above('md')
@@ -72,9 +88,8 @@
 
     // Icones
     &__icon
-        @include respond-above('md')
-            fill: $blueMain
-            transition: .4s
+        fill: $blueMain
+        transition: .4s
 
         &--disabled
             opacity: 0
@@ -86,44 +101,52 @@
     
     // Data
     &__date
-        @include respond-above('md')
-            font-size: $fs-12
-            font-weight: $thin
-            color: $blackMedium
+        font-size: $fs-12
+        font-weight: $thin
+        color: $blackMedium
+        display: block
+        margin-bottom: 15px
 
     // Título
     &__title
+        font-size: $fs-18
+        font-weight: $semi-bold
+        color: $blackMedium
+        line-height: 1.6
+        margin: 0
+
+        @include respond-below('sm')
+            margin-bottom: 8px
+
         @include respond-above('md')
-            font-size: $fs-18
-            font-weight: $semi-bold
-            color: $blackMedium
-            line-height: 1.6
-            margin: 0
             margin-top: 15px
     
     // Subtitulo
     &__subtitle
-        @include respond-above('md')
-            font-size: $fs-14
-            font-weight: $regular
-            color: $blackLight
-            line-height: 1.6
-            margin: 0
+        font-size: $fs-14
+        font-weight: $regular
+        color: $blackLight
+        line-height: 1.6
+        margin: 0
 
     // Texto
     &__text
-        @include respond-above('md')
-            font-size: $fs-14
-            font-weight: $thin
-            color: $blackMedium
-            line-height: 1.6
+        font-size: $fs-14
+        font-weight: $thin
+        color: $blackMedium
+        line-height: 1.6
 
     // article/content
     &__content
+        margin: 0 auto
+
+        @include respond-below('sm')
+            width: calc(100% - 20px)
+            padding: 10px 
+            
         @include respond-above('md')
             width: calc(100% - 50px)
             padding: 20px
-            margin: 0 auto
 
         // Opções de visualização
         &--hide
