@@ -99,12 +99,14 @@ if( ! function_exists('nautilus_enqueue_scripts') ){
         wp_register_script('slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), true);
         wp_register_script('eva-icons', 'https://unpkg.com/eva-icons', array(), true);
         wp_register_script('tpl-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), true);
+        wp_register_script('tpl-sliders', get_template_directory_uri() . '/js/sliders.js', array('slick-js'), true);
 
         // Lista de scripts a serem carregados
         wp_enqueue_script('jquery');
         wp_enqueue_script('slick-slider');
         wp_enqueue_script('eva-icons');
         wp_enqueue_script('tpl-functions');
+        wp_enqueue_script('tpl-sliders');
     }
     add_action('wp_enqueue_scripts', 'nautilus_enqueue_scripts');
 }
