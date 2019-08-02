@@ -270,9 +270,21 @@ if( !function_exists('get_plans') ){
                 $plan_txt_btn   = get_post_meta($post_id, 'plan_button_text', true);
                 $plan_payment_tag   = get_post_meta($post_id, 'payment_tag', true);
 
-                $output .= '<div class="col-xs-10 col-sm-10 col-md-2 col-lg-2">
+                // Tratamento do título em partes
+                $plan_title_arr = explode(' ', $post_title);
+                $plan_title_pt1 = $plan_title_arr[0];
+                $plan_title_pt2 = $plan_title_arr[1];
+
+                $plan_title_formated = $plan_title_pt1 .' <span>'. $plan_title_pt2 .'</span>';
+
+                $output .= '<div class="col-xs-12 col-sm-10 col-md-2 col-lg-2">
                                 <article id="plano-'. $post_id .'" class="planCard">
-                                    <h1 class="planCard__title" title="'. $post_title .'">'. $post_title .'</h1>
+                                    <h1 class="planCard__title planCard__title--hideMobile" title="'. $post_title .'">'. $post_title .'</h1>
+                                    <div class="planCard__bubbleTitle planCard__bubbleTitle--hideDesktop">
+                                        <h1 class="planCard__title">'. $plan_title_pt1 .'</h1>
+                                        <h6 class="planCard__subtitle">'. $plan_title_pt2 .'</h6>
+                                    </div>
+
                                     <span class="planCard__spacer"></span>
                                     <span class="planCard__label">tipo da conexão</span>
                                     <div class="planCard__content">

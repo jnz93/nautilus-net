@@ -32,7 +32,8 @@ p, ul, ol, li, span, input, label, textarea, button
     // Beneficios
     &__benefits
         @include respond-below('sm')
-            // display: none
+            padding-top: 90px
+            margin: 25px auto
 
         @include respond-above('md')
             min-height: calc(100vh - 100px)
@@ -43,7 +44,8 @@ p, ul, ol, li, span, input, label, textarea, button
     // Planos
     &__plans
         @include respond-below('sm')
-            display: none
+            padding-top: 90px
+            margin: 25px auto
 
         @include respond-above('md')
             min-height: calc(100vh - 100px)
@@ -54,7 +56,8 @@ p, ul, ol, li, span, input, label, textarea, button
     // Contato
     &__contact
         @include respond-below('sm')
-            display: none
+            padding-top: 90px
+            margin: 25px auto
 
         @include respond-above('md')
             min-height: calc(100vh - 100px)
@@ -63,6 +66,9 @@ p, ul, ol, li, span, input, label, textarea, button
             margin: 50px 0
 
     &__contentWrapper
+        @include respond-below('sm')
+            margin: 50px auto
+
         @include respond-above('md')
             margin: 80px auto
             justify-content: center

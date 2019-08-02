@@ -91,45 +91,85 @@
 // -> v1.0
 /////////////////////////////////////////////
 .planCard
+    height: auto
+    text-align: center
+    border-radius: 6px
+
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    @include respond-below('sm')
+        width: calc(100% - 40px)
+        padding: 20px
+        box-shadow: 0px 0px 6px $grayDark
+
     @include respond-above('md')
         width: calc(100% - 30px)
-        height: auto
         padding: 15px
-        text-align: center
-        border-radius: 6px
-
-        display: flex
-        flex-wrap: wrap
-        justify-content: center
-
-        box-shadow: 0px 0px 3px $graySecondary
+        box-shadow: 0px 0px 3px $grayDark
 
     // Borda
     &__spacer
+        width: 100%
+        height: 1px
         @include respond-above('md')
-            width: 100%
-            height: 1px
             background: $graySecondary
 
     // Título
     &__title
+        text-transform: uppercase
+        margin: 0
+        @include respond-below('sm')
+            font-size: $fs-36
+            color: $white
+
         @include respond-above('md')
             font-size: $fs-24
-            text-transform: uppercase
             color: $blueMain
-            margin: 0
             margin-bottom: 15px
+
+        &--hideMobile
+            @include respond-below('sm')
+                display: none
+    &__subtitle
+        width: 100%
+
+        @include respond-below('sm')
+            font-size: $fs-14
+            font-weight: $regular
+            color: $white
+            text-transform: uppercase
+            margin: 0
+
+    &__bubbleTitle
+        @include respond-below('sm')
+            background: $blueMain
+            width: 86px
+            height: 86px
+
+            margin: 15px auto
+            border-radius: 100%
+
+            display: flex
+            flex-wrap: wrap
+            align-content: center
+            justify-content: center
+
+        &--hideDesktop
+            @include respond-above('sm')
+                display: none
 
     // Label tipo da conexão
     &__label
-        @include respond-above('md')
-            font-size: $fs-14
-            color: $blackLight
-            border: 1px solid $grayDark
-            border-radius: 4px
-            padding: 5px 10px
-            display: inline-block
-            margin: 15px auto
+        font-size: $fs-12
+        color: $blackLight
+        text-transform: uppercase
+        border: 1px solid $grayDark
+        border-radius: 4px
+        padding: 5px 10px
+        display: inline-block
+        margin: 15px auto
 
     // Conteúdo
     &__content
@@ -148,19 +188,22 @@
             margin: 16px auto
 
     &__wrap
-        @include respond-above('md')
-            display: flex
-            align-items: flex-end
-            justify-content: center
-            margin: 20px auto
-            width: 100%
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        margin: 20px auto
+        width: 100%
 
     // Valor e tags de preço
     &__tag
+        font-weight: $regular
+        color: $blackLight
+
+        @include respond-below('sm')
+            font-size: $fs-12
+
         @include respond-above('md')
             font-size: $fs-14
-            font-weight: $regular
-            color: $blackLight
 
         &--alignStart
             align-self: flex-start
@@ -170,10 +213,10 @@
             align-self: flex-end
             
     &__price
+        font-size: $fs-36
+        color: $blackDark
+        margin: 0 3px
         @include respond-above('md')
-            font-size: $fs-36
-            color: $blackDark
-            margin: 0 3px
 
 /////////////////////////////////////////////
 // Contact card
@@ -269,3 +312,47 @@
 
         &--center
             text-align: center
+
+/////////////////////////////////////////////
+// Slick dots
+// -> v1.0
+/////////////////////////////////////////////
+.slick-dots
+    @include respond-below('sm')
+        width: 100%
+        height: 50px
+
+        padding: 0
+        margin: 15px auto
+        list-style: none
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+
+    li
+        width: 16px
+        height: 16px
+        border-radius: 100%
+        background: $graySecondary
+        color: $graySecondary
+
+        margin: auto 10px
+
+        button
+            width: 16px
+            height: 16px
+            border-radius: 100%
+            border: 1px solid $grayDark
+            background: $graySecondary
+            color: $graySecondary
+            outline: none
+
+    .slick-active
+        background: $blueMain
+        color: $blueMain
+
+        button
+            background: $blueMain
+            color: $blueMain

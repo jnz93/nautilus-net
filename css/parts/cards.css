@@ -27,6 +27,11 @@ p, ul, ol, li, span, input, label, textarea, button {
   .sct__homepage {
     height: calc(100vh - 90px); } }
 
+@media (max-width: 767px) {
+  .sct__benefits {
+    padding-top: 90px;
+    margin: 25px auto; } }
+
 @media (min-width: 992px) {
   .sct__benefits {
     min-height: calc(100vh - 100px);
@@ -36,7 +41,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (max-width: 767px) {
   .sct__plans {
-    display: none; } }
+    padding-top: 90px;
+    margin: 25px auto; } }
 
 @media (min-width: 992px) {
   .sct__plans {
@@ -47,7 +53,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (max-width: 767px) {
   .sct__contact {
-    display: none; } }
+    padding-top: 90px;
+    margin: 25px auto; } }
 
 @media (min-width: 992px) {
   .sct__contact {
@@ -55,6 +62,10 @@ p, ul, ol, li, span, input, label, textarea, button {
     padding: 0;
     padding-top: 100px;
     margin: 50px 0; } }
+
+@media (max-width: 767px) {
+  .sct__contentWrapper {
+    margin: 50px auto; } }
 
 @media (min-width: 992px) {
   .sct__contentWrapper {
@@ -174,83 +185,112 @@ p, ul, ol, li, span, input, label, textarea, button {
     color: #333333;
     line-height: 1.6; } }
 
-@media (min-width: 992px) {
-  .planCard {
-    width: calc(100% - 30px);
-    height: auto;
-    padding: 15px;
-    text-align: center;
-    border-radius: 6px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    box-shadow: 0px 0px 3px #EDEDED; } }
-
-@media (min-width: 992px) {
+.planCard {
+  height: auto;
+  text-align: center;
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  @media (max-width: 767px) {
+    .planCard {
+      width: calc(100% - 40px);
+      padding: 20px;
+      box-shadow: 0px 0px 6px #D4D4D4; } }
+  @media (min-width: 992px) {
+    .planCard {
+      width: calc(100% - 30px);
+      padding: 15px;
+      box-shadow: 0px 0px 3px #D4D4D4; } }
   .planCard__spacer {
     width: 100%;
-    height: 1px;
-    background: #EDEDED; } }
-
-@media (min-width: 992px) {
+    height: 1px; }
+    @media (min-width: 992px) {
+      .planCard__spacer {
+        background: #EDEDED; } }
   .planCard__title {
-    font-size: 2.4em;
     text-transform: uppercase;
-    color: #2340BC;
-    margin: 0;
-    margin-bottom: 15px; } }
-
-@media (min-width: 992px) {
+    margin: 0; }
+    @media (max-width: 767px) {
+      .planCard__title {
+        font-size: 3.6em;
+        color: #FFFFFF; } }
+    @media (min-width: 992px) {
+      .planCard__title {
+        font-size: 2.4em;
+        color: #2340BC;
+        margin-bottom: 15px; } }
+    @media (max-width: 767px) {
+      .planCard__title--hideMobile {
+        display: none; } }
+  .planCard__subtitle {
+    width: 100%; }
+    @media (max-width: 767px) {
+      .planCard__subtitle {
+        font-size: 1.4em;
+        font-weight: 500;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        margin: 0; } }
+  @media (max-width: 767px) {
+    .planCard__bubbleTitle {
+      background: #2340BC;
+      width: 86px;
+      height: 86px;
+      margin: 15px auto;
+      border-radius: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center; } }
+  @media (min-width: 768px) {
+    .planCard__bubbleTitle--hideDesktop {
+      display: none; } }
   .planCard__label {
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: #404040;
-    border: 1px solid #E8E8E8;
+    text-transform: uppercase;
+    border: 1px solid #D4D4D4;
     border-radius: 4px;
     padding: 5px 10px;
     display: inline-block;
-    margin: 15px auto; } }
-
-@media (min-width: 992px) {
-  .planCard__content {
-    margin: 5px auto; } }
-
-.planCard__content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0; }
-
-.planCard__content li {
-  font-size: 1.4em;
-  color: #404040;
-  line-height: 1.6;
-  margin: 16px auto; }
-
-@media (min-width: 992px) {
+    margin: 15px auto; }
+  @media (min-width: 992px) {
+    .planCard__content {
+      margin: 5px auto; } }
+  .planCard__content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .planCard__content li {
+    font-size: 1.4em;
+    color: #404040;
+    line-height: 1.6;
+    margin: 16px auto; }
   .planCard__wrap {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     margin: 20px auto;
-    width: 100%; } }
-
-@media (min-width: 992px) {
+    width: 100%; }
   .planCard__tag {
-    font-size: 1.4em;
     font-weight: 500;
-    color: #404040; } }
-
-.planCard__tag--alignStart {
-  align-self: flex-start;
-  margin-top: 10px; }
-
-.planCard__tag--alignEnd {
-  align-self: flex-end; }
-
-@media (min-width: 992px) {
+    color: #404040; }
+    @media (max-width: 767px) {
+      .planCard__tag {
+        font-size: 1.2em; } }
+    @media (min-width: 992px) {
+      .planCard__tag {
+        font-size: 1.4em; } }
+    .planCard__tag--alignStart {
+      align-self: flex-start;
+      margin-top: 10px; }
+    .planCard__tag--alignEnd {
+      align-self: flex-end; }
   .planCard__price {
     font-size: 3.6em;
     color: #262626;
-    margin: 0 3px; } }
+    margin: 0 3px; }
 
 @media (min-width: 992px) {
   .contactCard {
@@ -332,3 +372,37 @@ p, ul, ol, li, span, input, label, textarea, button {
   margin-bottom: 25px; }
   .contactCard__text--center {
     text-align: center; }
+
+@media (max-width: 767px) {
+  .slick-dots {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 15px auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; } }
+
+.slick-dots li {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: #EDEDED;
+  color: #EDEDED;
+  margin: auto 10px; }
+  .slick-dots li button {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    border: 1px solid #D4D4D4;
+    background: #EDEDED;
+    color: #EDEDED;
+    outline: none; }
+
+.slick-dots .slick-active {
+  background: #2340BC;
+  color: #2340BC; }
+  .slick-dots .slick-active button {
+    background: #2340BC;
+    color: #2340BC; }

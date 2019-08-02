@@ -29,6 +29,11 @@ p, ul, ol, li, span, input, label, textarea, button {
   .sct__homepage {
     height: calc(100vh - 90px); } }
 
+@media (max-width: 767px) {
+  .sct__benefits {
+    padding-top: 90px;
+    margin: 25px auto; } }
+
 @media (min-width: 992px) {
   .sct__benefits {
     min-height: calc(100vh - 100px);
@@ -38,7 +43,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (max-width: 767px) {
   .sct__plans {
-    display: none; } }
+    padding-top: 90px;
+    margin: 25px auto; } }
 
 @media (min-width: 992px) {
   .sct__plans {
@@ -49,7 +55,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (max-width: 767px) {
   .sct__contact {
-    display: none; } }
+    padding-top: 90px;
+    margin: 25px auto; } }
 
 @media (min-width: 992px) {
   .sct__contact {
@@ -57,6 +64,10 @@ p, ul, ol, li, span, input, label, textarea, button {
     padding: 0;
     padding-top: 100px;
     margin: 50px 0; } }
+
+@media (max-width: 767px) {
+  .sct__contentWrapper {
+    margin: 50px auto; } }
 
 @media (min-width: 992px) {
   .sct__contentWrapper {
