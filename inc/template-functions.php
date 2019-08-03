@@ -127,10 +127,13 @@ if( !function_exists('theme_options_page') ){
 function card_contact($icon, $title, $arr){
     
     $html = '';
-    $html .= '<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    $html .= '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                 <div class="contactCard">
                     <div class="contactCard__header">
-                        <i class="contactCard__icon" data-eva="'. $icon .'" data-eva-width="" data-eva-height="" data-eva-fill=""></i>
+                        <span class="contactCard__wrapIcon contactCard__wrapIcon--hideDesktop">
+                            <i class="contactCard__icon" data-eva="'. $icon .'" data-eva-width="" data-eva-height="36" data-eva-fill=""></i>    
+                        </span>
+                        <i class="contactCard__icon contactCard__icon--hideMobile" data-eva="'. $icon .'" data-eva-width="" data-eva-height="36" data-eva-fill=""></i>
                         <h3 class="contactCard__title contactCard__title--small contactCard__title--semiBold">'. $title .'</h3>
                     </div>
                     <span class="contactCard__spacer"></span>

@@ -223,22 +223,30 @@
 // -> v1.0
 /////////////////////////////////////////////
 .contactCard
+    padding: 10px
+    @include respond-below('sm')
+        width: calc(100% - 20px)
+        height: auto
+        margin: 15px auto
+        border-radius: 3px
+        box-shadow: 0px 0px 3px $grayDark
+
     @include respond-above('md')
         width: calc(100% - 50px)
         height: auto
         margin: 25px auto
-        padding: 10px
         border-radius: 3px
         box-shadow: 0px 0px 3px $graySecondary
 
     // Wrapper's
     &__wrapperFlexMid
+        display: flex
+        flex-wrap: wrap
+        align-content: center
+        justify-content: center
+        @include respond-below('sm')
+            margin-top: 50px
         @include respond-above('md')
-            display: flex
-            flex-wrap: wrap
-            align-content: center
-            justify-content: center
-
             padding: 0 15px
 
     // Spacer/borda
@@ -261,19 +269,54 @@
 
     // Corpo do card
     &__body
+        @include respond-below('sm')
+            display: none
+
         @include respond-above('md')
             width: 100%
             padding-left: 40px
 
+    // Wrapicon - Mobile solution
+    &__wrapIcon
+        @include respond-below('sm')
+            background: $blueMain
+            width: 48px
+            height: 48px
+            border-radius: 100%
+            margin: 10px auto
+
+            display: flex
+            align-items: center
+            justify-content: center
+
+        &--hideDesktop
+            @include respond-above('sm')
+                display: none
+
     // Ícone
     &__icon
+        @include respond-below('sm')
+            height: 32px
+            fill: $white
+
         @include respond-above('md')
             width: 22px
             fill: $blueMain
             margin-right: 15px
 
+        &--hideMobile
+            @include respond-below('sm')
+                display: none
+
     // Título do card
     &__title
+        @include respond-below('sm')
+            color: $blueMain
+            text-transform: uppercase
+            text-align: center
+            margin: 5px
+            line-height: 1.5
+
         @include respond-above('md')
             color: $blueMain
             text-transform: uppercase
@@ -281,6 +324,9 @@
 
         // Tamanhos
         &--small
+            @include respond-below('sm')
+                font-size: $fs-12
+
             @include respond-above('md')
                 font-size: $fs-16
 
