@@ -66,10 +66,9 @@ jQuery(window).scroll(function(){
     var offSetTop = jQuery(this).scrollTop();
     
     if( offSetTop >= 250){
-        mainHeader.removeClass('mainHeader__desktop--normal').addClass('mainHeader__desktop--fixed');
-        console.log(offSetTop);
+        mainHeader.addClass('mainHeader__type--fixed');
     } else{
-        mainHeader.removeClass('mainHeader__desktop--fixed').addClass('mainHeader__desktop--normal');
+        mainHeader.removeClass('mainHeader__type--fixed');
     }
 
 });
