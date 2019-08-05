@@ -31,7 +31,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (max-width: 767px) {
   .sct__benefits {
     padding-top: 90px;
-    margin: 25px auto; } }
+    margin: 25px auto;
+    position: relative; } }
 
 @media (min-width: 992px) {
   .sct__benefits {
@@ -168,7 +169,7 @@ p, ul, ol, li, span, input, label, textarea, button {
   @media (max-width: 767px) {
     .logo__image {
       width: auto;
-      height: 60px;
+      height: 50px;
       margin-right: 5px; } }
   @media (min-width: 992px) {
     .logo__image {
@@ -177,15 +178,14 @@ p, ul, ol, li, span, input, label, textarea, button {
       margin-right: 15px; } }
   @media (max-width: 767px) {
     .logo__title {
-      font-size: 2.4em;
+      font-size: 1.8em;
       font-weight: 700;
       color: #404040; } }
   @media (min-width: 992px) {
     .logo__title {
-      font-size: 3.2em;
+      font-size: 2.4em;
       font-weight: 700;
-      color: #404040;
-      text-transform: capitalize; } }
+      color: #404040; } }
 
 @media (max-width: 767px) {
   .mainMenuContainer {

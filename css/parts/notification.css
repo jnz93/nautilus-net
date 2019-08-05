@@ -32,7 +32,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (max-width: 767px) {
   .sct__benefits {
     padding-top: 90px;
-    margin: 25px auto; } }
+    margin: 25px auto;
+    position: relative; } }
 
 @media (min-width: 992px) {
   .sct__benefits {
@@ -115,8 +116,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (max-width: 767px) {
   .notification {
     position: absolute;
-    top: 100px;
-    right: auto;
+    top: 90px;
     z-index: 9999; } }
 
 @media (min-width: 992px) {
@@ -137,8 +137,7 @@ p, ul, ol, li, span, input, label, textarea, button {
   @media (min-width: 992px) {
     .notification__wrapper--normal {
       width: 48px;
-      height: 48px;
-      transform: rotate(360deg); } }
+      height: 48px; } }
   @media (max-width: 767px) {
     .notification__wrapper--expand {
       width: calc(100% - 40px);
@@ -171,12 +170,13 @@ p, ul, ol, li, span, input, label, textarea, button {
   outline: none; }
   @media (max-width: 767px) {
     .notification__iconWrap {
-      top: -80px;
-      right: 60px; } }
+      top: 20px;
+      right: 90px;
+      z-index: 9999; } }
   @media (min-width: 992px) {
     .notification__iconWrap {
-      top: -30px;
-      left: -20px; } }
+      top: 30px;
+      left: 0px; } }
   @media (min-width: 992px) {
     .notification__iconWrap--disabled {
       display: none; } }

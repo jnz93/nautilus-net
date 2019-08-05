@@ -30,7 +30,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (max-width: 767px) {
   .sct__benefits {
     padding-top: 90px;
-    margin: 25px auto; } }
+    margin: 25px auto;
+    position: relative; } }
 
 @media (min-width: 992px) {
   .sct__benefits {
@@ -132,7 +133,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     padding: 30px; } }
 
 .benefitCard__wrapIcon {
-  background: #FFFFFF;
+  background: #2340BC;
   width: 48px;
   height: 48px;
   border-radius: 100%;
@@ -141,20 +142,17 @@ p, ul, ol, li, span, input, label, textarea, button {
   justify-content: center; }
   @media (max-width: 767px) {
     .benefitCard__wrapIcon {
-      margin: auto;
-      background: #2340BC; } }
+      margin: auto; } }
   @media (min-width: 1200px) {
     .benefitCard__wrapIcon {
       margin: 0;
       margin-bottom: 15px; } }
+  .benefitCard__wrapIcon--expandMobile {
+    width: 64px;
+    height: 64px; }
 
-@media (max-width: 767px) {
-  .benefitCard__icon {
-    fill: #FFFFFF; } }
-
-@media (min-width: 992px) {
-  .benefitCard__icon {
-    fill: #2340BC; } }
+.benefitCard__icon {
+  fill: #FFFFFF; }
 
 @media (max-width: 767px) {
   .benefitCard__title {
@@ -175,6 +173,12 @@ p, ul, ol, li, span, input, label, textarea, button {
     margin-bottom: 15px; } }
 
 @media (max-width: 767px) {
+  .benefitCard__title--expandMobile {
+    font-size: 1.4em;
+    font-weight: 700;
+    text-transform: uppercase; } }
+
+@media (max-width: 767px) {
   .benefitCard__text {
     display: none; } }
 
@@ -184,6 +188,25 @@ p, ul, ol, li, span, input, label, textarea, button {
     font-weight: 300;
     color: #333333;
     line-height: 1.6; } }
+
+@media (max-width: 767px) {
+  .benefitCard__text--expandMobile {
+    font-size: 1.4em;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #333333;
+    text-align: center;
+    display: block; } }
+
+@media (max-width: 767px) {
+  .benefitCard__expandMobile {
+    width: calc(100% - 100px);
+    min-height: 260px;
+    padding: 15px 25px;
+    top: calc(100vh - 160px);
+    border: 1px solid #EDEDED;
+    border-radius: 6px;
+    position: absolute; } }
 
 .planCard {
   height: auto;
@@ -208,44 +231,28 @@ p, ul, ol, li, span, input, label, textarea, button {
     @media (min-width: 992px) {
       .planCard__spacer {
         background: #EDEDED; } }
+  .planCard__bubbleWrap {
+    background: #2340BC;
+    width: 86px;
+    height: 86px;
+    margin: 15px auto;
+    border-radius: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center; }
   .planCard__title {
     text-transform: uppercase;
-    margin: 0; }
-    @media (max-width: 767px) {
-      .planCard__title {
-        font-size: 3.6em;
-        color: #FFFFFF; } }
-    @media (min-width: 992px) {
-      .planCard__title {
-        font-size: 2.4em;
-        color: #2340BC;
-        margin-bottom: 15px; } }
-    @media (max-width: 767px) {
-      .planCard__title--hideMobile {
-        display: none; } }
+    margin: 0;
+    font-size: 3.6em;
+    color: #FFFFFF; }
   .planCard__subtitle {
-    width: 100%; }
-    @media (max-width: 767px) {
-      .planCard__subtitle {
-        font-size: 1.4em;
-        font-weight: 500;
-        color: #FFFFFF;
-        text-transform: uppercase;
-        margin: 0; } }
-  @media (max-width: 767px) {
-    .planCard__bubbleTitle {
-      background: #2340BC;
-      width: 86px;
-      height: 86px;
-      margin: 15px auto;
-      border-radius: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      align-content: center;
-      justify-content: center; } }
-  @media (min-width: 768px) {
-    .planCard__bubbleTitle--hideDesktop {
-      display: none; } }
+    width: 100%;
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin: 0; }
   .planCard__label {
     font-size: 1.2em;
     color: #404040;

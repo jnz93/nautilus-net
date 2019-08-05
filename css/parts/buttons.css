@@ -31,7 +31,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (max-width: 767px) {
   .sct__benefits {
     padding-top: 90px;
-    margin: 25px auto; } }
+    margin: 25px auto;
+    position: relative; } }
 
 @media (min-width: 992px) {
   .sct__benefits {

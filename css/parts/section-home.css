@@ -31,7 +31,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (max-width: 767px) {
   .sct__benefits {
     padding-top: 90px;
-    margin: 25px auto; } }
+    margin: 25px auto;
+    position: relative; } }
 
 @media (min-width: 992px) {
   .sct__benefits {
@@ -131,7 +132,7 @@ p, ul, ol, li, span, input, label, textarea, button {
   margin: 0;
   font-weight: 900;
   color: #333333;
-  line-height: 1.8; }
+  line-height: 1.6; }
   @media (max-width: 767px) {
     .articleHome__title {
       font-size: 2.4em;
@@ -153,7 +154,9 @@ p, ul, ol, li, span, input, label, textarea, button {
   @media (min-width: 992px) {
     .articleHome__excerpt {
       font-size: 1.8em;
-      margin-bottom: 45px; } }
+      margin-bottom: 45px;
+      width: 100%;
+      display: block; } }
 
 @media (max-width: 767px) {
   .articleHome button {
@@ -167,4 +170,6 @@ p, ul, ol, li, span, input, label, textarea, button {
   width: 100%; }
   @media (max-width: 767px) {
     .articleHome__img {
-      box-shadow: -10px 10px 10px #D4D4D4; } }
+      box-shadow: 0px 0px 10px #EDEDED;
+      border-top-right-radius: 25%;
+      border-top-left-radius: 25%; } }

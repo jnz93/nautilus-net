@@ -10,8 +10,7 @@
 .notification
     @include respond-below('sm')
         position: absolute
-        top: 100px
-        right: auto
+        top: 90px
         z-index: 9999
 
     @include respond-above('md')
@@ -36,7 +35,6 @@
             @include respond-above('md')
                 width: 48px
                 height: 48px
-                transform: rotate(360deg)
 
         // Tamanho aberto
         &--expand
@@ -75,12 +73,13 @@
         cursor: pointer
         outline: none
         @include respond-below('sm')
-            top: -80px
-            right: 60px
+            top: 20px
+            right: 90px
+            z-index: 9999
 
         @include respond-above('md')
-            top: -30px
-            left: -20px
+            top: 30px
+            left: 0px
 
         &--disabled
             @include respond-above('md')
