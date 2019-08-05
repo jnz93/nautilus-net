@@ -72,3 +72,45 @@ jQuery(window).scroll(function(){
     }
 
 });
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// Função clickOpenCardsMobile() - Responsável por expandir os cards clicados na
+// seção beneficios mobile.
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+function clickOpenCardsMobile(el){
+    var screenWidth = jQuery(window).width();
+
+    // Se não for mobile não faz nada
+    if( screenWidth > 500){
+        return false;
+    }
+
+    // Elementos para manipulação
+    var elToExpand  = el,
+        elTitle     = el.find('.benefitCard__title'),
+        elText      = el.find('.benefitCard__text'),
+        btnClose    = el.siblings('.benefitCard__closeBtn');
+        elCover     = el.siblings('.benefitCard__cover');
+
+    // Expandir o card e seus elementos
+    elToExpand.addClass('benefitCard__expandMobile');
+    elTitle.addClass('benefitCard__title--expandMobile');
+    elText.addClass('benefitCard__text--expandMobile');
+    btnClose.addClass('benefitCard__closeBtn--showBtn');
+    elCover.addClass('benefitCard__cover--expandMobile');
+
+    // Fechar o card
+    btnClose.click(function(){
+        elToExpand.removeClass('benefitCard__expandMobile');
+        elTitle.removeClass('benefitCard__title--expandMobile');
+        elText.removeClass('benefitCard__text--expandMobile');
+        elCover.removeClass('benefitCard__cover--expandMobile');
+
+        jQuery(this).removeClass('benefitCard__closeBtn--showBtn');
+    });
+}
+
+function clickCloseCardsMobile(el){
+
+}

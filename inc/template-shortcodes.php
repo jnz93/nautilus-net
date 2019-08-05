@@ -85,6 +85,10 @@ if( !function_exists('get_notifications') ){
     
         $notifications = new WP_Query($args);
         $output = '';
+        $output .= '<button id="openNotification" class="notification__iconWrap">
+                        <i id="ico-show" class="notification__icon notification__icon--show" data-eva="bell" data-eva-fill="" data-eva-height="24" data-eva-width="24" data-eva-animation=""></i>
+                        <i id="ico-close" class="notification__icon notification__icon--disabled" data-eva="close" data-eva-fill="" data-eva-height="24" data-eva-width="24" data-eva-animation=""></i>
+                    </button>';
         if( $notifications->have_posts() ){
             while( $notifications->have_posts() ){
                 $notifications->the_post();
@@ -96,10 +100,6 @@ if( !function_exists('get_notifications') ){
                 // $post_thumb_url = get_the_post_thumbnail_url($post_id, 'large');
 
                 $output .= '<div id="appNotification" class="notification notification__wrapper--normal">';
-                $output .= '<button id="openNotification" class="notification__iconWrap">
-                                <i id="ico-show" class="notification__icon notification__icon--show" data-eva="bell" data-eva-fill="" data-eva-height="24" data-eva-width="24" data-eva-animation=""></i>
-                                <i id="ico-close" class="notification__icon notification__icon--disabled" data-eva="close" data-eva-fill="" data-eva-height="24" data-eva-width="24" data-eva-animation=""></i>
-                            </button>';
                 
                 $output .= '<article id="notification-'. $post_id .'" class="notification__content notification__content--hide">';
                 $output .= '<div id="" class="col-md-12 col-lg-12">
@@ -212,7 +212,11 @@ if( !function_exists('get_article_benefits') ){
                 $post_icon      = get_post_meta($post_id, 'benefit_icon', true);
 
                 $output .= '<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                                <article id="benefit-'. $post_id .'" class="benefitCard">
+                                <div class="benefitCard__cover"></div>
+                                <span class="benefitCard__closeBtn">
+                                    <i class="" data-eva="close" fill="#404040"></i>
+                                </span>
+                                <article onClick="clickOpenCardsMobile(jQuery(this))" id="benefit-'. $post_id .'" class="benefitCard">
                                     <div class="col-12">
                                         <span class="benefitCard__wrapIcon">
                                             <i class="benefitCard__icon" data-eva="'. $post_icon .'" data-fill=""  data-eva-height="28" data-eva-width="28"></i>
@@ -277,8 +281,7 @@ if( !function_exists('get_plans') ){
 
                 $output .= '<div class="col-xs-12 col-sm-10 col-md-2 col-lg-2">
                                 <article id="plano-'. $post_id .'" class="planCard">
-                                    <h1 class="planCard__title planCard__title--hideMobile" title="'. $post_title .'">'. $post_title .'</h1>
-                                    <div class="planCard__bubbleTitle planCard__bubbleTitle--hideDesktop">
+                                    <div class="planCard__bubbleWrap">
                                         <h1 class="planCard__title">'. $plan_title_pt1 .'</h1>
                                         <h6 class="planCard__subtitle">'. $plan_title_pt2 .'</h6>
                                     </div>
