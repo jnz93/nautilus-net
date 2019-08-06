@@ -5,6 +5,10 @@
 
 jQuery(document).ready(function(){
     
+    // Elementos
+    var menuMobile = jQuery('#main-menu'),
+        screenWidth = jQuery(window).width();
+
     /**
      * Smooth scroll na rolagem das seções clicando nos links
      * @link https://css-tricks.com/snippets/jquery/smooth-scrolling/
@@ -31,7 +35,19 @@ jQuery(document).ready(function(){
             }
     
         }
-    
+        
+        // Se for mobile faz ações no menu
+        if( screenWidth < 600){
+            // Econde o menu
+            menuMobile.removeClass('mainMenuContainer__mobile--enabled');
+
+            // Troca de ícones do botão do menu
+            jQuery('#ico-menu').toggleClass('mainHeader__icoMenu--disabled');
+            jQuery('#ico-close').toggleClass('mainHeader__icoMenu--disabled');
+            
+            // Esconder e mostrar o botão da notificação
+            btnOpenNotification.toggleClass('notification__iconWrap--disabled');
+        }
     });
 
 
@@ -148,4 +164,25 @@ function clickOpenContactCardMobile(el){
 
         jQuery(this).removeClass('contactCard__closeBtn--showBtn');
     });
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// Função clickOpenMenuMobile() - Abre e fecha o menu mobile
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+function clickOpenMenuMobile(){
+
+    // Elementos
+    var menuMobile = jQuery("#main-menu"),
+        btnOpenNotification = jQuery('#openNotification');
+    
+    // Troca de ícones do botão
+    jQuery('#ico-menu').toggleClass('mainHeader__icoMenu--disabled');
+    jQuery('#ico-close').toggleClass('mainHeader__icoMenu--disabled');
+
+    // Esconder e mostrar o botão da notificação
+    btnOpenNotification.toggleClass('notification__iconWrap--disabled');
+
+    // Ações para mostrar o menu
+    menuMobile.addClass('mainMenuContainer__mobile');
+    menuMobile.toggleClass('mainMenuContainer__mobile--enabled');
 }

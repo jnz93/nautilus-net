@@ -177,9 +177,9 @@ p, ul, ol, li, span, input, label, textarea, button {
     .notification__iconWrap {
       top: 30px;
       left: 0px; } }
-  @media (min-width: 992px) {
-    .notification__iconWrap--disabled {
-      display: none; } }
+  .notification__iconWrap--disabled {
+    transition-duration: 1s;
+    display: none; }
 
 .notification__icon {
   fill: #2340BC;

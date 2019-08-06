@@ -42,9 +42,9 @@
 
             <div class="col-xs-3 col-sm-6 col-md-8 col-lg-8">
                 <!-- Botões menu mobile -->
-                <button id="btn-menu-mobile" class="mainHeader__btnMenu">
-                    <i class="mainHeader__icoMenu" data-eva="menu" data-eva-width="" data-eva-height=""></i>
-                    <i class="mainHeader__icoMenu mainHeader__icoMenu--disabled" data-eva="close" data-eva-width="" data-eva-height=""></i>
+                <button onClick="clickOpenMenuMobile()" class="mainHeader__btnMenu">
+                    <i id="ico-menu" class="mainHeader__icoMenu" data-eva="menu" data-eva-width="" data-eva-height=""></i>
+                    <i id="ico-close" class="mainHeader__icoMenu mainHeader__icoMenu--disabled" data-eva="close" data-eva-width="" data-eva-height=""></i>
                 </button>
                 
                 <?php 

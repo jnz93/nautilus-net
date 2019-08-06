@@ -48,6 +48,7 @@
 
             display: flex
             align-items: center
+            outline: none
 
         @include respond-above('md')
             display: none
@@ -56,8 +57,12 @@
         fill: $blueMain
         width: 36px
         height: 36px
+        transform: rotate(360deg)
+        transition: .8s
 
         &--disabled
+            transform: rotate(-360deg)
+            transition: .8s
             display: none
             
 // Logotipo
@@ -100,20 +105,70 @@
 // Main menu container
 .mainMenuContainer
     @include respond-below('sm')
-        display: none
+        position: fixed
 
+        background: $white
+        width: 100%
+        height: 100%
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+
+        z-index: -1
     @include respond-above('md')
         height: 100%
         display: flex
         justify-content: flex-end
 
+    &__mobile
+        // Efeitos
+        &:before
+            @include respond-below('sm')
+                content: ''
+                background: $graySecondary
+                width: 600px
+                height: 600px
+                border-radius: 100%
+                position: absolute
+                top: calc(100% / 2 - 300px)
+                left: -450px
+                z-index: -1
+                opacity: .4
+
+                transition-delay: 2s
+
+        &:after
+            @include respond-below('sm')
+                content: ''
+                width: 800px
+                height: 800px
+                background: $graySecondary
+                border-radius: 100%
+                position: absolute
+                top: calc(100% / 2 - 400px )
+                left: -500px
+                z-index: -2
+                opacity: 0.3
+
+                transition-delay: 2s
+
+        &--disabled
+            @include respond-below('sm')
+                left: -120%
+                transition: .3s
+                transition-delay: .4s
+
+        &--enabled
+            @include respond-below('sm')
+                left: 0
+                transition: .3s
 /**
     Menu list / UL
     Por conta de uma defiência do wordpress em passar uma classe css custom para os items do menu, esse bloco será diferente dos outros
     tendo seu próprio padrão.
  */
 .menuList
-    height: 100%
     margin: 0
     padding: 0
 
@@ -121,17 +176,72 @@
 
     display: flex
     align-items: center
+    
+    @include respond-below('sm')
+        width: calc(100% - 50px)
+        // height: 420px
+        margin: auto
+        margin-top: 110px
+        flex-wrap: wrap
+
+    @include respond-above('md')
+        height: 100%
+
+
+    // Gambiarra
+    &:before
+        @include respond-below('sm')
+            content: 'Menu de navegação'
+            font-size: $fs-21
+            font-weight: $semi-bold
+            margin-bottom: 20px
+            color: $blackLight
+
 
     .menu-item
-        height: 64px
-        padding-right: 32px
-        padding-left: 32px
-
         display: flex
         align-items: center
 
+        @include respond-below('sm')
+            width: 100%
+            height: 104px
+            margin-left: 10px
+            padding-left: 40px
+            position: relative
+
+        @include respond-above('md')
+            height: 64px
+            padding-right: 32px
+            padding-left: 32px
+
+        &:before
+            @include respond-below('sm')
+                content: ''
+                background: $blueMain
+                width: 1px
+                height: 100%
+
+                position: absolute
+                left: 8px
+                opacity: .1
+        &:after
+            @include respond-below('sm')
+                content: ''
+                background: $blueMain
+                width: 16px
+                height: 16px
+                border-radius: 100%
+
+                position: absolute
+                left: 0
+                opacity: .8
+                
         a
             font-size: $fs-16
             font-weight: $thin
             color: $blackLight
             text-decoration: none
+
+            @include respond-below('sm')
+                font-weight: $regular
+                color: $blackDark
