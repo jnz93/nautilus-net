@@ -339,6 +339,7 @@ p, ul, ol, li, span, input, label, textarea, button {
   padding: 10px; }
   @media (max-width: 767px) {
     .contactCard {
+      background: #FFFFFF;
       width: calc(100% - 20px);
       height: auto;
       margin: 15px auto;
@@ -351,6 +352,34 @@ p, ul, ol, li, span, input, label, textarea, button {
       margin: 25px auto;
       border-radius: 3px;
       box-shadow: 0px 0px 3px #EDEDED; } }
+  @media (max-width: 767px) {
+    .contactCard__cover {
+      background: #EDEDED;
+      opacity: .8;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: fixed;
+      display: none; } }
+  @media (min-width: 992px) {
+    .contactCard__cover {
+      display: none; } }
+  .contactCard__cover--expandMobile {
+    display: block; }
+  @media (max-width: 767px) {
+    .contactCard__closeBtn {
+      width: 36px;
+      height: 36px;
+      top: 20px;
+      right: 20px;
+      position: fixed;
+      display: none; } }
+  @media (min-width: 992px) {
+    .contactCard__closeBtn {
+      display: none; } }
+  .contactCard__closeBtn--showBtn {
+    display: block; }
   .contactCard__wrapperFlexMid {
     display: flex;
     flex-wrap: wrap;
@@ -362,15 +391,14 @@ p, ul, ol, li, span, input, label, textarea, button {
     @media (min-width: 992px) {
       .contactCard__wrapperFlexMid {
         padding: 0 15px; } }
-  @media (min-width: 992px) {
-    .contactCard__spacer {
-      width: 100%;
-      height: 1px;
-      background: #EDEDED;
-      margin: auto;
-      margin-top: 5px;
-      margin-bottom: 20px;
-      display: block; } }
+  .contactCard__spacer {
+    width: 100%;
+    height: 1px;
+    background: #EDEDED;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: block; }
   @media (min-width: 992px) {
     .contactCard__header {
       height: 40px;
@@ -383,6 +411,8 @@ p, ul, ol, li, span, input, label, textarea, button {
     .contactCard__body {
       width: 100%;
       padding-left: 40px; } }
+  .contactCard__body--expandMobile {
+    display: block; }
   @media (max-width: 767px) {
     .contactCard__wrapIcon {
       background: #2340BC;
@@ -414,32 +444,33 @@ p, ul, ol, li, span, input, label, textarea, button {
       text-transform: uppercase;
       text-align: center;
       margin: 5px;
-      line-height: 1.5; } }
+      line-height: 1.5;
+      font-size: 1.2em; } }
   @media (min-width: 992px) {
     .contactCard__title {
       color: #2340BC;
       text-transform: uppercase;
-      margin: 0; } }
-  @media (max-width: 767px) {
-    .contactCard__title--small {
-      font-size: 1.2em; } }
-  @media (min-width: 992px) {
-    .contactCard__title--small {
+      margin: 0;
       font-size: 1.6em; } }
-  @media (min-width: 992px) {
-    .contactCard__title--medium {
-      font-size: 1.8em;
-      color: #333333; } }
   .contactCard__title--thin {
     font-weight: 300; }
   .contactCard__title--semiBold {
     font-weight: 700; }
-  @media (min-width: 992px) {
-    .contactCard__info {
-      font-size: 1.6em;
-      font-weight: 500;
-      color: #333333;
-      margin: 12px 0; } }
+  @media (max-width: 767px) {
+    .contactCard__title--expandMobile {
+      font-size: 1.4em;
+      font-weight: 700;
+      text-transform: uppercase; } }
+  .contactCard__info {
+    font-weight: 500;
+    color: #333333;
+    margin: 12px 0; }
+    @media (max-width: 767px) {
+      .contactCard__info {
+        font-size: 1.4em; } }
+    @media (min-width: 992px) {
+      .contactCard__info {
+        font-size: 1.6em; } }
   .contactCard__text {
     font-size: 1.4em;
     line-height: 1.7;
@@ -448,6 +479,17 @@ p, ul, ol, li, span, input, label, textarea, button {
     margin-bottom: 25px; }
     .contactCard__text--center {
       text-align: center; }
+  @media (max-width: 767px) {
+    .contactCard__expandMobile {
+      width: calc(100% - 100px);
+      min-height: 160px;
+      padding: 15px 25px;
+      top: calc(100vh / 2 - 160px);
+      left: 25px;
+      border: 1px solid #EDEDED;
+      border-radius: 6px;
+      box-shadow: 0px 0px 10px #D4D4D4;
+      position: fixed; } }
 
 @media (max-width: 767px) {
   .slick-dots {

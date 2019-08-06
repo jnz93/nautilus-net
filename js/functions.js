@@ -111,6 +111,41 @@ function clickOpenCardsMobile(el){
     });
 }
 
-function clickCloseCardsMobile(el){
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// Função clickOpenContactCardMobile() - Responsável por expandir os cards clicados na
+// seção contato mobile.
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+function clickOpenContactCardMobile(el){
+    var screenWidth = jQuery(window).width();
+
+    // Se não for mobile não faz nada
+    if( screenWidth > 500){
+        return false;
+    }
+
+    // Elementos para manipulação
+    var elToExpand  = el,
+        elTitle     = el.find('.contactCard__title'),
+        // elText      = el.find('.contactCard__text'),
+        elBodyInfo  = el.find('.contactCard__body'),
+        btnClose    = el.siblings('.contactCard__closeBtn');
+        elCover     = el.siblings('.contactCard__cover');
+
+    // Expandir o card e seus elementos
+    elToExpand.addClass('contactCard__expandMobile');
+    elTitle.addClass('contactCard__title--expandMobile');
+    elBodyInfo.addClass('contactCard__body--expandMobile');
+    btnClose.addClass('contactCard__closeBtn--showBtn');
+    elCover.addClass('contactCard__cover--expandMobile');
+
+    // Fechar o card
+    btnClose.click(function(){
+        elToExpand.removeClass('contactCard__expandMobile');
+        elTitle.removeClass('contactCard__title--expandMobile');
+        elBodyInfo.removeClass('contactCard__body--expandMobile');
+        elCover.removeClass('contactCard__cover--expandMobile');
+
+        jQuery(this).removeClass('contactCard__closeBtn--showBtn');
+    });
 }

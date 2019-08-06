@@ -128,13 +128,17 @@ function card_contact($icon, $title, $arr){
     
     $html = '';
     $html .= '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                <div class="contactCard">
+                <div class="contactCard__cover"></div>
+                <span class="contactCard__closeBtn">
+                    <i class="" data-eva="close" fill="#404040"></i>
+                </span>
+                <div onClick="clickOpenContactCardMobile(jQuery(this))" class="contactCard">
                     <div class="contactCard__header">
                         <span class="contactCard__wrapIcon contactCard__wrapIcon--hideDesktop">
                             <i class="contactCard__icon" data-eva="'. $icon .'" data-eva-width="" data-eva-height="36" data-eva-fill=""></i>    
                         </span>
                         <i class="contactCard__icon contactCard__icon--hideMobile" data-eva="'. $icon .'" data-eva-width="" data-eva-height="36" data-eva-fill=""></i>
-                        <h3 class="contactCard__title contactCard__title--small contactCard__title--semiBold">'. $title .'</h3>
+                        <h3 class="contactCard__title contactCard__title--semiBold">'. $title .'</h3>
                     </div>
                     <span class="contactCard__spacer"></span>
                     <div class="contactCard__body">';
