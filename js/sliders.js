@@ -13,6 +13,17 @@ jQuery(document).ready(function(){
     if( screenWidth <= 400 ){
 
         /**
+         * Slick slider - Homepage
+         */
+        jQuery('.articleHome__wrapperSlider').slick({
+            dots: true,
+            arrows: false,
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
+        /**
          * Slick slider - Planos mobile
          */
         jQuery('.sct__plans > .sct__contentWrapper').slick({
@@ -31,6 +42,15 @@ jQuery(document).ready(function(){
      * slider team cards - above old desktop
      */
     if( screenWidth >= 860 ){
-        
+        /**
+         * Slick slider - Homepage
+         */
+        jQuery('.articleHome__wrapperSlider').slick({
+            dots: true,
+            arrows: false,
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
     }
 });

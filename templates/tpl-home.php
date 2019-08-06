@@ -5,7 +5,7 @@
  * @package nautilusnet
  */
 ?>
-<section id="homepage" class="container-fluid sct__homepage">
+<section id="homepage" class="sct__homepage">
     <div class="col-lg-11 row sct__contentWrapper sct__contentWrapper--noMargin" style="height: 100%;">
         <?php 
         // Notificações
@@ -17,7 +17,9 @@
 
         // Sliders
         if( shortcode_exists('show_article_sliders') ){
+            echo '<div class="articleHome__wrapperSlider">';
             do_shortcode('[show_article_sliders]');
+            echo '</div>';
         }else{
             echo "Shortcode de sliders não existe";
         }

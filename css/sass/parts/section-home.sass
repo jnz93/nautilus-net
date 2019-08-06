@@ -7,18 +7,25 @@
 
 // Articles dos sliders
 .articleHome
+    display: flex !important
     @include respond-below('sm')
-        width: 100%
+        // width: 100%
+        padding: 0 20px
         height: calc(100vh - 30vh)
         
-        display: flex
         flex-direction: column-reverse
 
     @include respond-above('md')
-        height: 90%
+        height: 530px
         margin: 2.5% auto
-        // display: flex
-        // align-content: center
+        align-content: center
+
+    &__wrapperSlider
+        overflow: hidden
+
+        @include respond-below('sm')
+            height: 90%
+        @include respond-above('md')
 
     &__wrapperContent
         display: flex
@@ -74,6 +81,6 @@
         width: 100%
 
         @include respond-below('sm')
-            box-shadow: 0px 0px 10px $graySecondary
-            border-top-right-radius: 25%
-            border-top-left-radius: 25%
+            // box-shadow: 0px 0px 10px $graySecondary
+            // border-top-right-radius: 25%
+            // border-top-left-radius: 25%
