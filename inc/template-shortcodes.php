@@ -145,11 +145,11 @@ if( !function_exists('get_article_sliders') ){
             'posts_per_page'    => $number_posts
         );
     
-        $notifications = new WP_Query($args);
+        $posts_homepage = new WP_Query($args);
         $output = '';
-        if( $notifications->have_posts() ){
-            while( $notifications->have_posts() ){
-                $notifications->the_post();
+        if( $posts_homepage->have_posts() ){
+            while( $posts_homepage->have_posts() ){
+                $posts_homepage->the_post();
                 $post_id        = get_the_ID();
                 $publish_date   = get_the_date('l,j,F', $post_id);
                 $post_title     = get_the_title($post_id);
