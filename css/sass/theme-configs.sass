@@ -3,7 +3,6 @@
 
 html
     scroll-behavior: smooth
-    // font-family: 'Montserrat', sans-serif
     font-size: 62.5%
     overflow-x: hidden
 
@@ -28,6 +27,52 @@ p, ul, ol, li, span, input, label, textarea, button
             
         @include respond-above('md')
             height: calc(100vh - 90px)
+
+        // Provisório
+        .slick-dots
+            display: flex
+            justify-content: center
+            list-style: none
+            padding: 0
+            margin: 0 auto
+
+            // items
+            li
+                width: 55px
+                height: 8px
+                border: 0
+                border-radius: 0
+
+                background: $grayDark
+                overflow: hidden
+                transition: .3s linear
+                
+                button
+                    width: 55px
+                    height: 4px
+                    border: 0
+                    border-radius: 0
+
+                    background: $grayDark
+                    color: $grayDark
+                    transition: .3s linear
+
+            .slick-active
+                width: 85px
+                height: 8px
+                border: 0
+                border-radius: 0
+
+                background: $main-color
+                transition: .3s linear
+                
+                button
+                    background: $main-color
+                    color: $main-color
+                    transition: .3s linear
+
+            
+
 
     // Beneficios
     &__benefits
@@ -97,7 +142,7 @@ p, ul, ol, li, span, input, label, textarea, button
     // Título
     &__title
         font-weight: $semi-bold
-        color: $blackMedium
+        color: $text-light
         line-height: 1.8
 
         @include respond-below('sm')

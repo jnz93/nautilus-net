@@ -27,6 +27,40 @@ p, ul, ol, li, span, input, label, textarea, button {
   .sct__homepage {
     height: calc(100vh - 90px); } }
 
+.sct__homepage .slick-dots {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; }
+  .sct__homepage .slick-dots li {
+    width: 55px;
+    height: 8px;
+    border: 0;
+    border-radius: 0;
+    background: #BDBDBD;
+    overflow: hidden;
+    transition: .3s linear; }
+    .sct__homepage .slick-dots li button {
+      width: 55px;
+      height: 4px;
+      border: 0;
+      border-radius: 0;
+      background: #BDBDBD;
+      color: #BDBDBD;
+      transition: .3s linear; }
+  .sct__homepage .slick-dots .slick-active {
+    width: 85px;
+    height: 8px;
+    border: 0;
+    border-radius: 0;
+    background: #062573;
+    transition: .3s linear; }
+    .sct__homepage .slick-dots .slick-active button {
+      background: #062573;
+      color: #062573;
+      transition: .3s linear; }
+
 @media (max-width: 767px) {
   .sct__benefits {
     padding-top: 90px;
@@ -92,7 +126,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       min-height: 120px; } }
   .sctHeader__title, .sctHeader__subtitle {
     font-weight: 700;
-    color: #333333;
+    color: #757575;
     line-height: 1.8; }
     @media (max-width: 767px) {
       .sctHeader__title, .sctHeader__subtitle {
@@ -113,7 +147,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (max-width: 767px) {
   .benefitCard {
-    background: #F2F2F2;
+    background: #F9FBFF;
     border-radius: 3px;
     width: calc(100% - 10px);
     min-height: 140px;
@@ -126,7 +160,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 1200px) {
   .benefitCard {
-    background: #F2F2F2;
+    background: #F9FBFF;
     border-radius: 6px;
     width: calc(100% - 110px);
     margin: 50px auto;
@@ -134,7 +168,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (max-width: 767px) {
   .benefitCard__cover {
-    background: #EDEDED;
+    background: #F2F2F2;
     opacity: .8;
     top: 0;
     right: 0;
@@ -167,7 +201,7 @@ p, ul, ol, li, span, input, label, textarea, button {
   display: block; }
 
 .benefitCard__wrapIcon {
-  background: #2340BC;
+  background: #062573;
   width: 48px;
   height: 48px;
   border-radius: 100%;
@@ -193,7 +227,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     font-size: 1.2em;
     font-weight: 500;
     line-height: 1.6;
-    color: #2340BC;
+    color: #062573;
     text-align: center; } }
 
 @media (min-width: 992px) {
@@ -201,7 +235,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     font-size: 1.6em;
     font-weight: 700;
     line-height: 1.6;
-    color: #2340BC;
+    color: #062573;
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 15px; } }
@@ -220,7 +254,7 @@ p, ul, ol, li, span, input, label, textarea, button {
   .benefitCard__text {
     font-size: 1.6em;
     font-weight: 300;
-    color: #333333;
+    color: #757575;
     line-height: 1.6; } }
 
 @media (max-width: 767px) {
@@ -228,7 +262,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     font-size: 1.4em;
     font-weight: 500;
     line-height: 1.5;
-    color: #333333;
+    color: #757575;
     text-align: center;
     display: block; } }
 
@@ -239,9 +273,9 @@ p, ul, ol, li, span, input, label, textarea, button {
     padding: 15px 25px;
     top: calc(100vh / 2 - 160px);
     left: 25px;
-    border: 1px solid #EDEDED;
+    border: 1px solid #F2F2F2;
     border-radius: 6px;
-    box-shadow: 0px 0px 10px #D4D4D4;
+    box-shadow: 0px 0px 10px #BDBDBD;
     position: fixed; } }
 
 .planCard {
@@ -255,20 +289,20 @@ p, ul, ol, li, span, input, label, textarea, button {
     .planCard {
       width: calc(100% - 40px);
       padding: 20px;
-      box-shadow: 0px 0px 6px #D4D4D4; } }
+      box-shadow: 0px 0px 6px #BDBDBD; } }
   @media (min-width: 992px) {
     .planCard {
       width: calc(100% - 30px);
       padding: 15px;
-      box-shadow: 0px 0px 3px #D4D4D4; } }
+      box-shadow: 0px 0px 3px #BDBDBD; } }
   .planCard__spacer {
     width: 100%;
     height: 1px; }
     @media (min-width: 992px) {
       .planCard__spacer {
-        background: #EDEDED; } }
+        background: #F2F2F2; } }
   .planCard__bubbleWrap {
-    background: #2340BC;
+    background: #062573;
     width: 86px;
     height: 86px;
     margin: 15px auto;
@@ -291,9 +325,9 @@ p, ul, ol, li, span, input, label, textarea, button {
     margin: 0; }
   .planCard__label {
     font-size: 1.2em;
-    color: #404040;
+    color: #757575;
     text-transform: uppercase;
-    border: 1px solid #D4D4D4;
+    border: 1px solid #BDBDBD;
     border-radius: 4px;
     padding: 5px 10px;
     display: inline-block;
@@ -307,7 +341,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     margin: 0; }
   .planCard__content li {
     font-size: 1.4em;
-    color: #404040;
+    color: #757575;
     line-height: 1.6;
     margin: 16px auto; }
   .planCard__wrap {
@@ -318,7 +352,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     width: 100%; }
   .planCard__tag {
     font-weight: 500;
-    color: #404040; }
+    color: #757575; }
     @media (max-width: 767px) {
       .planCard__tag {
         font-size: 1.2em; } }
@@ -344,17 +378,17 @@ p, ul, ol, li, span, input, label, textarea, button {
       height: auto;
       margin: 15px auto;
       border-radius: 3px;
-      box-shadow: 0px 0px 3px #D4D4D4; } }
+      box-shadow: 0px 0px 3px #BDBDBD; } }
   @media (min-width: 992px) {
     .contactCard {
       width: calc(100% - 50px);
       height: auto;
       margin: 25px auto;
       border-radius: 3px;
-      box-shadow: 0px 0px 3px #EDEDED; } }
+      box-shadow: 0px 0px 3px #F2F2F2; } }
   @media (max-width: 767px) {
     .contactCard__cover {
-      background: #EDEDED;
+      background: #F2F2F2;
       opacity: .8;
       top: 0;
       right: 0;
@@ -394,7 +428,7 @@ p, ul, ol, li, span, input, label, textarea, button {
   .contactCard__spacer {
     width: 100%;
     height: 1px;
-    background: #EDEDED;
+    background: #F2F2F2;
     margin: auto;
     margin-top: 5px;
     margin-bottom: 20px;
@@ -415,7 +449,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     display: block; }
   @media (max-width: 767px) {
     .contactCard__wrapIcon {
-      background: #2340BC;
+      background: #062573;
       width: 48px;
       height: 48px;
       border-radius: 100%;
@@ -433,14 +467,14 @@ p, ul, ol, li, span, input, label, textarea, button {
   @media (min-width: 992px) {
     .contactCard__icon {
       width: 22px;
-      fill: #2340BC;
+      fill: #062573;
       margin-right: 15px; } }
   @media (max-width: 767px) {
     .contactCard__icon--hideMobile {
       display: none; } }
   @media (max-width: 767px) {
     .contactCard__title {
-      color: #2340BC;
+      color: #062573;
       text-transform: uppercase;
       text-align: center;
       margin: 5px;
@@ -448,7 +482,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       font-size: 1.2em; } }
   @media (min-width: 992px) {
     .contactCard__title {
-      color: #2340BC;
+      color: #062573;
       text-transform: uppercase;
       margin: 0;
       font-size: 1.6em; } }
@@ -463,7 +497,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       text-transform: uppercase; } }
   .contactCard__info {
     font-weight: 500;
-    color: #333333;
+    color: #757575;
     margin: 12px 0; }
     @media (max-width: 767px) {
       .contactCard__info {
@@ -475,7 +509,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     font-size: 1.4em;
     line-height: 1.7;
     font-weight: 500;
-    color: #404040;
+    color: #757575;
     margin-bottom: 25px; }
     .contactCard__text--center {
       text-align: center; }
@@ -486,9 +520,9 @@ p, ul, ol, li, span, input, label, textarea, button {
       padding: 15px 25px;
       top: calc(100vh / 2 - 160px);
       left: 25px;
-      border: 1px solid #EDEDED;
+      border: 1px solid #F2F2F2;
       border-radius: 6px;
-      box-shadow: 0px 0px 10px #D4D4D4;
+      box-shadow: 0px 0px 10px #BDBDBD;
       position: fixed; } }
 
 @media (max-width: 767px) {
@@ -506,21 +540,21 @@ p, ul, ol, li, span, input, label, textarea, button {
   width: 16px;
   height: 16px;
   border-radius: 100%;
-  background: #EDEDED;
-  color: #EDEDED;
+  background: #F2F2F2;
+  color: #F2F2F2;
   margin: auto 10px; }
   .slick-dots li button {
     width: 16px;
     height: 16px;
     border-radius: 100%;
-    border: 1px solid #D4D4D4;
-    background: #EDEDED;
-    color: #EDEDED;
+    border: 1px solid #BDBDBD;
+    background: #F2F2F2;
+    color: #F2F2F2;
     outline: none; }
 
 .slick-dots .slick-active {
-  background: #2340BC;
-  color: #2340BC; }
+  background: #062573;
+  color: #062573; }
   .slick-dots .slick-active button {
-    background: #2340BC;
-    color: #2340BC; }
+    background: #062573;
+    color: #062573; }

@@ -28,6 +28,40 @@ p, ul, ol, li, span, input, label, textarea, button {
   .sct__homepage {
     height: calc(100vh - 90px); } }
 
+.sct__homepage .slick-dots {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; }
+  .sct__homepage .slick-dots li {
+    width: 55px;
+    height: 8px;
+    border: 0;
+    border-radius: 0;
+    background: #BDBDBD;
+    overflow: hidden;
+    transition: .3s linear; }
+    .sct__homepage .slick-dots li button {
+      width: 55px;
+      height: 4px;
+      border: 0;
+      border-radius: 0;
+      background: #BDBDBD;
+      color: #BDBDBD;
+      transition: .3s linear; }
+  .sct__homepage .slick-dots .slick-active {
+    width: 85px;
+    height: 8px;
+    border: 0;
+    border-radius: 0;
+    background: #062573;
+    transition: .3s linear; }
+    .sct__homepage .slick-dots .slick-active button {
+      background: #062573;
+      color: #062573;
+      transition: .3s linear; }
+
 @media (max-width: 767px) {
   .sct__benefits {
     padding-top: 90px;
@@ -93,7 +127,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       min-height: 120px; } }
   .sctHeader__title, .sctHeader__subtitle {
     font-weight: 700;
-    color: #333333;
+    color: #757575;
     line-height: 1.8; }
     @media (max-width: 767px) {
       .sctHeader__title, .sctHeader__subtitle {
@@ -136,7 +170,7 @@ p, ul, ol, li, span, input, label, textarea, button {
   .articleHome__title {
     margin: 0;
     font-weight: 900;
-    color: #333333;
+    color: #757575;
     line-height: 1.6; }
     @media (max-width: 767px) {
       .articleHome__title {
@@ -151,7 +185,7 @@ p, ul, ol, li, span, input, label, textarea, button {
   .articleHome__excerpt {
     margin: 0;
     font-weight: 300;
-    color: #404040;
+    color: #757575;
     line-height: 1.7; }
     @media (max-width: 767px) {
       .articleHome__excerpt {

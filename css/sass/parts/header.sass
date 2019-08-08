@@ -54,7 +54,7 @@
             display: none
 
     &__icoMenu
-        fill: $blueMain
+        fill: $main-color
         width: 36px
         height: 36px
         transform: rotate(360deg)
@@ -94,13 +94,13 @@
     &__title
         @include respond-below('sm')
             font-size: $fs-18
-            font-weight: $semi-bold
-            color: $blackLight
+            font-weight: $regular
+            color: $text-dark
 
         @include respond-above('md')
             font-size: $fs-24
-            font-weight: $semi-bold
-            color: $blackLight
+            font-weight: $regular
+            color: $text-dark
 
 // Main menu container
 .mainMenuContainer
@@ -195,7 +195,7 @@
             font-size: $fs-21
             font-weight: $semi-bold
             margin-bottom: 20px
-            color: $blackLight
+            color: $text-light
 
 
     .menu-item
@@ -217,7 +217,7 @@
         &:before
             @include respond-below('sm')
                 content: ''
-                background: $blueMain
+                background: $main-color
                 width: 1px
                 height: 100%
 
@@ -227,7 +227,7 @@
         &:after
             @include respond-below('sm')
                 content: ''
-                background: $blueMain
+                background: $main-color
                 width: 16px
                 height: 16px
                 border-radius: 100%
@@ -238,10 +238,10 @@
                 
         a
             font-size: $fs-16
-            font-weight: $thin
-            color: $blackLight
+            font-weight: $semi-thin
+            color: $text-light
             text-decoration: none
 
             @include respond-below('sm')
                 font-weight: $regular
-                color: $blackDark
+                color: $text-dark

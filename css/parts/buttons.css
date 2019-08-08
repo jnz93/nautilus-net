@@ -28,6 +28,40 @@ p, ul, ol, li, span, input, label, textarea, button {
   .sct__homepage {
     height: calc(100vh - 90px); } }
 
+.sct__homepage .slick-dots {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; }
+  .sct__homepage .slick-dots li {
+    width: 55px;
+    height: 8px;
+    border: 0;
+    border-radius: 0;
+    background: #BDBDBD;
+    overflow: hidden;
+    transition: .3s linear; }
+    .sct__homepage .slick-dots li button {
+      width: 55px;
+      height: 4px;
+      border: 0;
+      border-radius: 0;
+      background: #BDBDBD;
+      color: #BDBDBD;
+      transition: .3s linear; }
+  .sct__homepage .slick-dots .slick-active {
+    width: 85px;
+    height: 8px;
+    border: 0;
+    border-radius: 0;
+    background: #062573;
+    transition: .3s linear; }
+    .sct__homepage .slick-dots .slick-active button {
+      background: #062573;
+      color: #062573;
+      transition: .3s linear; }
+
 @media (max-width: 767px) {
   .sct__benefits {
     padding-top: 90px;
@@ -93,7 +127,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       min-height: 120px; } }
   .sctHeader__title, .sctHeader__subtitle {
     font-weight: 700;
-    color: #333333;
+    color: #757575;
     line-height: 1.8; }
     @media (max-width: 767px) {
       .sctHeader__title, .sctHeader__subtitle {
@@ -120,13 +154,13 @@ p, ul, ol, li, span, input, label, textarea, button {
   align-items: center;
   transition: .2s ease-in-out; }
   .btn__primary {
-    background: #2340BC;
+    background: #062573;
     border: none;
     border-radius: 6px;
     color: #FFFFFF;
     font-size: 1.6em; }
     .btn__primary:hover {
-      background: #062573; }
+      background: #031552; }
     .btn__primary--small {
       height: 32px;
       padding-right: 16px;
@@ -155,7 +189,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     font-size: 1.6em; }
     .btn__primaryGhost:hover {
       background: #FFFFFF;
-      color: #2340BC; }
+      color: #062573; }
     .btn__primaryGhost--small {
       height: 32px;
       padding-right: 16px;
@@ -178,12 +212,12 @@ p, ul, ol, li, span, input, label, textarea, button {
       padding-left: 32px; }
   .btn__secondary {
     background: none;
-    border: 1px solid #2340BC;
+    border: 1px solid #062573;
     border-radius: 16px;
-    color: #2340BC;
+    color: #062573;
     font-size: 1.6em; }
     .btn__secondary:hover {
-      background: #062573;
+      background: #031552;
       color: #FFFFFF; }
     .btn__secondary--small {
       height: 32px;

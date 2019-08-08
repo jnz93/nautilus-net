@@ -69,7 +69,7 @@
 
     // span.wrapIcon
     &__wrapIcon
-        background: $blueMain
+        background: $main-color
         width: 48px
         height: 48px
         border-radius: 100%
@@ -99,14 +99,14 @@
             font-size: $fs-12
             font-weight: $regular
             line-height: 1.6
-            color: $blueMain
+            color: $main-color
             text-align: center
 
         @include respond-above('md')
             font-size: $fs-16
             font-weight: $semi-bold
             line-height: 1.6
-            color: $blueMain
+            color: $main-color
             text-transform: uppercase
             margin: 0
             margin-bottom: 15px
@@ -125,7 +125,7 @@
         @include respond-above('md')
             font-size: $fs-16
             font-weight: $thin
-            color: $blackMedium
+            color: $text-light
             line-height: 1.6
 
         &--expandMobile
@@ -133,7 +133,7 @@
                 font-size: $fs-14
                 font-weight: $regular
                 line-height: 1.5
-                color: $blackMedium
+                color: $text-light
                 text-align: center
                 display: block
 
@@ -183,7 +183,7 @@
 
 
     &__bubbleWrap
-        background: $blueMain
+        background: $main-color
         width: 86px
         height: 86px
 
@@ -214,7 +214,7 @@
     // Label tipo da conexão
     &__label
         font-size: $fs-12
-        color: $blackLight
+        color: $text-light
         text-transform: uppercase
         border: 1px solid $grayDark
         border-radius: 4px
@@ -234,7 +234,7 @@
 
         li
             font-size: $fs-14
-            color: $blackLight
+            color: $text-light
             line-height: 1.6
             margin: 16px auto
 
@@ -248,7 +248,7 @@
     // Valor e tags de preço
     &__tag
         font-weight: $regular
-        color: $blackLight
+        color: $text-light
 
         @include respond-below('sm')
             font-size: $fs-12
@@ -265,7 +265,7 @@
             
     &__price
         font-size: $fs-36
-        color: $blackDark
+        color: $text-dark
         margin: 0 3px
         @include respond-above('md')
 
@@ -370,7 +370,7 @@
     // Wrapicon - Mobile solution
     &__wrapIcon
         @include respond-below('sm')
-            background: $blueMain
+            background: $main-color
             width: 48px
             height: 48px
             border-radius: 100%
@@ -392,7 +392,7 @@
 
         @include respond-above('md')
             width: 22px
-            fill: $blueMain
+            fill: $main-color
             margin-right: 15px
 
         &--hideMobile
@@ -402,7 +402,7 @@
     // Título do card
     &__title
         @include respond-below('sm')
-            color: $blueMain
+            color: $main-color
             text-transform: uppercase
             text-align: center
             margin: 5px
@@ -410,7 +410,7 @@
             font-size: $fs-12
 
         @include respond-above('md')
-            color: $blueMain
+            color: $main-color
             text-transform: uppercase
             margin: 0
             font-size: $fs-16
@@ -432,7 +432,7 @@
     // Informação
     &__info
         font-weight: $regular
-        color: $blackMedium
+        color: $text-light
         margin: 12px 0
         @include respond-below('sm')
             font-size: $fs-14
@@ -445,7 +445,7 @@
         font-size: $fs-14
         line-height: 1.7
         font-weight: $regular
-        color: $blackLight
+        color: $text-light
         margin-bottom: 25px
 
         &--center
@@ -502,9 +502,9 @@
             outline: none
 
     .slick-active
-        background: $blueMain
-        color: $blueMain
+        background: $main-color
+        color: $main-color
 
         button
-            background: $blueMain
-            color: $blueMain
+            background: $main-color
+            color: $main-color

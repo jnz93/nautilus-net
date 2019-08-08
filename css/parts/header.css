@@ -28,6 +28,40 @@ p, ul, ol, li, span, input, label, textarea, button {
   .sct__homepage {
     height: calc(100vh - 90px); } }
 
+.sct__homepage .slick-dots {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; }
+  .sct__homepage .slick-dots li {
+    width: 55px;
+    height: 8px;
+    border: 0;
+    border-radius: 0;
+    background: #BDBDBD;
+    overflow: hidden;
+    transition: .3s linear; }
+    .sct__homepage .slick-dots li button {
+      width: 55px;
+      height: 4px;
+      border: 0;
+      border-radius: 0;
+      background: #BDBDBD;
+      color: #BDBDBD;
+      transition: .3s linear; }
+  .sct__homepage .slick-dots .slick-active {
+    width: 85px;
+    height: 8px;
+    border: 0;
+    border-radius: 0;
+    background: #062573;
+    transition: .3s linear; }
+    .sct__homepage .slick-dots .slick-active button {
+      background: #062573;
+      color: #062573;
+      transition: .3s linear; }
+
 @media (max-width: 767px) {
   .sct__benefits {
     padding-top: 90px;
@@ -93,7 +127,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       min-height: 120px; } }
   .sctHeader__title, .sctHeader__subtitle {
     font-weight: 700;
-    color: #333333;
+    color: #757575;
     line-height: 1.8; }
     @media (max-width: 767px) {
       .sctHeader__title, .sctHeader__subtitle {
@@ -129,7 +163,7 @@ p, ul, ol, li, span, input, label, textarea, button {
   @media (min-width: 992px) {
     .mainHeader__type--fixed {
       background: #FFFFFF;
-      box-shadow: 0px 0px 3px #F2F2F2;
+      box-shadow: 0px 0px 3px #F9FBFF;
       top: 0;
       position: fixed; } }
   .mainHeader__flexContainer {
@@ -149,7 +183,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     .mainHeader__btnMenu {
       display: none; } }
   .mainHeader__icoMenu {
-    fill: #2340BC;
+    fill: #062573;
     width: 36px;
     height: 36px;
     transform: rotate(360deg);
@@ -184,13 +218,13 @@ p, ul, ol, li, span, input, label, textarea, button {
   @media (max-width: 767px) {
     .logo__title {
       font-size: 1.8em;
-      font-weight: 700;
-      color: #404040; } }
+      font-weight: 500;
+      color: #262626; } }
   @media (min-width: 992px) {
     .logo__title {
       font-size: 2.4em;
-      font-weight: 700;
-      color: #404040; } }
+      font-weight: 500;
+      color: #262626; } }
 
 @media (max-width: 767px) {
   .mainMenuContainer {
@@ -213,7 +247,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (max-width: 767px) {
   .mainMenuContainer__mobile:before {
     content: '';
-    background: #EDEDED;
+    background: #F2F2F2;
     width: 600px;
     height: 600px;
     border-radius: 100%;
@@ -229,7 +263,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     content: '';
     width: 800px;
     height: 800px;
-    background: #EDEDED;
+    background: #F2F2F2;
     border-radius: 100%;
     position: absolute;
     top: calc(100% / 2 - 400px);
@@ -275,7 +309,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       font-size: 2.1em;
       font-weight: 700;
       margin-bottom: 20px;
-      color: #404040; } }
+      color: #757575; } }
   .menuList .menu-item {
     display: flex;
     align-items: center; }
@@ -294,7 +328,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     @media (max-width: 767px) {
       .menuList .menu-item:before {
         content: '';
-        background: #2340BC;
+        background: #062573;
         width: 1px;
         height: 100%;
         position: absolute;
@@ -303,7 +337,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     @media (max-width: 767px) {
       .menuList .menu-item:after {
         content: '';
-        background: #2340BC;
+        background: #062573;
         width: 16px;
         height: 16px;
         border-radius: 100%;
@@ -312,8 +346,8 @@ p, ul, ol, li, span, input, label, textarea, button {
         opacity: .8; } }
     .menuList .menu-item a {
       font-size: 1.6em;
-      font-weight: 300;
-      color: #404040;
+      font-weight: 400;
+      color: #757575;
       text-decoration: none; }
       @media (max-width: 767px) {
         .menuList .menu-item a {
