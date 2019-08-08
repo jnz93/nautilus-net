@@ -24,7 +24,7 @@
         justify-content: center
 
     @include respond-above('lg')
-        background: $grayLight
+        background: $white
         border-radius: 6px
         width: calc(100% - 110px)
         margin: 50px auto
@@ -81,7 +81,8 @@
         @include respond-below('sm')
             margin: auto
 
-        @include respond-above('lg')
+        @include respond-above('md')
+            background: $information-color
             margin: 0
             margin-bottom: 15px
         
@@ -106,8 +107,8 @@
             font-size: $fs-16
             font-weight: $semi-bold
             line-height: 1.6
-            color: $main-color
-            text-transform: uppercase
+            color: $text-light
+            text-transform: none
             margin: 0
             margin-bottom: 15px
 

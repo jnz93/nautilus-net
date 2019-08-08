@@ -71,9 +71,6 @@ p, ul, ol, li, span, input, label, textarea, button
                     color: $accent-color
                     transition: .3s linear
 
-            
-
-
     // Beneficios
     &__benefits
         @include respond-below('sm')
@@ -85,7 +82,13 @@ p, ul, ol, li, span, input, label, textarea, button
             min-height: calc(100vh - 100px)
             padding: 0
             padding-top: 100px
+            padding-bottom: 100px
             margin: 50px 0
+
+            background-image: url("../../images/bg-secao-beneficios.svg")
+            background-size: auto 100%
+            background-position: center
+            background-repeat: repeat
 
     // Planos
     &__plans
