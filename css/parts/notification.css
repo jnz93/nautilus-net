@@ -36,15 +36,15 @@ p, ul, ol, li, span, input, label, textarea, button {
   padding: 0;
   margin: 0 auto; }
   .sct__homepage .slick-dots li {
-    width: 55px;
-    height: 8px;
+    width: 45px;
+    height: 4px;
     border: 0;
     border-radius: 0;
     background: #BDBDBD;
     overflow: hidden;
     transition: .3s linear; }
     .sct__homepage .slick-dots li button {
-      width: 55px;
+      width: 45px;
       height: 4px;
       border: 0;
       border-radius: 0;
@@ -52,15 +52,15 @@ p, ul, ol, li, span, input, label, textarea, button {
       color: #BDBDBD;
       transition: .3s linear; }
   .sct__homepage .slick-dots .slick-active {
-    width: 85px;
-    height: 8px;
+    width: 65px;
+    height: 4px;
     border: 0;
     border-radius: 0;
-    background: #062573;
+    background: #031552;
     transition: .3s linear; }
     .sct__homepage .slick-dots .slick-active button {
-      background: #062573;
-      color: #062573;
+      background: #031552;
+      color: #031552;
       transition: .3s linear; }
 
 @media (max-width: 767px) {
