@@ -39,7 +39,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     width: 45px;
     height: 4px;
     border: 0;
-    border-radius: 0;
+    border-radius: 20px;
     background: #BDBDBD;
     overflow: hidden;
     transition: .3s linear; }
@@ -55,12 +55,12 @@ p, ul, ol, li, span, input, label, textarea, button {
     width: 65px;
     height: 4px;
     border: 0;
-    border-radius: 0;
-    background: #031552;
+    border-radius: 20px;
+    background: #3C19A6;
     transition: .3s linear; }
     .sct__homepage .slick-dots .slick-active button {
-      background: #031552;
-      color: #031552;
+      background: #3C19A6;
+      color: #3C19A6;
       transition: .3s linear; }
 
 @media (max-width: 767px) {
@@ -156,8 +156,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (min-width: 992px) {
   .notification {
     position: absolute;
-    top: 80px;
-    left: 0px; } }
+    top: 60px;
+    right: 50px; } }
 
 .notification__spacer {
   width: 100%;
@@ -191,32 +191,32 @@ p, ul, ol, li, span, input, label, textarea, button {
       transform: rotate(360deg); } }
 
 .notification__iconWrap {
-  background: #FFFFFF;
+  background: #C3544A;
   width: 36px;
   height: 36px;
-  border: 1px solid #062573;
+  border: 1px solid #C3544A;
   border-radius: 100%;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  outline: none; }
+  outline: none;
+  z-index: 9999; }
   @media (max-width: 767px) {
     .notification__iconWrap {
       top: 20px;
-      right: 90px;
-      z-index: 9999; } }
+      right: 90px; } }
   @media (min-width: 992px) {
     .notification__iconWrap {
-      top: 30px;
-      left: 0px; } }
+      top: 10px;
+      right: 50px; } }
   .notification__iconWrap--disabled {
     transition-duration: 1s;
     display: none; }
 
 .notification__icon {
-  fill: #062573;
+  fill: #FFFFFF;
   transition: .4s; }
   .notification__icon--disabled {
     opacity: 0;

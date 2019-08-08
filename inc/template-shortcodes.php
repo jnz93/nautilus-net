@@ -86,8 +86,8 @@ if( !function_exists('get_notifications') ){
         $notifications = new WP_Query($args);
         $output = '';
         $output .= '<button id="openNotification" class="notification__iconWrap">
-                        <i id="ico-show" class="notification__icon notification__icon--show" data-eva="bell" data-eva-fill="" data-eva-height="24" data-eva-width="24" data-eva-animation=""></i>
-                        <i id="ico-close" class="notification__icon notification__icon--disabled" data-eva="close" data-eva-fill="" data-eva-height="24" data-eva-width="24" data-eva-animation=""></i>
+                        <i id="ico-show-notification" class="notification__icon notification__icon--show" data-eva="bell" data-eva-fill="" data-eva-height="24" data-eva-width="24" data-eva-animation=""></i>
+                        <i id="ico-close-notification" class="notification__icon notification__icon--disabled" data-eva="close" data-eva-fill="" data-eva-height="24" data-eva-width="24" data-eva-animation=""></i>
                     </button>';
         if( $notifications->have_posts() ){
             while( $notifications->have_posts() ){

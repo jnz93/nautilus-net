@@ -64,8 +64,8 @@ jQuery(document).ready(function(){
     btnOpenNotification.click(function(){
 
         // Troca dos icones no botão
-        jQuery('#ico-show').toggleClass('notification__icon--show notification__icon--disabled');
-        jQuery('#ico-close').toggleClass('notification__icon--disabled notification__icon--show');
+        jQuery('#ico-show-notification').toggleClass('notification__icon--show notification__icon--disabled');
+        jQuery('#ico-close-notification').toggleClass('notification__icon--disabled notification__icon--show');
 
         // Mostrar o conteúdo
         appNotification.toggleClass('notification__wrapper--expand');

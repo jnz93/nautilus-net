@@ -38,7 +38,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     width: 45px;
     height: 4px;
     border: 0;
-    border-radius: 0;
+    border-radius: 20px;
     background: #BDBDBD;
     overflow: hidden;
     transition: .3s linear; }
@@ -54,12 +54,12 @@ p, ul, ol, li, span, input, label, textarea, button {
     width: 65px;
     height: 4px;
     border: 0;
-    border-radius: 0;
-    background: #031552;
+    border-radius: 20px;
+    background: #3C19A6;
     transition: .3s linear; }
     .sct__homepage .slick-dots .slick-active button {
-      background: #031552;
-      color: #031552;
+      background: #3C19A6;
+      color: #3C19A6;
       transition: .3s linear; }
 
 @media (max-width: 767px) {
@@ -219,12 +219,12 @@ p, ul, ol, li, span, input, label, textarea, button {
     .logo__title {
       font-size: 1.8em;
       font-weight: 500;
-      color: #262626; } }
+      color: #2e3a59; } }
   @media (min-width: 992px) {
     .logo__title {
       font-size: 2.4em;
       font-weight: 500;
-      color: #262626; } }
+      color: #2e3a59; } }
 
 @media (max-width: 767px) {
   .mainMenuContainer {
@@ -352,4 +352,4 @@ p, ul, ol, li, span, input, label, textarea, button {
       @media (max-width: 767px) {
         .menuList .menu-item a {
           font-weight: 500;
-          color: #262626; } }
+          color: #2e3a59; } }

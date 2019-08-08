@@ -38,7 +38,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     width: 45px;
     height: 4px;
     border: 0;
-    border-radius: 0;
+    border-radius: 20px;
     background: #BDBDBD;
     overflow: hidden;
     transition: .3s linear; }
@@ -54,12 +54,12 @@ p, ul, ol, li, span, input, label, textarea, button {
     width: 65px;
     height: 4px;
     border: 0;
-    border-radius: 0;
-    background: #031552;
+    border-radius: 20px;
+    background: #3C19A6;
     transition: .3s linear; }
     .sct__homepage .slick-dots .slick-active button {
-      background: #031552;
-      color: #031552;
+      background: #3C19A6;
+      color: #3C19A6;
       transition: .3s linear; }
 
 @media (max-width: 767px) {
@@ -148,7 +148,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 .articleHome {
   outline: none;
-  display: flex !important; }
+  display: flex !important;
+  cursor: grab; }
   @media (max-width: 767px) {
     .articleHome {
       padding: 0 20px;
@@ -171,7 +172,7 @@ p, ul, ol, li, span, input, label, textarea, button {
   .articleHome__title {
     margin: 0;
     font-weight: 900;
-    color: #262626;
+    color: #2e3a59;
     line-height: 1.6; }
     @media (max-width: 767px) {
       .articleHome__title {

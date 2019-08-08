@@ -37,7 +37,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     width: 45px;
     height: 4px;
     border: 0;
-    border-radius: 0;
+    border-radius: 20px;
     background: #BDBDBD;
     overflow: hidden;
     transition: .3s linear; }
@@ -53,12 +53,12 @@ p, ul, ol, li, span, input, label, textarea, button {
     width: 65px;
     height: 4px;
     border: 0;
-    border-radius: 0;
-    background: #031552;
+    border-radius: 20px;
+    background: #3C19A6;
     transition: .3s linear; }
     .sct__homepage .slick-dots .slick-active button {
-      background: #031552;
-      color: #031552;
+      background: #3C19A6;
+      color: #3C19A6;
       transition: .3s linear; }
 
 @media (max-width: 767px) {
@@ -366,7 +366,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       align-self: flex-end; }
   .planCard__price {
     font-size: 3.6em;
-    color: #262626;
+    color: #2e3a59;
     margin: 0 3px; }
 
 .contactCard {

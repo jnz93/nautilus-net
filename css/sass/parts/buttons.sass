@@ -25,18 +25,23 @@
     align-content: center
     align-items: center
     transition: .2s ease-in-out
+    cursor: pointer
 
     // Botões primários
     &__primary
         background: $main-color
         border: none
-        border-radius: 6px
+        border-radius: 0
         color: $white
         font-size: $fs-16
+        transition: .2s linear
 
         // Estado hover
         &:hover
-            background: $secondary-color
+            background: $main-color
+            // box-shadow: -6px 6px 1px $grayDark
+            box-shadow: -6px 6px 0px $secondary-color
+            transition: .2s linear
 
         // Tamanhos padrões
         &--small
