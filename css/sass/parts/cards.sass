@@ -175,16 +175,26 @@
         padding: 15px
         box-shadow: 0px 0px 3px $grayDark
 
+    // Título
+    &__title
+        font-size: $fs-21
+        font-weight: $semi-bold
+        color: $text-dark
+
     // Borda
     &__spacer
-        width: 100%
-        height: 1px
+        background: $graySecondary
+        display: block
         @include respond-above('md')
-            background: $graySecondary
+            width: 100%
+            height: 1px
 
-
-    &__bubbleWrap
-        background: $main-color
+        &--fift
+            @include respond-above('md')
+                width: 50%
+    
+    &__bubbleInfo
+        background: $accent-color
         width: 86px
         height: 86px
 
@@ -197,13 +207,13 @@
         justify-content: center
     
     // Título
-    &__title
+    &__speed
         text-transform: uppercase
         margin: 0
         font-size: $fs-36
         color: $white
         
-    &__subtitle
+    &__speedTag
         width: 100%
         font-size: $fs-14
         font-weight: $regular
@@ -225,13 +235,11 @@
 
     // Conteúdo
     &__content
+        list-style: none
+        padding: 0
+        margin: 0
         @include respond-above('md')
             margin: 5px auto
-
-        ul
-            list-style: none
-            padding: 0
-            margin: 0
 
         li
             font-size: $fs-14

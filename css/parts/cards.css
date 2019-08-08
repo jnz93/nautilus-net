@@ -301,14 +301,22 @@ p, ul, ol, li, span, input, label, textarea, button {
       width: calc(100% - 30px);
       padding: 15px;
       box-shadow: 0px 0px 3px #BDBDBD; } }
+  .planCard__title {
+    font-size: 2.1em;
+    font-weight: 700;
+    color: #2e3a59; }
   .planCard__spacer {
-    width: 100%;
-    height: 1px; }
+    background: #F2F2F2;
+    display: block; }
     @media (min-width: 992px) {
       .planCard__spacer {
-        background: #F2F2F2; } }
-  .planCard__bubbleWrap {
-    background: #062573;
+        width: 100%;
+        height: 1px; } }
+    @media (min-width: 992px) {
+      .planCard__spacer--fift {
+        width: 50%; } }
+  .planCard__bubbleInfo {
+    background: #3C19A6;
     width: 86px;
     height: 86px;
     margin: 15px auto;
@@ -317,12 +325,12 @@ p, ul, ol, li, span, input, label, textarea, button {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center; }
-  .planCard__title {
+  .planCard__speed {
     text-transform: uppercase;
     margin: 0;
     font-size: 3.6em;
     color: #FFFFFF; }
-  .planCard__subtitle {
+  .planCard__speedTag {
     width: 100%;
     font-size: 1.4em;
     font-weight: 500;
@@ -338,18 +346,18 @@ p, ul, ol, li, span, input, label, textarea, button {
     padding: 5px 10px;
     display: inline-block;
     margin: 15px auto; }
-  @media (min-width: 992px) {
-    .planCard__content {
-      margin: 5px auto; } }
-  .planCard__content ul {
+  .planCard__content {
     list-style: none;
     padding: 0;
     margin: 0; }
-  .planCard__content li {
-    font-size: 1.4em;
-    color: #757575;
-    line-height: 1.6;
-    margin: 16px auto; }
+    @media (min-width: 992px) {
+      .planCard__content {
+        margin: 5px auto; } }
+    .planCard__content li {
+      font-size: 1.4em;
+      color: #757575;
+      line-height: 1.6;
+      margin: 16px auto; }
   .planCard__wrap {
     display: flex;
     align-items: flex-end;

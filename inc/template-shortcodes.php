@@ -281,23 +281,30 @@ if( !function_exists('get_plans') ){
 
                 $output .= '<div class="col-xs-12 col-sm-10 col-md-2 col-lg-2">
                                 <article id="plano-'. $post_id .'" class="planCard">
-                                    <div class="planCard__bubbleWrap">
-                                        <h1 class="planCard__title">'. $plan_title_pt1 .'</h1>
-                                        <h6 class="planCard__subtitle">'. $plan_title_pt2 .'</h6>
-                                    </div>
-
+                                    <h1 class="planCard__title">'. $post_title .'</h1>
                                     <span class="planCard__spacer"></span>
-                                    <span class="planCard__label">tipo da conexão</span>
-                                    <div class="planCard__content">
-                                        '. $post_content .'
+
+                                    <div class="planCard__bubbleInfo">
+                                        <h3 class="planCard__speed">'. $plan_download .'</h3>
+                                        <span class="planCard__speedTag">mega</span>
+                                    </div>                                    
+                                    <div class="col-sm-12 col-md-12">
+                                        <span class="planCard__label">tipo da conexão</span>
                                     </div>
+                                    <span class="planCard__spacer planCard__spacer--fift"></span>
+                                    <ul class="planCard__content">
+                                        <li class="planCard__contentItem">Upload: <b>'. $plan_upload .' MEGA</b></li>
+                                        <li class="planCard__contentItem">Download: <b>'. $plan_download .' MEGA</b></li>
+                                        <li class="planCard__contentItem">Franquia: <b>Ilimitada</b></li>
+                                    </ul>
+                                    <span class="planCard__spacer planCard__spacer--fift"></span>
+
                                     <div class="planCard__wrap">
                                         <span class="planCard__tag planCard__tag--alignStart">R$</span>
                                         <h2 class="planCard__price" title="'. $plan_price .'">'. $plan_price .'</h2>
                                         <span class="planCard__tag planCard__tag--alignEnd">'. $plan_payment_tag .'</span>
                                     </div>
-                                    <button id="submit-'. $post_id .'" class="btn btn__primary btn__primary--medium">'. $plan_txt_btn .'</button>
-                                </article>
+                                   </article>
                             </div>';   
             }
             echo $output;
