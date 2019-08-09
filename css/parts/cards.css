@@ -27,40 +27,6 @@ p, ul, ol, li, span, input, label, textarea, button {
   .sct__homepage {
     height: calc(100vh - 90px); } }
 
-.sct__homepage .slick-dots {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0 auto; }
-  .sct__homepage .slick-dots li {
-    width: 45px;
-    height: 4px;
-    border: 0;
-    border-radius: 20px;
-    background: #BDBDBD;
-    overflow: hidden;
-    transition: .3s linear; }
-    .sct__homepage .slick-dots li button {
-      width: 45px;
-      height: 4px;
-      border: 0;
-      border-radius: 0;
-      background: #BDBDBD;
-      color: #BDBDBD;
-      transition: .3s linear; }
-  .sct__homepage .slick-dots .slick-active {
-    width: 65px;
-    height: 4px;
-    border: 0;
-    border-radius: 20px;
-    background: #3C19A6;
-    transition: .3s linear; }
-    .sct__homepage .slick-dots .slick-active button {
-      background: #3C19A6;
-      color: #3C19A6;
-      transition: .3s linear; }
-
 @media (max-width: 767px) {
   .sct__benefits {
     padding-top: 90px;
@@ -89,6 +55,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     min-height: calc(100vh - 100px);
     padding: 0;
     padding-top: 100px;
+    padding-bottom: 100px;
     margin: 50px 0; } }
 
 @media (max-width: 767px) {
@@ -298,11 +265,11 @@ p, ul, ol, li, span, input, label, textarea, button {
       box-shadow: 0px 0px 6px #BDBDBD; } }
   @media (min-width: 992px) {
     .planCard {
-      width: calc(100% - 30px);
       padding: 15px;
-      box-shadow: 0px 0px 3px #BDBDBD; } }
+      margin: 0 10px;
+      box-shadow: 0px 0px 10px #BDBDBD; } }
   .planCard__title {
-    font-size: 2.1em;
+    font-size: 1.8em;
     font-weight: 700;
     color: #2e3a59; }
   .planCard__spacer {
@@ -311,7 +278,8 @@ p, ul, ol, li, span, input, label, textarea, button {
     @media (min-width: 992px) {
       .planCard__spacer {
         width: 100%;
-        height: 1px; } }
+        height: 1px;
+        margin: 5px auto; } }
     @media (min-width: 992px) {
       .planCard__spacer--fift {
         width: 50%; } }
@@ -539,36 +507,57 @@ p, ul, ol, li, span, input, label, textarea, button {
       box-shadow: 0px 0px 10px #BDBDBD;
       position: fixed; } }
 
-@media (max-width: 767px) {
-  .slick-dots {
-    width: 100%;
-    height: 50px;
-    padding: 0;
-    margin: 15px auto;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center; } }
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; }
+  .slick-dots li {
+    width: 45px;
+    height: 4px;
+    border: 0;
+    margin: 0 7px;
+    border-radius: 20px;
+    background: #BDBDBD;
+    overflow: hidden;
+    transition: .3s linear; }
+    .slick-dots li button {
+      width: 45px;
+      height: 4px;
+      border: 0;
+      border-radius: 0;
+      background: #BDBDBD;
+      color: #BDBDBD;
+      transition: .3s linear; }
+  .slick-dots .slick-active {
+    width: 65px;
+    height: 4px;
+    border: 0;
+    border-radius: 20px;
+    background: #3C19A6;
+    transition: .3s linear; }
+    .slick-dots .slick-active button {
+      background: #3C19A6;
+      color: #3C19A6;
+      transition: .3s linear; }
 
-.slick-dots li {
-  width: 16px;
-  height: 16px;
-  border-radius: 100%;
-  background: #F2F2F2;
-  color: #F2F2F2;
-  margin: auto 10px; }
-  .slick-dots li button {
-    width: 16px;
-    height: 16px;
-    border-radius: 100%;
-    border: 1px solid #BDBDBD;
-    background: #F2F2F2;
-    color: #F2F2F2;
-    outline: none; }
+@media (min-width: 992px) {
+  .slick-arrow {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    position: absolute;
+    top: calc(100% / 2 - 20px); } }
 
-.slick-dots .slick-active {
-  background: #062573;
-  color: #062573; }
-  .slick-dots .slick-active button {
-    background: #062573;
-    color: #062573; }
+.slick-arrow .eva {
+  fill: #3C19A6; }
+
+@media (min-width: 992px) {
+  .slick-prev {
+    left: -50px; } }
+
+@media (min-width: 992px) {
+  .slick-next {
+    right: -50px; } }

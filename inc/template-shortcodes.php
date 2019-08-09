@@ -279,33 +279,31 @@ if( !function_exists('get_plans') ){
                 $plan_title_pt1 = $plan_title_arr[0];
                 $plan_title_pt2 = $plan_title_arr[1];
 
-                $output .= '<div class="col-xs-12 col-sm-10 col-md-2 col-lg-2">
-                                <article id="plano-'. $post_id .'" class="planCard">
-                                    <h1 class="planCard__title">'. $post_title .'</h1>
-                                    <span class="planCard__spacer"></span>
+                $output .= '<article id="plano-'. $post_id .'" class="planCard">
+                                <h1 class="planCard__title">'. $post_title .'</h1>
+                                <span class="planCard__spacer"></span>
 
-                                    <div class="planCard__bubbleInfo">
-                                        <h3 class="planCard__speed">'. $plan_download .'</h3>
-                                        <span class="planCard__speedTag">mega</span>
-                                    </div>                                    
-                                    <div class="col-sm-12 col-md-12">
-                                        <span class="planCard__label">tipo da conexão</span>
-                                    </div>
-                                    <span class="planCard__spacer planCard__spacer--fift"></span>
-                                    <ul class="planCard__content">
-                                        <li class="planCard__contentItem">Upload: <b>'. $plan_upload .' MEGA</b></li>
-                                        <li class="planCard__contentItem">Download: <b>'. $plan_download .' MEGA</b></li>
-                                        <li class="planCard__contentItem">Franquia: <b>Ilimitada</b></li>
-                                    </ul>
-                                    <span class="planCard__spacer planCard__spacer--fift"></span>
+                                <div class="planCard__bubbleInfo">
+                                    <h3 class="planCard__speed">'. $plan_download .'</h3>
+                                    <span class="planCard__speedTag">mega</span>
+                                </div>                                    
+                                <div class="col-sm-12 col-md-12">
+                                    <span class="planCard__label">tipo da conexão</span>
+                                </div>
+                                <span class="planCard__spacer planCard__spacer--fift"></span>
+                                <ul class="planCard__content">
+                                    <li class="planCard__contentItem">Upload: <b>'. $plan_upload .' MEGA</b></li>
+                                    <li class="planCard__contentItem">Download: <b>'. $plan_download .' MEGA</b></li>
+                                    <li class="planCard__contentItem">Franquia: <b>Ilimitada</b></li>
+                                </ul>
+                                <span class="planCard__spacer planCard__spacer--fift"></span>
 
-                                    <div class="planCard__wrap">
-                                        <span class="planCard__tag planCard__tag--alignStart">R$</span>
-                                        <h2 class="planCard__price" title="'. $plan_price .'">'. $plan_price .'</h2>
-                                        <span class="planCard__tag planCard__tag--alignEnd">'. $plan_payment_tag .'</span>
-                                    </div>
-                                   </article>
-                            </div>';   
+                                <div class="planCard__wrap">
+                                    <span class="planCard__tag planCard__tag--alignStart">R$</span>
+                                    <h2 class="planCard__price" title="'. $plan_price .'">'. $plan_price .'</h2>
+                                    <span class="planCard__tag planCard__tag--alignEnd">'. $plan_payment_tag .'</span>
+                                </div>
+                            </article>';
             }
             echo $output;
         } else {

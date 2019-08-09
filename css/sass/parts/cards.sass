@@ -171,13 +171,13 @@
         box-shadow: 0px 0px 6px $grayDark
 
     @include respond-above('md')
-        width: calc(100% - 30px)
         padding: 15px
-        box-shadow: 0px 0px 3px $grayDark
+        margin: 0 10px
+        box-shadow: 0px 0px 10px $grayDark
 
     // Título
     &__title
-        font-size: $fs-21
+        font-size: $fs-18
         font-weight: $semi-bold
         color: $text-dark
 
@@ -188,6 +188,7 @@
         @include respond-above('md')
             width: 100%
             height: 1px
+            margin: 5px auto
 
         &--fift
             @include respond-above('md')
@@ -479,41 +480,66 @@
 // -> v1.0
 /////////////////////////////////////////////
 .slick-dots
-    @include respond-below('sm')
-        width: 100%
-        height: 50px
-
-        padding: 0
-        margin: 15px auto
-        list-style: none
-
-        display: flex
-        align-items: center
-        justify-content: center
-
-
+    display: flex
+    justify-content: center
+    list-style: none
+    padding: 0
+    margin: 0 auto
+    
+    // items
     li
-        width: 16px
-        height: 16px
-        border-radius: 100%
-        background: $graySecondary
-        color: $graySecondary
+        width: 45px
+        height: 4px
+        border: 0
+        margin: 0 7px
+        border-radius: 20px
 
-        margin: auto 10px
-
+        background: $grayDark
+        overflow: hidden
+        transition: .3s linear
+        
         button
-            width: 16px
-            height: 16px
-            border-radius: 100%
-            border: 1px solid $grayDark
-            background: $graySecondary
-            color: $graySecondary
-            outline: none
+            width: 45px
+            height: 4px
+            border: 0
+            border-radius: 0
+
+            background: $grayDark
+            color: $grayDark
+            transition: .3s linear
 
     .slick-active
-        background: $main-color
-        color: $main-color
+        width: 65px
+        height: 4px
+        border: 0
+        border-radius: 20px
 
+        background: $accent-color
+        transition: .3s linear
+        
         button
-            background: $main-color
-            color: $main-color
+            background: $accent-color
+            color: $accent-color
+            transition: .3s linear
+
+// Botões slick prev e next
+.slick-arrow
+    @include respond-above('md')
+        width: 40px
+        height: 40px
+        border: none
+        background: none
+
+        position: absolute
+        top: calc(100% / 2 - 20px)
+    
+    // Ícone svg
+    .eva
+        fill: $accent-color
+
+.slick-prev
+    @include respond-above('md')
+        left: -50px
+.slick-next
+    @include respond-above('md')
+        right: -50px

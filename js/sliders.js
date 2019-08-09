@@ -52,5 +52,33 @@ jQuery(document).ready(function(){
             slidesToShow: 1,
             slidesToScroll: 1
         });
+
+        /**
+         * Slick slider - Planos desktop
+         */
+        jQuery('.sct__plans > .sct__contentWrapper').slick({
+            dots: true,
+            arrows: true,
+            infinite: false,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+        });
+        
+        // Altearção no elemento do slider -> provisório
+        jQuery('.sct__plans .slick-list').css({
+            'min-height' : '540px'
+        });
+
+        jQuery('.sct__plans .slick-track').css({
+            'margin' : '25px auto'
+        })
+
+        // Adicionar ícones aos botões do slider
+        var iconPrev = '<i class="" data-eva="arrow-circle-left"></i>',
+            iconNext = '<i class="" data-eva="arrow-circle-right"></i>';
+
+        jQuery('.slick-prev').text('').append(iconPrev);
+        jQuery('.slick-next').text('').append(iconNext);
+        eva.replace(); // Chamanda para dar replace nos ícones
     }
 });
