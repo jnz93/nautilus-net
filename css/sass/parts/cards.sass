@@ -171,9 +171,10 @@
         box-shadow: 0px 0px 6px $grayDark
 
     @include respond-above('md')
+        background: $white
         padding: 15px
         margin: 0 10px
-        box-shadow: 0px 0px 10px $grayDark
+        box-shadow: -3px 3px 6px $grayDark
 
     // Título
     &__title
@@ -195,7 +196,7 @@
                 width: 50%
     
     &__bubbleInfo
-        background: $accent-color
+        background: $information-color
         width: 86px
         height: 86px
 
@@ -294,6 +295,7 @@
         box-shadow: 0px 0px 3px $grayDark
 
     @include respond-above('md')
+        background: $white
         width: calc(100% - 150px)
         height: auto
         margin-top: 25px
@@ -301,7 +303,7 @@
         padding: 15px 25px
 
         border-radius: 3px
-        box-shadow: 0px 0px 3px $grayDark
+        box-shadow: -3px 3px 10px $grayDark
 
     &__flex
         @include respond-above('md')

@@ -57,7 +57,11 @@ p, ul, ol, li, span, input, label, textarea, button {
     padding: 0;
     padding-top: 100px;
     padding-bottom: 100px;
-    margin: 50px 0; } }
+    margin: 50px 0;
+    background-image: url("../../images/bg-secao-planos.svg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: top 140px right -1310px; } }
 
 @media (max-width: 767px) {
   .sct__contact {
@@ -69,7 +73,12 @@ p, ul, ol, li, span, input, label, textarea, button {
     min-height: calc(100vh - 100px);
     padding: 0;
     padding-top: 100px;
-    margin: 50px 0; } }
+    padding-bottom: 100px;
+    margin: 50px 0;
+    background-image: url("../../images/bg-secao-contato.svg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: top 30px left -470px; } }
 
 @media (max-width: 767px) {
   .sct__contentWrapper {
