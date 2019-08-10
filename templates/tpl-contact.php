@@ -21,10 +21,12 @@ $page_thumb_url     = get_the_post_thumbnail_url($page);
     </header>
 
     <div class="row sct__contentWrapper">
-        <?php 
-        if( shortcode_exists('show_contact_section') ){
-            do_shortcode('[show_contact_section]');
-        }
-    ?>
+        <div class="row col-lg-9">
+            <?php 
+            if( shortcode_exists('show_contact_section') ){
+                do_shortcode('[show_contact_section]');
+            }
+            ?>
+        </div>
     </div>
 </section>

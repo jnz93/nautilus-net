@@ -124,34 +124,64 @@ if( !function_exists('theme_options_page') ){
  * @param $title = string
  * @param $arr = array
  */
-function card_contact($icon, $title, $arr){
+function card_contact($title, $arr){
     
     $html = '';
     $html .= '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                 <div class="contactCard__cover"></div>
-                <span class="contactCard__closeBtn">
-                    <i class="" data-eva="close" fill="#404040"></i>
-                </span>
                 <div onClick="clickOpenContactCardMobile(jQuery(this))" class="contactCard">
-                    <div class="contactCard__header">
-                        <span class="contactCard__wrapIcon contactCard__wrapIcon--hideDesktop">
-                            <i class="contactCard__icon" data-eva="'. $icon .'" data-eva-width="" data-eva-height="36" data-eva-fill=""></i>    
-                        </span>
-                        <i class="contactCard__icon contactCard__icon--hideMobile" data-eva="'. $icon .'" data-eva-width="" data-eva-height="36" data-eva-fill=""></i>
-                        <h3 class="contactCard__title contactCard__title--semiBold">'. $title .'</h3>
-                    </div>
+                    <h3 class="contactCard__title contactCard__title--semiBold">'. $title .'</h3>
                     <span class="contactCard__spacer"></span>
-                    <div class="contactCard__body">';
+                    <ul class="contactCard__list">';
                     if( is_array($arr) ){
                         foreach( $arr as $item ){
+                            $html .= '<li class="contactCard__listItem">';
+                            $html .= '<span class="contactCard__tag">Identificação do item</span>';
                             $html .= '<p class="contactCard__info">'.$item.'</p>';
+                            $html .= '<button class=""><i class="" data-eva="phone"></i>Fazer chamada</button>';
+                            $html .= '</li>';
+                            $html .= '<span class="contactCard__spacer"></span>';
                         }
                         
                     }
-            $html .= '</div>
+            $html .= '</ul>
                 </div>
             </div>';
 
     echo $html ;
 }
+
+
+/**
+ * Card Phone contact
+ * @param $title_card = string com o título do cartão
+ * @param $title_info = array com os títulos de cada informaçao
+ * @param $arr_infos = array com as informações a serem escritas
+ */
+function card_phone_contact($title_card, $title_info, $arr_infos){
+    $html = '';
+    $html .= '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 contactCard__flex contactCard__flex--alignCenter">
+                <div class="contactCard__cover"></div>
+                <div onClick="clickOpenContactCardMobile(jQuery(this))" class="contactCard">
+                    <h3 class="contactCard__title contactCard__title--semiBold">'. $title_card .'</h3>
+                    <span class="contactCard__spacer"></span>
+                    <ul class="contactCard__list">
+                        <li class="contactCard__listItem">
+                            <span class="contactCard__tag">'. $title_info[0] .'</span>
+                            <p class="contactCard__info">'. $arr_infos[0] .'</p>
+                        </li>
+                        <span class="contactCard__spacer"></span>
+                        <li class="contactCard__listItem">
+                            <span class="contactCard__tag">'. $title_info[1] .'</span>
+                            <p class="contactCard__info">'. $arr_infos[1] .'</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>';
+
+    echo $html ;
+}
+
+// <button class=""><i class="" data-eva="whatsapp"></i>Iniciar conversa</button>
+// <button class=""><i class="" data-eva="phone"></i>Fazer chamada</button>
 ?>
