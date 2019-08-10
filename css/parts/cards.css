@@ -363,11 +363,19 @@ p, ul, ol, li, span, input, label, textarea, button {
       box-shadow: 0px 0px 3px #BDBDBD; } }
   @media (min-width: 992px) {
     .contactCard {
-      width: calc(100% - 50px);
+      width: calc(100% - 150px);
       height: auto;
-      margin: 25px auto;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      padding: 15px 25px;
       border-radius: 3px;
-      box-shadow: 0px 0px 3px #F2F2F2; } }
+      box-shadow: 0px 0px 3px #BDBDBD; } }
+  @media (min-width: 992px) {
+    .contactCard__flex {
+      display: flex; } }
+  @media (min-width: 992px) {
+    .contactCard__flex--alignCenter {
+      justify-content: center; } }
   @media (max-width: 767px) {
     .contactCard__cover {
       background: #F2F2F2;
@@ -415,19 +423,16 @@ p, ul, ol, li, span, input, label, textarea, button {
     margin-top: 5px;
     margin-bottom: 20px;
     display: block; }
-  @media (min-width: 992px) {
-    .contactCard__header {
-      height: 40px;
-      display: flex;
-      align-items: center; } }
   @media (max-width: 767px) {
-    .contactCard__body {
+    .contactCard__list {
       display: none; } }
   @media (min-width: 992px) {
-    .contactCard__body {
-      width: 100%;
-      padding-left: 40px; } }
-  .contactCard__body--expandMobile {
+    .contactCard__list {
+      width: calc(100% - 40px);
+      list-style: none;
+      padding: 0 20px;
+      margin: 0; } }
+  .contactCard__list--expandMobile {
     display: block; }
   @media (max-width: 767px) {
     .contactCard__wrapIcon {
@@ -464,10 +469,11 @@ p, ul, ol, li, span, input, label, textarea, button {
       font-size: 1.2em; } }
   @media (min-width: 992px) {
     .contactCard__title {
-      color: #062573;
-      text-transform: uppercase;
+      color: #2e3a59;
+      font-size: 1.6em;
       margin: 0;
-      font-size: 1.6em; } }
+      margin-top: 10px;
+      margin-bottom: 20px; } }
   .contactCard__title--thin {
     font-weight: 300; }
   .contactCard__title--semiBold {
@@ -477,16 +483,22 @@ p, ul, ol, li, span, input, label, textarea, button {
       font-size: 1.4em;
       font-weight: 700;
       text-transform: uppercase; } }
+  @media (min-width: 992px) {
+    .contactCard__tag {
+      font-weight: 400;
+      font-size: 1.2em;
+      color: #757575;
+      margin: 5px 0; } }
   .contactCard__info {
     font-weight: 500;
     color: #757575;
-    margin: 12px 0; }
+    margin: 7px 0; }
     @media (max-width: 767px) {
       .contactCard__info {
         font-size: 1.4em; } }
     @media (min-width: 992px) {
       .contactCard__info {
-        font-size: 1.6em; } }
+        font-size: 1.8em; } }
   .contactCard__text {
     font-size: 1.4em;
     line-height: 1.7;

@@ -294,11 +294,23 @@
         box-shadow: 0px 0px 3px $grayDark
 
     @include respond-above('md')
-        width: calc(100% - 50px)
+        width: calc(100% - 150px)
         height: auto
-        margin: 25px auto
+        margin-top: 25px
+        margin-bottom: 25px
+        padding: 15px 25px
+
         border-radius: 3px
-        box-shadow: 0px 0px 3px $graySecondary
+        box-shadow: 0px 0px 3px $grayDark
+
+    &__flex
+        @include respond-above('md')
+            display: flex
+
+        &--alignCenter
+            @include respond-above('md')
+                justify-content: center
+            
 
     // Cover mobile
     &__cover
@@ -358,21 +370,16 @@
         margin-bottom: 20px
         display: block
 
-    // Cabeçalho do card
-    &__header
-        @include respond-above('md')
-            height: 40px
-            display: flex
-            align-items: center
-
     // Corpo do card
-    &__body
+    &__list
         @include respond-below('sm')
             display: none
 
         @include respond-above('md')
-            width: 100%
-            padding-left: 40px
+            width: calc(100% - 40px)
+            list-style: none
+            padding: 0 20px
+            margin: 0
 
         &--expandMobile
             display: block
@@ -420,10 +427,11 @@
             font-size: $fs-12
 
         @include respond-above('md')
-            color: $main-color
-            text-transform: uppercase
-            margin: 0
+            color: $text-dark
             font-size: $fs-16
+            margin: 0
+            margin-top: 10px
+            margin-bottom: 20px
 
         // Weigth
         &--thin
@@ -437,18 +445,24 @@
                 font-size: $fs-14
                 font-weight: $semi-bold
                 text-transform: uppercase
-
+    // Tag
+    &__tag
+        @include respond-above('md')
+            font-weight: $semi-thin
+            font-size: $fs-12
+            color: $text-light
+            margin: 5px 0
 
     // Informação
     &__info
         font-weight: $regular
         color: $text-light
-        margin: 12px 0
+        margin: 7px 0
         @include respond-below('sm')
             font-size: $fs-14
 
         @include respond-above('md')
-            font-size: $fs-16
+            font-size: $fs-18
 
     // Textos
     &__text

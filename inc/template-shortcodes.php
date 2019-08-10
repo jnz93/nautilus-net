@@ -334,28 +334,11 @@ if( !function_exists('create_contact_section') ){
         $arr_office_hours   = explode('~', $office_hours);
         $arr_address        = explode('~', $contact_address);
 
-        ?>
-        <!-- Container content -->
-        <div id="" class="row col-xs-12 col-sm-12 col-md-10 col-lg-10">
-            <div id="" class="row col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                <?php
-                // Chamada dos cards
-                card_contact('email', 'E-mail', $arr_email);
-                card_contact('phone', 'Telefone/Whatsapp', $arr_tel);
-                card_contact('clock', 'Horário de atendimento', $arr_office_hours);
-                card_contact('map', 'Endereço', $arr_address);
-                ?>
-            </div>
-
-            <div class="row col-xs-12 col-sm-12 col-md-5 col-lg-5">
-                <div class="contactCard__wrapperFlexMid">
-                    <h3 class="contactCard__title contactCard__title--medium contactCard__title--semiBold">Precisa de um especialista?</h3>
-                    <p class="contactCard__text contactCard__text--center">Não encontrou o que estava procurando? Está precisando de ajuda? Não tem problema, abre um chamado que nós vamos solucionar seu problema o mais rápido possível!</p>
-                    <button id="" class="btn btn__primary btn__primary--medium">Abrir chamado</button>
-                </div>
-            </div>
-        </div>
-        <?php
+        // Chamada dos cards
+        card_phone_contact('Telefone(s)', array('Telefone loja', 'WhatsApp'), $arr_tel);
+        card_phone_contact('E-mails(s)', array('E-mail suporte', 'E-mail comercial'), $arr_email);
+        card_phone_contact('Endereço', array('Rua/Logradouro', 'Cidade'), $arr_address);
+        card_phone_contact('Horário de atendimento', array('Segunda à sexta feira', 'Sábado'), $arr_office_hours);
     }
 
     add_shortcode('show_contact_section', 'create_contact_section');
