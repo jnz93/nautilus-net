@@ -501,37 +501,58 @@
     list-style: none
     padding: 0
     margin: 0 auto
+
+    @include respond-below('sm')
+        align-self: flex-end
     
     // items
     li
-        width: 45px
-        height: 4px
         border: 0
         margin: 0 7px
         border-radius: 20px
+        @include respond-below('sm')
+            width: 20px
+            height: 3px
+
+        @include respond-above('md')
+            width: 45px
+            height: 4px
 
         background: $grayDark
         overflow: hidden
         transition: .3s linear
         
         button
-            width: 45px
-            height: 4px
             border: 0
             border-radius: 0
 
             background: $grayDark
             color: $grayDark
             transition: .3s linear
+            outline: none
+            @include respond-below('sm')
+                width: 20px
+                height: 3px
+
+            @include respond-above('md')
+                width: 45px
+                height: 4px
+            
 
     .slick-active
-        width: 65px
-        height: 4px
         border: 0
         border-radius: 20px
 
         background: $accent-color
         transition: .3s linear
+        @include respond-below('sm')
+            width: 35px
+            height: 3px
+            
+        @include respond-above('md')
+            width: 65px
+            height: 4px
+        
         
         button
             background: $accent-color

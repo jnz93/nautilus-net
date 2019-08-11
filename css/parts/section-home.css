@@ -134,7 +134,6 @@ p, ul, ol, li, span, input, label, textarea, button {
   @media (max-width: 767px) {
     .articleHome {
       padding: 0 20px;
-      height: calc(100vh - 30vh);
       flex-direction: column-reverse; } }
   @media (min-width: 992px) {
     .articleHome {
@@ -145,7 +144,9 @@ p, ul, ol, li, span, input, label, textarea, button {
     overflow: hidden; }
     @media (max-width: 767px) {
       .articleHome__wrapperSlider {
-        height: 90%; } }
+        height: 93%;
+        display: flex;
+        flex-wrap: wrap; } }
   .articleHome__wrapperContent {
     display: flex;
     flex-wrap: wrap;
@@ -157,7 +158,8 @@ p, ul, ol, li, span, input, label, textarea, button {
     line-height: 1.6; }
     @media (max-width: 767px) {
       .articleHome__title {
-        font-size: 2.4em;
+        width: 100%;
+        font-size: 2.1em;
         margin-bottom: 10px;
         margin-top: 20px;
         text-align: center; } }
@@ -172,6 +174,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     line-height: 1.7; }
     @media (max-width: 767px) {
       .articleHome__excerpt {
+        width: 100%;
         font-size: 1.6em;
         margin-bottom: 15px;
         text-align: center; } }
@@ -183,7 +186,7 @@ p, ul, ol, li, span, input, label, textarea, button {
         display: block; } }
   @media (max-width: 767px) {
     .articleHome button {
-      display: none; } }
+      margin: auto; } }
   .articleHome__thumbContainer {
     margin: 0;
     padding: 0; }

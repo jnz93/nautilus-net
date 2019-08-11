@@ -536,30 +536,52 @@ p, ul, ol, li, span, input, label, textarea, button {
   list-style: none;
   padding: 0;
   margin: 0 auto; }
+  @media (max-width: 767px) {
+    .slick-dots {
+      align-self: flex-end; } }
   .slick-dots li {
-    width: 45px;
-    height: 4px;
     border: 0;
     margin: 0 7px;
     border-radius: 20px;
     background: #BDBDBD;
     overflow: hidden;
     transition: .3s linear; }
+    @media (max-width: 767px) {
+      .slick-dots li {
+        width: 20px;
+        height: 3px; } }
+    @media (min-width: 992px) {
+      .slick-dots li {
+        width: 45px;
+        height: 4px; } }
     .slick-dots li button {
-      width: 45px;
-      height: 4px;
       border: 0;
       border-radius: 0;
       background: #BDBDBD;
       color: #BDBDBD;
-      transition: .3s linear; }
+      transition: .3s linear;
+      outline: none; }
+      @media (max-width: 767px) {
+        .slick-dots li button {
+          width: 20px;
+          height: 3px; } }
+      @media (min-width: 992px) {
+        .slick-dots li button {
+          width: 45px;
+          height: 4px; } }
   .slick-dots .slick-active {
-    width: 65px;
-    height: 4px;
     border: 0;
     border-radius: 20px;
     background: #3C19A6;
     transition: .3s linear; }
+    @media (max-width: 767px) {
+      .slick-dots .slick-active {
+        width: 35px;
+        height: 3px; } }
+    @media (min-width: 992px) {
+      .slick-dots .slick-active {
+        width: 65px;
+        height: 4px; } }
     .slick-dots .slick-active button {
       background: #3C19A6;
       color: #3C19A6;
