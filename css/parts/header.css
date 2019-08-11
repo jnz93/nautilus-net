@@ -28,23 +28,26 @@ p, ul, ol, li, span, input, label, textarea, button {
   .sct__homepage {
     height: calc(100vh - 90px); } }
 
-@media (max-width: 767px) {
-  .sct__benefits {
-    padding-top: 90px;
-    margin: 25px auto;
-    position: relative; } }
-
-@media (min-width: 992px) {
-  .sct__benefits {
-    min-height: calc(100vh - 100px);
-    padding: 0;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin: 50px 0;
-    background-image: url("../../images/bg-secao-beneficios.svg");
-    background-size: auto 100%;
-    background-position: center;
-    background-repeat: repeat; } }
+.sct__benefits {
+  background-image: url("../../images/bg-secao-beneficios.svg"); }
+  @media (max-width: 767px) {
+    .sct__benefits {
+      padding-top: 120px;
+      padding-bottom: 120px;
+      margin: 25px auto;
+      position: relative;
+      background-size: auto 100%;
+      background-repeat: no-repeat; } }
+  @media (min-width: 992px) {
+    .sct__benefits {
+      min-height: calc(100vh - 100px);
+      padding: 0;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      margin: 50px 0;
+      background-size: auto 100%;
+      background-position: center;
+      background-repeat: repeat; } }
 
 @media (max-width: 767px) {
   .sct__plans {

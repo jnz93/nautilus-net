@@ -11,10 +11,10 @@
 /////////////////////////////////////////////
 .benefitCard
     @include respond-below('sm')
-        background: $grayLight
+        background: none
         border-radius: 3px
         width: calc(100% - 10px)
-        min-height: 140px
+        min-height: 300px
         padding: 5px
         margin: 12px auto
 
@@ -30,43 +30,6 @@
         margin: 50px auto
         padding: 30px
 
-    // Cover mobile
-    &__cover
-        @include respond-below('sm')
-            background: $graySecondary
-            opacity: .8
-            top: 0
-            right: 0
-            bottom: 0
-            left: 0
-            position: fixed
-
-            display: none
-
-        @include respond-above('md')
-            display: none
-        
-        &--expandMobile
-            display: block
-
-    // Botão de fechar
-    &__closeBtn
-        @include respond-below('sm')
-            width: 36px
-            height: 36px
-
-            top: 20px
-            right: 20px
-            position: fixed
-
-            display: none
-
-        @include respond-above('md')
-            display: none
-
-        &--showBtn
-            display: block
-
     // span.wrapIcon
     &__wrapIcon
         background: $main-color
@@ -79,7 +42,7 @@
         justify-content: center
         
         @include respond-below('sm')
-            margin: auto
+            margin: 15px auto
 
         @include respond-above('md')
             background: $information-color
@@ -97,11 +60,13 @@
     // Título
     &__title
         @include respond-below('sm')
-            font-size: $fs-12
-            font-weight: $regular
+            font-size: $fs-16
+            font-weight: $semi-bold
             line-height: 1.6
-            color: $main-color
+            color: $text-dark
             text-align: center
+
+            margin: 20px auto
 
         @include respond-above('md')
             font-size: $fs-16
@@ -121,7 +86,12 @@
     // Texto
     &__text
         @include respond-below('sm')
-            display: none
+            font-size: $fs-14
+            font-weight: $semi-thin
+            color: $text-light
+            line-height: 1.5
+            text-align: center
+            margin: 20px auto
 
         @include respond-above('md')
             font-size: $fs-16
@@ -548,7 +518,7 @@
         @include respond-below('sm')
             width: 35px
             height: 3px
-            
+
         @include respond-above('md')
             width: 65px
             height: 4px

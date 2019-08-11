@@ -24,6 +24,17 @@ jQuery(document).ready(function(){
         });
 
         /**
+         * Slick slider - Vantagens
+         */
+        jQuery('.sct__benefits > .sct__contentWrapper').slick({
+            dots: true,
+            arrows: false,
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
+        /**
          * Slick slider - Planos mobile
          */
         jQuery('.sct__plans > .sct__contentWrapper').slick({
