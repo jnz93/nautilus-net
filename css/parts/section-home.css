@@ -49,22 +49,36 @@ p, ul, ol, li, span, input, label, textarea, button {
       background-position: center;
       background-repeat: repeat; } }
 
-@media (max-width: 767px) {
-  .sct__plans {
-    padding-top: 90px;
-    margin: 25px auto; } }
-
-@media (min-width: 992px) {
-  .sct__plans {
-    min-height: calc(100vh - 100px);
-    padding: 0;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin: 50px 0;
-    background-image: url("../../images/bg-secao-planos.svg");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: top 140px right -1310px; } }
+.sct__plans {
+  background-image: url("../../images/bg-secao-planos.svg"); }
+  @media (max-width: 767px) {
+    .sct__plans {
+      background-size: auto 80%;
+      background-position: top 240px left;
+      background-repeat: no-repeat;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      margin: 25px auto; } }
+  @media (min-width: 992px) {
+    .sct__plans {
+      min-height: calc(100vh - 100px);
+      padding: 0;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      margin: 50px 0;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: top 140px right -1310px; } }
+  @media (max-width: 767px) {
+    .sct__plans .sct__contentWrapper {
+      padding: 0 20px;
+      min-height: 520px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; } }
+  @media (max-width: 767px) {
+    .sct__plans .slick-list {
+      padding: 20px 0; } }
 
 @media (max-width: 767px) {
   .sct__contact {

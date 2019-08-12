@@ -39,7 +39,7 @@ jQuery(document).ready(function(){
          */
         jQuery('.sct__plans > .sct__contentWrapper').slick({
             dots: true,
-            arrows: false,
+            arrows: true,
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -84,12 +84,12 @@ jQuery(document).ready(function(){
             'margin' : '25px auto'
         })
 
-        // Adicionar ícones aos botões do slider
-        var iconPrev = '<i class="" data-eva="arrow-circle-left"></i>',
-            iconNext = '<i class="" data-eva="arrow-circle-right"></i>';
-
-        jQuery('.slick-prev').text('').append(iconPrev);
-        jQuery('.slick-next').text('').append(iconNext);
-        eva.replace(); // Chamanda para dar replace nos ícones
     }
+    // Adicionar ícones aos botões do slider
+    var iconPrev = '<i class="" data-eva="arrow-circle-left"></i>',
+        iconNext = '<i class="" data-eva="arrow-circle-right"></i>';
+
+    jQuery('.slick-prev').text('').append(iconPrev);
+    jQuery('.slick-next').text('').append(iconNext);
+    eva.replace(); // Chamanda para dar replace nos ícones
 });

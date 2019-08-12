@@ -127,9 +127,9 @@
 // -> v1.0
 /////////////////////////////////////////////
 .planCard
+    background: $white
     height: auto
     text-align: center
-    border-radius: 6px
 
     display: flex
     flex-wrap: wrap
@@ -137,13 +137,15 @@
 
     @include respond-below('sm')
         width: calc(100% - 40px)
+        margin: 0 7px
         padding: 20px
-        box-shadow: 0px 0px 6px $grayDark
+        border-radius: 12px
+        box-shadow: 0px 0px 2px $grayDark
 
     @include respond-above('md')
-        background: $white
         padding: 15px
         margin: 0 10px
+        border-radius: 6px
         box-shadow: -3px 3px 6px $grayDark
 
     // Título
@@ -156,14 +158,12 @@
     &__spacer
         background: $graySecondary
         display: block
-        @include respond-above('md')
-            width: 100%
-            height: 1px
-            margin: 5px auto
-
+        width: 100%
+        height: 1px
+        margin: 5px auto
+        
         &--fift
-            @include respond-above('md')
-                width: 50%
+            width: 50%
     
     &__bubbleInfo
         background: $information-color
@@ -531,22 +531,35 @@
 
 // Botões slick prev e next
 .slick-arrow
+    border: none
+    background: none
+    outline: none
+
+    position: absolute
+    top: calc(100% / 2 - 20px)
+
+    @include respond-below('sm')
+        width: 32px
+        height: 32px
+
     @include respond-above('md')
         width: 40px
         height: 40px
-        border: none
-        background: none
-
-        position: absolute
-        top: calc(100% / 2 - 20px)
     
     // Ícone svg
     .eva
         fill: $accent-color
 
 .slick-prev
+    @include respond-below('sm')
+        left: -20px
+
     @include respond-above('md')
         left: -50px
+
 .slick-next
+    @include respond-below('sm')
+        right: -15px
+
     @include respond-above('md')
         right: -50px

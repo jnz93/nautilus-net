@@ -48,22 +48,36 @@ p, ul, ol, li, span, input, label, textarea, button {
       background-position: center;
       background-repeat: repeat; } }
 
-@media (max-width: 767px) {
-  .sct__plans {
-    padding-top: 90px;
-    margin: 25px auto; } }
-
-@media (min-width: 992px) {
-  .sct__plans {
-    min-height: calc(100vh - 100px);
-    padding: 0;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin: 50px 0;
-    background-image: url("../../images/bg-secao-planos.svg");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: top 140px right -1310px; } }
+.sct__plans {
+  background-image: url("../../images/bg-secao-planos.svg"); }
+  @media (max-width: 767px) {
+    .sct__plans {
+      background-size: auto 80%;
+      background-position: top 240px left;
+      background-repeat: no-repeat;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      margin: 25px auto; } }
+  @media (min-width: 992px) {
+    .sct__plans {
+      min-height: calc(100vh - 100px);
+      padding: 0;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      margin: 50px 0;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: top 140px right -1310px; } }
+  @media (max-width: 767px) {
+    .sct__plans .sct__contentWrapper {
+      padding: 0 20px;
+      min-height: 520px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; } }
+  @media (max-width: 767px) {
+    .sct__plans .slick-list {
+      padding: 20px 0; } }
 
 @media (max-width: 767px) {
   .sct__contact {
@@ -236,22 +250,24 @@ p, ul, ol, li, span, input, label, textarea, button {
     position: fixed; } }
 
 .planCard {
+  background: #FFFFFF;
   height: auto;
   text-align: center;
-  border-radius: 6px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
   @media (max-width: 767px) {
     .planCard {
       width: calc(100% - 40px);
+      margin: 0 7px;
       padding: 20px;
-      box-shadow: 0px 0px 6px #BDBDBD; } }
+      border-radius: 12px;
+      box-shadow: 0px 0px 2px #BDBDBD; } }
   @media (min-width: 992px) {
     .planCard {
-      background: #FFFFFF;
       padding: 15px;
       margin: 0 10px;
+      border-radius: 6px;
       box-shadow: -3px 3px 6px #BDBDBD; } }
   .planCard__title {
     font-size: 1.8em;
@@ -259,15 +275,12 @@ p, ul, ol, li, span, input, label, textarea, button {
     color: #2e3a59; }
   .planCard__spacer {
     background: #F2F2F2;
-    display: block; }
-    @media (min-width: 992px) {
-      .planCard__spacer {
-        width: 100%;
-        height: 1px;
-        margin: 5px auto; } }
-    @media (min-width: 992px) {
-      .planCard__spacer--fift {
-        width: 50%; } }
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 5px auto; }
+    .planCard__spacer--fift {
+      width: 50%; }
   .planCard__bubbleInfo {
     background: #4776CD;
     width: 86px;
@@ -562,21 +575,34 @@ p, ul, ol, li, span, input, label, textarea, button {
       color: #3C19A6;
       transition: .3s linear; }
 
-@media (min-width: 992px) {
-  .slick-arrow {
-    width: 40px;
-    height: 40px;
-    border: none;
-    background: none;
-    position: absolute;
-    top: calc(100% / 2 - 20px); } }
+.slick-arrow {
+  border: none;
+  background: none;
+  outline: none;
+  position: absolute;
+  top: calc(100% / 2 - 20px); }
+  @media (max-width: 767px) {
+    .slick-arrow {
+      width: 32px;
+      height: 32px; } }
+  @media (min-width: 992px) {
+    .slick-arrow {
+      width: 40px;
+      height: 40px; } }
+  .slick-arrow .eva {
+    fill: #3C19A6; }
 
-.slick-arrow .eva {
-  fill: #3C19A6; }
+@media (max-width: 767px) {
+  .slick-prev {
+    left: -20px; } }
 
 @media (min-width: 992px) {
   .slick-prev {
     left: -50px; } }
+
+@media (max-width: 767px) {
+  .slick-next {
+    right: -15px; } }
 
 @media (min-width: 992px) {
   .slick-next {
