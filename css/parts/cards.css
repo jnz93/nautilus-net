@@ -79,22 +79,23 @@ p, ul, ol, li, span, input, label, textarea, button {
     .sct__plans .slick-list {
       padding: 20px 0; } }
 
-@media (max-width: 767px) {
-  .sct__contact {
-    padding-top: 90px;
-    margin: 25px auto; } }
-
-@media (min-width: 992px) {
-  .sct__contact {
-    min-height: calc(100vh - 100px);
-    padding: 0;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin: 50px 0;
-    background-image: url("../../images/bg-secao-contato.svg");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: top 30px left -470px; } }
+.sct__contact {
+  background-image: url("../../images/bg-secao-contato.svg");
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  @media (max-width: 767px) {
+    .sct__contact {
+      background-size: auto 75%;
+      background-position: top 150px left -320px;
+      margin: 25px auto; } }
+  @media (min-width: 992px) {
+    .sct__contact {
+      min-height: calc(100vh - 100px);
+      padding: 0;
+      margin: 50px 0;
+      background-size: auto 100%;
+      background-position: top 30px left -470px; } }
 
 @media (max-width: 767px) {
   .sct__contentWrapper {
@@ -369,12 +370,33 @@ p, ul, ol, li, span, input, label, textarea, button {
       padding: 15px 25px;
       border-radius: 3px;
       box-shadow: -3px 3px 10px #BDBDBD; } }
+  @media (max-width: 767px) {
+    .contactCard__help {
+      font-size: 1.2em;
+      text-align: center;
+      color: #757575;
+      width: 100%; } }
+  @media (min-width: 992px) {
+    .contactCard__help {
+      display: none; } }
   @media (min-width: 992px) {
     .contactCard__flex {
       display: flex; } }
   @media (min-width: 992px) {
     .contactCard__flex--alignCenter {
       justify-content: center; } }
+  @media (max-width: 767px) {
+    .contactCard__flex:nth-child(4) {
+      display: none; } }
+  @media (max-width: 767px) {
+    .contactCard__display--mobile {
+      display: block;
+      background: none;
+      box-shadow: none;
+      margin-top: 40px; } }
+  @media (min-width: 992px) {
+    .contactCard__display--mobile {
+      display: none; } }
   @media (max-width: 767px) {
     .contactCard__cover {
       background: #F2F2F2;
@@ -392,8 +414,10 @@ p, ul, ol, li, span, input, label, textarea, button {
     display: block; }
   @media (max-width: 767px) {
     .contactCard__closeBtn {
+      background: none;
       width: 36px;
       height: 36px;
+      border: none;
       top: 20px;
       right: 20px;
       position: fixed;
@@ -418,33 +442,25 @@ p, ul, ol, li, span, input, label, textarea, button {
     width: 100%;
     height: 1px;
     background: #F2F2F2;
-    margin: auto;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    display: block; }
-  @media (max-width: 767px) {
-    .contactCard__list {
-      display: none; } }
-  @media (min-width: 992px) {
-    .contactCard__list {
-      width: calc(100% - 40px);
-      list-style: none;
-      padding: 0 20px;
-      margin: 0; } }
-  .contactCard__list--expandMobile {
-    display: block; }
+    margin: auto; }
+    @media (min-width: 768px) {
+      .contactCard__spacer {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 20px; } }
   @media (max-width: 767px) {
     .contactCard__wrapIcon {
-      background: #062573;
-      width: 48px;
-      height: 48px;
+      background: #4776CD;
+      width: 36px;
+      height: 36px;
       border-radius: 100%;
       margin: 10px auto;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
       justify-content: center; } }
   @media (min-width: 768px) {
-    .contactCard__wrapIcon--hideDesktop {
+    .contactCard__wrapIcon {
       display: none; } }
   @media (max-width: 767px) {
     .contactCard__icon {
@@ -460,10 +476,10 @@ p, ul, ol, li, span, input, label, textarea, button {
       display: none; } }
   @media (max-width: 767px) {
     .contactCard__title {
-      color: #062573;
-      text-transform: uppercase;
+      color: #2e3a59;
+      text-transform: capitalize;
       text-align: center;
-      margin: 5px;
+      margin: 10px auto;
       line-height: 1.5;
       font-size: 1.2em; } }
   @media (min-width: 992px) {
@@ -482,12 +498,31 @@ p, ul, ol, li, span, input, label, textarea, button {
       font-size: 1.4em;
       font-weight: 700;
       text-transform: uppercase; } }
-  @media (min-width: 992px) {
-    .contactCard__tag {
-      font-weight: 400;
-      font-size: 1.2em;
-      color: #757575;
-      margin: 5px 0; } }
+  .contactCard__list {
+    list-style: none;
+    padding: 0; }
+    @media (max-width: 767px) {
+      .contactCard__list {
+        display: none;
+        padding: 0 10px;
+        padding-top: 10px;
+        margin: 0; } }
+    @media (min-width: 992px) {
+      .contactCard__list {
+        width: calc(100% - 40px);
+        padding: 0 20px;
+        margin: 0; } }
+    .contactCard__list--expandMobile {
+      text-align: center;
+      display: block; }
+  @media (max-width: 767px) {
+    .contactCard__listItem {
+      margin: 15px auto; } }
+  .contactCard__tag {
+    font-weight: 400;
+    font-size: 1.2em;
+    color: #757575;
+    margin: 5px 0; }
   .contactCard__info {
     font-weight: 500;
     color: #757575;

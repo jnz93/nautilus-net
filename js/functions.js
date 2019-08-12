@@ -144,14 +144,14 @@ function clickOpenContactCardMobile(el){
     var elToExpand  = el,
         elTitle     = el.find('.contactCard__title'),
         // elText      = el.find('.contactCard__text'),
-        elBodyInfo  = el.find('.contactCard__body'),
+        elBodyInfo  = el.find('.contactCard__list'),
         btnClose    = el.siblings('.contactCard__closeBtn');
         elCover     = el.siblings('.contactCard__cover');
 
     // Expandir o card e seus elementos
     elToExpand.addClass('contactCard__expandMobile');
     elTitle.addClass('contactCard__title--expandMobile');
-    elBodyInfo.addClass('contactCard__body--expandMobile');
+    elBodyInfo.addClass('contactCard__list--expandMobile');
     btnClose.addClass('contactCard__closeBtn--showBtn');
     elCover.addClass('contactCard__cover--expandMobile');
 
@@ -159,7 +159,7 @@ function clickOpenContactCardMobile(el){
     btnClose.click(function(){
         elToExpand.removeClass('contactCard__expandMobile');
         elTitle.removeClass('contactCard__title--expandMobile');
-        elBodyInfo.removeClass('contactCard__body--expandMobile');
+        elBodyInfo.removeClass('contactCard__list--expandMobile');
         elCover.removeClass('contactCard__cover--expandMobile');
 
         jQuery(this).removeClass('contactCard__closeBtn--showBtn');

@@ -331,10 +331,29 @@ if( !function_exists('create_contact_section') ){
         $arr_address        = explode('~', $contact_address);
 
         // Chamada dos cards
-        card_phone_contact('Telefone(s)', array('Telefone loja', 'WhatsApp'), $arr_tel);
-        card_phone_contact('E-mails(s)', array('E-mail suporte', 'E-mail comercial'), $arr_email);
-        card_phone_contact('Endereço', array('Rua/Logradouro', 'Cidade'), $arr_address);
-        card_phone_contact('Horário de atendimento', array('Segunda à sexta feira', 'Sábado'), $arr_office_hours);
+        card_phone_contact('Telefone(s)', 'phone', array('Telefone loja', 'WhatsApp'), $arr_tel);
+        card_phone_contact('E-mails(s)', 'email', array('E-mail suporte', 'E-mail comercial'), $arr_email);
+        card_phone_contact('Endereço', 'map', array('Rua/Logradouro', 'Cidade'), $arr_address);
+        card_phone_contact('Horário de atendimento', 'clock', array('Segunda à sexta feira', 'Sábado'), $arr_office_hours);
+        echo '<span class="contactCard__help">Clique no botão para abrir</span>';
+
+        $html = '';
+        $html .= '<div class="contactCard contactCard__display--mobile">
+                    <h3 class="contactCard__title contactCard__title--semiBold">Horário de atendimento</h3>
+                    <span class="contactCard__spacer"></span>
+                    <ul class="contactCard__list contactCard__list--expandMobile">
+                        <li class="contactCard__listItem">
+                            <span class="contactCard__tag">Segunda à sexta feira</span>
+                            <p class="contactCard__info">'. $arr_office_hours[0] .'</p>
+                        </li>
+                        <span class="contactCard__spacer"></span>
+                        <li class="contactCard__listItem">
+                            <span class="contactCard__tag">Sábado</span>
+                            <p class="contactCard__info">'. $arr_office_hours[1] .'</p>
+                        </li>
+                    </ul>
+                </div>';
+        echo $html;
     }
 
     add_shortcode('show_contact_section', 'create_contact_section');

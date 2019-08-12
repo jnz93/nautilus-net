@@ -156,13 +156,18 @@ function card_contact($title, $arr){
  * Card Phone contact
  * @param $title_card = string com o título do cartão
  * @param $title_info = array com os títulos de cada informaçao
+ * @param $icon = nome do icone utilizado no modo mobile
  * @param $arr_infos = array com as informações a serem escritas
  */
-function card_phone_contact($title_card, $title_info, $arr_infos){
+function card_phone_contact($title_card, $icon, $title_info, $arr_infos){
     $html = '';
-    $html .= '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 contactCard__flex contactCard__flex--alignCenter">
+    $html .= '<div class="col-xs-4 col-sm-4 col-md-6 col-lg-6 contactCard__flex contactCard__flex--alignCenter">
                 <div class="contactCard__cover"></div>
+                <button class="contactCard__closeBtn contactCard__closeBtn"><i class="" data-eva="close"></i></button>
                 <div onClick="clickOpenContactCardMobile(jQuery(this))" class="contactCard">
+                    <div class="contactCard__wrapIcon">
+                        <i class="contactCard__icon" data-eva="'. $icon .'"></i>
+                    </div>
                     <h3 class="contactCard__title contactCard__title--semiBold">'. $title_card .'</h3>
                     <span class="contactCard__spacer"></span>
                     <ul class="contactCard__list">

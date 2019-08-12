@@ -275,6 +275,17 @@
         border-radius: 3px
         box-shadow: -3px 3px 10px $grayDark
 
+    &__help
+        @include respond-below('sm')
+            font-size: $fs-12
+            text-align: center
+            color: $text-light
+
+            width: 100%
+        @include respond-above('md')
+            display: none
+
+    // Flex align
     &__flex
         @include respond-above('md')
             display: flex
@@ -282,7 +293,24 @@
         &--alignCenter
             @include respond-above('md')
                 justify-content: center
+
+        // Hack para esconder o card de horário no mobile
+        &:nth-child(4)
+            @include respond-below('sm')
+                display: none
             
+    //
+    &__display
+
+        &--mobile
+            @include respond-below('sm')
+                display: block
+                background: none
+                box-shadow: none
+                margin-top: 40px
+
+            @include respond-above('md')
+                display: none
 
     // Cover mobile
     &__cover
@@ -306,8 +334,11 @@
     // Botão de fechar
     &__closeBtn
         @include respond-below('sm')
+            background: none
             width: 36px
             height: 36px
+
+            border: none
 
             top: 20px
             right: 20px
@@ -338,40 +369,27 @@
         height: 1px
         background: $graySecondary
         margin: auto
-        margin-top: 5px
-        margin-bottom: 20px
-        display: block
-
-    // Corpo do card
-    &__list
-        @include respond-below('sm')
-            display: none
-
-        @include respond-above('md')
-            width: calc(100% - 40px)
-            list-style: none
-            padding: 0 20px
-            margin: 0
-
-        &--expandMobile
+        @include respond-above('sm')
             display: block
+            margin-top: 5px
+            margin-bottom: 20px
 
     // Wrapicon - Mobile solution
     &__wrapIcon
         @include respond-below('sm')
-            background: $main-color
-            width: 48px
-            height: 48px
+            background: $information-color
+            width: 36px
+            height: 36px
             border-radius: 100%
             margin: 10px auto
+            margin-bottom: 20px
 
             display: flex
             align-items: center
             justify-content: center
 
-        &--hideDesktop
-            @include respond-above('sm')
-                display: none
+        @include respond-above('sm')
+            display: none
 
     // Ícone
     &__icon
@@ -391,10 +409,10 @@
     // Título do card
     &__title
         @include respond-below('sm')
-            color: $main-color
-            text-transform: uppercase
+            color: $text-dark
+            text-transform: capitalize
             text-align: center
-            margin: 5px
+            margin: 10px auto
             line-height: 1.5
             font-size: $fs-12
 
@@ -417,13 +435,37 @@
                 font-size: $fs-14
                 font-weight: $semi-bold
                 text-transform: uppercase
+    
+    // Corpo do card
+    &__list
+        list-style: none
+        padding: 0
+
+        @include respond-below('sm')
+            display: none
+            padding: 0 10px
+            padding-top: 10px
+            margin: 0
+
+        @include respond-above('md')
+            width: calc(100% - 40px)
+            padding: 0 20px
+            margin: 0
+
+        &--expandMobile
+            text-align: center
+            
+            display: block
+    
+    &__listItem
+        @include respond-below('sm')
+            margin: 15px auto
     // Tag
     &__tag
-        @include respond-above('md')
-            font-weight: $semi-thin
-            font-size: $fs-12
-            color: $text-light
-            margin: 5px 0
+        font-weight: $semi-thin
+        font-size: $fs-12
+        color: $text-light
+        margin: 5px 0
 
     // Informação
     &__info
