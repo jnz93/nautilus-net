@@ -30,12 +30,12 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (min-width: 992px) {
   .sct__homepage .slick-prev {
     left: 0;
-    z-index: 999; } }
+    z-index: 99; } }
 
 @media (min-width: 992px) {
   .sct__homepage .slick-next {
     right: 0;
-    z-index: 999; } }
+    z-index: 99; } }
 
 .sct__benefits {
   background-image: url("../../images/bg-secao-beneficios.svg"); }
@@ -379,7 +379,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       margin-bottom: 25px;
       padding: 15px 25px;
       border-radius: 3px;
-      box-shadow: -3px 3px 10px #BDBDBD; } }
+      box-shadow: -3px 3px 3px #F2F2F2; } }
   @media (max-width: 767px) {
     .contactCard__help {
       font-size: 1.2em;
@@ -576,6 +576,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     border: 0;
     margin: 0 7px;
     border-radius: 20px;
+    cursor: pointer;
     background: #BDBDBD;
     overflow: hidden;
     transition: .3s linear; }
@@ -593,7 +594,8 @@ p, ul, ol, li, span, input, label, textarea, button {
       background: #BDBDBD;
       color: #BDBDBD;
       transition: .3s linear;
-      outline: none; }
+      outline: none;
+      cursor: pointer; }
       @media (max-width: 767px) {
         .slick-dots li button {
           width: 20px;
@@ -643,7 +645,8 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 992px) {
   .slick-prev {
-    left: -50px; } }
+    left: -50px;
+    cursor: pointer; } }
 
 @media (max-width: 767px) {
   .slick-next {
@@ -651,4 +654,5 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 992px) {
   .slick-next {
-    right: -50px; } }
+    right: -50px;
+    cursor: pointer; } }

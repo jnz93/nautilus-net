@@ -5,8 +5,8 @@
  * @package nautilusnet
  */
 
-// $page               = get_page_by_title('Conheça as vantages da Nautilus Net');
-$page               = get_post('662');
+$page               = get_page_by_title('Conheça as vantages da Nautilus Net');
+// $page               = get_post('662');
 $page_id            = $page->ID;
 $page_title         = $page->post_title;
 $page_subtitle      = get_post_meta($page_id, 'subtitle_page', true);

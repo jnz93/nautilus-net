@@ -6,12 +6,12 @@
  */
 @import '../theme-configs.sass'
 
-    
+// Notificações 
 .notification
+    z-index: 999
     @include respond-below('sm')
         position: absolute
         top: 90px
-        z-index: 9999
 
     @include respond-above('md')
         position: absolute
@@ -41,7 +41,6 @@
             @include respond-below('sm')
                 width: calc(100% - 40px)
                 background: $white
-                box-shadow: 0px 0px 4px $graySecondary
                 border: none
                 border-radius: 4px
 
@@ -49,10 +48,8 @@
                 width: 390px
                 height: auto
                 background: $white
-                box-shadow: 0px 0px 6px $graySecondary
                 border: 1px solid $graySecondary
                 border-radius: 6px
-                z-index: 99
                 transform: rotate(360deg)
 
     // Wrapper dos icones

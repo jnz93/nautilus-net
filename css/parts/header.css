@@ -31,12 +31,12 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (min-width: 992px) {
   .sct__homepage .slick-prev {
     left: 0;
-    z-index: 999; } }
+    z-index: 99; } }
 
 @media (min-width: 992px) {
   .sct__homepage .slick-next {
     right: 0;
-    z-index: 999; } }
+    z-index: 99; } }
 
 .sct__benefits {
   background-image: url("../../images/bg-secao-beneficios.svg"); }
@@ -157,7 +157,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 .mainHeader {
   background: none;
-  z-index: 999;
+  z-index: 99;
   position: absolute;
   top: 0;
   left: 0; }
@@ -366,3 +366,21 @@ p, ul, ol, li, span, input, label, textarea, button {
       .menuList .menu-item a:hover {
         transition: .2s;
         color: #062573; }
+
+.coverBackground {
+  background-size: cover;
+  background-color: #2e3a59;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  opacity: 0;
+  z-index: -9;
+  transition: .2s; }
+  .coverBackground__active {
+    opacity: .8;
+    z-index: 999;
+    transition: .2s; }

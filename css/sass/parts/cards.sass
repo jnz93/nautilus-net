@@ -273,7 +273,7 @@
         padding: 15px 25px
 
         border-radius: 3px
-        box-shadow: -3px 3px 10px $grayDark
+        box-shadow: -3px 3px 3px $graySecondary
 
     &__help
         @include respond-below('sm')
@@ -522,6 +522,8 @@
         border: 0
         margin: 0 7px
         border-radius: 20px
+        cursor: pointer
+
         @include respond-below('sm')
             width: 20px
             height: 3px
@@ -542,6 +544,7 @@
             color: $grayDark
             transition: .3s linear
             outline: none
+            cursor: pointer
             @include respond-below('sm')
                 width: 20px
                 height: 3px
@@ -598,6 +601,7 @@
 
     @include respond-above('md')
         left: -50px
+        cursor: pointer
 
 .slick-next
     @include respond-below('sm')
@@ -605,3 +609,4 @@
 
     @include respond-above('md')
         right: -50px
+        cursor: pointer

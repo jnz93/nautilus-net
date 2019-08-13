@@ -31,12 +31,12 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (min-width: 992px) {
   .sct__homepage .slick-prev {
     left: 0;
-    z-index: 999; } }
+    z-index: 99; } }
 
 @media (min-width: 992px) {
   .sct__homepage .slick-next {
     right: 0;
-    z-index: 999; } }
+    z-index: 99; } }
 
 .sct__benefits {
   background-image: url("../../images/bg-secao-beneficios.svg"); }

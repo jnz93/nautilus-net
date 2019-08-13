@@ -13,6 +13,7 @@
         ?>
         <script>
             eva.replace();
+            new WOW().init();
         </script>
     </footer>
     <?php wp_footer(); ?>

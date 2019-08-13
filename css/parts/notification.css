@@ -32,12 +32,12 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (min-width: 992px) {
   .sct__homepage .slick-prev {
     left: 0;
-    z-index: 999; } }
+    z-index: 99; } }
 
 @media (min-width: 992px) {
   .sct__homepage .slick-next {
     right: 0;
-    z-index: 999; } }
+    z-index: 99; } }
 
 .sct__benefits {
   background-image: url("../../images/bg-secao-beneficios.svg"); }
@@ -156,128 +156,116 @@ p, ul, ol, li, span, input, label, textarea, button {
       .sctHeader__subtitle {
         font-size: 1.6em; } }
 
-@media (max-width: 767px) {
-  .notification {
-    position: absolute;
-    top: 90px;
-    z-index: 9999; } }
-
-@media (min-width: 992px) {
-  .notification {
-    position: absolute;
-    top: 60px;
-    right: 50px; } }
-
-.notification__spacer {
-  width: 100%;
-  height: 1px;
-  background: #F2F2F2;
-  margin: 15px auto;
-  display: block; }
-
-.notification__wrapper {
-  transition: .4s; }
-  @media (min-width: 992px) {
-    .notification__wrapper--normal {
-      width: 48px;
-      height: 48px; } }
+.notification {
+  z-index: 999; }
   @media (max-width: 767px) {
-    .notification__wrapper--expand {
-      width: calc(100% - 40px);
-      background: #FFFFFF;
-      box-shadow: 0px 0px 4px #F2F2F2;
-      border: none;
-      border-radius: 4px; } }
+    .notification {
+      position: absolute;
+      top: 90px; } }
   @media (min-width: 992px) {
-    .notification__wrapper--expand {
-      width: 390px;
-      height: auto;
-      background: #FFFFFF;
-      box-shadow: 0px 0px 6px #F2F2F2;
-      border: 1px solid #F2F2F2;
-      border-radius: 6px;
-      z-index: 99;
-      transform: rotate(360deg); } }
-
-.notification__iconWrap {
-  background: #C3544A;
-  width: 36px;
-  height: 36px;
-  border: 1px solid #C3544A;
-  border-radius: 100%;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  outline: none;
-  z-index: 9999; }
-  @media (max-width: 767px) {
-    .notification__iconWrap {
-      top: 20px;
-      right: 90px; } }
-  @media (min-width: 992px) {
-    .notification__iconWrap {
-      top: 10px;
+    .notification {
+      position: absolute;
+      top: 60px;
       right: 50px; } }
-  .notification__iconWrap--disabled {
-    transition-duration: 1s;
-    display: none; }
-
-.notification__icon {
-  fill: #FFFFFF;
-  transition: .4s; }
-  .notification__icon--disabled {
-    opacity: 0;
-    display: none; }
-  .notification__icon--show {
-    opacity: 1;
+  .notification__spacer {
+    width: 100%;
+    height: 1px;
+    background: #F2F2F2;
+    margin: 15px auto;
     display: block; }
-
-.notification__date {
-  font-size: 1.2em;
-  font-weight: 300;
-  color: #757575;
-  display: block;
-  margin-bottom: 15px; }
-
-.notification__title {
-  font-size: 1.8em;
-  font-weight: 700;
-  color: #757575;
-  line-height: 1.6;
-  margin: 0; }
-  @media (max-width: 767px) {
-    .notification__title {
-      margin-bottom: 8px; } }
-  @media (min-width: 992px) {
-    .notification__title {
-      margin-top: 15px; } }
-
-.notification__subtitle {
-  font-size: 1.4em;
-  font-weight: 500;
-  color: #757575;
-  line-height: 1.6;
-  margin: 0; }
-
-.notification__text {
-  font-size: 1.4em;
-  font-weight: 300;
-  color: #757575;
-  line-height: 1.6; }
-
-.notification__content {
-  margin: 0 auto; }
-  @media (max-width: 767px) {
-    .notification__content {
-      width: calc(100% - 20px);
-      padding: 10px; } }
-  @media (min-width: 992px) {
-    .notification__content {
-      width: calc(100% - 50px);
-      padding: 20px; } }
-  .notification__content--hide {
-    display: none; }
-  .notification__content--show {
-    display: block; }
+  .notification__wrapper {
+    transition: .4s; }
+    @media (min-width: 992px) {
+      .notification__wrapper--normal {
+        width: 48px;
+        height: 48px; } }
+    @media (max-width: 767px) {
+      .notification__wrapper--expand {
+        width: calc(100% - 40px);
+        background: #FFFFFF;
+        border: none;
+        border-radius: 4px; } }
+    @media (min-width: 992px) {
+      .notification__wrapper--expand {
+        width: 390px;
+        height: auto;
+        background: #FFFFFF;
+        border: 1px solid #F2F2F2;
+        border-radius: 6px;
+        transform: rotate(360deg); } }
+  .notification__iconWrap {
+    background: #C3544A;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #C3544A;
+    border-radius: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    z-index: 9999; }
+    @media (max-width: 767px) {
+      .notification__iconWrap {
+        top: 20px;
+        right: 90px; } }
+    @media (min-width: 992px) {
+      .notification__iconWrap {
+        top: 10px;
+        right: 50px; } }
+    .notification__iconWrap--disabled {
+      transition-duration: 1s;
+      display: none; }
+  .notification__icon {
+    fill: #FFFFFF;
+    transition: .4s; }
+    .notification__icon--disabled {
+      opacity: 0;
+      display: none; }
+    .notification__icon--show {
+      opacity: 1;
+      display: block; }
+  .notification__date {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #757575;
+    display: block;
+    margin-bottom: 15px; }
+  .notification__title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #757575;
+    line-height: 1.6;
+    margin: 0; }
+    @media (max-width: 767px) {
+      .notification__title {
+        margin-bottom: 8px; } }
+    @media (min-width: 992px) {
+      .notification__title {
+        margin-top: 15px; } }
+  .notification__subtitle {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #757575;
+    line-height: 1.6;
+    margin: 0; }
+  .notification__text {
+    font-size: 1.4em;
+    font-weight: 300;
+    color: #757575;
+    line-height: 1.6; }
+  .notification__content {
+    margin: 0 auto; }
+    @media (max-width: 767px) {
+      .notification__content {
+        width: calc(100% - 20px);
+        padding: 10px; } }
+    @media (min-width: 992px) {
+      .notification__content {
+        width: calc(100% - 50px);
+        padding: 20px; } }
+    .notification__content--hide {
+      display: none; }
+    .notification__content--show {
+      display: block; }

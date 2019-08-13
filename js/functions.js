@@ -58,11 +58,15 @@ jQuery(document).ready(function(){
     // Elementos
     var btnOpenNotification = jQuery('#openNotification'),
         appNotification = jQuery('#appNotification'),
-        contentNotification = jQuery('.notification__content');
+        contentNotification = jQuery('.notification__content'),
+        coverBackground     = jQuery('.coverBackground');
 
     // Ações mediante ao clique no botão
     btnOpenNotification.click(function(){
 
+        // Mostrar / Esconder o coverBackground
+        coverBackground.toggleClass('coverBackground__active');
+        
         // Troca dos icones no botão
         jQuery('#ico-show-notification').toggleClass('notification__icon--show notification__icon--disabled');
         jQuery('#ico-close-notification').toggleClass('notification__icon--disabled notification__icon--show');
