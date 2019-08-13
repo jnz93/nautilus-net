@@ -161,7 +161,7 @@ function card_contact($title, $arr){
  */
 function card_phone_contact($title_card, $icon, $title_info, $arr_infos){
     $html = '';
-    $html .= '<div class="col-xs-4 col-sm-4 col-md-6 col-lg-6 contactCard__flex contactCard__flex--alignCenter">
+    $html .= '<div data-wow-delay=".3s" class="wow bounceInUp col-xs-4 col-sm-4 col-md-6 col-lg-6 contactCard__flex contactCard__flex--alignCenter">
                 <div class="contactCard__cover"></div>
                 <button class="contactCard__closeBtn contactCard__closeBtn"><i class="" data-eva="close"></i></button>
                 <div onClick="clickOpenContactCardMobile(jQuery(this))" class="contactCard">

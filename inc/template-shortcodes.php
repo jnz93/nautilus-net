@@ -158,7 +158,7 @@ if( !function_exists('get_article_sliders') ){
                 $post_excerpt   = get_the_excerpt($post_id);
                 $post_thumb_url = get_the_post_thumbnail_url($post_id, 'large');
 
-                $output .= '<article class="row articleHome">
+                $output .= '<article data-wow-delay=".2s" class="wow bounceInUp row articleHome">
                                 <div class="col-md-6 col-lg-6 articleHome__wrapperContent">
                                     <h1 class="articleHome__title" title="'. $post_title .'">'. $post_title .'</h1>
                                     <p class="articleHome__excerpt">'. $post_excerpt .'</p>
@@ -211,7 +211,7 @@ if( !function_exists('get_article_benefits') ){
                 $post_content   = get_the_content();
                 $post_icon      = get_post_meta($post_id, 'benefit_icon', true);
 
-                $output .= '<div class="col-md-4 col-lg-4">
+                $output .= '<div data-wow-delay=".2s" class="wow bounceInUp col-md-4 col-lg-4">
                                 <article id="benefit-'. $post_id .'" class="benefitCard">
                                     <div class="col-12">
                                         <span class="benefitCard__wrapIcon">
@@ -275,7 +275,7 @@ if( !function_exists('get_plans') ){
                 $plan_title_pt1 = $plan_title_arr[0];
                 $plan_title_pt2 = $plan_title_arr[1];
 
-                $output .= '<article id="plano-'. $post_id .'" class="planCard">
+                $output .= '<article data-wow-delay=".2s" id="plano-'. $post_id .'" class="wow bounceInRight planCard">
                                 <h1 class="planCard__title">'. $post_title .'</h1>
                                 <span class="planCard__spacer"></span>
 

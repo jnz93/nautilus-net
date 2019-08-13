@@ -58,7 +58,7 @@ jQuery(document).ready(function(){
          */
         jQuery('.articleHome__wrapperSlider').slick({
             dots: true,
-            arrows: false,
+            arrows: true,
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1

@@ -19,7 +19,10 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header id="" class="mainHeader">
+    <script>
+        new WOW().init()
+    </script>
+    <header id="" class="wow bounceInDown mainHeader">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mainHeader__flexContainer"> <!-- Container-->
             <div class="col-xs-9 col-sm-6 col-md-4 col-lg-4">
                 <?php 

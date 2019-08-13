@@ -14,7 +14,7 @@ $page_description   = $page->post_excerpt;
 $page_content       = $page->post_content;
 $page_thumb_url     = get_the_post_thumbnail_url($page);
 ?>
-<section id="benefits" class="container-fluid sct__benefits">
+<section id="benefits" data-wow-delay=".1s" class="wow fadeIn container-fluid sct__benefits">
     <header class="row sctHeader">
         <h1 class="sctHeader__title sctHeader__title--big" title="" style="display: block"><?php echo $page_title ?></h1>
         <p class="sctHeader__subtitle"><?php echo sanitize_text_field($page_content);?></p>

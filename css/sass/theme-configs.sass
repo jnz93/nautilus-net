@@ -28,6 +28,14 @@ p, ul, ol, li, span, input, label, textarea, button
         @include respond-above('md')
             height: calc(100vh - 90px)
 
+        .slick-prev
+            @include respond-above('md')
+                left: 0
+                z-index: 999
+        .slick-next
+            @include respond-above('md')
+                right: 0
+                z-index: 999
 
     // Beneficios
     &__benefits

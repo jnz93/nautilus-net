@@ -5,7 +5,7 @@
  * @package nautilusnet
  */
 ?>
-<section id="homepage" class="sct__homepage">
+<section id="homepage" data-wow-delay=".1s" class="wow fadeIn sct__homepage">
     <div class="col-lg-11 row sct__contentWrapper sct__contentWrapper--noMargin" style="height: 100%;">
         <?php 
         // Notificações
