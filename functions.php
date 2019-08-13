@@ -82,11 +82,13 @@ if( ! function_exists('nautilus_enqueue_scripts') ){
         wp_register_style('section-home', get_template_directory_uri() . '/css/parts/section-home.css', array(), '1.0.0', 'all');
         wp_register_style('cards', get_template_directory_uri() . '/css/parts/cards.css', array(), '1.0.0', 'all');
         wp_register_style('notification', get_template_directory_uri() . '/css/parts/notification.css', array(), '1.0.0', 'all');
+        wp_register_style('animate-css', get_template_directory_uri() . '/css/animate.css', array(), '3.7.2', 'all');
 
         // Lista de folhas a serem carregadas
         wp_enqueue_style('normalize');
         wp_enqueue_style('flexbox');
         wp_enqueue_style('slick-css');
+        wp_enqueue_style('animate-css');
         wp_enqueue_style('buttons-css');
         wp_enqueue_style('header-css');
         wp_enqueue_style('section-home');
@@ -100,11 +102,13 @@ if( ! function_exists('nautilus_enqueue_scripts') ){
         wp_register_script('eva-icons', 'https://unpkg.com/eva-icons', array(), true);
         wp_register_script('tpl-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), true);
         wp_register_script('tpl-sliders', get_template_directory_uri() . '/js/sliders.js', array('slick-js'), true);
+        wp_register_script('wow-transitions', get_template_directory_uri() . '/js/wow.min.js', array(), true);
 
         // Lista de scripts a serem carregados
         wp_enqueue_script('jquery');
         wp_enqueue_script('slick-slider');
         wp_enqueue_script('eva-icons');
+        wp_enqueue_script('wow-transitions');
         wp_enqueue_script('tpl-functions');
         wp_enqueue_script('tpl-sliders');
     }
