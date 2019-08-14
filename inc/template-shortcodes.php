@@ -372,3 +372,33 @@ if( !function_exists('create_footer_type1') ){
     }
     add_shortcode('show_footer_type_1', 'create_footer_type1');
 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Simple-fast contact app
+////////////////////////////////////////////////////////////////////////////////////////////////
+if( !function_exists('simple_contact_app') ){
+    function simple_contact_app(){
+        // Informações para contato
+        $whatsapp_number    = get_option('contact_whatsapp');
+        $tel_number         = get_option('contact_phone');
+
+        //
+        $html = '<div id="" class="simpleContact">
+                    <span class="simpleContact__information">Clique para iniciar a conversa</span>
+                    <div class="simpleContact__selectedContainer">
+                        <span class="simpleContact__selectedItem simpleContact__selectedItem--hide"><i class="simpleContact__icon" data-eva="message-square"></i>'. $whatsapp_number .'</span>
+                        <span class="simpleContact__selectedItem simpleContact__selectedItem--show"><i class="simpleContact__icon" data-eva="phone-call"></i>'. $tel_number .'</span>
+                    </div>
+                    <button class="simpleContact__buttonSelect">Fale com a Nautilusnet</button>
+                    <ul class="simpleContact__list simpleContact__list--hide">
+                        <i class="simpleContact__icon" data-eva="arrow-up"></i>
+                        <li class="simpleContact__listItem">WhatsApp</li>
+                        <li class="simpleContact__listItem">Telefone</li>
+                    </ul>
+                </div>';
+        
+        echo $html;
+    }
+    add_shortcode('simple_contact', 'simple_contact_app');
+}

@@ -1,0 +1,66 @@
+/*
+ Theme Name: nautilus-net
+ Description: Folha de estilos da aplicação de contato rápido
+ Pattern: BEM(Block, Element & Modifier)
+ */
+@import '../theme-configs.sass'
+
+
+.simpleContact
+    @include respond-above('md')
+        width: 320px
+        height: 75px
+
+        display: flex
+        flex-wrap: wrap
+        align-content: center
+
+        position: fixed
+        right: 25px
+        bottom: 25px
+
+    &__information
+        @include respond-above('md')
+            font-size: $fs-12
+            color: $text-light
+            
+            width: 100%
+            margin-bottom: 10px
+            display: block
+
+
+    &__selectedContainer
+        @include respond-above('md')
+            width: calc(75% - 10px)
+            height: 40px
+
+            border: 1px solid $success-color
+            border-radius: 25px
+
+            margin-right: 8px
+
+            display: flex
+            align-content: center
+            justify-content: center
+
+    &__selectedItem
+        @include respond-above('md')
+            font-size: $fs-14
+            font-weight: $regular
+            color: $text-dark
+
+    &__list
+        padding: 0
+        list-style: none
+        @include respond-above('md')
+            display: none
+            //display: flex
+            align-content: center
+            justify-content: center
+
+    &__buttonSelect
+        @include respond-above('md')
+            background: $success-color
+            width: calc(25% - 4px)
+            height: 40px
+            border-radius: 25px
