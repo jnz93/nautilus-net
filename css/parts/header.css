@@ -140,20 +140,20 @@ p, ul, ol, li, span, input, label, textarea, button {
     line-height: 1.8; }
     @media (max-width: 767px) {
       .sctHeader__title, .sctHeader__subtitle {
-        font-size: 21px;
+        font-size: 2.1em;
         margin: 0 auto;
         margin-bottom: 10px; } }
     @media (min-width: 992px) {
       .sctHeader__title, .sctHeader__subtitle {
-        font-size: 32px;
+        font-size: 3.2em;
         margin: 0 auto;
         margin-top: 15px; } }
   .sctHeader__subtitle {
-    font-size: 18px;
+    font-size: 1.8em;
     font-weight: 300; }
     @media (max-width: 767px) {
       .sctHeader__subtitle {
-        font-size: 16px; } }
+        font-size: 1.6em; } }
 
 .mainHeader {
   background: none;
@@ -226,12 +226,12 @@ p, ul, ol, li, span, input, label, textarea, button {
       margin-right: 5px; } }
   @media (max-width: 767px) {
     .logo__title {
-      font-size: 18px;
+      font-size: 1.8em;
       font-weight: 700;
       color: #2e3a59; } }
   @media (min-width: 992px) {
     .logo__title {
-      font-size: 21px;
+      font-size: 2.1em;
       font-weight: 700;
       color: #2e3a59; } }
 
@@ -315,7 +315,7 @@ p, ul, ol, li, span, input, label, textarea, button {
   @media (max-width: 767px) {
     .menuList:before {
       content: 'Menu de navegação';
-      font-size: 21px;
+      font-size: 2.1em;
       font-weight: 700;
       margin-bottom: 20px;
       color: #757575; } }
@@ -354,7 +354,7 @@ p, ul, ol, li, span, input, label, textarea, button {
         left: 0;
         opacity: .8; } }
     .menuList .menu-item a {
-      font-size: 16px;
+      font-size: 1.6em;
       font-weight: 500;
       color: #757575;
       text-decoration: none;

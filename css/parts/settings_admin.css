@@ -20,19 +20,19 @@
 
 @media (min-width: 992px) {
   .settingsPage__title--big {
-    font-size: 24px;
+    font-size: 2.4em;
     font-weight: 900;
     line-height: 1.6; } }
 
 @media (min-width: 992px) {
   .settingsPage__title--medium {
-    font-size: 21px;
+    font-size: 2.1em;
     font-weight: 700;
     line-height: 1.5; } }
 
 @media (min-width: 992px) {
   .settingsPage__title--small {
-    font-size: 18px;
+    font-size: 1.8em;
     font-weight: 700;
     line-height: 1.5; } }
 
@@ -41,7 +41,7 @@
   margin: 12px auto; }
   @media (min-width: 992px) {
     .settingsPage__text--medium {
-      font-size: 14px;
+      font-size: 1.4em;
       font-weight: 400; } }
 
 @media (min-width: 992px) {
@@ -54,7 +54,7 @@
   display: block; }
   @media (min-width: 992px) {
     .settingsPage__label {
-      font-size: 14px;
+      font-size: 1.4em;
       font-weight: 400;
       margin-bottom: 8px; } }
 
@@ -67,5 +67,5 @@
       padding-left: 10px;
       padding-right: 10px;
       height: 35px;
-      font-size: 16px;
+      font-size: 1.6em;
       font-weight: 400; } }

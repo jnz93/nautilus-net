@@ -141,20 +141,20 @@ p, ul, ol, li, span, input, label, textarea, button {
     line-height: 1.8; }
     @media (max-width: 767px) {
       .sctHeader__title, .sctHeader__subtitle {
-        font-size: 21px;
+        font-size: 2.1em;
         margin: 0 auto;
         margin-bottom: 10px; } }
     @media (min-width: 992px) {
       .sctHeader__title, .sctHeader__subtitle {
-        font-size: 32px;
+        font-size: 3.2em;
         margin: 0 auto;
         margin-top: 15px; } }
   .sctHeader__subtitle {
-    font-size: 18px;
+    font-size: 1.8em;
     font-weight: 300; }
     @media (max-width: 767px) {
       .sctHeader__subtitle {
-        font-size: 16px; } }
+        font-size: 1.6em; } }
 
 .notification {
   z-index: 999; }
@@ -227,13 +227,13 @@ p, ul, ol, li, span, input, label, textarea, button {
       opacity: 1;
       display: block; }
   .notification__date {
-    font-size: 12px;
+    font-size: 1.2em;
     font-weight: 300;
     color: #757575;
     display: block;
     margin-bottom: 15px; }
   .notification__title {
-    font-size: 18px;
+    font-size: 1.8em;
     font-weight: 700;
     color: #757575;
     line-height: 1.6;
@@ -245,13 +245,13 @@ p, ul, ol, li, span, input, label, textarea, button {
       .notification__title {
         margin-top: 15px; } }
   .notification__subtitle {
-    font-size: 14px;
+    font-size: 1.4em;
     font-weight: 500;
     color: #757575;
     line-height: 1.6;
     margin: 0; }
   .notification__text {
-    font-size: 14px;
+    font-size: 1.4em;
     font-weight: 300;
     color: #757575;
     line-height: 1.6; }

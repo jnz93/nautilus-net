@@ -140,20 +140,20 @@ p, ul, ol, li, span, input, label, textarea, button {
     line-height: 1.8; }
     @media (max-width: 767px) {
       .sctHeader__title, .sctHeader__subtitle {
-        font-size: 21px;
+        font-size: 2.1em;
         margin: 0 auto;
         margin-bottom: 10px; } }
     @media (min-width: 992px) {
       .sctHeader__title, .sctHeader__subtitle {
-        font-size: 32px;
+        font-size: 3.2em;
         margin: 0 auto;
         margin-top: 15px; } }
   .sctHeader__subtitle {
-    font-size: 18px;
+    font-size: 1.8em;
     font-weight: 300; }
     @media (max-width: 767px) {
       .sctHeader__subtitle {
-        font-size: 16px; } }
+        font-size: 1.6em; } }
 
 .articleHome {
   outline: none;
@@ -188,13 +188,13 @@ p, ul, ol, li, span, input, label, textarea, button {
     @media (max-width: 767px) {
       .articleHome__title {
         width: 100%;
-        font-size: 21px;
+        font-size: 2.1em;
         margin-bottom: 10px;
         margin-top: 20px;
         text-align: center; } }
     @media (min-width: 992px) {
       .articleHome__title {
-        font-size: 46px;
+        font-size: 4.6em;
         margin-bottom: 15px; } }
   .articleHome__excerpt {
     margin: 0;
@@ -204,12 +204,12 @@ p, ul, ol, li, span, input, label, textarea, button {
     @media (max-width: 767px) {
       .articleHome__excerpt {
         width: 100%;
-        font-size: 16px;
+        font-size: 1.6em;
         margin-bottom: 15px;
         text-align: center; } }
     @media (min-width: 992px) {
       .articleHome__excerpt {
-        font-size: 18px;
+        font-size: 1.8em;
         margin-bottom: 45px;
         width: 100%;
         display: block; } }

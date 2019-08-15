@@ -139,20 +139,20 @@ p, ul, ol, li, span, input, label, textarea, button {
     line-height: 1.8; }
     @media (max-width: 767px) {
       .sctHeader__title, .sctHeader__subtitle {
-        font-size: 21px;
+        font-size: 2.1em;
         margin: 0 auto;
         margin-bottom: 10px; } }
     @media (min-width: 992px) {
       .sctHeader__title, .sctHeader__subtitle {
-        font-size: 32px;
+        font-size: 3.2em;
         margin: 0 auto;
         margin-top: 15px; } }
   .sctHeader__subtitle {
-    font-size: 18px;
+    font-size: 1.8em;
     font-weight: 300; }
     @media (max-width: 767px) {
       .sctHeader__subtitle {
-        font-size: 16px; } }
+        font-size: 1.6em; } }
 
 @media (max-width: 767px) {
   .benefitCard {
@@ -200,7 +200,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (max-width: 767px) {
   .benefitCard__title {
-    font-size: 16px;
+    font-size: 1.6em;
     font-weight: 700;
     line-height: 1.6;
     color: #2e3a59;
@@ -209,7 +209,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 992px) {
   .benefitCard__title {
-    font-size: 16px;
+    font-size: 1.6em;
     font-weight: 700;
     line-height: 1.6;
     color: #757575;
@@ -219,13 +219,13 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (max-width: 767px) {
   .benefitCard__title--expandMobile {
-    font-size: 14px;
+    font-size: 1.4em;
     font-weight: 700;
     text-transform: uppercase; } }
 
 @media (max-width: 767px) {
   .benefitCard__text {
-    font-size: 14px;
+    font-size: 1.4em;
     font-weight: 400;
     color: #757575;
     line-height: 1.5;
@@ -234,14 +234,14 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 992px) {
   .benefitCard__text {
-    font-size: 16px;
+    font-size: 1.6em;
     font-weight: 300;
     color: #757575;
     line-height: 1.6; } }
 
 @media (max-width: 767px) {
   .benefitCard__text--expandMobile {
-    font-size: 14px;
+    font-size: 1.4em;
     font-weight: 500;
     line-height: 1.5;
     color: #757575;
@@ -281,7 +281,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       border-radius: 6px;
       box-shadow: -3px 3px 6px #BDBDBD; } }
   .planCard__title {
-    font-size: 18px;
+    font-size: 1.8em;
     font-weight: 700;
     color: #2e3a59; }
   .planCard__spacer {
@@ -305,17 +305,17 @@ p, ul, ol, li, span, input, label, textarea, button {
   .planCard__speed {
     text-transform: uppercase;
     margin: 0;
-    font-size: 36px;
+    font-size: 3.6em;
     color: #FFFFFF; }
   .planCard__speedTag {
     width: 100%;
-    font-size: 14px;
+    font-size: 1.4em;
     font-weight: 500;
     color: #FFFFFF;
     text-transform: uppercase;
     margin: 0; }
   .planCard__label {
-    font-size: 12px;
+    font-size: 1.2em;
     color: #757575;
     text-transform: uppercase;
     border: 1px solid #BDBDBD;
@@ -331,7 +331,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       .planCard__content {
         margin: 5px auto; } }
     .planCard__content li {
-      font-size: 14px;
+      font-size: 1.4em;
       color: #757575;
       line-height: 1.6;
       margin: 16px auto; }
@@ -346,17 +346,17 @@ p, ul, ol, li, span, input, label, textarea, button {
     color: #757575; }
     @media (max-width: 767px) {
       .planCard__tag {
-        font-size: 12px; } }
+        font-size: 1.2em; } }
     @media (min-width: 992px) {
       .planCard__tag {
-        font-size: 14px; } }
+        font-size: 1.4em; } }
     .planCard__tag--alignStart {
       align-self: flex-start;
       margin-top: 10px; }
     .planCard__tag--alignEnd {
       align-self: flex-end; }
   .planCard__price {
-    font-size: 36px;
+    font-size: 3.6em;
     color: #2e3a59;
     margin: 0 3px; }
 
@@ -382,7 +382,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       box-shadow: -3px 3px 3px #F2F2F2; } }
   @media (max-width: 767px) {
     .contactCard__help {
-      font-size: 12px;
+      font-size: 1.2em;
       text-align: center;
       color: #757575;
       width: 100%; } }
@@ -491,11 +491,11 @@ p, ul, ol, li, span, input, label, textarea, button {
       text-align: center;
       margin: 10px auto;
       line-height: 1.5;
-      font-size: 12px; } }
+      font-size: 1.2em; } }
   @media (min-width: 992px) {
     .contactCard__title {
       color: #2e3a59;
-      font-size: 16px;
+      font-size: 1.6em;
       margin: 0;
       margin-top: 10px;
       margin-bottom: 20px; } }
@@ -505,7 +505,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     font-weight: 700; }
   @media (max-width: 767px) {
     .contactCard__title--expandMobile {
-      font-size: 14px;
+      font-size: 1.4em;
       font-weight: 700;
       text-transform: uppercase; } }
   .contactCard__list {
@@ -530,7 +530,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       margin: 15px auto; } }
   .contactCard__tag {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 1.2em;
     color: #757575;
     margin: 5px 0; }
   .contactCard__info {
@@ -539,12 +539,12 @@ p, ul, ol, li, span, input, label, textarea, button {
     margin: 7px 0; }
     @media (max-width: 767px) {
       .contactCard__info {
-        font-size: 14px; } }
+        font-size: 1.4em; } }
     @media (min-width: 992px) {
       .contactCard__info {
-        font-size: 18px; } }
+        font-size: 1.8em; } }
   .contactCard__text {
-    font-size: 14px;
+    font-size: 1.4em;
     line-height: 1.7;
     font-weight: 500;
     color: #757575;
