@@ -56,59 +56,60 @@ if( !function_exists('theme_options_page') ){
         $curr_contact_cnpj              = get_option('contact_cnpj');
         $curr_contact_office_hours      = get_option('contact_office_hours');
         ?>
-        <section id="" class="container-fluid sctSetupTheme">
-            <h1 class="sctSetupTheme__title">Painel de configurações do tema</h1>
-            <form method="post" action="options.php" class="formSetup">
+        <!-- <h3 class="settingsPage__title settingsPage__title--medium">Informações de contato</h3>
+        <p class="settingsPage__text settingsPage__text--medium">Essas informações serão mostradas na seção de contato da homepage e em outros cenários possíveis.</p> -->
+
+        <section id="" class="settingsPage">
+            <h1 class="settingsPage__title settingsPage__title--big">Painel de configurações do tema</h1>
+            <form method="post" action="options.php" class="row settingsPage__form">
                 <?php 
                 settings_fields('contact-settings-group'); 
                 do_settings_sections('contact-settings-group');
                 ?>
-                <h3 class="formSetup__title">Informações de contato</h3>
-                <p class="formSetup__text">Essas informações serão mostradas na seção de contato da homepage e em outros cenários possíveis.</p>
-
+                
                 <div class="col-lg-6">
-                    <div class="formSetup__wrapInput">
-                        <label for="contact_email" class="">E-mail para contato</label>
-                        <input type="text" id="contact_email" name="contact_email" class="" placeholder="" value="<?php echo ( empty($curr_contact_email) ? '' : $curr_contact_email ) ?>">
+                    <div class="settingsPage__wrapInput">
+                        <label for="contact_email" class="settingsPage__label">E-mail para contato</label>
+                        <input type="text" id="contact_email" name="contact_email" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_email) ? '' : $curr_contact_email ) ?>">
+                    </div>
+                </div>
+
+                <div class="row col-lg-6">
+                    <div class="col-lg-6 settingsPage__wrapInput">
+                        <label for="contact_phone" class="settingsPage__label">Telefone Loja</label>
+                        <input type="tel" id="contact_phone" name="contact_phone" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_phone) ? '' : $curr_contact_phone ) ?>">
+                    </div>
+                    <div class="col-lg-6 settingsPage__wrapInput">
+                        <label for="contact_whatsapp" class="settingsPage__label">Whatsapp</label>
+                        <input type="tel" id="contact_whatsapp" name="contact_whatsapp" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_whatsapp) ? '' : $curr_contact_whatsapp ) ?>">
                     </div>
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="formSetup__wrapInput">
-                        <label for="contact_phone" class="">Telefone fixo</label>
-                        <input type="tel" id="contact_phone" name="contact_phone" class="" placeholder="" value="<?php echo ( empty($curr_contact_phone) ? '' : $curr_contact_phone ) ?>">
-                    </div>
-                    <div class="formSetup__wrapInput">
-                        <label for="contact_whatsapp" class="">Whatsapp</label>
-                        <input type="tel" id="contact_whatsapp" name="contact_whatsapp" class="" placeholder="" value="<?php echo ( empty($curr_contact_whatsapp) ? '' : $curr_contact_whatsapp ) ?>">
+                    <div class="settingsPage__wrapInput">
+                        <label for="contact_address" class="settingsPage__label">Endereço</label>
+                        <input type="text" id="contact_address" name="contact_address" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_address) ? '' :$curr_contact_address ) ?>">
                     </div>
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="formSetup__wrapInput">
-                        <label for="contact_address" class="">Endereço</label>
-                        <input type="text" id="contact_address" name="contact_address" class="" placeholder="" value="<?php echo ( empty($curr_contact_address) ? '' :$curr_contact_address ) ?>">
+                    <div class="settingsPage__wrapInput">
+                        <label for="contact_cep" class="settingsPage__label">CEP</label>
+                        <input type="text" id="contact_cep" name="contact_cep" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_cep) ? '' : $curr_contact_cep ) ?>">
                     </div>
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="formSetup__wrapInput">
-                        <label for="contact_cep" class="">CEP</label>
-                        <input type="text" id="contact_cep" name="contact_cep" class="" placeholder="" value="<?php echo ( empty($curr_contact_cep) ? '' : $curr_contact_cep ) ?>">
+                    <div class="settingsPage__wrapInput">
+                        <label for="contact_cnpj" class="settingsPage__label">CNPJ</label>
+                        <input type="text" id="contact_cnpj" name="contact_cnpj" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_cnpj) ? '' : $curr_contact_cnpj ) ?>">
                     </div>
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="formSetup__wrapInput">
-                        <label for="contact_cnpj" class="">CNPJ</label>
-                        <input type="text" id="contact_cnpj" name="contact_cnpj" class="" placeholder="" value="<?php echo ( empty($curr_contact_cnpj) ? '' : $curr_contact_cnpj ) ?>">
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="formSetup__wrapInput">
-                        <label for="contact_office_hours" class="">Horário de atendimento</label>
-                        <input type="text" id="contact_office_hours" name="contact_office_hours" class="" placeholder="" value="<?php echo ( empty($curr_contact_office_hours) ? '' : $curr_contact_office_hours ) ?>">
+                    <div class="settingsPage__wrapInput">
+                        <label for="contact_office_hours" class="settingsPage__label">Horário de atendimento</label>
+                        <input type="text" id="contact_office_hours" name="contact_office_hours" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_office_hours) ? '' : $curr_contact_office_hours ) ?>">
                     </div>
                 </div>
                 <?php submit_button(); ?>
