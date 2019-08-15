@@ -126,8 +126,10 @@ if( ! function_exists('nautilus_enqueue_admin_scripts') ){
         $theme_version  = $theme->get('Version');
 
         // Folhas de estilos
+        wp_register_style('flexbox', get_template_directory_uri() . '/css/flexboxgrid.min.css', array(), '6.3.1', 'all');
         wp_register_style('settings-page', get_template_directory_uri() . '/css/parts/settings_admin.css', array(), $theme_version, 'all');
 
+        wp_enqueue_style('flexbox');
         wp_enqueue_style('settings-page');
     }
     add_action('admin_enqueue_scripts', 'nautilus_enqueue_admin_scripts');
