@@ -116,6 +116,24 @@ if( ! function_exists('nautilus_enqueue_scripts') ){
 }
 
 /**
+ * Estilos e escripts no painel de administração
+ * @hook admin_enqueue_scripts
+ * @link https://codex.wordpress.org/Plugin_API/Action_Reference/admin_enqueue_scripts
+ */
+if( ! function_exists('nautilus_enqueue_admin_scripts') ){
+    function nautilus_enqueue_admin_scripts(){
+        $theme          = wp_get_theme();
+        $theme_version  = $theme->get('Version');
+
+        // Folhas de estilos
+        wp_register_style('settings-page', get_template_directory_uri() . '/css/settings_admin.css', array(), $theme_version, 'all');
+
+        wp_enqueue_style('settings-page');
+    }
+    add_action('admin_enqueue_scripts', 'nautilus_enqueue_admin_scripts');
+}
+
+/**
  * Registro de tipos de posts
  */
 require get_template_directory() . '/inc/template-posttypes.php';
