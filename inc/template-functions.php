@@ -26,13 +26,27 @@ if( !function_exists('add_menu_options') ){
 if( !function_exists('register_nautilus_settings') ){
     
     function register_nautilus_settings(){
-        register_setting('contact-settings-group', 'contact_email');
+        register_setting('contact-settings-group', 'contact_email_support');
+        register_setting('contact-settings-group', 'contact_email_comercial');
+
         register_setting('contact-settings-group', 'contact_phone');
         register_setting('contact-settings-group', 'contact_whatsapp');
-        register_setting('contact-settings-group', 'contact_address');
+
+        register_setting('contact-settings-group', 'contact_street');
+        register_setting('contact-settings-group', 'contact_city');
         register_setting('contact-settings-group', 'contact_cep');
+
         register_setting('contact-settings-group', 'contact_cnpj');
-        register_setting('contact-settings-group', 'contact_office_hours');
+
+        register_setting('contact-settings-group', 'contact_hours_business_day');
+        register_setting('contact-settings-group', 'contact_hours_saturday');
+        
+        register_setting('contact-settings-group', 'google_analitycs');
+
+        register_setting('contact-settings-group', 'facebook_page');
+        register_setting('contact-settings-group', 'instagram_page');
+        register_setting('contact-settings-group', 'twitter_page');
+        register_setting('contact-settings-group', 'youtube_channel');
     }
 }
 
@@ -48,70 +62,138 @@ if( !function_exists('theme_options_page') ){
         }
 
         // Valores salvos
-        $curr_contact_email             = get_option('contact_email');
-        $curr_contact_phone             = get_option('contact_phone');
-        $curr_contact_whatsapp          = get_option('contact_whatsapp');
-        $curr_contact_address           = get_option('contact_address');
-        $curr_contact_cep               = get_option('contact_cep');
-        $curr_contact_cnpj              = get_option('contact_cnpj');
-        $curr_contact_office_hours      = get_option('contact_office_hours');
+        $curr_email_support                 = get_option('contact_email_support');
+        $curr_email_comercial               = get_option('contact_email_comercial');
+        $curr_phone                         = get_option('contact_phone');
+        $curr_whatsapp                      = get_option('contact_whatsapp');
+        $curr_street                        = get_option('contact_street');
+        $curr_city                          = get_option('contact_city');
+        $curr_cep                           = get_option('contact_cep');
+        $curr_cnpj                          = get_option('contact_cnpj');
+        $curr_hours_business_day            = get_option('contact_hours_business_day');
+        $curr_hours_saturday                = get_option('contact_hours_saturday');
+        $curr_google_analytics              = get_option('google_analitycs');
+        $curr_facebook_page                 = get_option('facebook_page');
+        $curr_instagram_page                = get_option('instagram_page');
+        $curr_twitter_page                  = get_option('twitter_page');
+        $curr_youtube_channel               = get_option('youtube_channel');
+
         ?>
         <!-- <h3 class="settingsPage__title settingsPage__title--medium">Informações de contato</h3>
         <p class="settingsPage__text settingsPage__text--medium">Essas informações serão mostradas na seção de contato da homepage e em outros cenários possíveis.</p> -->
 
         <section id="" class="settingsPage">
             <h1 class="settingsPage__title settingsPage__title--big">Painel de configurações do tema</h1>
-            <form method="post" action="options.php" class="row settingsPage__form">
+            <form method="post" action="options.php" class="row col-lg-8 settingsPage__form">
                 <?php 
                 settings_fields('contact-settings-group'); 
                 do_settings_sections('contact-settings-group');
                 ?>
                 
-                <div class="col-lg-6">
-                    <div class="settingsPage__wrapInput">
-                        <label for="contact_email" class="settingsPage__label">E-mail para contato</label>
-                        <input type="text" id="contact_email" name="contact_email" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_email) ? '' : $curr_contact_email ) ?>">
+                <div class="row col-lg-12">
+                    <div class="col-lg-12">
+                        <h3 class="settingsPage__title settingsPage__title--small">E-mails para contato</h3>
+                    </div>
+
+                    <div class="col-lg-6 settingsPage__wrapInput">
+                        <label for="contact_email_support" class="settingsPage__label">E-mail do suporte</label>
+                        <input type="text" id="contact_email_support" name="contact_email_support" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_email_support) ? '' : $curr_email_support ) ?>">
+                    </div>
+                    <div class="col-lg-6 settingsPage__wrapInput">
+                        <label for="contact_email_comercial" class="settingsPage__label">E-mail do comercial</label>
+                        <input type="text" id="contact_email_comercial" name="contact_email_comercial" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_email_comercial) ? '' : $curr_email_comercial ) ?>">
                     </div>
                 </div>
 
-                <div class="row col-lg-6">
+                <div class="row col-lg-12">
+                    <div class="col-lg-12">
+                        <h3 class="settingsPage__title settingsPage__title--small">Telefones</h3>
+                    </div>
                     <div class="col-lg-6 settingsPage__wrapInput">
                         <label for="contact_phone" class="settingsPage__label">Telefone Loja</label>
-                        <input type="tel" id="contact_phone" name="contact_phone" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_phone) ? '' : $curr_contact_phone ) ?>">
+                        <input type="tel" id="contact_phone" name="contact_phone" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_phone) ? '' : $curr_phone ) ?>">
                     </div>
                     <div class="col-lg-6 settingsPage__wrapInput">
-                        <label for="contact_whatsapp" class="settingsPage__label">Whatsapp</label>
-                        <input type="tel" id="contact_whatsapp" name="contact_whatsapp" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_whatsapp) ? '' : $curr_contact_whatsapp ) ?>">
+                        <label for="contact_whatsapp" class="settingsPage__label">Número Whatsapp</label>
+                        <input type="tel" id="contact_whatsapp" name="contact_whatsapp" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_whatsapp) ? '' : $curr_whatsapp ) ?>">
                     </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="settingsPage__wrapInput">
-                        <label for="contact_address" class="settingsPage__label">Endereço</label>
-                        <input type="text" id="contact_address" name="contact_address" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_address) ? '' :$curr_contact_address ) ?>">
+                <div class="row col-lg-12">
+                    <div class="col-lg-12">
+                        <h3 class="settingsPage__title settingsPage__title--small">Endereço</h3>
                     </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="settingsPage__wrapInput">
+                    <div class="col-lg-4 settingsPage__wrapInput">
+                        <label for="contact_street" class="settingsPage__label">Rua/Logradouro</label>
+                        <input type="text" id="contact_street" name="contact_street" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_street) ? '' : $curr_street ) ?>">
+                    </div>
+                    <div class="col-lg-4 settingsPage__wrapInput">
+                        <label for="contact_city" class="settingsPage__label">Cidade</label>
+                        <input type="text" id="contact_city" name="contact_city" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_city) ? '' : $curr_city ) ?>">
+                    </div>
+                    <div class="col-lg-4 settingsPage__wrapInput">
                         <label for="contact_cep" class="settingsPage__label">CEP</label>
-                        <input type="text" id="contact_cep" name="contact_cep" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_cep) ? '' : $curr_contact_cep ) ?>">
+                        <input type="text" id="contact_cep" name="contact_cep" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_cep) ? '' : $curr_cep ) ?>">
                     </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="settingsPage__wrapInput">
+                <div class="row col-lg-12">
+                    <div class="col-lg-12">
+                        <h3 class="settingsPage__title settingsPage__title--small">Horários de atendimento</h3>
+                    </div>
+
+                    <div class="col-lg-6 settingsPage__wrapInput">
+                        <label for="contact_hours_business_day" class="settingsPage__label">Comercial Segunda à sexta feira</label>
+                        <input type="text" id="contact_hours_business_day" name="contact_hours_business_day" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_hours_business_day) ? '' : $curr_hours_business_day ) ?>">
+                    </div>
+                    <div class="col-lg-6 settingsPage__wrapInput">
+                        <label for="contact_hours_saturday" class="settingsPage__label">Comercial aos sábados</label>
+                        <input type="text" id="contact_hours_saturday" name="contact_hours_saturday" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_hours_saturday) ? '' : $curr_hours_saturday ) ?>">
+                    </div>
+                </div>
+
+                <div class="row col-lg-12">
+                    <div class="col-lg-12">
+                        <h3 class="settingsPage__title settingsPage__title--small">Informações sobre a empresa</h3>
+                    </div>
+                    <div class="col-lg-6 settingsPage__wrapInput">
                         <label for="contact_cnpj" class="settingsPage__label">CNPJ</label>
-                        <input type="text" id="contact_cnpj" name="contact_cnpj" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_cnpj) ? '' : $curr_contact_cnpj ) ?>">
+                        <input type="text" id="contact_cnpj" name="contact_cnpj" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_cnpj) ? '' : $curr_cnpj ) ?>">
                     </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="settingsPage__wrapInput">
-                        <label for="contact_office_hours" class="settingsPage__label">Horário de atendimento</label>
-                        <input type="text" id="contact_office_hours" name="contact_office_hours" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_contact_office_hours) ? '' : $curr_contact_office_hours ) ?>">
+                <div class="row col-lg-12">
+                    <div class="col-lg-12">
+                        <h3 class="settingsPage__title settingsPage__title--small">Configurações analitycs</h3>
+                    </div>
+                    <div class="col-lg-12 settingsPage__wrapInput">
+                        <label for="google_analitycs" class="settingsPage__label">Google Analytics ID</label>
+                        <input type="text" id="google_analitycs" name="google_analitycs" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_google_analytics) ? '' : $curr_google_analytics ) ?>">
                     </div>
                 </div>
+
+                <div class="row col-lg-12">
+                    <div class="col-lg-12">
+                        <h3 class="settingsPage__title settingsPage__title--small">Redes Sociais</h3>
+                    </div>
+                    <div class="col-lg-6 settingsPage__wrapInput">
+                        <label for="facebook_page" class="settingsPage__label">Página do facebook</label>
+                        <input type="text" id="facebook_page" name="facebook_page" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_facebook_page) ? '' : $curr_facebook_page ) ?>">
+                    </div>
+                    <div class="col-lg-6 settingsPage__wrapInput">
+                        <label for="instagram_page" class="settingsPage__label">Página do instagram</label>
+                        <input type="text" id="instagram_page" name="instagram_page" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_instagram_page) ? '' : $curr_instagram_page ) ?>">
+                    </div>
+                    <div class="col-lg-6 settingsPage__wrapInput">
+                        <label for="twitter_page" class="settingsPage__label">Página do twitter</label>
+                        <input type="text" id="twitter_page" name="twitter_page" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_twitter_page) ? '' : $curr_twitter_page ) ?>">
+                    </div>
+                    <div class="col-lg-6 settingsPage__wrapInput">
+                        <label for="youtube_channel" class="settingsPage__label">Canal do youtube</label>
+                        <input type="text" id="youtube_channel" name="youtube_channel" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_youtube_channel) ? '' : $curr_youtube_channel ) ?>">
+                    </div>
+                </div>
+
                 <?php submit_button(); ?>
             </form>
         </section>

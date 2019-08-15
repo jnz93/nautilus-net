@@ -1,0 +1,77 @@
+/*
+ Theme Name: nautilus-net
+ Description: Layout da página de configurações e opções do tema
+ Pattern: BEM(Block, Element & Modifier) https://www.alura.com.br/artigos/criando-componentes-css-com-padrao-bem
+ */
+@import '../style-guide.sass'
+@import '../media-queries.sass'
+
+// Seção da página
+.settingsPage
+    @include respond-above('md')
+        background: $white
+        min-height: 600px
+        margin: 15px
+        padding: 15px
+        border-radius: 4px
+        border: 1px solid $graySecondary
+
+    // Títulos
+    &__title
+        @include respond-above('md')
+            color: $text-dark
+            margin: 15px auto
+        
+        &--big
+            @include respond-above('md')
+                font-size: $fs-24
+                font-weight: $bold
+                line-height: 1.6
+
+        &--medium
+            @include respond-above('md')
+                font-size: $fs-21
+                font-weight: $semi-bold
+                line-height: 1.5
+
+        &--small
+            @include respond-above('md')
+                font-size: $fs-18
+                font-weight: $semi-bold
+                line-height: 1.5
+        
+    // Text
+    &__text
+        color: $text-light
+        margin: 12px auto
+
+        &--medium
+            @include respond-above('md')
+                font-size: $fs-14
+                font-weight: $semi-thin
+
+    // Wrap input
+    &__wrapInput
+        @include respond-above('md')
+            margin-bottom: 15px
+
+    // Label input
+    &__label
+        color: $text-light
+        width: 100%
+        display: block
+        @include respond-above('md')
+            font-size: $fs-14
+            font-weight: $semi-thin
+            margin-bottom: 8px
+
+    &__input
+        width: 100%
+        color: $text-light
+        @include respond-above('md')
+            border-radius: 4px
+            padding-left: 10px
+            padding-right: 10px
+            height: 35px
+            font-size: $fs-16
+            font-weight: $semi-thin
