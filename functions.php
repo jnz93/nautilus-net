@@ -126,7 +126,7 @@ if( ! function_exists('nautilus_enqueue_admin_scripts') ){
         $theme_version  = $theme->get('Version');
 
         // Folhas de estilos
-        wp_register_style('settings-page', get_template_directory_uri() . '/css/settings_admin.css', array(), $theme_version, 'all');
+        wp_register_style('settings-page', get_template_directory_uri() . '/css/parts/settings_admin.css', array(), $theme_version, 'all');
 
         wp_enqueue_style('settings-page');
     }
