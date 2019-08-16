@@ -16,15 +16,29 @@
         border-radius: 4px
         border: 1px solid $graySecondary
 
+        // Provisório
+        font-size: 62.5%
+
+    // Header
+    &__headerSection
+        @include respond-above('md')
+            background: $graySecondary
+            flex-wrap: wrap
+
+            padding: 15px 25px
+
+
+
     // Títulos
     &__title
         @include respond-above('md')
+            width: 100%
             color: $text-dark
-            margin: 15px auto
+            margin: 5px auto
         
         &--big
             @include respond-above('md')
-                font-size: $fs-24
+                font-size: $fs-36
                 font-weight: $bold
                 line-height: 1.6
 
@@ -42,18 +56,23 @@
         
     // Text
     &__text
+        width: 100%
         color: $text-light
-        margin: 12px auto
+        margin: 3px auto
 
         &--medium
             @include respond-above('md')
-                font-size: $fs-14
+                font-size: $fs-18
                 font-weight: $semi-thin
 
-    // Wrap input
-    &__wrapInput
-        @include respond-above('md')
-            margin-bottom: 15px
+        &--small
+            @include respond-above('md')
+                font-size: $fs-12
+                font-weight: $semi-thin
+
+        // Posicionamento
+        &--alignRight
+            text-align: right
 
     // Label input
     &__label
@@ -75,3 +94,13 @@
             height: 35px
             font-size: $fs-16
             font-weight: $semi-thin
+
+    // Wrap input
+    &__wrapInput
+        @include respond-above('md')
+            margin-bottom: 15px
+
+    // Wrapper group of settings
+    &__wrapperGroup
+        @include respond-above('md')
+            margin: 15px auto
