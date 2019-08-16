@@ -307,20 +307,40 @@ function custom_company_logo(){
             font-size: 24px;
 
             overflow: initial;
+            text-indent: 0;
         }
-        #login h1 a:after{
-            content: "<?php echo $site_name ?>";
+        #login h1 a p{
             width: 400px;
-            position: absolute;
-            bottom: 0;
-            left: -140px;
             color: #2e3a59;
             font-weight: 700;
             text-indent: 0;
+            position: absolute;
+            bottom: 0;
+            left: -140px;
         }
     </style>
     <?php
 }
 add_action('login_enqueue_scripts', 'custom_company_logo');
+
+/**
+ * Alterar link do logotipo
+ * @hook login_headerurl
+ * @link https://codex.wordpress.org/Customizing_the_Login_Form
+ * */
+function company_url_logo(){
+    return get_bloginfo('url');
+}
+add_filter('login_headerurl', 'company_url_logo');
+
+/**
+ * Alterar título do logotipo
+ * @hook login_headertitle
+ * @link https://codex.wordpress.org/Customizing_the_Login_Form
+ * */
+function company_title_logo(){
+    return '<p>' . get_bloginfo('name') . '</p>';
+}
+add_filter('login_headertitle', 'company_title_logo');
 
 ?>
