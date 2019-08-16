@@ -283,4 +283,44 @@ function card_phone_contact($title_card, $icon, $title_info, $arr_infos){
 
 // <button class=""><i class="" data-eva="whatsapp"></i>Iniciar conversa</button>
 // <button class=""><i class="" data-eva="phone"></i>Fazer chamada</button>
+
+/**
+ * Custom logotipo nautilus na tela de login 
+ * @hook login_enqueue_scripts
+ * @link https://codex.wordpress.org/Customizing_the_Login_Form
+ * */
+function custom_company_logo(){
+    $logo_id        = get_theme_mod('custom_logo');
+    $logo_url       = wp_get_attachment_image_src($logo_id, 'medium');
+    $site_name      = get_bloginfo('name');
+    ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo $logo_url[0] ?>);
+            height:120px;
+            width:120px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            padding-bottom: 30px;
+            position: relative;
+            color: blue;
+            font-size: 24px;
+
+            overflow: initial;
+        }
+        #login h1 a:after{
+            content: "<?php echo $site_name ?>";
+            width: 400px;
+            position: absolute;
+            bottom: 0;
+            left: -140px;
+            color: #2e3a59;
+            font-weight: 700;
+            text-indent: 0;
+        }
+    </style>
+    <?php
+}
+add_action('login_enqueue_scripts', 'custom_company_logo');
+
 ?>
