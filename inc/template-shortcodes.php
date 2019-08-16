@@ -315,20 +315,22 @@ if( !function_exists('get_plans') ){
 if( !function_exists('create_contact_section') ){
     function create_contact_section(){
 
-        // Armazenamento das informações
-        $contact_email      = get_option('contact_email');
-        $contact_phone      = get_option('contact_phone');
-        $contact_whatsapp   = get_option('contact_whatsapp');
-        $contact_address    = get_option('contact_address');
-        $contact_cep        = get_option('contact_cep');
-        $contact_cnpj       = get_option('contact_cnpj');
-        $office_hours       = get_option('contact_office_hours');
+        $email_support                 = get_option('contact_email_support');
+        $email_comercial               = get_option('contact_email_comercial');
+        $phone                         = get_option('contact_phone');
+        $whatsapp                      = get_option('contact_whatsapp');
+        $street                        = get_option('contact_street');
+        $city                          = get_option('contact_city');
+        $cep                           = get_option('contact_cep');
+        $cnpj                          = get_option('contact_cnpj');
+        $hours_business_day            = get_option('contact_hours_business_day');
+        $hours_saturday                = get_option('contact_hours_saturday');
 
-        // Tratamento de grupos de informações para enviar na função de construção do card
-        $arr_email          = explode(',', $contact_email);
-        $arr_tel            = array($contact_phone, $contact_whatsapp);
-        $arr_office_hours   = explode('~', $office_hours);
-        $arr_address        = explode('~', $contact_address);
+        // Tratamento para chamada da função que cria o card
+        $arr_email          = array($email_support, $email_comercial);
+        $arr_tel            = array($phone, $whatsapp);
+        $arr_office_hours   = array($hours_business_day, $hours_saturday);
+        $arr_address        = array($street, $city);
 
         // Chamada dos cards
         card_phone_contact('Telefone(s)', 'phone', array('Telefone loja', 'WhatsApp'), $arr_tel);
@@ -344,12 +346,12 @@ if( !function_exists('create_contact_section') ){
                     <ul class="contactCard__list contactCard__list--expandMobile">
                         <li class="contactCard__listItem">
                             <span class="contactCard__tag">Segunda à sexta feira</span>
-                            <p class="contactCard__info">'. $arr_office_hours[0] .'</p>
+                            <p class="contactCard__info">'. $hours_business_day .'</p>
                         </li>
                         <span class="contactCard__spacer"></span>
                         <li class="contactCard__listItem">
                             <span class="contactCard__tag">Sábado</span>
-                            <p class="contactCard__info">'. $arr_office_hours[1] .'</p>
+                            <p class="contactCard__info">'. $hours_saturday .'</p>
                         </li>
                     </ul>
                 </div>';
