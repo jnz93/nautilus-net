@@ -159,3 +159,8 @@ require get_template_directory() . '/inc/template-shortcodes.php';
  * Template register options
  */
 require get_template_directory() . '/inc/template-options.php';
+
+/**
+ * Template taxonomies
+ */
+require get_template_directory() . '/inc/template-taxonomies.php';
