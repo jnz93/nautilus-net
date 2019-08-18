@@ -240,18 +240,16 @@ if( !function_exists('get_article_benefits') ){
 if( !function_exists('get_plans') ){
     function get_plans(){
         $post_type      = 'planos';
-        $order          = 'DESC';
-        $orderby        = 'date';
         $status         = 'publish';
-        $number_posts   = '5';
+        $number_posts   = '-1';
         
         $args = array(
             'post_type'         => $post_type,
-            // 'cat'               => $category,
-            // 'order'             => $order,
-            // 'orderby'           => $orderby,
             'post_status'       => $status,
-            'posts_per_page'    => $number_posts
+            'posts_per_page'    => $number_posts,
+            'orderby'           => array(
+                'speed_download' => 'ASC'
+            )
         );
     
         $plans = new WP_Query($args);
