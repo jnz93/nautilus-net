@@ -5,8 +5,8 @@
  * @package nautilusnet
  */
 
-$page               = get_page_by_title('Temos vários planos de conexão para você e sua família');
-// $page               = get_post('662');
+// $page               = get_page_by_title('Temos vários planos de conexão para você e sua família');
+$page               = get_post('16');
 $page_id            = $page->ID;
 $page_title         = $page->post_title;
 $page_subtitle      = get_post_meta($page_id, 'subtitle_page', true);
