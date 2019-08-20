@@ -19,6 +19,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
+    <?php snippet_ganalytics(); ?>
     <div class="coverBackground"></div>
     <header id="" class="wow bounceInDown mainHeader">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mainHeader__flexContainer"> <!-- Container-->
