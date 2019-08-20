@@ -119,7 +119,7 @@ if( !function_exists('get_notifications') ){
             }
             echo $output;
         } else {
-            echo "Não encontramos notificações. :)";
+            echo "<p style='opacity: 0'>Não encontramos notificações. :)</p>";
         }
     }
     add_shortcode('show_notifications', 'get_notifications');
@@ -228,7 +228,7 @@ if( !function_exists('get_article_benefits') ){
             }
             echo $output;
         } else {
-            echo "Não encontramos notificações. :)";
+            echo "<p>Ainda não temos publicações.</p>";
         }
     }
     add_shortcode('show_article_benefits', 'get_article_benefits');
@@ -307,7 +307,7 @@ if( !function_exists('get_plans') ){
             }
             echo $output;
         } else {
-            echo "Não encontramos planos cadastrados";
+            echo "<p style='text-align: center;'>Ainda não temos publicações.</p>";
         }
     }
     add_shortcode('show_plans', 'get_plans');
@@ -372,7 +372,7 @@ if( !function_exists('create_footer_type1') ){
     function create_footer_type1(){
         ?>
         <div class="row container-fluid">
-            <p class="footer__text footer__text--copyright">Todos os direitos reservados NautilusNet 2019</p>
+            <p class="footer__text footer__text--copyright" style="width: 100%; text-align: center; font-size: 1.2em">Todos os direitos reservados NautilusNet 2019</p>
         </div>
         <?php
     }
