@@ -352,7 +352,7 @@ add_filter('login_headertitle', 'company_title_logo');
  */
 function snippet_ganalytics(){
     $g_analytics_id = get_option('google_analitycs');
-    $snippet_js = '<script async src="https://www.googletagmanager.com/gtag/js?id='. $g_analytics_id .'"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", '. $g_analytics_id .');</script>';
+    $snippet_js = '<script async src="https://www.googletagmanager.com/gtag/js?id='. $g_analytics_id .'"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "'. $g_analytics_id .'");</script>';
 
     echo $snippet_js;
 }
