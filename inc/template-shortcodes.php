@@ -380,14 +380,18 @@ if( !function_exists('create_footer_type1') ){
 if( !function_exists('simple_contact_app') ){
     function simple_contact_app(){
         // Informações para contato
-        $whatsapp_number    = get_option('contact_whatsapp');
-        $tel_number         = get_option('contact_phone');
+        $get_whatsapp       = get_option('contact_whatsapp');
+        $get_tel            = get_option('contact_phone');
+        $arr_caracteres     = array('-', ' ', '(', ')');
+
+        $whatsapp_number    = str_replace($arr_caracteres, '', $get_whatsapp);
+        $tel_number         = str_replace($arr_caracteres, '', $get_tel);
 
         //
         $html = '<div id="" class="simpleContact">        
                     <ul class="simpleContact__list simpleContact__list--hide">
-                        <li class="simpleContact__listItem"><a href="https://wa.me/'. $whatsapp_number .'" class="simpleContact__link">WhatsApp <i class="simpleContact__icon" data-eva="message-circle"></i></a></li>
-                        <li class="simpleContact__listItem"><a href="" class="simpleContact__link">Telefone <i class="simpleContact__icon" data-eva="phone-call"></i></a></li>
+                        <li class="simpleContact__listItem"><a target="_blank" href="https://wa.me/'. $whatsapp_number .'" class="simpleContact__link">WhatsApp <i class="simpleContact__icon" data-eva="message-circle"></i></a></li>
+                        <li class="simpleContact__listItem"><a target="_blank" href="tel:+55'. $tel_number .'" class="simpleContact__link">Telefone <i class="simpleContact__icon" data-eva="phone-call"></i></a></li>
                     </ul>
 
                     <button onclick="openSimpleSupport(jQuery(this))" class="simpleContact__buttonSelect simpleContact__buttonSelect--online"><span class="simpleContact__bubble simpleContact__bubble--online"></span>Suporte online</button>
@@ -396,9 +400,5 @@ if( !function_exists('simple_contact_app') ){
         
         echo $html;
     }
-    add_shortcode('simple_contact', 'simple_contact_app');
-
-    // url para abrir a conversa no whatsapp
-    // https://wa.me/5511981856675
-    
+    add_shortcode('simple_contact', 'simple_contact_app');    
 }
