@@ -157,8 +157,6 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 992px) {
   .simpleContact {
-    width: 320px;
-    height: 75px;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -173,6 +171,10 @@ p, ul, ol, li, span, input, label, textarea, button {
     width: 100%;
     margin-bottom: 10px;
     display: block; } }
+
+.simpleContact__information--hide {
+  opacity: 0;
+  display: none; }
 
 @media (min-width: 992px) {
   .simpleContact__selectedContainer {
@@ -193,16 +195,93 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 .simpleContact__list {
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap; }
   @media (min-width: 992px) {
     .simpleContact__list {
-      display: none;
-      align-content: center;
-      justify-content: center; } }
+      width: 200px;
+      height: 120px;
+      position: absolute;
+      right: 0;
+      transition: .2s all; } }
+  .simpleContact__list--hide {
+    top: 0px;
+    opacity: 0;
+    z-index: -9;
+    transition: .2s all; }
+  .simpleContact__list--show {
+    top: -160px;
+    opacity: 1;
+    z-index: 0;
+    transition: .2s all; }
 
 @media (min-width: 992px) {
-  .simpleContact__buttonSelect {
+  .simpleContact__listItem {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; } }
+
+@media (min-width: 992px) {
+  .simpleContact__listItem:first-child {
+    border-bottom: 1px solid #F2F2F2; } }
+
+.simpleContact__buttonSelect {
+  outline: none; }
+  @media (min-width: 992px) {
+    .simpleContact__buttonSelect {
+      background: none;
+      width: 165px;
+      height: 50px;
+      border-radius: 14px;
+      font-size: 1.6em;
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer; } }
+  .simpleContact__buttonSelect--online {
+    border: 2px solid #45B441;
+    color: #45B441;
+    transition: .2s all; }
+  .simpleContact__buttonSelect--offline {
+    background: 2px solid #C3544A;
+    color: #C3544A; }
+  .simpleContact__buttonSelect--clickOnline {
     background: #45B441;
-    width: calc(25% - 4px);
-    height: 40px;
-    border-radius: 25px; } }
+    color: #FFFFFF;
+    transition: .2s all; }
+
+@media (min-width: 992px) {
+  .simpleContact__link {
+    padding: 15px 5px;
+    font-size: 1.4em;
+    color: #2e3a59;
+    text-decoration: none;
+    display: flex;
+    align-items: center; } }
+
+.simpleContact__icon {
+  fill: #FFFFFF; }
+  @media (min-width: 992px) {
+    .simpleContact__icon {
+      padding: 8px;
+      background: #45B441;
+      border-radius: 100%;
+      margin-left: 10px; } }
+
+@media (min-width: 992px) {
+  .simpleContact__bubble {
+    width: 14px;
+    height: 14px;
+    display: block;
+    border-radius: 100%;
+    margin-right: 10px; }
+    .simpleContact__bubble--online {
+      background: #45B441; }
+    .simpleContact__bubble--offline {
+      background: #C3544A; }
+    .simpleContact__bubble--clickOnline {
+      background: #FFFFFF; } }

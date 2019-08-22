@@ -8,8 +8,8 @@
 
 .simpleContact
     @include respond-above('md')
-        width: 320px
-        height: 75px
+        // width: 320px
+        // height: 75px
 
         display: flex
         flex-wrap: wrap
@@ -28,6 +28,9 @@
             margin-bottom: 10px
             display: block
 
+        &--hide
+            opacity: 0
+            display: none
 
     &__selectedContainer
         @include respond-above('md')
@@ -52,15 +55,114 @@
     &__list
         padding: 0
         list-style: none
+        display: flex
+        align-content: center
+        justify-content: center
+        flex-wrap: wrap
+
         @include respond-above('md')
-            display: none
-            //display: flex
-            align-content: center
-            justify-content: center
+            width: 200px
+            height: 120px
+
+            position: absolute
+            right: 0
+
+            transition: .2s all
+
+        &--hide
+            top: 0px
+            opacity: 0
+            z-index: -9
+            transition: .2s all
+
+        &--show
+            top: -160px
+            opacity: 1
+            z-index: 0
+            transition: .2s all
+
+    &__listItem
+        @include respond-above('md')
+            width: 100%
+            
+            display: flex
+            justify-content: flex-end
+
+        &:first-child
+            @include respond-above('md')
+                border-bottom: 1px solid $graySecondary
+
 
     &__buttonSelect
+        outline: none
+
         @include respond-above('md')
+            background: none
+            width: 165px
+            height: 50px
+            border-radius: 14px
+            font-size: 1.6em
+            line-height: 1.5
+            
+            display: flex
+            align-items: center
+            justify-content: center
+
+            cursor: pointer
+
+        // Estados
+        &--online
+            border: 2px solid $success-color
+            color: $success-color
+
+            transition: .2s all
+
+        &--offline
+            background: 2px solid $danger-color
+            color: $danger-color
+
+
+        // Ações
+        &--clickOnline
             background: $success-color
-            width: calc(25% - 4px)
-            height: 40px
-            border-radius: 25px
+            color: $white
+
+            transition: .2s all
+
+
+    &__link
+        @include respond-above('md')
+            padding: 15px 5px
+            
+            font-size: $fs-14
+            color: $text-dark
+            text-decoration: none
+
+            display: flex
+            align-items: center
+
+    &__icon
+        fill: $white
+
+        @include respond-above('md')
+            padding: 8px
+            background: $success-color
+            border-radius: 100% 
+            margin-left: 10px   
+
+    &__bubble
+        @include respond-above('md')
+            width: 14px
+            height: 14px
+            display: block
+            border-radius: 100%
+            margin-right: 10px
+
+            &--online
+                background: $success-color
+
+            &--offline
+                background: $danger-color
+        
+            &--clickOnline
+                background: $white

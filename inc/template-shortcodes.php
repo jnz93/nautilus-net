@@ -384,21 +384,21 @@ if( !function_exists('simple_contact_app') ){
         $tel_number         = get_option('contact_phone');
 
         //
-        $html = '<div id="" class="simpleContact">
-                    <span class="simpleContact__information">Clique para iniciar a conversa</span>
-                    <div class="simpleContact__selectedContainer">
-                        <span class="simpleContact__selectedItem simpleContact__selectedItem--hide"><i class="simpleContact__icon" data-eva="message-square"></i>'. $whatsapp_number .'</span>
-                        <span class="simpleContact__selectedItem simpleContact__selectedItem--show"><i class="simpleContact__icon" data-eva="phone-call"></i>'. $tel_number .'</span>
-                    </div>
-                    <button class="simpleContact__buttonSelect">Fale com a Nautilusnet</button>
+        $html = '<div id="" class="simpleContact">        
                     <ul class="simpleContact__list simpleContact__list--hide">
-                        <i class="simpleContact__icon" data-eva="arrow-up"></i>
-                        <li class="simpleContact__listItem">WhatsApp</li>
-                        <li class="simpleContact__listItem">Telefone</li>
+                        <li class="simpleContact__listItem"><a href="https://wa.me/'. $whatsapp_number .'" class="simpleContact__link">WhatsApp <i class="simpleContact__icon" data-eva="message-circle"></i></a></li>
+                        <li class="simpleContact__listItem"><a href="" class="simpleContact__link">Telefone <i class="simpleContact__icon" data-eva="phone-call"></i></a></li>
                     </ul>
+
+                    <button onclick="openSimpleSupport(jQuery(this))" class="simpleContact__buttonSelect simpleContact__buttonSelect--online"><span class="simpleContact__bubble simpleContact__bubble--online"></span>Suporte online</button>
+                    <span class="simpleContact__information simpleContact__information--hide">Ao selecionar a opção desejada uma nova aba sera aberta</span>
                 </div>';
         
         echo $html;
     }
     add_shortcode('simple_contact', 'simple_contact_app');
+
+    // url para abrir a conversa no whatsapp
+    // https://wa.me/5511981856675
+    
 }

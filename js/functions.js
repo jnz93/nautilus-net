@@ -190,3 +190,12 @@ function clickOpenMenuMobile(){
     menuMobile.addClass('mainMenuContainer__mobile');
     menuMobile.toggleClass('mainMenuContainer__mobile--enabled');
 }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// Função openSimpleSupport() - Mostra e esconde as opções de contato rápido
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+function openSimpleSupport(el){
+    el.toggleClass('simpleContact__buttonSelect--clickOnline').find('span.simpleContact__bubble').toggleClass('simpleContact__bubble--clickOnline');
+    jQuery('.simpleContact__list--hide').toggleClass('simpleContact__list--show');
+}
