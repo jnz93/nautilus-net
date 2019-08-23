@@ -292,8 +292,8 @@ if( !function_exists('get_plans') ){
                                 </div>
                                 <span class="planCard__spacer planCard__spacer--fift"></span>
                                 <ul class="planCard__content">
-                                    <li class="planCard__contentItem">Upload: <b>'. $plan_upload .' MEGA</b></li>
-                                    <li class="planCard__contentItem">Download: <b>'. $plan_download .' MEGA</b></li>
+                                <li class="planCard__contentItem">Download: <b>'. $plan_download .' MEGA</b></li>
+                                <li class="planCard__contentItem">Upload: <b>'. $plan_upload .' MEGA</b></li>
                                     <li class="planCard__contentItem">Franquia: <b>Ilimitada</b></li>
                                 </ul>
                                 <span class="planCard__spacer planCard__spacer--fift"></span>
