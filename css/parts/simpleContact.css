@@ -155,133 +155,158 @@ p, ul, ol, li, span, input, label, textarea, button {
       .sctHeader__subtitle {
         font-size: 1.6em; } }
 
-@media (min-width: 992px) {
-  .simpleContact {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    position: fixed;
-    right: 25px;
-    bottom: 25px; } }
-
-@media (min-width: 992px) {
-  .simpleContact__information {
-    font-size: 1.2em;
-    color: #757575;
-    width: 100%;
-    margin-bottom: 10px;
-    display: block; } }
-
-.simpleContact__information--hide {
-  opacity: 0;
-  display: none; }
-
-@media (min-width: 992px) {
-  .simpleContact__selectedContainer {
-    width: calc(75% - 10px);
-    height: 40px;
-    border: 1px solid #45B441;
-    border-radius: 25px;
-    margin-right: 8px;
-    display: flex;
-    align-content: center;
-    justify-content: center; } }
-
-@media (min-width: 992px) {
-  .simpleContact__selectedItem {
-    font-size: 1.4em;
-    font-weight: 500;
-    color: #2e3a59; } }
-
-.simpleContact__list {
-  padding: 0;
-  list-style: none;
+.simpleContact {
   display: flex;
+  flex-wrap: wrap;
   align-content: center;
-  justify-content: center;
-  flex-wrap: wrap; }
+  position: fixed;
+  z-index: 999; }
+  @media (max-width: 991px) {
+    .simpleContact {
+      right: 10px;
+      bottom: 10px; } }
   @media (min-width: 992px) {
-    .simpleContact__list {
-      width: 200px;
-      height: 120px;
-      position: absolute;
-      right: 0;
-      transition: .2s all; } }
-  .simpleContact__list--hide {
-    top: 0px;
+    .simpleContact {
+      right: 25px;
+      bottom: 25px; } }
+  .simpleContact__buttonSelect {
+    outline: none;
+    background: none; }
+    @media (max-width: 991px) {
+      .simpleContact__buttonSelect {
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        overflow: hidden; } }
+    @media (min-width: 992px) {
+      .simpleContact__buttonSelect {
+        height: 48px;
+        border-radius: 14px;
+        padding-left: 24px;
+        padding-right: 24px;
+        font-size: 1.6em;
+        line-height: 1.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer; } }
+    .simpleContact__buttonSelect--online {
+      border: 1px solid #45B441;
+      color: #45B441;
+      transition: .2s all; }
+    .simpleContact__buttonSelect--offline {
+      background: 1px solid #C3544A;
+      color: #C3544A; }
+    .simpleContact__buttonSelect--clickOnline {
+      background: #45B441;
+      color: #FFFFFF;
+      transition: .2s all; }
+    .simpleContact__buttonSelect:hover {
+      box-shadow: 0px 0px 3px #45B441;
+      transition: .2s all; }
+  @media (min-width: 992px) {
+    .simpleContact__information {
+      font-size: 1.2em;
+      color: #757575;
+      width: 100%;
+      margin-bottom: 10px;
+      display: block; } }
+  .simpleContact__information--hide {
     opacity: 0;
-    z-index: -9;
+    display: none; }
+  @media (max-width: 991px) {
+    .simpleContact__buttonIcon {
+      margin-top: 10px;
+      margin-bottom: 10px; } }
+  @media (min-width: 992px) {
+    .simpleContact__buttonIcon {
+      margin-right: 6px; } }
+  .simpleContact__buttonIcon--online {
+    fill: #45B441; }
+  .simpleContact__buttonIcon--offline {
+    fill: #C3544A; }
+  .simpleContact__buttonIcon--clickOnline {
+    fill: #FFFFFF; }
+  @media (min-width: 992px) {
+    .simpleContact__selectedItem {
+      font-size: 1.4em;
+      font-weight: 500;
+      color: #2e3a59; } }
+  .simpleContact__list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 0;
     transition: .2s all; }
-  .simpleContact__list--show {
-    top: -160px;
-    opacity: 1;
-    z-index: 0;
-    transition: .2s all; }
-
-@media (min-width: 992px) {
+    @media (max-width: 991px) {
+      .simpleContact__list {
+        width: 130px;
+        height: 120px; } }
+    @media (min-width: 992px) {
+      .simpleContact__list {
+        width: 200px;
+        height: 120px; } }
+    .simpleContact__list--hide {
+      top: 0px;
+      opacity: 0;
+      z-index: -9;
+      transition: .2s all; }
+    .simpleContact__list--show {
+      opacity: 1;
+      z-index: 0;
+      transition: .2s all; }
+      @media (max-width: 991px) {
+        .simpleContact__list--show {
+          top: -120px; } }
+      @media (min-width: 992px) {
+        .simpleContact__list--show {
+          top: -160px; } }
   .simpleContact__listItem {
     width: 100%;
     display: flex;
-    justify-content: flex-end; } }
-
-@media (min-width: 992px) {
-  .simpleContact__listItem:first-child {
-    border-bottom: 1px solid #F2F2F2; } }
-
-.simpleContact__buttonSelect {
-  outline: none; }
-  @media (min-width: 992px) {
-    .simpleContact__buttonSelect {
-      background: none;
-      width: 165px;
-      height: 50px;
-      border-radius: 14px;
-      font-size: 1.6em;
-      line-height: 1.5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer; } }
-  .simpleContact__buttonSelect--online {
-    border: 2px solid #45B441;
-    color: #45B441;
-    transition: .2s all; }
-  .simpleContact__buttonSelect--offline {
-    background: 2px solid #C3544A;
-    color: #C3544A; }
-  .simpleContact__buttonSelect--clickOnline {
-    background: #45B441;
-    color: #FFFFFF;
-    transition: .2s all; }
-
-@media (min-width: 992px) {
+    justify-content: flex-end; }
+    @media (min-width: 992px) {
+      .simpleContact__listItem:first-child {
+        border-bottom: 1px solid #F2F2F2; } }
   .simpleContact__link {
-    padding: 15px 5px;
-    font-size: 1.4em;
-    color: #2e3a59;
     text-decoration: none;
     display: flex;
-    align-items: center; } }
-
-.simpleContact__icon {
-  fill: #FFFFFF; }
-  @media (min-width: 992px) {
-    .simpleContact__icon {
-      padding: 8px;
-      background: #45B441;
-      border-radius: 100%;
-      margin-left: 10px; } }
-
-@media (min-width: 992px) {
-  .simpleContact__bubble {
-    width: 14px;
-    height: 14px;
-    display: block;
+    align-items: center; }
+    @media (max-width: 991px) {
+      .simpleContact__link {
+        padding: 8px 3px;
+        font-size: 1.2em;
+        color: #2e3a59; } }
+    @media (min-width: 992px) {
+      .simpleContact__link {
+        padding: 15px 5px;
+        font-size: 1.4em;
+        color: #2e3a59; } }
+  .simpleContact__icon {
+    fill: #FFFFFF;
+    background: #45B441;
     border-radius: 100%;
-    margin-right: 10px; }
-    .simpleContact__bubble--online {
-      background: #45B441; }
-    .simpleContact__bubble--offline {
-      background: #C3544A; }
-    .simpleContact__bubble--clickOnline {
-      background: #FFFFFF; } }
+    margin-left: 10px; }
+    @media (max-width: 991px) {
+      .simpleContact__icon {
+        padding: 4px; } }
+    @media (min-width: 992px) {
+      .simpleContact__icon {
+        padding: 8px; } }
+  @media (min-width: 992px) {
+    .simpleContact__bubble {
+      width: 14px;
+      height: 14px;
+      display: block;
+      border-radius: 100%;
+      margin-right: 10px; }
+      .simpleContact__bubble--online {
+        background: #45B441; }
+      .simpleContact__bubble--offline {
+        background: #C3544A; }
+      .simpleContact__bubble--clickOnline {
+        background: #FFFFFF; } }
