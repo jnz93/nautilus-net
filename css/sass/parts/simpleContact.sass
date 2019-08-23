@@ -1,0 +1,200 @@
+/*
+ Theme Name: nautilus-net
+ Description: Folha de estilos da aplicação de contato rápido
+ Pattern: BEM(Block, Element & Modifier)
+ */
+@import '../theme-configs.sass'
+
+
+.simpleContact
+    display: flex
+    flex-wrap: wrap
+    align-content: center
+
+    position: fixed
+    z-index: 999
+
+    @include respond-below('md')
+        right: 10px
+        bottom: 10px
+
+    @include respond-above('md')
+        right: 25px
+        bottom: 25px
+
+
+    &__buttonSelect
+        outline: none
+        background: none
+        @include respond-below('md')
+            width: 48px
+            height: 48px
+            border-radius: 100%
+            overflow: hidden
+
+        @include respond-above('md')
+            height: 48px
+            border-radius: 14px
+            padding-left: 24px
+            padding-right: 24px
+            
+            font-size: 1.6em
+            line-height: 1.5
+            
+            display: flex
+            align-items: center
+            justify-content: center
+
+            cursor: pointer
+
+        // Estados
+        &--online
+            border: 1px solid $success-color
+            color: $success-color
+
+            transition: .2s all
+
+        &--offline
+            background: 1px solid $danger-color
+            color: $danger-color
+
+
+        // Ações
+        &--clickOnline
+            background: $success-color
+            color: $white
+
+            transition: .2s all
+
+        &:hover
+            box-shadow: 0px 0px 3px $success-color
+            transition: .2s all
+
+    &__information
+        @include respond-above('md')
+            font-size: $fs-12
+            color: $text-light
+            
+            width: 100%
+            margin-bottom: 10px
+            display: block
+
+        &--hide
+            opacity: 0
+            display: none
+
+    &__buttonIcon
+        @include respond-below('md')
+            margin-top: 10px
+            margin-bottom: 10px
+
+        @include respond-above('md')
+            margin-right: 6px
+
+        &--online
+            fill: $success-color
+
+        &--offline
+            fill: $danger-color
+
+        &--clickOnline
+            fill: $white
+
+    &__selectedItem
+        @include respond-above('md')
+            font-size: $fs-14
+            font-weight: $regular
+            color: $text-dark
+
+    &__list
+        padding: 0
+        list-style: none
+
+        display: flex
+        align-content: center
+        justify-content: center
+        flex-wrap: wrap
+
+        position: absolute
+        right: 0
+        transition: .2s all
+
+        @include respond-below('md')
+            width: 130px
+            height: 120px
+
+        @include respond-above('md')
+            width: 200px
+            height: 120px
+
+        &--hide
+            top: 0px
+            opacity: 0
+            z-index: -9
+            transition: .2s all
+
+        &--show
+            opacity: 1
+            z-index: 0
+            transition: .2s all
+
+            @include respond-below('md')
+                top: -120px
+            @include respond-above('md')
+                top: -160px
+
+    &__listItem
+        width: 100%
+        display: flex
+        justify-content: flex-end
+
+        &:first-child
+            @include respond-above('md')
+                border-bottom: 1px solid $graySecondary
+
+
+    &__link
+        text-decoration: none
+        display: flex
+        align-items: center
+
+        @include respond-below('md')
+            padding: 8px 3px
+            font-size: $fs-12
+            color: $text-dark
+
+        @include respond-above('md')
+            padding: 15px 5px
+            
+            font-size: $fs-14
+            color: $text-dark
+
+    &__icon
+        fill: $white
+
+        background: $success-color
+        border-radius: 100% 
+        margin-left: 10px
+
+        @include respond-below('md')
+            padding: 4px 
+              
+        @include respond-above('md')
+            padding: 8px
+
+    &__bubble
+        @include respond-above('md')
+            width: 14px
+            height: 14px
+            display: block
+            border-radius: 100%
+            margin-right: 10px
+
+            &--online
+                background: $success-color
+
+            &--offline
+                background: $danger-color
+        
+            &--clickOnline
+                background: $white

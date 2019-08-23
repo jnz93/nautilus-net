@@ -378,3 +378,34 @@ if( !function_exists('create_footer_type1') ){
     }
     add_shortcode('show_footer_type_1', 'create_footer_type1');
 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Simple-fast contact app
+////////////////////////////////////////////////////////////////////////////////////////////////
+if( !function_exists('simple_contact_app') ){
+    function simple_contact_app(){
+        // Informações para contato
+        $get_whatsapp       = get_option('contact_whatsapp');
+        $get_tel            = get_option('contact_phone');
+        $arr_caracteres     = array('-', ' ', '(', ')');
+
+        $whatsapp_number    = str_replace($arr_caracteres, '', $get_whatsapp);
+        $tel_number         = str_replace($arr_caracteres, '', $get_tel);
+
+        //
+        $html = '<div id="" class="simpleContact">        
+                    <ul class="simpleContact__list simpleContact__list--hide">
+                        <li class="simpleContact__listItem"><a target="_blank" href="https://wa.me/'. $whatsapp_number .'" class="simpleContact__link">WhatsApp <i class="simpleContact__icon" data-eva="message-circle"></i></a></li>
+                        <li class="simpleContact__listItem"><a target="_blank" href="tel:+55'. $tel_number .'" class="simpleContact__link">Telefone <i class="simpleContact__icon" data-eva="phone-call"></i></a></li>
+                    </ul>
+
+                    <button onclick="openSimpleSupport(jQuery(this))" class="simpleContact__buttonSelect simpleContact__buttonSelect--online"><i class="simpleContact__buttonIcon simpleContact__buttonIcon--online" data-eva="person-done"></i>Suporte online</button>
+                    <span class="simpleContact__information simpleContact__information--hide">Ao selecionar a opção desejada uma nova aba sera aberta</span>
+                </div>';
+        
+        echo $html;
+    }
+    add_shortcode('simple_contact', 'simple_contact_app');    
+    // <button onclick="openSimpleSupport(jQuery(this))" class="simpleContact__buttonSelect simpleContact__buttonSelect--online"><span class="simpleContact__bubble simpleContact__bubble--online"></span>Suporte online</button>
+}

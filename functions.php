@@ -83,6 +83,7 @@ if( ! function_exists('nautilus_enqueue_scripts') ){
         wp_register_style('cards', get_template_directory_uri() . '/css/parts/cards.css', array(), '1.0.0', 'all');
         wp_register_style('notification', get_template_directory_uri() . '/css/parts/notification.css', array(), '1.0.0', 'all');
         wp_register_style('animate-css', get_template_directory_uri() . '/css/animate.css', array(), '3.7.2', 'all');
+        wp_register_style('simple-contact', get_template_directory_uri() . '/css/parts/simpleContact.css', array(), '1.0.0', 'all');
 
         // Lista de folhas a serem carregadas
         wp_enqueue_style('normalize');
@@ -94,6 +95,7 @@ if( ! function_exists('nautilus_enqueue_scripts') ){
         wp_enqueue_style('section-home');
         wp_enqueue_style('cards');
         wp_enqueue_style('notification');
+        wp_enqueue_style('simple-contact');
 
 
         // Registro de scripts JS

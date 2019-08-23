@@ -23,6 +23,13 @@
         }else{
             echo "Shortcode de sliders não existe";
         }
+
+        // Contato app
+        if( shortcode_exists('simple_contact') ){
+            do_shortcode('[simple_contact]');
+        } else {
+            echo "Shortcode /'simple_contact'/ não existe";
+        }
         ?>
     </div>
 </section>

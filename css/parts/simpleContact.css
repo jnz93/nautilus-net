@@ -1,0 +1,312 @@
+@charset "UTF-8";
+/*
+ Theme Name: nautilus-net
+ Description: Folha de estilos da aplicação de contato rápido
+ Pattern: BEM(Block, Element & Modifier)
+ */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  overflow-x: hidden; }
+
+h1, h2, h3, h4, h5, h6, figcaption {
+  font-family: 'Poppins'; }
+
+p, ul, ol, li, span, input, label, textarea, button {
+  font-family: 'Hind'; }
+
+@media (min-width: 992px) {
+  .body-content {
+    margin-top: 90px; } }
+
+@media (max-width: 767px) {
+  .sct__homepage {
+    height: calc(100vh - 80px);
+    margin-top: 80px; } }
+
+@media (min-width: 992px) {
+  .sct__homepage {
+    height: calc(100vh - 90px); } }
+
+@media (min-width: 992px) {
+  .sct__homepage .slick-prev {
+    left: 0;
+    z-index: 99; } }
+
+@media (min-width: 992px) {
+  .sct__homepage .slick-next {
+    right: 0;
+    z-index: 99; } }
+
+.sct__benefits {
+  background-image: url("../../images/bg-secao-beneficios.svg"); }
+  @media (max-width: 767px) {
+    .sct__benefits {
+      padding-top: 120px;
+      padding-bottom: 120px;
+      margin: 25px auto;
+      position: relative;
+      background-size: auto 100%;
+      background-repeat: no-repeat; } }
+  @media (min-width: 992px) {
+    .sct__benefits {
+      min-height: calc(100vh - 100px);
+      padding: 0;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      margin: 50px 0;
+      background-size: auto 100%;
+      background-position: center;
+      background-repeat: repeat; } }
+
+.sct__plans {
+  background-image: url("../../images/bg-secao-planos.svg"); }
+  @media (max-width: 767px) {
+    .sct__plans {
+      background-size: auto 80%;
+      background-position: top 240px left;
+      background-repeat: no-repeat;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      margin: 25px auto; } }
+  @media (min-width: 992px) {
+    .sct__plans {
+      min-height: calc(100vh - 100px);
+      padding: 0;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      margin: 50px 0;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: top 140px right -1310px; } }
+  @media (max-width: 767px) {
+    .sct__plans .sct__contentWrapper {
+      padding: 0 20px;
+      min-height: 520px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; } }
+  @media (max-width: 767px) {
+    .sct__plans .slick-list {
+      padding: 20px 0; } }
+
+.sct__contact {
+  background-image: url("../../images/bg-secao-contato.svg");
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  @media (max-width: 767px) {
+    .sct__contact {
+      background-size: auto 75%;
+      background-position: top 150px left -320px;
+      margin: 25px auto; } }
+  @media (min-width: 992px) {
+    .sct__contact {
+      min-height: calc(100vh - 100px);
+      padding: 0;
+      margin: 50px 0;
+      background-size: auto 100%;
+      background-position: top 30px left -470px; } }
+
+@media (max-width: 767px) {
+  .sct__contentWrapper {
+    margin: 50px auto; } }
+
+@media (min-width: 992px) {
+  .sct__contentWrapper {
+    margin: 80px auto;
+    justify-content: center;
+    position: relative; } }
+
+.sct__contentWrapper--noMargin {
+  margin: 0 auto; }
+
+.sctHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  text-align: center; }
+  @media (max-width: 767px) {
+    .sctHeader {
+      width: 90%; } }
+  @media (min-width: 992px) {
+    .sctHeader {
+      max-width: 960px;
+      min-height: 120px; } }
+  .sctHeader__title, .sctHeader__subtitle {
+    font-weight: 700;
+    color: #757575;
+    line-height: 1.8; }
+    @media (max-width: 767px) {
+      .sctHeader__title, .sctHeader__subtitle {
+        font-size: 2.1em;
+        margin: 0 auto;
+        margin-bottom: 10px; } }
+    @media (min-width: 992px) {
+      .sctHeader__title, .sctHeader__subtitle {
+        font-size: 3.2em;
+        margin: 0 auto;
+        margin-top: 15px; } }
+  .sctHeader__subtitle {
+    font-size: 1.8em;
+    font-weight: 300; }
+    @media (max-width: 767px) {
+      .sctHeader__subtitle {
+        font-size: 1.6em; } }
+
+.simpleContact {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  position: fixed;
+  z-index: 999; }
+  @media (max-width: 991px) {
+    .simpleContact {
+      right: 10px;
+      bottom: 10px; } }
+  @media (min-width: 992px) {
+    .simpleContact {
+      right: 25px;
+      bottom: 25px; } }
+  .simpleContact__buttonSelect {
+    outline: none;
+    background: none; }
+    @media (max-width: 991px) {
+      .simpleContact__buttonSelect {
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        overflow: hidden; } }
+    @media (min-width: 992px) {
+      .simpleContact__buttonSelect {
+        height: 48px;
+        border-radius: 14px;
+        padding-left: 24px;
+        padding-right: 24px;
+        font-size: 1.6em;
+        line-height: 1.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer; } }
+    .simpleContact__buttonSelect--online {
+      border: 1px solid #45B441;
+      color: #45B441;
+      transition: .2s all; }
+    .simpleContact__buttonSelect--offline {
+      background: 1px solid #C3544A;
+      color: #C3544A; }
+    .simpleContact__buttonSelect--clickOnline {
+      background: #45B441;
+      color: #FFFFFF;
+      transition: .2s all; }
+    .simpleContact__buttonSelect:hover {
+      box-shadow: 0px 0px 3px #45B441;
+      transition: .2s all; }
+  @media (min-width: 992px) {
+    .simpleContact__information {
+      font-size: 1.2em;
+      color: #757575;
+      width: 100%;
+      margin-bottom: 10px;
+      display: block; } }
+  .simpleContact__information--hide {
+    opacity: 0;
+    display: none; }
+  @media (max-width: 991px) {
+    .simpleContact__buttonIcon {
+      margin-top: 10px;
+      margin-bottom: 10px; } }
+  @media (min-width: 992px) {
+    .simpleContact__buttonIcon {
+      margin-right: 6px; } }
+  .simpleContact__buttonIcon--online {
+    fill: #45B441; }
+  .simpleContact__buttonIcon--offline {
+    fill: #C3544A; }
+  .simpleContact__buttonIcon--clickOnline {
+    fill: #FFFFFF; }
+  @media (min-width: 992px) {
+    .simpleContact__selectedItem {
+      font-size: 1.4em;
+      font-weight: 500;
+      color: #2e3a59; } }
+  .simpleContact__list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 0;
+    transition: .2s all; }
+    @media (max-width: 991px) {
+      .simpleContact__list {
+        width: 130px;
+        height: 120px; } }
+    @media (min-width: 992px) {
+      .simpleContact__list {
+        width: 200px;
+        height: 120px; } }
+    .simpleContact__list--hide {
+      top: 0px;
+      opacity: 0;
+      z-index: -9;
+      transition: .2s all; }
+    .simpleContact__list--show {
+      opacity: 1;
+      z-index: 0;
+      transition: .2s all; }
+      @media (max-width: 991px) {
+        .simpleContact__list--show {
+          top: -120px; } }
+      @media (min-width: 992px) {
+        .simpleContact__list--show {
+          top: -160px; } }
+  .simpleContact__listItem {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; }
+    @media (min-width: 992px) {
+      .simpleContact__listItem:first-child {
+        border-bottom: 1px solid #F2F2F2; } }
+  .simpleContact__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center; }
+    @media (max-width: 991px) {
+      .simpleContact__link {
+        padding: 8px 3px;
+        font-size: 1.2em;
+        color: #2e3a59; } }
+    @media (min-width: 992px) {
+      .simpleContact__link {
+        padding: 15px 5px;
+        font-size: 1.4em;
+        color: #2e3a59; } }
+  .simpleContact__icon {
+    fill: #FFFFFF;
+    background: #45B441;
+    border-radius: 100%;
+    margin-left: 10px; }
+    @media (max-width: 991px) {
+      .simpleContact__icon {
+        padding: 4px; } }
+    @media (min-width: 992px) {
+      .simpleContact__icon {
+        padding: 8px; } }
+  @media (min-width: 992px) {
+    .simpleContact__bubble {
+      width: 14px;
+      height: 14px;
+      display: block;
+      border-radius: 100%;
+      margin-right: 10px; }
+      .simpleContact__bubble--online {
+        background: #45B441; }
+      .simpleContact__bubble--offline {
+        background: #C3544A; }
+      .simpleContact__bubble--clickOnline {
+        background: #FFFFFF; } }
