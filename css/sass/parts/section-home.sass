@@ -20,17 +20,22 @@
 
     @include respond-above('md')
         height: 530px
-        margin: 2.5% auto
+        margin: auto
         padding: 0 75px
         align-content: center
 
     &__wrapperSlider
         overflow: hidden
+        display: flex
+        flex-wrap: wrap
 
         @include respond-below('sm')
             height: 93%
-            display: flex
-            flex-wrap: wrap
+
+        @include respond-above('sm')
+            align-content: center
+            justify-content: center
+            position: relative
 
     &__wrapperContent
         display: flex
@@ -88,6 +93,7 @@
 
     &__img
         width: 100%
+        margin: auto
 
         @include respond-below('sm')
             // box-shadow: 0px 0px 10px $graySecondary

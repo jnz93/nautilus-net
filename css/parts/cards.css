@@ -25,7 +25,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 @media (min-width: 992px) {
   .sct__homepage {
-    height: calc(100vh - 90px); } }
+    height: calc(100vh - 130px); } }
 
 @media (min-width: 992px) {
   .sct__homepage .slick-prev {
@@ -572,6 +572,10 @@ p, ul, ol, li, span, input, label, textarea, button {
   @media (max-width: 767px) {
     .slick-dots {
       align-self: flex-end; } }
+  @media (min-width: 768px) {
+    .slick-dots {
+      position: absolute;
+      bottom: 0; } }
   .slick-dots li {
     border: 0;
     margin: 0 7px;
