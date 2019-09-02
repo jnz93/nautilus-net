@@ -270,10 +270,14 @@ if( !function_exists('get_plans') ){
 
                 $tax_conexao    = get_the_terms($post_id, 'tipo_conexao');
                 $conexao_arr       = array();
-                foreach($tax_conexao as $conexao){
-                    $conexao_arr[] = $conexao->name;
+                if( !empty($tax_conexao) ){
+                    foreach($tax_conexao as $conexao){
+                        $conexao_arr[] = $conexao->name;
+                    }
+                    $tipo_conexao = join( ' - ', $conexao_arr );
+                } else {
+                    $tipo_conexao = "tipo da conexão";
                 }
-                $conexao_str    = join( ' - ', $conexao_arr );
                 // Tratamento do título em partes
                 $plan_title_arr = explode(' ', $post_title);
                 $plan_title_pt1 = $plan_title_arr[0];
@@ -288,7 +292,7 @@ if( !function_exists('get_plans') ){
                                     <span class="planCard__speedTag">mega</span>
                                 </div>                                    
                                 <div class="col-sm-12 col-md-12">
-                                    <span class="planCard__label">'. $conexao_str .'</span>
+                                    <span class="planCard__label">'. $tipo_conexao .'</span>
                                 </div>
                                 <span class="planCard__spacer planCard__spacer--fift"></span>
                                 <ul class="planCard__content">
