@@ -400,7 +400,7 @@ if( !function_exists('simple_contact_app') ){
         //
         $html = '<div id="" class="simpleContact">        
                     <ul class="simpleContact__list simpleContact__list--hide">
-                        <li class="simpleContact__listItem"><a target="_blank" href="https://wa.me/'. $whatsapp_number .'" class="simpleContact__link">WhatsApp <i class="simpleContact__icon" data-eva="message-circle"></i></a></li>
+                        <li class="simpleContact__listItem"><a target="_blank" href="https://wa.me/55'. $whatsapp_number .'" class="simpleContact__link">WhatsApp <i class="simpleContact__icon" data-eva="message-circle"></i></a></li>
                         <li class="simpleContact__listItem"><a target="_blank" href="tel:+55'. $tel_number .'" class="simpleContact__link">Telefone <i class="simpleContact__icon" data-eva="phone-call"></i></a></li>
                     </ul>
 
