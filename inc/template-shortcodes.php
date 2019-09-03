@@ -162,7 +162,7 @@ if( !function_exists('get_article_sliders') ){
                                 <div class="col-md-6 col-lg-6 articleHome__wrapperContent">
                                     <h1 class="articleHome__title" title="'. $post_title .'">'. $post_title .'</h1>
                                     <p class="articleHome__excerpt">'. $post_excerpt .'</p>
-                                    <button class="btn btn__primary btn__primary--big">Ver publicação</button>
+                                    <a href="'. get_the_permalink($post_id) .'" class="btn btn__primary btn__primary--big">Ver publicação</a>
                                 </div>
                                 <div class="col-md-6 col-lg-6 articleHome__wrapperContent">
                                     <figure class="articleHome__thumbContainer">
