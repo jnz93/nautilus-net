@@ -32,7 +32,6 @@
 
                         $output =   '<figure id="" class="logo">
                                         <img src="'. $logo_url[0] .'" id="" class="logo__image" alt="'. $site_name .'">
-                                        <figcaption class="logo__title">'. $site_name .'</figcaption>
                                     </figure>';
                         
                         echo $output;

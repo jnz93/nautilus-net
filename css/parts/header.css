@@ -213,7 +213,8 @@ p, ul, ol, li, span, input, label, textarea, button {
       height: 80px; } }
   @media (min-width: 992px) {
     .logo {
-      height: 90px; } }
+      height: 90px;
+      margin-left: 25px; } }
   @media (max-width: 767px) {
     .logo__image {
       width: auto;
