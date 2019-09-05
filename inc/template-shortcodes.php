@@ -413,3 +413,57 @@ if( !function_exists('simple_contact_app') ){
     add_shortcode('simple_contact', 'simple_contact_app');    
     // <button onclick="openSimpleSupport(jQuery(this))" class="simpleContact__buttonSelect simpleContact__buttonSelect--online"><span class="simpleContact__bubble simpleContact__bubble--online"></span>Suporte online</button>
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Similar posts aside
+////////////////////////////////////////////////////////////////////////////////////////////////
+if( !function_exists('get_similar_posts_aside') ){
+    function get_similar_posts_aside(){
+        $post_type      = 'post';
+        $order          = 'DESC';
+        $orderby        = 'date';
+        $status         = 'publish';
+        $number_posts   = '4';
+        
+        $args = array(
+            'post_type'         => $post_type,
+            'cat'               => $category,
+            'order'             => $order,
+            'orderby'           => $orderby,
+            'post_status'       => $status,
+            'posts_per_page'    => $number_posts
+        );
+    
+        $similar_posts = new WP_Query($args);
+        $output = '';
+
+        $output .= '<h3 class="asideBox__title">Posts populares</h3>';
+        if( $similar_posts->have_posts() ){
+            $output .= '<ul id="" class="similarList">';
+            while( $similar_posts->have_posts() ){
+                $similar_posts->the_post();
+                $post_id        = get_the_ID();
+                $post_title     = get_the_title($post_id);
+                $post_thumb_url = get_the_post_thumbnail_url($post_id);
+                $post_link      = get_the_permalink($post_id);
+
+                $output .= '<li class="similarList__item row">
+                                <div class="similarList__wrap col-lg-4">
+                                    <img src="'. $post_thumb_url .'" alt="" class="similarList__thumb">
+                                </div>
+                                <div class="similarList__wrap col-lg-8">
+                                    <a href="'. $post_link .'" alt="" target="_parent" class="similarList__title">'. $post_title .'</a>
+                                    <span class="similarList__label">4 Minuto(s) de leitura</span>
+                                </div>
+                            </li>';
+                
+            }
+            $output .= '</ul>';
+            echo $output;
+        } else {
+            echo "Não encontramos notificações";
+        }
+    }
+    add_shortcode('similar_posts_aside', 'get_similar_posts_aside');
+}
+

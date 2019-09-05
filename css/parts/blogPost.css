@@ -286,3 +286,48 @@ p, ul, ol, li, span, input, label, textarea, button {
 
 .post strong {
   color: #2e3a59; }
+
+@media (min-width: 992px) {
+  .asideBox {
+    margin: auto;
+    margin-top: 15px;
+    box-shadow: 0px 0px 5px #F9FBFF; } }
+
+@media (min-width: 992px) {
+  .asideBox__title {
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #2e3a59;
+    margin: 0;
+    margin-bottom: 15px; } }
+
+.similarList {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  @media (min-width: 992px) {
+    .similarList {
+      width: 100%;
+      margin: 15px auto; } }
+  @media (min-width: 992px) {
+    .similarList__item {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 25px auto; } }
+  .similarList__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between; }
+  @media (min-width: 992px) {
+    .similarList__thumb {
+      width: 105px; } }
+  @media (min-width: 992px) {
+    .similarList__title {
+      font-size: 1.8em;
+      font-weight: 900;
+      color: #757575;
+      line-height: 1.5;
+      margin: 0;
+      margin-bottom: 5px;
+      text-decoration: none; } }

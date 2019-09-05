@@ -148,3 +148,57 @@
 
     strong
         color: $text-dark
+
+
+// Asidebox
+.asideBox
+    @include respond-above(md)
+        margin: auto
+        margin-top: 15px
+        box-shadow: 0px 0px 5px $grayLight
+
+    &__title
+        @include respond-above(md)
+            font-size: $fs-18
+            font-weight: $bold
+            color: $text-dark
+
+            margin: 0
+            margin-bottom: 15px
+
+
+// Similar list - Aside
+.similarList
+    list-style: none
+    padding: 0
+    margin: 0
+    @include respond-above(md)
+        width: 100%
+        margin: 15px auto
+        
+    &__item
+        @include respond-above(md)
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            margin: 25px auto
+    
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        align-content: space-between
+
+    &__thumb
+        @include respond-above(md)
+            width: 105px
+
+    &__title
+        @include respond-above(md)
+            font-size: $fs-18
+            font-weight: $bold
+            color: $text-light
+            line-height: 1.5
+
+            margin: 0
+            margin-bottom: 5px
+            text-decoration: none

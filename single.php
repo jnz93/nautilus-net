@@ -43,7 +43,21 @@ get_header(); ?>
             </main><!-- .content__main -->
 
             <aside class="content__aside col-lg-4">
+                <div class="asideBox col-lg-10">
 
+                    <div class="asideBox__adsense">
+                        <!-- Adsense -->
+                    </div>
+
+                    <div class="asideBox__similarPosts">
+                        <!-- Outras publciações -->
+                        <?php do_shortcode('[similar_posts_aside]'); ?>
+                    </div>
+
+                    <div class="asideBox__socialNetwork">
+                        <!-- Redes sociais -->
+                    </div>
+                </div>
             </aside><!-- .content__aside --> 
         </div>
         
