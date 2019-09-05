@@ -58,67 +58,93 @@
             padding: 55px 30px
 
 // Títulos e textos
-.post__title,
-h1
-    @include respond-above(md)
-        font-weight: 800
-        font-size: $fs-36
-        color: $text-dark
-        line-height: 1.6
+.post
+    &__informations
+        @include respond-above(md)
+            background: $grayLight
+            height: 60px
+            margin: 15px auto
+            display: flex
+            align-items: center
+    
+    &__data
+        @include respond-above(md)
+            font-size: $fs-14
+            color: $text-dark
+            font-weight: $regular
+            
+            display: flex
+            align-items: center
+            margin-right: 25px
+            // align-content: center
 
-        margin: 0
-        margin-bottom: 25px
+    &__icon
+        fill: $text-dark
+        @include respond-above(md)
+            width: 22px
+            margin-right: 5px
 
-.post__subtitle,
-h2,
-    @include respond-above(md)
-        font-weight: 600
-        font-size: $fs-24
-        color: $text-dark
-        line-height: 1.6
+    &__title,
+    h1
+        @include respond-above(md)
+            font-weight: 800
+            font-size: $fs-36
+            color: $text-dark
+            line-height: 1.6
 
-        margin: 0
-        margin-bottom: 25px
+            margin: 0
+            margin-bottom: 25px
 
-.post__excerpt
-    @include respond-above(md)
-        font-size: $fs-21
-        font-weight: 400
-        color: $text-light
-        line-height: 1.6
+    &__subtitle,
+    h2,
+        @include respond-above(md)
+            font-weight: 600
+            font-size: $fs-24
+            color: $text-dark
+            line-height: 1.6
 
-        margin: 0
-        margin-bottom: 25px
+            margin: 0
+            margin-bottom: 25px
 
-.post__text, 
-p
-    @include respond-above('md')
-        font-size: $fs-18
-        font-weight: 400
-        color: $text-light
-        line-height: 1.6
+    &__excerpt
+        @include respond-above(md)
+            font-size: $fs-21
+            font-weight: 400
+            color: $text-light
+            line-height: 1.6
 
-        margin: 0
-        margin-bottom: 25px
+            margin: 0
+            margin-bottom: 25px
 
-.post__list,
-ul,
-ol
-    @include respond-above('md')
-        margin: 40px auto
-        padding: 30px 35px
-        background: $grayLight
-        list-style: square
+    &__text, 
+    p
+        @include respond-above('md')
+            font-size: $fs-18
+            font-weight: 400
+            color: $text-light
+            line-height: 1.6
 
-.post__listItem,
-li
-    @include respond-above('md')
-        font-size: $fs-16
-        line-height: 1.6
-        color: $text-light
+            margin: 0
+            margin-bottom: 25px
 
-        margin: 0
-        margin-bottom: 25px
+    &__list,
+    ul,
+    ol
+        @include respond-above('md')
+            margin: 40px auto
+            padding: 30px 35px
+            background: $grayLight
+            list-style: square
+
+    &__listItem,
+    li
+        @include respond-above('md')
+            font-size: $fs-16
+            line-height: 1.6
+            color: $text-light
+
+            margin: 0
+            margin-bottom: 25px
 
     strong
         color: $text-dark

@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var cleanDir = require('gulp-clean-dir');
-var wpPot = require('gulp-wp-pot');
+
+const { watch } = require('gulp');
 
 gulp.task('compileSass', function(){
     return gulp
@@ -9,13 +9,8 @@ gulp.task('compileSass', function(){
         // .pipe(cleanDir('css', {ext: '.css'})) Não está funcionando
         .pipe(sass())
         .pipe(gulp.dest('css/parts')) // path of to compile archives
-})
- 
-gulp.task('wpPot', function () {
-    return gulp.src('/*.php')
-        .pipe(wpPot( {
-            domain: 'domain',
-            package: 'Example project'
-        } ))
-        .pipe(gulp.dest('file.pot'));
 });
+
+// watch(['css/sass/parts/*.sass'], function(compileSass){
+//     compileSass;
+// });

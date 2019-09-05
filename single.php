@@ -23,10 +23,13 @@ get_header(); ?>
                         <h1 class="post__title"><?php the_title(); ?></h1>
                         <p class="post__excerpt"><?php echo get_the_excerpt() ?></p>
 
-                        <div class="postData">
+                        <div class="post__informations col-lg-12">
                             <!-- Author -->
+                            <span class="post__data"> <i class="post__icon" data-eva="person"></i> <?php the_author() ?></span>
                             <!-- data da publicação -->
+                            <span class="post__data"><i class="post__icon" data-eva="calendar"></i> <?php the_time(get_option('date_format'));?> </span>
                             <!-- Tempo de leitura -->
+                            <span class="post__data"><i class="post__icon" data-eva="book-open"></i></span>
                         </div>
 
                         <?php the_content(); ?>
