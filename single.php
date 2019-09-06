@@ -15,6 +15,8 @@ get_header(); ?>
         </div><!-- .content__cover -->
 
         <div class="content__wrapperMain">
+            <?php do_shortcode('[widget_share_post]'); ?><!-- .sharePost -->
+
             <main id="main" class="content__main col-lg-8" role="main">
                 <?php
                 // Start the loop.

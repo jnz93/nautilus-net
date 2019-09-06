@@ -508,3 +508,45 @@ if( !function_exists('create_widget_social_network') )
     }
     add_shortcode('widget_social_network', 'create_widget_social_network');
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Widget Share post
+////////////////////////////////////////////////////////////////////////////////////////////////
+if( !function_exists('create_widget_share_post') )
+{
+    function create_widget_share_post()
+    {
+        // repeat
+        // message-square
+        // paper-plane
+        // undo(180deg)
+        ?>
+        <div class="widgetShare">
+            <span class="widgetShare__title">Compartilhe</span>
+
+            <ul class="shareList">
+                <li class="shareList__item">
+                    <a href="<?php the_permalink(); ?>" data-layout="button_count" class="shareList__link fb-share-button">
+                        <i class="shareList__icon" data-eva="undo"></i>
+                        <span class="shareList__text">Compartilhar no facebook</span>
+                    </a>
+                </li>
+                <li class="shareList__item">
+                    <a href="<?php the_permalink(); ?>" class="shareList__link twitter-share-button">
+                        <i class="shareList__icon" data-eva="repeat"></i>
+                        <span class="shareList__text">Tweetar</span>
+                    </a>
+                </li>
+                <li class="shareList__item">
+                    <a href="" class="shareList__link">
+                        <i class="shareList__icon" data-eva="message-square"></i>
+                        <span class="shareList__text">Enviar no WhatsApp</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <?php
+    }
+    add_shortcode('widget_share_post', 'create_widget_share_post');
+}

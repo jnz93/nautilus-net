@@ -176,7 +176,7 @@
         @include respond-above(md)
             margin: 35px 0
 
-// Similar list - Aside
+// Last posts - Aside
 .similarList
     list-style: none
     padding: 0
@@ -236,3 +236,61 @@
         @include respond-above(md)
             width: 36px
             height: 36px
+
+
+// Widget share post
+.widgetShare
+    background: $grayLight
+    position: absolute
+
+    @include respond-above(md)
+        width: 80px
+        height: auto
+        padding: 10px 5px
+        left: -110px
+    
+    &__title
+        @include respond-above(md)
+            font-size: $fs-12
+            font-weight: $regular
+            color: $text-light
+            margin: 0
+            margin-bottom: 15px
+            display: block
+
+.shareList
+    margin: 0
+    padding: 0
+    list-style: none
+    width: 100%
+    height: auto
+    @include respond-above(md)
+        margin-top: 15px
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+
+    &__item
+        @include respond-above(md)
+            background: $secondary-color
+            width: 48px
+            height: 48px
+
+            border-radius: 4px
+            display: flex
+            margin: auto
+            margin-bottom: 15px
+
+    &__link
+        @include respond-above(md)
+            width: 100%
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+
+    &__icon
+        fill: $white
+
+    &__text
+        display: none

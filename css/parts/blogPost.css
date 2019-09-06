@@ -357,3 +357,54 @@ p, ul, ol, li, span, input, label, textarea, button {
     .socialNetworkList__icon {
       width: 36px;
       height: 36px; } }
+
+.widgetShare {
+  background: #F9FBFF;
+  position: absolute; }
+  @media (min-width: 992px) {
+    .widgetShare {
+      width: 80px;
+      height: auto;
+      padding: 10px 5px;
+      left: -110px; } }
+  @media (min-width: 992px) {
+    .widgetShare__title {
+      font-size: 1.2em;
+      font-weight: 500;
+      color: #757575;
+      margin: 0;
+      margin-bottom: 15px;
+      display: block; } }
+
+.shareList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  height: auto; }
+  @media (min-width: 992px) {
+    .shareList {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; } }
+  @media (min-width: 992px) {
+    .shareList__item {
+      background: #031552;
+      width: 48px;
+      height: 48px;
+      border-radius: 4px;
+      display: flex;
+      margin: auto;
+      margin-bottom: 15px; } }
+  @media (min-width: 992px) {
+    .shareList__link {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
+  .shareList__icon {
+    fill: #FFFFFF; }
+  .shareList__text {
+    display: none; }
