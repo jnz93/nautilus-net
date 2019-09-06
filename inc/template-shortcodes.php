@@ -467,3 +467,44 @@ if( !function_exists('get_similar_posts_aside') ){
     add_shortcode('similar_posts_aside', 'get_similar_posts_aside');
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Social network items
+////////////////////////////////////////////////////////////////////////////////////////////////
+if( !function_exists('create_widget_social_network') )
+{
+    function create_widget_social_network()
+    {
+        $theme_name         = get_bloginfo('name');
+        $page_facebook      = get_option('facebook_page');
+        $page_instagram     = get_option('instagram_page');
+        $page_twitter       = get_option('twitter_page');
+        $channel_youtube    = get_option('youtube_channel');
+        ?>
+
+        <h3 class="asideBox__title">Redes sociais</h3>
+        <ul class="socialNetworkList">
+            <li class="socialNetworkList__item">
+                <a href="<?php echo $page_facebook ?>" target="_blank" alt="Página facebook <?php echo $theme_name ?>" class="socialNetworkList__link">
+                    <img src="<?php echo get_template_directory_uri() . '/images/social_facebook.svg' ?>" alt="Página facebook <?php echo $theme_name ?>" class="socialNetworkList__icon">
+                </a>
+            </li>
+            <li class="socialNetworkList__item">
+                <a href="<?php echo $page_instagram ?>" target="_blank" alt="Página instagram <?php echo $theme_name ?>" class="socialNetworkList__link">
+                    <img src="<?php echo get_template_directory_uri() . '/images/social_instagram.svg' ?>" alt="Página instagram <?php echo $theme_name ?>" class="socialNetworkList__icon">
+                </a>
+            </li>
+            <li class="socialNetworkList__item">
+                <a href="<?php echo $page_twitter ?>" target="_blank" alt="Página Twitter <?php echo $theme_name ?>" class="socialNetworkList__link">
+                    <img src="<?php echo get_template_directory_uri() . '/images/social_twitter.svg' ?>" alt="Página twitter <?php echo $theme_name ?>" class="socialNetworkList__icon">
+                </a>
+            </li>
+            <li class="socialNetworkList__item">
+                <a href="<?php echo $channel_youtube ?>" target="_blank" alt="Página youtube <?php echo $theme_name ?>" class="socialNetworkList__link">
+                    <img src="<?php echo get_template_directory_uri() . '/images/social_youtube.svg' ?>" alt="Página youtube <?php echo $theme_name ?>" class="socialNetworkList__icon">
+                </a>
+            </li>
+        </ul>
+        <?php
+    }
+    add_shortcode('widget_social_network', 'create_widget_social_network');
+}

@@ -152,20 +152,29 @@
 
 // Asidebox
 .asideBox
+    display: flex
+    flex-wrap: wrap
+
     @include respond-above(md)
         margin: auto
         margin-top: 15px
+        padding: 0 15px
         box-shadow: 0px 0px 5px $grayLight
 
     &__title
         @include respond-above(md)
             font-size: $fs-18
             font-weight: $bold
-            color: $text-dark
+            color: $text-light
 
             margin: 0
             margin-bottom: 15px
 
+    &__adsense,
+    &__lastPosts,
+    &__socialNetwork
+        @include respond-above(md)
+            margin: 35px 0
 
 // Similar list - Aside
 .similarList
@@ -202,3 +211,28 @@
             margin: 0
             margin-bottom: 5px
             text-decoration: none
+
+
+// Social Network list - Aside
+.socialNetworkList
+    list-style: none
+    padding: 0
+    margin: 0
+    margin-top: 25px
+
+    display: flex
+    align-items: center
+
+    @include respond-above(md)
+        height: 80px
+    
+    &__item
+        @include respond-above(md)
+            width: 48px
+            height: 48px
+            margin-right: 10px
+    
+    &__icon
+        @include respond-above(md)
+            width: 36px
+            height: 36px

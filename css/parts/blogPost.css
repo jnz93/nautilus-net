@@ -287,19 +287,25 @@ p, ul, ol, li, span, input, label, textarea, button {
 .post strong {
   color: #2e3a59; }
 
-@media (min-width: 992px) {
-  .asideBox {
-    margin: auto;
-    margin-top: 15px;
-    box-shadow: 0px 0px 5px #F9FBFF; } }
-
-@media (min-width: 992px) {
-  .asideBox__title {
-    font-size: 1.8em;
-    font-weight: 900;
-    color: #2e3a59;
-    margin: 0;
-    margin-bottom: 15px; } }
+.asideBox {
+  display: flex;
+  flex-wrap: wrap; }
+  @media (min-width: 992px) {
+    .asideBox {
+      margin: auto;
+      margin-top: 15px;
+      padding: 0 15px;
+      box-shadow: 0px 0px 5px #F9FBFF; } }
+  @media (min-width: 992px) {
+    .asideBox__title {
+      font-size: 1.8em;
+      font-weight: 900;
+      color: #757575;
+      margin: 0;
+      margin-bottom: 15px; } }
+  @media (min-width: 992px) {
+    .asideBox__adsense, .asideBox__lastPosts, .asideBox__socialNetwork {
+      margin: 35px 0; } }
 
 .similarList {
   list-style: none;
@@ -331,3 +337,23 @@ p, ul, ol, li, span, input, label, textarea, button {
       margin: 0;
       margin-bottom: 5px;
       text-decoration: none; } }
+
+.socialNetworkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 25px;
+  display: flex;
+  align-items: center; }
+  @media (min-width: 992px) {
+    .socialNetworkList {
+      height: 80px; } }
+  @media (min-width: 992px) {
+    .socialNetworkList__item {
+      width: 48px;
+      height: 48px;
+      margin-right: 10px; } }
+  @media (min-width: 992px) {
+    .socialNetworkList__icon {
+      width: 36px;
+      height: 36px; } }
