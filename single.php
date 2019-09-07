@@ -48,17 +48,15 @@ get_header(); ?>
                 <div class="asideBox col-lg-11">
 
                     <div class="asideBox__adsense">
-                        <!-- Adsense -->
+                        <?php do_shortcode('[widget_adsense]'); ?><!-- Adsense -->
                     </div>
 
                     <div class="asideBox__lastPosts">
-                        <!-- Outras publciações -->
-                        <?php do_shortcode('[similar_posts_aside]'); ?>
+                        <?php do_shortcode('[similar_posts_aside]'); ?><!-- Outras publciações -->
                     </div>
 
-                    <div class="asideBox__socialNetwork">
-                        <!-- Redes sociais -->
-                        <?php do_shortcode('[widget_social_network]'); ?>
+                    <div class="asideBox__socialNetwork">                        
+                        <?php do_shortcode('[widget_social_network]'); ?><!-- Redes sociais -->
                     </div>
                 </div>
             </aside><!-- .content__aside --> 

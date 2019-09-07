@@ -516,10 +516,6 @@ if( !function_exists('create_widget_share_post') )
 {
     function create_widget_share_post()
     {
-        // repeat
-        // message-square
-        // paper-plane
-        // undo(180deg)
         ?>
         <div class="widgetShare">
             <span class="widgetShare__title">Compartilhe</span>
@@ -549,4 +545,30 @@ if( !function_exists('create_widget_share_post') )
         <?php
     }
     add_shortcode('widget_share_post', 'create_widget_share_post');
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Widget adsense local
+////////////////////////////////////////////////////////////////////////////////////////////////
+if (!function_exists('create_widget_adsense'))
+{
+    function create_widget_adsense(){
+        if(!is_single())
+        {
+            echo 'Widget só funciona em publicações';
+            die;
+        }
+        $adsense_img = '';
+        $default_img = get_template_directory_uri() . '/images/no_thumb.svg';
+
+        ?>
+        <div class="widgetAdsense">
+            <figure class="widgetAdsense__wrapper">
+                <img src="<?php $adsense_img != '' ? print $adsense_img : print $default_img; ?>" alt="" class="widgetAdsense__img">
+                <figcaption class="widgetAdsense__label">Adsense 320x250px</figcaption>
+            </figure>            
+        </div>
+        <?php
+    }
+    add_shortcode('widget_adsense', 'create_widget_adsense');
 }

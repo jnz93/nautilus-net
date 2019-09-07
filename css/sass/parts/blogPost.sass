@@ -294,3 +294,37 @@
 
     &__text
         display: none
+
+
+// Widget adsense
+.widgetAdsense
+    margin: 0
+    @include respond-above(md)
+        margin-bottom: 15px
+
+    &__wrapper
+        @include respond-above(md)
+            width: 320px
+            height: 290px
+
+            display: flex
+            flex-wrap: wrap
+            margin: 0
+
+    &__img
+        @include respond-above(md)
+            background: $graySecondary
+            width: 100%
+            height: 250px
+
+            margin: 0
+            margin-bottom: 10px
+            border-radius: 4px
+
+    &__label
+        @include respond-above(md)
+            width: 100%
+
+            font-size: $fs-12
+            color: $text-light
+            text-align: center
