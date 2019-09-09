@@ -17,7 +17,7 @@ get_header(); ?>
         <div class="content__wrapperMain">
             <?php do_shortcode('[widget_share_post]'); ?><!-- .sharePost -->
 
-            <main id="main" class="content__main col-lg-8" role="main">
+            <main id="main" class="content__main col-xs-11 col-sm-11 col-md-8 col-lg-8" role="main">
                 <?php
                 // Start the loop.
                 while ( have_posts() ) : the_post(); ?>
@@ -44,8 +44,8 @@ get_header(); ?>
     
             </main><!-- .content__main -->
 
-            <aside class="content__aside col-lg-4">
-                <div class="asideBox col-lg-11">
+            <aside class="content__aside col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="asideBox col-xs-12 col-sm-12 col-md-11 col-lg-11">
 
                     <div class="asideBox__adsense">
                         <?php do_shortcode('[widget_adsense]'); ?><!-- Adsense -->

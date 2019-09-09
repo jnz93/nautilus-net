@@ -437,9 +437,9 @@ if( !function_exists('get_similar_posts_aside') ){
         $similar_posts = new WP_Query($args);
         $output = '';
 
-        $output .= '<h3 class="asideBox__title">Posts populares</h3>';
+        $output .= '<h3 class="asideBox__title">Posts recentes</h3>';
         if( $similar_posts->have_posts() ){
-            $output .= '<ul id="" class="similarList">';
+            $output .= '<ul id="" class="listPosts">';
             while( $similar_posts->have_posts() ){
                 $similar_posts->the_post();
                 $post_id        = get_the_ID();
@@ -447,14 +447,16 @@ if( !function_exists('get_similar_posts_aside') ){
                 $post_thumb_url = get_the_post_thumbnail_url($post_id);
                 $post_link      = get_the_permalink($post_id);
 
-                $output .= '<li class="similarList__item row">
-                                <div class="similarList__wrap col-lg-4">
-                                    <img src="'. $post_thumb_url .'" alt="" class="similarList__thumb">
+                $output .= '<li class="listPosts__item row">
+                                <a href="'. $post_link .'" alt="" target="_parent" class="listPosts__link row col-12">
+                                <div class="listPosts__wrap col-xs-3 col-sm-3 col-md-4 col-lg-4">
+                                    <img src="'. $post_thumb_url .'" alt="" class="listPosts__thumb">
                                 </div>
-                                <div class="similarList__wrap col-lg-8">
-                                    <a href="'. $post_link .'" alt="" target="_parent" class="similarList__title">'. $post_title .'</a>
-                                    <span class="similarList__label">4 Minuto(s) de leitura</span>
+                                <div class="listPosts__wrap col-xs-9 col-sm-9 col-md-8 col-lg-8">
+                                    <h4 class="listPosts__title">'. $post_title .'</h4>
+                                    <span class="listPosts__label">4 Minuto(s) de leitura</span>
                                 </div>
+                                </a>
                             </li>';
                 
             }
