@@ -162,7 +162,7 @@ if( !function_exists('get_article_sliders') ){
                                 <div class="col-md-6 col-lg-6 articleHome__wrapperContent">
                                     <h1 class="articleHome__title" title="'. $post_title .'">'. $post_title .'</h1>
                                     <p class="articleHome__excerpt">'. $post_excerpt .'</p>
-                                    <button class="btn btn__primary btn__primary--big">Ver publicação</button>
+                                    <a href="'. get_the_permalink($post_id) .'" class="btn btn__primary btn__primary--big">Ver publicação</a>
                                 </div>
                                 <div class="col-md-6 col-lg-6 articleHome__wrapperContent">
                                     <figure class="articleHome__thumbContainer">
@@ -412,4 +412,165 @@ if( !function_exists('simple_contact_app') ){
     }
     add_shortcode('simple_contact', 'simple_contact_app');    
     // <button onclick="openSimpleSupport(jQuery(this))" class="simpleContact__buttonSelect simpleContact__buttonSelect--online"><span class="simpleContact__bubble simpleContact__bubble--online"></span>Suporte online</button>
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Similar posts aside
+////////////////////////////////////////////////////////////////////////////////////////////////
+if( !function_exists('get_similar_posts_aside') ){
+    function get_similar_posts_aside(){
+        $post_type      = 'post';
+        $order          = 'DESC';
+        $orderby        = 'date';
+        $status         = 'publish';
+        $number_posts   = '4';
+        
+        $args = array(
+            'post_type'         => $post_type,
+            'cat'               => $category,
+            'order'             => $order,
+            'orderby'           => $orderby,
+            'post_status'       => $status,
+            'posts_per_page'    => $number_posts
+        );
+    
+        $similar_posts = new WP_Query($args);
+        $output = '';
+
+        $output .= '<h3 class="asideBox__title">Posts recentes</h3>';
+        if( $similar_posts->have_posts() ){
+            $output .= '<ul id="" class="listPosts">';
+            while( $similar_posts->have_posts() ){
+                $similar_posts->the_post();
+                $post_id        = get_the_ID();
+                $post_title     = get_the_title($post_id);
+                $post_thumb_url = get_the_post_thumbnail_url($post_id);
+                $post_link      = get_the_permalink($post_id);
+
+                $output .= '<li class="listPosts__item row">
+                                <a href="'. $post_link .'" alt="" target="_parent" class="listPosts__link row col-12">
+                                <div class="listPosts__wrap col-xs-3 col-sm-3 col-md-4 col-lg-4">
+                                    <img src="'. $post_thumb_url .'" alt="" class="listPosts__thumb">
+                                </div>
+                                <div class="listPosts__wrap col-xs-9 col-sm-9 col-md-8 col-lg-8">
+                                    <h4 class="listPosts__title">'. $post_title .'</h4>
+                                    <span class="listPosts__label">4 Minuto(s) de leitura</span>
+                                </div>
+                                </a>
+                            </li>';
+                
+            }
+            $output .= '</ul>';
+            echo $output;
+        } else {
+            echo "Não encontramos notificações";
+        }
+    }
+    add_shortcode('similar_posts_aside', 'get_similar_posts_aside');
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Social network items
+////////////////////////////////////////////////////////////////////////////////////////////////
+if( !function_exists('create_widget_social_network') )
+{
+    function create_widget_social_network()
+    {
+        $theme_name         = get_bloginfo('name');
+        $page_facebook      = get_option('facebook_page');
+        $page_instagram     = get_option('instagram_page');
+        $page_twitter       = get_option('twitter_page');
+        $channel_youtube    = get_option('youtube_channel');
+        ?>
+
+        <h3 class="asideBox__title">Redes sociais</h3>
+        <ul class="socialNetworkList">
+            <li class="socialNetworkList__item">
+                <a href="<?php echo $page_facebook ?>" target="_blank" alt="Página facebook <?php echo $theme_name ?>" class="socialNetworkList__link">
+                    <img src="<?php echo get_template_directory_uri() . '/images/social_facebook.svg' ?>" alt="Página facebook <?php echo $theme_name ?>" class="socialNetworkList__icon">
+                </a>
+            </li>
+            <li class="socialNetworkList__item">
+                <a href="<?php echo $page_instagram ?>" target="_blank" alt="Página instagram <?php echo $theme_name ?>" class="socialNetworkList__link">
+                    <img src="<?php echo get_template_directory_uri() . '/images/social_instagram.svg' ?>" alt="Página instagram <?php echo $theme_name ?>" class="socialNetworkList__icon">
+                </a>
+            </li>
+            <li class="socialNetworkList__item">
+                <a href="<?php echo $page_twitter ?>" target="_blank" alt="Página Twitter <?php echo $theme_name ?>" class="socialNetworkList__link">
+                    <img src="<?php echo get_template_directory_uri() . '/images/social_twitter.svg' ?>" alt="Página twitter <?php echo $theme_name ?>" class="socialNetworkList__icon">
+                </a>
+            </li>
+            <li class="socialNetworkList__item">
+                <a href="<?php echo $channel_youtube ?>" target="_blank" alt="Página youtube <?php echo $theme_name ?>" class="socialNetworkList__link">
+                    <img src="<?php echo get_template_directory_uri() . '/images/social_youtube.svg' ?>" alt="Página youtube <?php echo $theme_name ?>" class="socialNetworkList__icon">
+                </a>
+            </li>
+        </ul>
+        <?php
+    }
+    add_shortcode('widget_social_network', 'create_widget_social_network');
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Widget Share post
+////////////////////////////////////////////////////////////////////////////////////////////////
+if( !function_exists('create_widget_share_post') )
+{
+    function create_widget_share_post()
+    {
+        ?>
+        <div class="widgetShare">
+            <span class="widgetShare__title">Compartilhe</span>
+
+            <ul class="shareList">
+                <li class="shareList__item">
+                    <a href="<?php the_permalink(); ?>" data-layout="button_count" class="shareList__link fb-share-button">
+                        <i class="shareList__icon" data-eva="undo"></i>
+                        <span class="shareList__text">Compartilhar no facebook</span>
+                    </a>
+                </li>
+                <li class="shareList__item">
+                    <a href="<?php the_permalink(); ?>" class="shareList__link twitter-share-button">
+                        <i class="shareList__icon" data-eva="repeat"></i>
+                        <span class="shareList__text">Tweetar</span>
+                    </a>
+                </li>
+                <li class="shareList__item">
+                    <a href="" class="shareList__link">
+                        <i class="shareList__icon" data-eva="message-square"></i>
+                        <span class="shareList__text">Enviar no WhatsApp</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <?php
+    }
+    add_shortcode('widget_share_post', 'create_widget_share_post');
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Widget adsense local
+////////////////////////////////////////////////////////////////////////////////////////////////
+if (!function_exists('create_widget_adsense'))
+{
+    function create_widget_adsense(){
+        if(!is_single())
+        {
+            echo 'Widget só funciona em publicações';
+            die;
+        }
+        $adsense_img = '';
+        $default_img = get_template_directory_uri() . '/images/no_thumb.svg';
+
+        ?>
+        <div class="widgetAdsense">
+            <figure class="widgetAdsense__wrapper">
+                <img src="<?php $adsense_img != '' ? print $adsense_img : print $default_img; ?>" alt="" class="widgetAdsense__img">
+                <figcaption class="widgetAdsense__label">Adsense 320x250px</figcaption>
+            </figure>            
+        </div>
+        <?php
+    }
+    add_shortcode('widget_adsense', 'create_widget_adsense');
 }

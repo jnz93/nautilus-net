@@ -35,13 +35,13 @@
 @media (min-width: 992px) {
   .settingsPage__title--medium {
     font-size: 2.1em;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5; } }
 
 @media (min-width: 992px) {
   .settingsPage__title--small {
     font-size: 1.8em;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5; } }
 
 .settingsPage__text {

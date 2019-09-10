@@ -134,7 +134,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       max-width: 960px;
       min-height: 120px; } }
   .sctHeader__title, .sctHeader__subtitle {
-    font-weight: 700;
+    font-weight: 600;
     color: #757575;
     line-height: 1.8; }
     @media (max-width: 767px) {
@@ -201,7 +201,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (max-width: 767px) {
   .benefitCard__title {
     font-size: 1.6em;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.6;
     color: #2e3a59;
     text-align: center;
@@ -210,7 +210,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (min-width: 992px) {
   .benefitCard__title {
     font-size: 1.6em;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.6;
     color: #757575;
     text-transform: none;
@@ -220,7 +220,7 @@ p, ul, ol, li, span, input, label, textarea, button {
 @media (max-width: 767px) {
   .benefitCard__title--expandMobile {
     font-size: 1.4em;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase; } }
 
 @media (max-width: 767px) {
@@ -282,7 +282,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       box-shadow: -3px 3px 6px #BDBDBD; } }
   .planCard__title {
     font-size: 1.8em;
-    font-weight: 700;
+    font-weight: 600;
     color: #2e3a59; }
   .planCard__spacer {
     background: #F2F2F2;
@@ -502,11 +502,11 @@ p, ul, ol, li, span, input, label, textarea, button {
   .contactCard__title--thin {
     font-weight: 300; }
   .contactCard__title--semiBold {
-    font-weight: 700; }
+    font-weight: 600; }
   @media (max-width: 767px) {
     .contactCard__title--expandMobile {
       font-size: 1.4em;
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase; } }
   .contactCard__list {
     list-style: none;

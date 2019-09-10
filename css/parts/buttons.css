@@ -135,7 +135,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       max-width: 960px;
       min-height: 120px; } }
   .sctHeader__title, .sctHeader__subtitle {
-    font-weight: 700;
+    font-weight: 600;
     color: #757575;
     line-height: 1.8; }
     @media (max-width: 767px) {

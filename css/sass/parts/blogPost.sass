@@ -1,0 +1,427 @@
+/*
+ Theme Name: nautilus-net
+ Description: folha de estilos dos varios tipos de cards utilizados no tema
+ Pattern: BEM(Block, Element & Modifier)
+ */
+@import '../theme-configs.sass'
+
+/////////////////////////////////////////////
+// Content Área
+// -> v1.0
+/////////////////////////////////////////////
+.content
+    @include respond-below(md)
+        margin-top: 80px
+
+    @include respond-above('sm')
+        margin-top: 90px
+
+    
+    &__cover
+        background-size: cover
+        background-attachment: fixed
+
+        @include respond-below(md)
+            height: 470px
+
+        @include respond-above('md')
+            height: 490px
+
+        @include respond-above('lg')
+            height: 560px
+
+    
+    &__wrapperMain
+        @include respond-above('sm')
+            margin: auto
+            display: flex
+            flex-wrap: wrap
+
+            position: relative
+
+        @include respond-above('md')
+            max-width: 1130px
+        
+        @include respond-above('lg')
+            max-width: 1280px
+
+    
+    &__main
+        background: $white
+        border-radius: 6px
+        position: relative
+
+        box-shadow: 0px 0px 5px $graySecondary
+
+        @include respond-below(md)
+            top: -120px
+            padding: 15px 10px
+            margin: auto
+
+        @include respond-above(md)
+            top: -100px
+            padding: 40px 20px
+
+        @include respond-above(lg)
+            top: -150px
+            padding: 55px 30px
+
+// Títulos e textos
+.post
+    &__informations
+        background: $grayLight
+        display: flex
+        align-items: center
+
+        @include respond-below(md)
+            height: 40px
+            margin: 20px auto
+
+        @include respond-above(md)
+            height: 60px
+            margin: 15px auto
+    
+    &__data
+        color: $text-dark
+        font-weight: $regular
+        
+        display: flex
+        align-items: center
+
+        @include respond-below(md)
+            font-size: $fs-12
+            margin-right: 15px
+            
+        @include respond-above(md)
+            font-size: $fs-14
+            margin-right: 25px
+
+    &__icon
+        fill: $text-dark
+        @include respond-below(md)
+            width: 18px
+            margin-right: 5px
+        @include respond-above(md)
+            width: 22px
+            margin-right: 5px
+
+    &__title,
+    h1
+        color: $text-dark
+        font-weight: $bold
+        line-height: 1.6
+        margin: 0
+        
+        @include respond-below(md)
+            font-size: $fs-24
+            margin-bottom: 20px
+
+        @include respond-above(md)
+            font-size: $fs-36
+            margin-bottom: 25px
+
+    &__subtitle,
+    h2
+        font-weight: $bold
+        color: $text-dark
+        line-height: 1.6
+        margin: 0
+
+        @include respond-below(md)
+            font-size: $fs-21
+            margin-bottom: 20px
+        @include respond-above(md)
+            font-size: $fs-24
+            margin-bottom: 25px
+
+    &__excerpt
+        font-weight: $semi-thin
+        color: $text-light
+        line-height: 1.6
+        margin: 0
+
+        @include respond-below(md)
+            font-size: $fs-16
+            margin-bottom: 15px
+            
+        @include respond-above(md)
+            font-size: $fs-21
+            margin-bottom: 25px
+
+    &__text, 
+    p
+        font-weight: 400
+        color: $text-light
+        line-height: 1.6
+        margin: 0
+
+        @include respond-below(md)
+            font-size: $fs-16
+            margin-bottom: 25px
+
+        @include respond-above(md)
+            font-size: $fs-18
+            margin-bottom: 25px
+
+    &__list,
+    ul,
+    ol
+        margin: 40px auto
+        background: $grayLight
+        list-style: square
+        @include respond-below(md)
+            padding: 15px 20px
+
+        @include respond-above(md)
+            padding: 30px 35px
+
+    &__listItem,
+    li
+        line-height: 1.6
+        color: $text-light
+        margin: 0
+        
+        @include respond-below(md)
+            font-size: $fs-14
+            margin-bottom: 15px
+
+        @include respond-above(md)
+            font-size: $fs-16
+            margin-bottom: 25px
+
+    strong
+        color: $text-dark
+
+// Asidebox
+.asideBox
+    display: flex
+    flex-wrap: wrap
+
+    @include respond-below(md)
+
+
+    @include respond-above(md)
+        margin: auto
+        margin-top: 15px
+        padding: 0 15px
+        box-shadow: 0px 0px 5px $grayLight
+
+    &__title
+        font-weight: $semi-bold
+        color: $text-light
+        margin: 0
+        
+        @include respond-below(md)
+            font-size: $fs-18
+            margin-bottom: 20px
+
+        @include respond-above(md)
+            font-size: $fs-21
+            margin-bottom: 25px
+
+    &__adsense,
+    &__lastPosts,
+    &__socialNetwork
+        @include respond-below(md)
+            width: 100%
+            margin: 20px auto
+
+        @include respond-above(md)
+            margin: 35px 0
+
+// Last posts - Aside
+.listPosts
+    list-style: none
+    padding: 0
+    margin: 0
+    
+    @include respond-below(md)
+        width: 100%
+        margin: 20px auto
+
+    @include respond-above(md)
+        width: 100%
+        margin: 15px auto
+    
+    &__link
+        text-decoration: none
+        
+    &__item
+        background: $graySecondary
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        margin: 15px auto
+        padding: 10px
+        border-radius: 3px
+        
+        @include respond-below(md)
+            margin: 5px auto    
+
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        align-content: center
+
+    &__thumb
+        @include respond-below(md)
+            width: 80px
+            height: 80px
+
+        @include respond-above(md)
+            width: 105px
+            height: 105px
+
+    &__title
+        color: $text-light
+        font-weight: $bold
+        line-height: 1.5
+
+        margin: 0
+        margin-bottom: 5px
+
+        @include respond-below(md)
+            font-size: $fs-18
+
+        @include respond-above(md)
+            font-size: $fs-18
+
+
+// Social Network list - Aside
+.socialNetworkList
+    list-style: none
+    padding: 0
+    margin: 0
+    margin-top: 25px
+
+    display: flex
+    align-items: center
+
+    @include respond-below(md)
+        height: 60px
+
+    @include respond-above(md)
+        height: 80px
+    
+    &__item
+        @include respond-below(md)
+            width: 42px
+            height: 42px
+            margin-right: 10px
+
+        @include respond-above(md)
+            width: 48px
+            height: 48px
+            margin-right: 10px
+    
+    &__icon
+        @include respond-below(md)
+            width: 30px
+            height: 30px
+
+        @include respond-above(md)
+            width: 36px
+            height: 36px
+
+// Widget share post
+.widgetShare
+    background: $grayLight
+    position: absolute
+
+    @include respond-below(md)
+        display: none
+
+    @include respond-above(md)
+        width: 80px
+        height: auto
+        padding: 10px 5px
+        left: -110px
+    
+    &__title
+        @include respond-above(md)
+            font-size: $fs-12
+            font-weight: $regular
+            color: $text-light
+            margin: 0
+            margin-bottom: 15px
+            display: block
+
+.shareList
+    margin: 0
+    padding: 0
+    list-style: none
+    width: 100%
+    height: auto
+    @include respond-above(md)
+        margin-top: 15px
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+
+    &__item
+        @include respond-above(md)
+            background: $secondary-color
+            width: 48px
+            height: 48px
+
+            border-radius: 4px
+            display: flex
+            margin: auto
+            margin-bottom: 15px
+
+    &__link
+        @include respond-above(md)
+            width: 100%
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+
+    &__icon
+        fill: $white
+
+    &__text
+        display: none
+
+
+// Widget adsense
+.widgetAdsense
+    margin: 0
+
+    @include respond-below(md)
+        margin-bottom: 15px
+        
+    @include respond-above(md)
+        margin-bottom: 25px
+
+    &__wrapper
+        width: 320px
+        display: flex
+        flex-wrap: wrap
+        margin: 0 auto
+
+        @include respond-below(md)
+            height: 270px
+
+        @include respond-above(md)
+            height: 290px
+
+
+    &__img
+        background: $graySecondary
+        width: 100%
+        margin: 0
+        height: 250px
+
+        @include respond-below(md)
+            margin-bottom: 5px
+
+        @include respond-above(md)
+            margin-bottom: 10px
+            border-radius: 4px
+
+    &__label
+        width: 100%
+        font-size: $fs-12
+        color: $text-light
+        text-align: center

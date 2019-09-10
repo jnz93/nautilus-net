@@ -135,7 +135,7 @@ p, ul, ol, li, span, input, label, textarea, button {
       max-width: 960px;
       min-height: 120px; } }
   .sctHeader__title, .sctHeader__subtitle {
-    font-weight: 700;
+    font-weight: 600;
     color: #757575;
     line-height: 1.8; }
     @media (max-width: 767px) {
@@ -228,12 +228,12 @@ p, ul, ol, li, span, input, label, textarea, button {
   @media (max-width: 767px) {
     .logo__title {
       font-size: 1.8em;
-      font-weight: 700;
+      font-weight: 600;
       color: #2e3a59; } }
   @media (min-width: 992px) {
     .logo__title {
       font-size: 2.1em;
-      font-weight: 700;
+      font-weight: 600;
       color: #2e3a59; } }
 
 @media (max-width: 767px) {
@@ -317,7 +317,7 @@ p, ul, ol, li, span, input, label, textarea, button {
     .menuList:before {
       content: 'Menu de navegação';
       font-size: 2.1em;
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: 20px;
       color: #757575; } }
   .menuList .menu-item {
