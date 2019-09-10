@@ -35,6 +35,7 @@ if( !function_exists('register_nautilus_settings') ){
         register_setting('contact-settings-group', 'contact_street');
         register_setting('contact-settings-group', 'contact_city');
         register_setting('contact-settings-group', 'contact_cep');
+        register_setting('contact-settings-group', 'reference_point');
 
         register_setting('contact-settings-group', 'contact_cnpj');
 
@@ -74,6 +75,7 @@ if( !function_exists('theme_options_page') ){
         $curr_street                        = get_option('contact_street');
         $curr_city                          = get_option('contact_city');
         $curr_cep                           = get_option('contact_cep');
+        $curr_reference_point               = get_option('reference_point');
         $curr_cnpj                          = get_option('contact_cnpj');
         $curr_hours_business_day            = get_option('contact_hours_business_day');
         $curr_hours_saturday                = get_option('contact_hours_saturday');
@@ -145,6 +147,10 @@ if( !function_exists('theme_options_page') ){
                     <div class="col-lg-4 settingsPage__wrapInput">
                         <label for="contact_cep" class="settingsPage__label">CEP</label>
                         <input type="text" id="contact_cep" name="contact_cep" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_cep) ? '' : $curr_cep ) ?>">
+                    </div>
+                    <div class="col-lg-4 settingsPage__wrapInput">
+                        <label for="reference_point" class="settingsPage__label">Ponto de referência</label>
+                        <input type="text" id="reference_point" name="reference_point" class="settingsPage__input" placeholder="" value="<?php echo ( empty($curr_reference_point) ? '' : $curr_reference_point ) ?>">
                     </div>
                 </div>
 
