@@ -59,10 +59,12 @@
                 </button>
                 
                 <?php 
-                if( shortcode_exists('show_menu_navegacao') ){
-                    do_shortcode('[show_menu_navegacao]');
-                } else {
-                    echo "Menu principal ainda não foi criado pela administração.";
+                if( !is_single() ){
+                    if( shortcode_exists('show_menu_navegacao') ){
+                        do_shortcode('[show_menu_navegacao]');
+                    } else {
+                        echo "Menu principal ainda não foi criado pela administração.";
+                    }
                 }
                 ?>
             </div><!-- #End navigation menu -->
