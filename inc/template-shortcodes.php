@@ -485,26 +485,34 @@ if( !function_exists('create_widget_social_network') )
 
         <h3 class="asideBox__title">Redes sociais</h3>
         <ul class="socialNetworkList">
+            <?php if ($page_facebook != '') : ?>
             <li class="socialNetworkList__item">
                 <a href="<?php echo $page_facebook ?>" target="_blank" alt="Página facebook <?php echo $theme_name ?>" class="socialNetworkList__link">
                     <img src="<?php echo get_template_directory_uri() . '/images/social_facebook.svg' ?>" alt="Página facebook <?php echo $theme_name ?>" class="socialNetworkList__icon">
                 </a>
             </li>
+            <?php endif; 
+            if ($page_instagram != '') : ?>
             <li class="socialNetworkList__item">
                 <a href="<?php echo $page_instagram ?>" target="_blank" alt="Página instagram <?php echo $theme_name ?>" class="socialNetworkList__link">
                     <img src="<?php echo get_template_directory_uri() . '/images/social_instagram.svg' ?>" alt="Página instagram <?php echo $theme_name ?>" class="socialNetworkList__icon">
                 </a>
             </li>
+            <?php endif;
+            if ($page_twitter != '') : ?>
             <li class="socialNetworkList__item">
                 <a href="<?php echo $page_twitter ?>" target="_blank" alt="Página Twitter <?php echo $theme_name ?>" class="socialNetworkList__link">
                     <img src="<?php echo get_template_directory_uri() . '/images/social_twitter.svg' ?>" alt="Página twitter <?php echo $theme_name ?>" class="socialNetworkList__icon">
                 </a>
             </li>
+            <?php endif;
+            if ($channel_youtube != '') : ?>
             <li class="socialNetworkList__item">
                 <a href="<?php echo $channel_youtube ?>" target="_blank" alt="Página youtube <?php echo $theme_name ?>" class="socialNetworkList__link">
                     <img src="<?php echo get_template_directory_uri() . '/images/social_youtube.svg' ?>" alt="Página youtube <?php echo $theme_name ?>" class="socialNetworkList__icon">
                 </a>
             </li>
+            <?php endif; ?>
         </ul>
         <?php
     }
