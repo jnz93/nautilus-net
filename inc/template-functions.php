@@ -303,26 +303,13 @@ function custom_company_logo(){
     <style type="text/css">
         #login h1 a, .login h1 a {
             background-image: url(<?php echo $logo_url[0] ?>);
-            height:120px;
-            width:120px;
+            width: 220px;
             background-size: 100%;
             background-repeat: no-repeat;
-            padding-bottom: 30px;
-            position: relative;
-            color: blue;
-            font-size: 24px;
-
-            overflow: initial;
-            text-indent: 0;
+            margin-top: 50px
         }
         #login h1 a p{
-            width: 400px;
-            color: #2e3a59;
-            font-weight: 700;
-            text-indent: 0;
-            position: absolute;
-            bottom: 0;
-            left: -140px;
+            display: none;
         }
     </style>
     <?php
@@ -337,7 +324,7 @@ add_action('login_enqueue_scripts', 'custom_company_logo');
 function company_url_logo(){
     return get_bloginfo('url');
 }
-add_filter('login_headerurl', 'company_url_logo');
+// add_filter('login_headerurl', 'company_url_logo');
 
 /**
  * Alterar título do logotipo
