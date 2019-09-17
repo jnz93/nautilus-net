@@ -526,19 +526,29 @@ if( !function_exists('create_widget_share_post') )
 {
     function create_widget_share_post()
     {
+        $title      = urlencode(get_the_title());
+        $url        = urlencode(get_the_permalink());
+        $summary    = urlencode(get_the_excerpt());
+        $image      = urlencode(get_the_post_thumbnail_url());
         ?>
         <div class="widgetShare">
             <span class="widgetShare__title">Compartilhe</span>
-
             <ul class="shareList">
                 <li class="shareList__item">
-                    <a href="<?php the_permalink(); ?>" data-layout="button_count" class="shareList__link fb-share-button">
+                
+                    <script>
+                    function open_dialog_share(){
+                        window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $title;?>&amp;p[summary]=<?php echo $summary;?>&amp;p[url]=<?php echo $url; ?>&amp;&p[images][0]=<?php echo $image;?>', 'sharer', 'toolbar=0,status=0,width=620,height=280');
+                    }
+                    </script>
+
+                    <a onclick="open_dialog_share()" href="javascript: void(0)" class="shareList__link">
                         <i class="shareList__icon" data-eva="undo"></i>
                         <span class="shareList__text">Compartilhar no facebook</span>
                     </a>
                 </li>
-                <li class="shareList__item">
-                    <a href="<?php the_permalink(); ?>" class="shareList__link twitter-share-button">
+                <li class="shareList__item" style="display: none;">
+                    <a title="Your Title Here" rel="dialog" href="http://twitter.com/home/?status=<?php echo get_the_excerpt(); ?>" target="_blank" class="shareList__link twitter-share-button">
                         <i class="shareList__icon" data-eva="repeat"></i>
                         <span class="shareList__text">Tweetar</span>
                     </a>
