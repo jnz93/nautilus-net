@@ -529,6 +529,7 @@ if( !function_exists('create_widget_share_post') )
         $title      = urlencode(get_the_title());
         $url        = urlencode(get_the_permalink());
         $summary    = urlencode(get_the_excerpt());
+        $excerpt    = get_the_excerpt();
         $image      = urlencode(get_the_post_thumbnail_url());
         ?>
         <div class="widgetShare">
@@ -547,17 +548,18 @@ if( !function_exists('create_widget_share_post') )
                         <span class="shareList__text">Compartilhar no facebook</span>
                     </a>
                 </li>
-                <li class="shareList__item" style="display: none;">
-                    <a title="Your Title Here" rel="dialog" href="http://twitter.com/home/?status=<?php echo get_the_excerpt(); ?>" target="_blank" class="shareList__link twitter-share-button">
+                <li class="shareList__item">
+                    <a href="https://twitter.com/share?ref_src=<?php echo $url ?>" class="shareList__link" target="_blank" data-text="<?php echo $excerpt; ?>" data-hashtags="nautilusnet" data-show-count="false">
                         <i class="shareList__icon" data-eva="repeat"></i>
                         <span class="shareList__text">Tweetar</span>
                     </a>
                 </li>
                 <li class="shareList__item">
-                    <a href="" class="shareList__link">
+                    <a href="https://wa.me/?text=<?php echo $url ?>" data-action="share/whatsapp" class="shareList__link" target="_blank">
                         <i class="shareList__icon" data-eva="message-square"></i>
                         <span class="shareList__text">Enviar no WhatsApp</span>
                     </a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </li>
             </ul>
         </div>
