@@ -369,6 +369,49 @@ function fb_count() {
     { 
         $fbcount = '0'; 
     }
-}       
-    
+}
+
+/**
+ * Open graph tags
+ * @link https://developers.facebook.com/docs/sharing/webmasters#basic
+ * */
+function fb_opengraph_tags()
+{
+    if ( !is_home() && is_single())
+    {
+        $url = get_permalink();
+        $type = 'website';
+        $title = get_the_title();
+        $description = get_the_excerpt();
+        $image = get_the_post_thumbnail_url();
+
+        $html = '';
+        $html .= '<meta property="og:url" content="'. $url .'" />';
+        $html .= '<meta property="og:type" content="'. $type .'" />';
+        $html .= '<meta property="og:title" content="'. $title .'" />';
+        $html .= '<meta property="og:description" content="'. $description .'" />';
+        $html .= '<meta property="og:image" content="'. $image .'" />';
+
+        echo $html;
+    } 
+    else 
+    {
+        $url = get_option('siteurl');
+        $type = 'website';
+        $title = get_option('blogname');
+        $description = get_option('blogdescription');
+        $logo_id        = get_theme_mod('custom_logo');
+        $logo_url       = wp_get_attachment_image_src($logo_id, 'medium');
+
+        $html = '';
+        $html .= '<meta property="og:url" content="'. $url .'" />';
+        $html .= '<meta property="og:type" content="'. $type .'" />';
+        $html .= '<meta property="og:title" content="'. $title .'" />';
+        $html .= '<meta property="og:description" content="'. $description .'" />';
+        $html .= '<meta property="og:image" content="'. $logo_url[0] .'" />';
+
+        echo $html;
+    }
+}
+add_action('wp_head', 'fb_opengraph_tags');
 ?>
