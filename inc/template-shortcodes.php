@@ -596,7 +596,9 @@ if (!function_exists('create_widget_adsense'))
 }
 
 
-// Get logotipo custom
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Shortcode: custom_logotipo
+////////////////////////////////////////////////////////////////////////////////////////////////
 if (!function_exists('get_custom_logotipo'))
 {
     function get_custom_logotipo()
@@ -616,4 +618,35 @@ if (!function_exists('get_custom_logotipo'))
         }
     }
     add_shortcode('custom_logotipo', 'get_custom_logotipo');
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Shortcode: menu_fixed
+////////////////////////////////////////////////////////////////////////////////////////////////
+if( ! function_exists('get_menu_fixed') ){
+    function get_menu_fixed()
+    {
+        $args_menu = array(
+            'menu'              => 'Menu Fixo',
+            'menu_class'        => 'container__flex menuList',
+            'menu_id'           => '',
+            'container'         => 'div',
+            'container_class'   => 'container__flex mainMenuContainer',
+            'container_id'      => 'main-menu',
+            'fallback_cb'       => '', #Se não existir o menu chama uma função que será executada. Padrão 'wp_page_menu'.
+            'before'            => '',
+            'after'             => '',
+            'link_before'       => '',
+            'link_after'        => '',
+            'echo'              => true,
+            'depth'             => '',
+            'walker'            => '', 
+            'theme_location'    => 'menu-navegacao',
+            'item_spacing'      => ''
+        );
+
+        return wp_nav_menu($args_menu);
+    }
+    add_shortcode('menu_fixed', 'get_menu_fixed');
 }
