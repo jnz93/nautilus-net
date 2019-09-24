@@ -1,16 +1,14 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
-const { watch } = require('gulp');
-
-gulp.task('compileSass', function(){
+var pathSass = 'css/sass/parts/*.sass';
+gulp.task('sass', function(){
     return gulp
-        .src('css/sass/parts/*.sass') // path of archives to compile
-        // .pipe(cleanDir('css', {ext: '.css'})) Não está funcionando
+        .src(pathSass)
         .pipe(sass())
-        .pipe(gulp.dest('css/parts')) // path of to compile archives
+        .pipe(gulp.dest('css/parts'))
 });
 
-// watch(['css/sass/parts/*.sass'], function(compileSass){
-//     compileSass;
-// });
+gulp.task('watchCompile', function(){
+    gulp.watch(pathSass, gulp.series('sass'));
+});
