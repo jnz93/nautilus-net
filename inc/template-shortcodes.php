@@ -594,3 +594,26 @@ if (!function_exists('create_widget_adsense'))
     }
     add_shortcode('widget_adsense', 'create_widget_adsense');
 }
+
+
+// Get logotipo custom
+if (!function_exists('get_custom_logotipo'))
+{
+    function get_custom_logotipo()
+    {     
+        if( has_custom_logo() ){
+            $logo_id        = get_theme_mod('custom_logo');
+            $logo_url       = wp_get_attachment_image_src($logo_id, 'medium');
+            $site_name      = get_bloginfo('name');
+
+            $output =   '<figure id="" class="logo">
+                            <img src="'. $logo_url[0] .'" id="" class="logo__image" alt="'. $site_name .'">
+                        </figure>';
+            
+            echo $output;
+        } else {
+            echo "Adicione um logotipo";
+        }
+    }
+    add_shortcode('custom_logotipo', 'get_custom_logotipo');
+}
