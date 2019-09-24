@@ -29,43 +29,46 @@
         js.src = "https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v4.0";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="coverBackground"></div>
-    <header id="" class="wow bounceInDown mainHeader">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mainHeader__flexContainer"> <!-- Container-->
-            <div class="col-xs-9 col-sm-6 col-md-4 col-lg-4">
-                <?php 
-                    if( has_custom_logo() ){
-                        $logo_id        = get_theme_mod('custom_logo');
-                        $logo_url       = wp_get_attachment_image_src($logo_id, 'medium');
-                        $site_name      = get_bloginfo('name');
 
-                        $output =   '<figure id="" class="logo">
-                                        <img src="'. $logo_url[0] .'" id="" class="logo__image" alt="'. $site_name .'">
-                                    </figure>';
-                        
-                        echo $output;
-                    } else {
-                        echo "Adicione um logotipo";
-                    }
-                ?>
-            </div> <!-- #End logotipo -->
 
-            <div class="col-xs-3 col-sm-6 col-md-8 col-lg-8">
-                <!-- Botões menu mobile -->
-                <button onClick="clickOpenMenuMobile()" class="mainHeader__btnMenu">
-                    <i id="ico-menu" class="mainHeader__icoMenu" data-eva="menu" data-eva-width="" data-eva-height=""></i>
-                    <i id="ico-close" class="mainHeader__icoMenu mainHeader__icoMenu--disabled" data-eva="close" data-eva-width="" data-eva-height=""></i>
-                </button>
-                
-                <?php 
-                if( !is_single() ){
-                    if( shortcode_exists('show_menu_navegacao') ){
-                        do_shortcode('[show_menu_navegacao]');
-                    } else {
-                        echo "Menu principal ainda não foi criado pela administração.";
-                    }
-                }
-                ?>
-            </div><!-- #End navigation menu -->
-        </div>
+    <header id="" class="headerMain">
+        <div class="container-fluid row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row headerMain__top">
+                <div class="col-lg-4">
+                    <div class="infoWrapper">
+                        <p class="infoWrapper__text"><i class="infoWrapper__icon"></i> A loja está aberta</p>
+                        <p class="infoWrapper__text"><i class="infoWrapper__icon"></i> A loja está fechada</p>
+                    </div>
+                </div> <!-- #End horário comercial loja -->
+
+                <div class="col-lg-8">
+                    <ul class="contactList">
+                        <li class="contactList__item">
+                            <i class="contactList__icon"></i>
+                            <span class="contactList__text">Informação</span>
+                        </li>
+
+                        <li class="contactList__item">
+                            <i class="contactList__icon"></i>
+                            <span class="contactList__text">Informação</span>
+                        </li>
+
+                        <li class="contactList__item">
+                            <i class="contactList__icon"></i>
+                            <span class="contactList__text">Informação</span>
+                        </li>
+                    </ul> <!-- #End informações top -->
+                </div>
+            </div> <!-- #End parte de cima -->
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row headerMain__bottom">
+                <div class="col-lg-4">
+                    <?php do_shortcode('[custom_logotipo]'); ?>
+                </div> <!-- #End Logotipo -->
+
+                <div class="col-lg-8">
+                    <?php do_shortcode('[menu_fixed]'); ?>
+                </div>
+            </div> <!-- #End parte de baixo -->
+        </div> <!-- #end Container -->
     </header> <!-- #End main header -->
