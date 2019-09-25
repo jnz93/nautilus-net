@@ -32,7 +32,7 @@
 
 
     <header id="" class="masterHeader">
-        <div class="container-fluid row masterHeader__container">
+        <div class="container-fluid">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row masterHeader__top">
                 <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
                     <div class="infoWrapper">
