@@ -414,4 +414,16 @@ function fb_opengraph_tags()
     }
 }
 add_action('wp_head', 'fb_opengraph_tags');
+
+/**
+ * Habilitar upload de svg
+ * @link https://martinenghi.com.br/blog/como-habilitar-o-upload-de-svg-no-wordpress/
+ */
+function cc_mime_types($mimes)
+{
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
 ?>
