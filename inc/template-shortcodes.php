@@ -629,11 +629,11 @@ if( ! function_exists('get_menu_fixed') ){
     {
         $args_menu = array(
             'menu'              => 'Menu Fixo',
-            'menu_class'        => 'container__flex menuList',
+            'menu_class'        => 'masterMenu',
             'menu_id'           => '',
             'container'         => 'div',
-            'container_class'   => 'container__flex mainMenuContainer',
-            'container_id'      => 'main-menu',
+            'container_class'   => 'mainMenuContainer',
+            'container_id'      => 'master-menu',
             'fallback_cb'       => '', #Se não existir o menu chama uma função que será executada. Padrão 'wp_page_menu'.
             'before'            => '',
             'after'             => '',

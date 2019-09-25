@@ -208,7 +208,8 @@ a, a:hover {
     justify-content: center;
     cursor: pointer;
     outline: none;
-    z-index: 9999; }
+    z-index: 9999;
+    display: none; }
     @media (max-width: 767px) {
       .notification__iconWrap {
         top: 20px;

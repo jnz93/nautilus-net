@@ -5,66 +5,128 @@
  */
 @import '../theme-configs.sass'
 
-// Header
-.mainHeader
-    background: none
-    z-index: 99
-    position: absolute
-    top: 0
-    left: 0
-
-    @include respond-below('sm')
-        width: 100%
-        height: 75px        
-
-    @include respond-above('md')
-        width: 100%
-        height: 90px
+///////////////////////////////////////////////////////////
+// Master header
+//////////////////////////////////////////////////////////
+.masterHeader
+    background: $white
     
-    // Tipos do header conforme a rolagem da página
-    &__type
-        
-        &--fixed
-            @include respond-above('md')
-                background: $white
-                box-shadow: 0px 0px 3px $grayLight
-                top: 0
-                position: fixed
-    // Container flex
-    &__flexContainer
-        display: flex
-        
+    &__top
+        border-bottom: 1px solid $graySecondary
+        @include respond-below(md)
+            height: 30px
 
-    // Botões do menu mobile
-    &__btnMenu
-        @include respond-below('sm')
-            background: none
-            width: 48px
-            height: 48px
+        @include respond-above(md)
+            height: 40px
+    
+    &__bottom
+        border-bottom: 1px solid $graySecondary
+        @include respond-below(md)
+            height: 90px
+
+        @include respond-above(md)
+            height: 120px
+
+    &__container
+        @include respond-above(lg)
+            // max-width: 1366px
+            margin: auto
+
+///////////////////////////////////////////////////////////
+// infoWrapper
+//////////////////////////////////////////////////////////
+.infoWrapper
+    height: 100%
+    display: flex
+    align-items: center
+
+    &__icon
+        @include respond-below(md)
+            width: 14px
+            height: 14px
+
+        @include respond-above(md)
+            width: 18px
+            height: 18px
+        
+        &--online
+            fill: $success-color
+
+        &--offline
+            fill: $danger-color
+    
+    &__text
+        @include respond-below(md)
+            font-size: $fs-12
+            margin: 0
+            margin-left: 3px
+            margin-top: 3px
+
+            
+        @include respond-above(md)
+            font-size: $fs-14
+            margin: 0
+            margin-left: 4px
+            margin-top: 3px
+
+        &--online
+            color:: $success-color
+
+        &--offline
+            color: $danger-color
+
+///////////////////////////////////////////////////////////
+// inforList top
+//////////////////////////////////////////////////////////
+.infoList
+    width: 100%
+    height: 100%
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: flex-end
+
+    &__item
+        display: flex
+        align-items: center
+        border-right: 1px solid $graySecondary
+
+        @include respond-below(md)
+            padding: 0 15px
+
+        @include respond-above(md)
+            height: 40px
+            padding: 0 20px
+
+        &:last-child
             border: none
 
-            margin: auto
-            margin-top: 15px
+    &__icon
+        @include respond-below(md)
+            width: 14px
+            height: 14px
+            fill: $text-dark
 
-            display: flex
-            align-items: center
-            outline: none
+        @include respond-above(md)
+            width: 18px
+            height: 18px
+            fill: $text-dark
 
-        @include respond-above('md')
+    &__text
+        @include respond-below(md)
+            font-size: $fs-12
+            font-weight: $regular
+            color: $text-dark
             display: none
 
-    &__icoMenu
-        fill: $main-color
-        width: 36px
-        height: 36px
-        transform: rotate(360deg)
-        transition: .8s
+        @include respond-above(md)
+            font-size: $fs-14
+            font-weight: $regular
+            color: $text-dark
+            margin-left: 4px
+            margin-top: 3px
 
-        &--disabled
-            transform: rotate(-360deg)
-            transition: .8s
-            display: none
-            
 // Logotipo
 .logo
     margin: 0
@@ -78,98 +140,28 @@
         height: 80px
         
     @include respond-above('md')
-        height: 90px
-        margin-left: 25px
+        height: 100%
 
     &__image
         @include respond-below('sm')
             width: auto
-            height: 50px
-            margin-right: 5px
+            height: 45px
 
         @include respond-above('md')
             width: auto
-            height: 70px
-            margin-right: 5px
-
-    &__title
-        @include respond-below('sm')
-            font-size: $fs-18
-            font-weight: $semi-bold
-            color: $text-dark
-
-        @include respond-above('md')
-            font-size: $fs-21
-            font-weight: $semi-bold
-            color: $text-dark
 
 // Main menu container
 .mainMenuContainer
-    @include respond-below('sm')
-        position: fixed
+    height: 100%
+    display: flex
+    justify-content: flex-end
 
-        background: $white
-        width: 100%
-        height: 100%
-        top: 0
-        right: 0
-        bottom: 0
-        left: 0
-
-        z-index: -1
-    @include respond-above('md')
-        height: 100%
-        display: flex
-        justify-content: flex-end
-
-    &__mobile
-        // Efeitos
-        &:before
-            @include respond-below('sm')
-                content: ''
-                background: $graySecondary
-                width: 600px
-                height: 600px
-                border-radius: 100%
-                position: absolute
-                top: calc(100% / 2 - 300px)
-                left: -450px
-                z-index: -1
-                opacity: .4
-
-                transition-delay: 2s
-
-        &:after
-            @include respond-below('sm')
-                content: ''
-                width: 800px
-                height: 800px
-                background: $graySecondary
-                border-radius: 100%
-                position: absolute
-                top: calc(100% / 2 - 400px )
-                left: -500px
-                z-index: -2
-                opacity: 0.3
-
-                transition-delay: 2s
-
-        &--disabled
-            @include respond-below('sm')
-                left: -120%
-                transition: .3s
-                transition-delay: .4s
-
-        &--enabled
-            @include respond-below('sm')
-                left: 0
-                transition: .3s
 /**
     Menu list / UL
     Por conta de uma defiência do wordpress em passar uma classe css custom para os items do menu, esse bloco será diferente dos outros
     tendo seu próprio padrão.
  */
-.menuList
+.masterMenu
     margin: 0
     padding: 0
 
@@ -179,79 +171,38 @@
     align-items: center
     
     @include respond-below('sm')
-        width: calc(100% - 50px)
-        // height: 420px
-        margin: auto
-        margin-top: 110px
-        flex-wrap: wrap
+
 
     @include respond-above('md')
         height: 100%
-
-
-    // Gambiarra
-    &:before
-        @include respond-below('sm')
-            content: 'Menu de navegação'
-            font-size: $fs-21
-            font-weight: $semi-bold
-            margin-bottom: 20px
-            color: $text-light
-
 
     .menu-item
         display: flex
         align-items: center
 
         @include respond-below('sm')
-            width: 100%
-            height: 104px
-            margin-left: 10px
-            padding-left: 40px
-            position: relative
+            background: $graySecondary
+            width: 36px
+            height: 36px
+            margin: 4px 
 
         @include respond-above('md')
             height: 64px
             padding-right: 32px
             padding-left: 32px
-
-        &:before
-            @include respond-below('sm')
-                content: ''
-                background: $main-color
-                width: 1px
-                height: 100%
-
-                position: absolute
-                left: 8px
-                opacity: .1
-        &:after
-            @include respond-below('sm')
-                content: ''
-                background: $main-color
-                width: 16px
-                height: 16px
-                border-radius: 100%
-
-                position: absolute
-                left: 0
-                opacity: .8
-                
         a
-            font-size: $fs-16
-            font-weight: $regular
-            color: $text-light
-            text-decoration: none
-
             transition: .2s
-
-            @include respond-below('sm')
+            @include respond-below(md)
+                display: none 
+            @include respond-above(md)
+                font-size: $fs-18
                 font-weight: $regular
                 color: $text-dark
+                text-decoration: none
 
             &:hover
                 transition: .2s
-                color: $main-color
+                color: $accent-color
 
 
 // Cover background

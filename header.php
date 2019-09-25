@@ -31,42 +31,42 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 
 
-    <header id="" class="headerMain">
-        <div class="container-fluid row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row headerMain__top">
-                <div class="col-lg-4">
+    <header id="" class="masterHeader">
+        <div class="container-fluid row masterHeader__container">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row masterHeader__top">
+                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
                     <div class="infoWrapper">
-                        <p class="infoWrapper__text"><i class="infoWrapper__icon"></i> A loja está aberta</p>
-                        <p class="infoWrapper__text"><i class="infoWrapper__icon"></i> A loja está fechada</p>
+                        <i class="infoWrapper__icon infoWrapper__icon--online" data-eva="radio-button-on"></i><p class="infoWrapper__text infoWrapper__text--online"> A loja está aberta</p>
+                        <!-- <p class="infoWrapper__text"><i class="infoWrapper__icon"></i> A loja está fechada</p> -->
                     </div>
                 </div> <!-- #End horário comercial loja -->
 
-                <div class="col-lg-8">
-                    <ul class="contactList">
-                        <li class="contactList__item">
-                            <i class="contactList__icon"></i>
-                            <span class="contactList__text">Informação</span>
+                <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
+                    <ul class="infoList">
+                        <li class="infoList__item">
+                            <i class="infoList__icon" data-eva="pin"></i>
+                            <span class="infoList__text">Av. Iguaçu, 445 - Centro, Capitão Leônidas Marques</span>
                         </li>
 
-                        <li class="contactList__item">
-                            <i class="contactList__icon"></i>
-                            <span class="contactList__text">Informação</span>
+                        <li class="infoList__item">
+                            <i class="infoList__icon" data-eva="message-circle"></i>
+                            <span class="infoList__text">(45) 99831-3997</span>
                         </li>
 
-                        <li class="contactList__item">
-                            <i class="contactList__icon"></i>
-                            <span class="contactList__text">Informação</span>
+                        <li class="infoList__item">
+                            <i class="infoList__icon" data-eva="phone-call"></i>
+                            <span class="infoList__text">(45) 3286-2985</span>
                         </li>
                     </ul> <!-- #End informações top -->
                 </div>
             </div> <!-- #End parte de cima -->
 
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row headerMain__bottom">
-                <div class="col-lg-4">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row masterHeader__bottom">
+                <div class="col-xs-7 col-sm-7 col-md-4 col-lg-4">
                     <?php do_shortcode('[custom_logotipo]'); ?>
                 </div> <!-- #End Logotipo -->
 
-                <div class="col-lg-8">
+                <div class="col-xs-5 col-sm-5 col-md-8 col-lg-8">
                     <?php do_shortcode('[menu_fixed]'); ?>
                 </div>
             </div> <!-- #End parte de baixo -->

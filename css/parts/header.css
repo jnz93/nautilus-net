@@ -158,52 +158,105 @@ a, a:hover {
       .sctHeader__subtitle {
         font-size: 1.6em; } }
 
-.mainHeader {
-  background: none;
-  z-index: 99;
-  position: absolute;
-  top: 0;
-  left: 0; }
-  @media (max-width: 767px) {
-    .mainHeader {
-      width: 100%;
-      height: 75px; } }
+.masterHeader {
+  background: #FFFFFF; }
+  .masterHeader__top {
+    border-bottom: 1px solid #F2F2F2; }
+    @media (max-width: 991px) {
+      .masterHeader__top {
+        height: 30px; } }
+    @media (min-width: 992px) {
+      .masterHeader__top {
+        height: 40px; } }
+  .masterHeader__bottom {
+    border-bottom: 1px solid #F2F2F2; }
+    @media (max-width: 991px) {
+      .masterHeader__bottom {
+        height: 90px; } }
+    @media (min-width: 992px) {
+      .masterHeader__bottom {
+        height: 120px; } }
+  @media (min-width: 1200px) {
+    .masterHeader__container {
+      margin: auto; } }
+
+.infoWrapper {
+  height: 100%;
+  display: flex;
+  align-items: center; }
+  @media (max-width: 991px) {
+    .infoWrapper__icon {
+      width: 14px;
+      height: 14px; } }
   @media (min-width: 992px) {
-    .mainHeader {
-      width: 100%;
-      height: 90px; } }
+    .infoWrapper__icon {
+      width: 18px;
+      height: 18px; } }
+  .infoWrapper__icon--online {
+    fill: #45B441; }
+  .infoWrapper__icon--offline {
+    fill: #C3544A; }
+  @media (max-width: 991px) {
+    .infoWrapper__text {
+      font-size: 1.2em;
+      margin: 0;
+      margin-left: 3px;
+      margin-top: 3px; } }
   @media (min-width: 992px) {
-    .mainHeader__type--fixed {
-      background: #FFFFFF;
-      box-shadow: 0px 0px 3px #F9FBFF;
-      top: 0;
-      position: fixed; } }
-  .mainHeader__flexContainer {
-    display: flex; }
-  @media (max-width: 767px) {
-    .mainHeader__btnMenu {
-      background: none;
-      width: 48px;
-      height: 48px;
-      border: none;
-      margin: auto;
-      margin-top: 15px;
-      display: flex;
-      align-items: center;
-      outline: none; } }
+    .infoWrapper__text {
+      font-size: 1.4em;
+      margin: 0;
+      margin-left: 4px;
+      margin-top: 3px; } }
+  .infoWrapper__text--online {
+    color: #45B441; }
+  .infoWrapper__text--offline {
+    color: #C3544A; }
+
+.infoList {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; }
+  .infoList__item {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #F2F2F2; }
+    @media (max-width: 991px) {
+      .infoList__item {
+        padding: 0 15px; } }
+    @media (min-width: 992px) {
+      .infoList__item {
+        height: 40px;
+        padding: 0 20px; } }
+    .infoList__item:last-child {
+      border: none; }
+  @media (max-width: 991px) {
+    .infoList__icon {
+      width: 14px;
+      height: 14px;
+      fill: #2e3a59; } }
   @media (min-width: 992px) {
-    .mainHeader__btnMenu {
+    .infoList__icon {
+      width: 18px;
+      height: 18px;
+      fill: #2e3a59; } }
+  @media (max-width: 991px) {
+    .infoList__text {
+      font-size: 1.2em;
+      font-weight: 500;
+      color: #2e3a59;
       display: none; } }
-  .mainHeader__icoMenu {
-    fill: #062573;
-    width: 36px;
-    height: 36px;
-    transform: rotate(360deg);
-    transition: .8s; }
-    .mainHeader__icoMenu--disabled {
-      transform: rotate(-360deg);
-      transition: .8s;
-      display: none; }
+  @media (min-width: 992px) {
+    .infoList__text {
+      font-size: 1.4em;
+      font-weight: 500;
+      color: #2e3a59;
+      margin-left: 4px;
+      margin-top: 3px; } }
 
 .logo {
   margin: 0;
@@ -216,160 +269,62 @@ a, a:hover {
       height: 80px; } }
   @media (min-width: 992px) {
     .logo {
-      height: 90px;
-      margin-left: 25px; } }
+      height: 100%; } }
   @media (max-width: 767px) {
     .logo__image {
       width: auto;
-      height: 50px;
-      margin-right: 5px; } }
+      height: 45px; } }
   @media (min-width: 992px) {
     .logo__image {
-      width: auto;
-      height: 70px;
-      margin-right: 5px; } }
-  @media (max-width: 767px) {
-    .logo__title {
-      font-size: 1.8em;
-      font-weight: 600;
-      color: #2e3a59; } }
-  @media (min-width: 992px) {
-    .logo__title {
-      font-size: 2.1em;
-      font-weight: 600;
-      color: #2e3a59; } }
+      width: auto; } }
 
-@media (max-width: 767px) {
-  .mainMenuContainer {
-    position: fixed;
-    background: #FFFFFF;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1; } }
-
-@media (min-width: 992px) {
-  .mainMenuContainer {
-    height: 100%;
-    display: flex;
-    justify-content: flex-end; } }
-
-@media (max-width: 767px) {
-  .mainMenuContainer__mobile:before {
-    content: '';
-    background: #F2F2F2;
-    width: 600px;
-    height: 600px;
-    border-radius: 100%;
-    position: absolute;
-    top: calc(100% / 2 - 300px);
-    left: -450px;
-    z-index: -1;
-    opacity: .4;
-    transition-delay: 2s; } }
-
-@media (max-width: 767px) {
-  .mainMenuContainer__mobile:after {
-    content: '';
-    width: 800px;
-    height: 800px;
-    background: #F2F2F2;
-    border-radius: 100%;
-    position: absolute;
-    top: calc(100% / 2 - 400px);
-    left: -500px;
-    z-index: -2;
-    opacity: 0.3;
-    transition-delay: 2s; } }
-
-@media (max-width: 767px) {
-  .mainMenuContainer__mobile--disabled {
-    left: -120%;
-    transition: .3s;
-    transition-delay: .4s; } }
-
-@media (max-width: 767px) {
-  .mainMenuContainer__mobile--enabled {
-    left: 0;
-    transition: .3s; } }
+.mainMenuContainer {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end; }
 
 /**
     Menu list / UL
     Por conta de uma defiência do wordpress em passar uma classe css custom para os items do menu, esse bloco será diferente dos outros
     tendo seu próprio padrão.
  */
-.menuList {
+.masterMenu {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   align-items: center; }
-  @media (max-width: 767px) {
-    .menuList {
-      width: calc(100% - 50px);
-      margin: auto;
-      margin-top: 110px;
-      flex-wrap: wrap; } }
   @media (min-width: 992px) {
-    .menuList {
+    .masterMenu {
       height: 100%; } }
-  @media (max-width: 767px) {
-    .menuList:before {
-      content: 'Menu de navegação';
-      font-size: 2.1em;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: #757575; } }
-  .menuList .menu-item {
+  .masterMenu .menu-item {
     display: flex;
     align-items: center; }
     @media (max-width: 767px) {
-      .menuList .menu-item {
-        width: 100%;
-        height: 104px;
-        margin-left: 10px;
-        padding-left: 40px;
-        position: relative; } }
+      .masterMenu .menu-item {
+        background: #F2F2F2;
+        width: 36px;
+        height: 36px;
+        margin: 4px; } }
     @media (min-width: 992px) {
-      .menuList .menu-item {
+      .masterMenu .menu-item {
         height: 64px;
         padding-right: 32px;
         padding-left: 32px; } }
-    @media (max-width: 767px) {
-      .menuList .menu-item:before {
-        content: '';
-        background: #062573;
-        width: 1px;
-        height: 100%;
-        position: absolute;
-        left: 8px;
-        opacity: .1; } }
-    @media (max-width: 767px) {
-      .menuList .menu-item:after {
-        content: '';
-        background: #062573;
-        width: 16px;
-        height: 16px;
-        border-radius: 100%;
-        position: absolute;
-        left: 0;
-        opacity: .8; } }
-    .menuList .menu-item a {
-      font-size: 1.6em;
-      font-weight: 500;
-      color: #757575;
-      text-decoration: none;
+    .masterMenu .menu-item a {
       transition: .2s; }
-      @media (max-width: 767px) {
-        .menuList .menu-item a {
+      @media (max-width: 991px) {
+        .masterMenu .menu-item a {
+          display: none; } }
+      @media (min-width: 992px) {
+        .masterMenu .menu-item a {
+          font-size: 1.8em;
           font-weight: 500;
-          color: #2e3a59; } }
-      .menuList .menu-item a:hover {
+          color: #2e3a59;
+          text-decoration: none; } }
+      .masterMenu .menu-item a:hover {
         transition: .2s;
-        color: #062573; }
+        color: #3C19A6; }
 
 .coverBackground {
   background-size: cover;
