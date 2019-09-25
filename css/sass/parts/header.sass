@@ -184,7 +184,8 @@
             background: $graySecondary
             width: 36px
             height: 36px
-            margin: 4px 
+            margin: 5px
+            border-radius: 4px
 
         @include respond-above('md')
             height: 64px
@@ -192,8 +193,14 @@
             padding-left: 32px
         a
             transition: .2s
+            display: flex
+            align-items: center
             @include respond-below(md)
-                display: none 
+                width: 100%
+                height: 100%
+                display: flex
+                justify-content: center
+                
             @include respond-above(md)
                 font-size: $fs-18
                 font-weight: $regular
@@ -203,7 +210,32 @@
             &:hover
                 transition: .2s
                 color: $accent-color
+    
+    // Icons
+    .menu-image
+        padding: 0 !important
+        margin: 0 !important
+        @include respond-below(md)
+            width: 20px
+            height: 20px
 
+        @include respond-above(md)
+            background: $graySecondary
+            width: 24px
+            height: 24px
+            border-radius: 4px
+            padding: 10px !important
+            margin-right: 6px !important
+
+    .menu-image-title
+        padding: 0
+        margin: 0
+        @include respond-below(md)
+            display: none
+
+        @include respond-above(md)
+            margin-top: 5px
+            margin-left: 5px
 
 // Cover background
 .coverBackground
