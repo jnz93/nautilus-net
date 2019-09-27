@@ -6,11 +6,6 @@
  */
 ?>
 <section id="homepage" class="sct__homepage">
-    <?php
-    if( shortcode_exists('show_article_sliders') ){
-        do_shortcode('[show_article_sliders]');
-    }else{
-        echo "Shortcode de sliders não existe";
-    }
-    ?>
+    <?php do_shortcode('[show_article_sliders]'); ?>
+    <?php do_shortcode('[navigation_singlepage]'); ?>
 </section>
