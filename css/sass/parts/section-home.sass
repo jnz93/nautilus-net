@@ -7,9 +7,11 @@
 
 // Articles dos sliders
 .articleHome
+    background-repeat: no-repeat
+    background-size: 100%
     outline: none
     display: flex !important
-    cursor: grab
+    // cursor: grab
     
     @include respond-below('sm')
         // width: 100%
@@ -19,35 +21,59 @@
         flex-direction: column-reverse
 
     @include respond-above('md')
-        height: 530px
+        height: 100%
         margin: auto
         padding: 0 75px
-        align-content: center
+        align-items: center
 
-    &__wrapperSlider
-        overflow: hidden
-        display: flex
-        flex-wrap: wrap
+    // Container content
+    &__content
+        background: rgba(0, 0, 0, .5)
+        position: relative
 
-        @include respond-below('sm')
-            height: 93%
+        @include respond-above(md)
+            height: 340px
+            padding: 25px 0
+        // Hack btn link
+        a
+            display: inline-flex
 
-        @include respond-above('sm')
-            align-content: center
-            justify-content: center
-            position: relative
+        
+        // Modifiers
+        &--desktop
+            @include respond-below(md)
+                display: none
+            @include respond-above(md)
+                display: block
 
-    &__wrapperContent
-        display: flex
-        flex-wrap: wrap
-        align-content: center
+        &--mobile
+            @include respond-below(md)
+                display: block
+            @include respond-above(md)
+                display: none
+
+        // Faixas
+        &:before,
+        &:after
+            content: ''
+            background: rgba(0, 0, 0, .5)
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+
+        &:before
+            left: -100%
+
+        &:after
+            right: -100%
 
     // Título
     &__title
         margin: 0
         font-weight: $bold
-        color: $text-dark
-        line-height: 1.6
+        color: $white
+        line-height: 1.5
         
         @include respond-below('sm')
             width: 100%
@@ -57,15 +83,16 @@
             text-align: center
 
         @include respond-above('md')
-            font-size: $fs-46
+            font-size: $fs-36
             margin-bottom: 15px
 
     // Subtitulo
     &__excerpt
         margin: 0
         font-weight: $thin
-        color: $text-light
-        line-height: 1.7
+        color: $white
+        line-height: 1.6
+        opacity: .8
 
         @include respond-below('sm')
             width: 100%
@@ -75,27 +102,7 @@
             
         @include respond-above('md')
             font-size: $fs-18
-            margin-bottom: 45px
+            margin-bottom: 15px
 
             width: 100%
             display: block
-
-    button
-        @include respond-below('sm')
-            // display: none
-            margin: auto
-            // border-radius: 40px
-
-    // Imagem/thumb
-    &__thumbContainer
-        margin: 0
-        padding: 0
-
-    &__img
-        width: 100%
-        margin: auto
-
-        @include respond-below('sm')
-            // box-shadow: 0px 0px 10px $graySecondary
-            // border-top-right-radius: 25%
-            // border-top-left-radius: 25%

@@ -134,7 +134,7 @@ if( !function_exists('get_article_sliders') ){
         $order          = 'DESC';
         $orderby        = 'date';
         $status         = 'publish';
-        $number_posts   = '5';
+        $number_posts   = '1';
         
         $args = array(
             'post_type'         => $post_type,
@@ -153,26 +153,28 @@ if( !function_exists('get_article_sliders') ){
                 $post_id        = get_the_ID();
                 $publish_date   = get_the_date('l,j,F', $post_id);
                 $post_title     = get_the_title($post_id);
-                $post_subtitle  = get_post_meta($post_id, 'post_subtitle', true);
-                $post_content   = get_the_content();
                 $post_excerpt   = get_the_excerpt($post_id);
-                $post_thumb_url = get_the_post_thumbnail_url($post_id, 'large');
-
-                $output .= '<article data-wow-delay=".2s" class="wow bounceInUp row articleHome">
-                                <div class="col-md-6 col-lg-6 articleHome__wrapperContent">
-                                    <h1 class="articleHome__title" title="'. $post_title .'">'. $post_title .'</h1>
-                                    <p class="articleHome__excerpt">'. $post_excerpt .'</p>
-                                    <a href="'. get_the_permalink($post_id) .'" class="btn btn__primary btn__primary--big">Ver publicação</a>
-                                </div>
-                                <div class="col-md-6 col-lg-6 articleHome__wrapperContent">
-                                    <figure class="articleHome__thumbContainer">
-                                        <img src="'. $post_thumb_url .'" class="articleHome__img" />
-                                    </figure>
-                                </div>
-                            </article>';
+                $post_thumb_url = get_the_post_thumbnail_url($post_id);
+                $post_link      = get_the_permalink($post_id);?>
                 
+                <article id="<?php echo $post_id; ?>" class="articleHome" style="background-image: url('<?php echo $post_thumb_url ?>')">
+                    <div class="col-lg-12 row articleHome__content">
+                        <div class="col-lg-6 articleHome__content--desktop">
+                            <h1 class="articleHome__title"><?php echo $post_title ?></h1>
+                            <p class="articleHome__excerpt"><?php echo $post_excerpt ?></p>
+                            <a href="<?php echo $post_link ?>" class="btn btn__primary btn__primary--normal">Saiba mais</a>
+                        </div> <!-- /End title, excerpt and button container desktop-->
+                        <div class="col-lg-6 articleHome__content--mobile">
+                            <a href="<?php echo $post_link ?>">
+                                <h1 class="articleHome__title"><?php echo $post_title ?></h1>
+                                <p class="articleHome__excerpt"><?php echo $post_excerpt ?></p>
+                            </a>
+                        </div><!-- /End title, excerpt and button container mobile -->
+                        <?php do_shortcode('[widget_share_post]'); ?>
+                    </div>
+                </article>
+                <?php
             }
-            echo $output;
         } else {
             echo "Não encontramos notificações. :)";
         }

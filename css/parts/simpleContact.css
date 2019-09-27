@@ -18,10 +18,6 @@ p, ul, ol, li, span, input, label, textarea, button, a {
 a, a:hover {
   text-decoration: none; }
 
-@media (min-width: 992px) {
-  .body-content {
-    margin-top: 90px; } }
-
 @media (max-width: 767px) {
   .sct__homepage {
     height: calc(100vh - 80px);
@@ -29,7 +25,7 @@ a, a:hover {
 
 @media (min-width: 992px) {
   .sct__homepage {
-    height: calc(100vh - 130px); } }
+    height: calc(100vh - 160px); } }
 
 @media (min-width: 992px) {
   .sct__homepage .slick-prev {
