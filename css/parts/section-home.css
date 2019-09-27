@@ -157,6 +157,7 @@ a, a:hover {
 .articleHome {
   background-repeat: no-repeat;
   background-size: 100%;
+  background-attachment: fixed;
   display: flex !important;
   position: relative; }
   @media (max-width: 767px) {
