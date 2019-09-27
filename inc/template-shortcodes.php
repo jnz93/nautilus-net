@@ -170,7 +170,9 @@ if( !function_exists('get_article_sliders') ){
                                 <p class="articleHome__excerpt"><?php echo $post_excerpt ?></p>
                             </a>
                         </div><!-- /End title, excerpt and button container mobile -->
-                        <?php do_shortcode('[widget_share_post]'); ?>
+                        <div class="col-lg-12">
+                            <?php do_shortcode('[widget_share_options]'); ?>
+                        </div>
                     </div>
                 </article>
                 <?php
@@ -651,4 +653,51 @@ if( ! function_exists('get_menu_fixed') ){
         return wp_nav_menu($args_menu);
     }
     add_shortcode('menu_fixed', 'get_menu_fixed');
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Widget Share post
+////////////////////////////////////////////////////////////////////////////////////////////////
+if( !function_exists('create_widget_share_options') )
+{
+    function create_widget_share_options()
+    {
+        $title      = urlencode(get_the_title());
+        $url        = urlencode(get_the_permalink());
+        $summary    = urlencode(get_the_excerpt());
+        $excerpt    = get_the_excerpt();
+        $image      = urlencode(get_the_post_thumbnail_url());
+        ?>
+        <ul class="shareList">
+            <li class="shareList__item">
+            
+                <script>
+                function open_dialog_share(){
+                    window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $title;?>&amp;p[summary]=<?php echo $summary;?>&amp;p[url]=<?php echo $url; ?>&amp;&p[images][0]=<?php echo $image;?>', 'sharer', 'toolbar=0,status=0,width=620,height=280');
+                }
+                </script>
+
+                <a onclick="open_dialog_share()" href="javascript: void(0)" class="shareList__link">
+                    <i class="shareList__icon" data-eva="undo"></i>
+                    <span class="shareList__text">Compartilhar no facebook</span>
+                </a>
+            </li>
+            <li class="shareList__item">
+                <a href="https://twitter.com/share?ref_src=<?php echo $url ?>" class="shareList__link" target="_blank" data-text="<?php echo $excerpt; ?>" data-hashtags="nautilusnet" data-show-count="false">
+                    <i class="shareList__icon" data-eva="repeat"></i>
+                    <span class="shareList__text">Tweetar</span>
+                </a>
+            </li>
+            <li class="shareList__item">
+                <a href="https://wa.me/?text=<?php echo $url ?>" data-action="share/whatsapp" class="shareList__link" target="_blank">
+                    <i class="shareList__icon" data-eva="message-square"></i>
+                    <span class="shareList__text">Enviar no WhatsApp</span>
+                </a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </li>
+        </ul>
+        
+        <?php
+    }
+    add_shortcode('widget_share_options', 'create_widget_share_options');
 }

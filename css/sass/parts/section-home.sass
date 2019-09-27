@@ -32,9 +32,8 @@
         position: relative
 
         @include respond-above(md)
-            height: 340px
-            padding-top: 50px
-            padding-bottom: 25px
+            height: 350px
+            padding-top: 40px
         // Hack btn link
         a
             display: inline-flex
@@ -107,3 +106,29 @@
 
             width: 100%
             display: block
+
+
+// Share options list
+.shareList
+    display: flex
+    list-style: none
+    padding: 0
+    margin: 0
+    @include respond-above(md)
+        margin-top: 15px
+
+    &__item
+        @include respond-above(md)
+            padding: 5px 10px
+            margin-right: 15px
+
+    &__icon
+        @include respond-above(md)
+            width: 24px
+            height: 24px
+            fill: $white
+
+    &__text
+        @include respond-above(md)
+            display: none
+    
