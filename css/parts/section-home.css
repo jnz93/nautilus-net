@@ -157,8 +157,8 @@ a, a:hover {
 .articleHome {
   background-repeat: no-repeat;
   background-size: 100%;
-  outline: none;
-  display: flex !important; }
+  display: flex !important;
+  position: relative; }
   @media (max-width: 767px) {
     .articleHome {
       padding: 0 20px;
@@ -169,9 +169,28 @@ a, a:hover {
       margin: auto;
       padding: 0 75px;
       align-items: center; } }
+  .articleHome:before, .articleHome:after {
+    content: '';
+    position: absolute;
+    background: url("../../images/pixel-dots.svg");
+    z-index: 0;
+    opacity: .1; }
+    @media (min-width: 992px) {
+      .articleHome:before, .articleHome:after {
+        width: 100%;
+        height: calc(290px / 2); } }
+  @media (min-width: 992px) {
+    .articleHome:before {
+      top: 0;
+      left: 0; } }
+  @media (min-width: 992px) {
+    .articleHome:after {
+      bottom: 0;
+      left: 0; } }
   .articleHome__content {
     background: rgba(0, 0, 0, 0.5);
-    position: relative; }
+    position: relative;
+    z-index: 9; }
     @media (min-width: 992px) {
       .articleHome__content {
         height: 350px;
