@@ -175,7 +175,8 @@ a, a:hover {
     @media (min-width: 992px) {
       .articleHome__content {
         height: 340px;
-        padding: 25px 0; } }
+        padding-top: 50px;
+        padding-bottom: 25px; } }
     .articleHome__content a {
       display: inline-flex; }
     @media (max-width: 991px) {
