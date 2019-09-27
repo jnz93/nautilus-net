@@ -701,3 +701,31 @@ if( !function_exists('create_widget_share_options') )
     }
     add_shortcode('widget_share_options', 'create_widget_share_options');
 }
+
+if (!function_exists('get_navigation_singlepage'))
+{
+    function get_navigation_singlepage()
+    {
+        $args_menu = array(
+            'menu'              => 'navigation-singlepage',
+            'menu_class'        => 'navList',
+            'menu_id'           => '',
+            'container'         => 'nav',
+            'container_class'   => 'navSinglepage',
+            'container_id'      => 'master-menu',
+            'fallback_cb'       => '', #Se não existir o menu chama uma função que será executada. Padrão 'wp_page_menu'.
+            'before'            => '',
+            'after'             => '',
+            'link_before'       => '',
+            'link_after'        => '',
+            'echo'              => true,
+            'depth'             => '',
+            'walker'            => '', 
+            'theme_location'    => 'navigation-singlepage',
+            'item_spacing'      => ''
+        );
+
+        return wp_nav_menu($args_menu);
+    }
+    add_shortcode('navigation_singlepage', 'get_navigation_singlepage');
+}
