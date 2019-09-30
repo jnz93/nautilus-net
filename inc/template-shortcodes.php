@@ -134,7 +134,7 @@ if( !function_exists('get_article_sliders') ){
         $order          = 'DESC';
         $orderby        = 'date';
         $status         = 'publish';
-        $number_posts   = '1';
+        $number_posts   = '3';
         
         $args = array(
             'post_type'         => $post_type,
@@ -144,42 +144,52 @@ if( !function_exists('get_article_sliders') ){
             'post_status'       => $status,
             'posts_per_page'    => $number_posts
         );
-    
-        $posts_homepage = new WP_Query($args);
-        $output = '';
-        if( $posts_homepage->have_posts() ){
-            while( $posts_homepage->have_posts() ){
-                $posts_homepage->the_post();
-                $post_id        = get_the_ID();
-                $publish_date   = get_the_date('l,j,F', $post_id);
-                $post_title     = get_the_title($post_id);
-                $post_excerpt   = get_the_excerpt($post_id);
-                $post_thumb_url = get_the_post_thumbnail_url($post_id);
-                $post_link      = get_the_permalink($post_id);?>
-                
-                <article id="<?php echo $post_id; ?>" class="articleHome" style="background-image: url('<?php echo $post_thumb_url ?>')">
-                    <div class="col-lg-12 row articleHome__content">
-                        <div class="col-lg-6 articleHome__content--desktop">
-                            <h1 class="articleHome__title"><?php echo $post_title ?></h1>
-                            <p class="articleHome__excerpt"><?php echo $post_excerpt ?></p>
-                            <a href="<?php echo $post_link ?>" class="btn btn__primary btn__primary--normal">Saiba mais</a>
-                        </div> <!-- /End title, excerpt and button container desktop-->
-                        <div class="col-xs-10 col-sm-10 articleHome__content--mobile">
-                            <a href="<?php echo $post_link ?>">
-                                <h1 class="articleHome__title"><?php echo $post_title ?></h1>
-                                <p class="articleHome__excerpt"><?php echo $post_excerpt ?></p>
-                            </a>
-                        </div><!-- /End title, excerpt and button container mobile -->
-                        <div class="col-lg-12">
-                            <?php do_shortcode('[widget_share_options]'); ?>
-                        </div>
-                    </div>
-                </article>
+        ?>
+        <div class="swiper-container" style="height: 100%;">
+            <div class="swiper-wrapper">
+            
                 <?php
-            }
-        } else {
-            echo "Não encontramos notificações. :)";
-        }
+                $posts_homepage = new WP_Query($args);
+                $output = '';
+                if( $posts_homepage->have_posts() ){
+                    while( $posts_homepage->have_posts() ){
+                        $posts_homepage->the_post();
+                        $post_id        = get_the_ID();
+                        $publish_date   = get_the_date('l,j,F', $post_id);
+                        $post_title     = get_the_title($post_id);
+                        $post_excerpt   = get_the_excerpt($post_id);
+                        $post_thumb_url = get_the_post_thumbnail_url($post_id);
+                        $post_link      = get_the_permalink($post_id);?>
+                        
+                        <article id="<?php echo $post_id; ?>" class="swiper-slide articleHome" style="background-image: url('<?php echo $post_thumb_url ?>')">
+                            <div class="col-lg-12 row articleHome__content">
+                                <div class="col-lg-6 articleHome__content--desktop">
+                                    <h1 class="articleHome__title"><?php echo $post_title ?></h1>
+                                    <p class="articleHome__excerpt"><?php echo $post_excerpt ?></p>
+                                    <a href="<?php echo $post_link ?>" class="btn btn__primary btn__primary--normal">Saiba mais</a>
+                                </div> <!-- /End title, excerpt and button container desktop-->
+                                <div class="col-xs-10 col-sm-10 articleHome__content--mobile">
+                                    <a href="<?php echo $post_link ?>">
+                                        <h1 class="articleHome__title"><?php echo $post_title ?></h1>
+                                        <p class="articleHome__excerpt"><?php echo $post_excerpt ?></p>
+                                    </a>
+                                </div><!-- /End title, excerpt and button container mobile -->
+                                <div class="col-lg-12">
+                                    <?php do_shortcode('[widget_share_options]'); ?>
+                                </div>
+                            </div>
+                        </article>
+                        <?php
+                    }
+                } else {
+                    echo "Não encontramos notificações. :)";
+                }?>
+                </div>
+                <div class="swiper-pagination paginationSlider"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+        </div>
+        <?php
     }
     add_shortcode('show_article_sliders', 'get_article_sliders');
 }
