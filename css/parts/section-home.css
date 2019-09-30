@@ -157,6 +157,7 @@ a, a:hover {
 .articleHome {
   background-repeat: no-repeat;
   background-attachment: fixed;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -291,7 +292,8 @@ a, a:hover {
     display: none; }
 
 .navSinglepage {
-  position: absolute; }
+  position: absolute;
+  z-index: 999; }
   @media (max-width: 991px) {
     .navSinglepage {
       display: none; } }
@@ -331,3 +333,60 @@ a, a:hover {
     .navList .menu-item:hover {
       transition: .2s all;
       background: #F2F2F2; }
+
+@media (max-width: 991px) {
+  .paginationSlider {
+    margin-right: 15px; } }
+
+@media (min-width: 992px) {
+  .paginationSlider {
+    margin-right: 40px; } }
+
+.paginationSlider .swiper-pagination-bullet {
+  background: #FFFFFF;
+  width: 10px;
+  height: 10px;
+  margin: 22px 0 !important;
+  position: relative; }
+
+.paginationSlider .swiper-pagination-bullet-active {
+  background: #4776CD;
+  transition: .5s all; }
+  .paginationSlider .swiper-pagination-bullet-active:before {
+    content: '';
+    background: none;
+    border: 1px solid #4776CD;
+    border-radius: 100%;
+    padding: 10px;
+    top: -6px;
+    left: -6px;
+    position: absolute;
+    transition: .5s all; }
+
+.swiper-button-prev {
+  transform: rotate(90deg);
+  left: auto; }
+  @media (max-width: 991px) {
+    .swiper-button-prev {
+      top: 35%;
+      right: 16px; } }
+  @media (min-width: 992px) {
+    .swiper-button-prev {
+      top: 35%;
+      right: 42px; } }
+  .swiper-button-prev:after {
+    font-size: 1.6em; }
+
+.swiper-button-next {
+  transform: rotate(90deg);
+  top: auto; }
+  @media (max-width: 991px) {
+    .swiper-button-next {
+      bottom: 32%;
+      right: 16px; } }
+  @media (min-width: 992px) {
+    .swiper-button-next {
+      bottom: 33%;
+      right: 42px; } }
+  .swiper-button-next:after {
+    font-size: 1.8em; }
