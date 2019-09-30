@@ -20,8 +20,8 @@ a, a:hover {
 
 @media (max-width: 767px) {
   .sct__homepage {
-    height: calc(100vh - 80px);
-    margin-top: 80px; } }
+    height: calc(100vh - 120px);
+    margin: 0; } }
 
 @media (min-width: 992px) {
   .sct__homepage {
