@@ -13,17 +13,6 @@ jQuery(document).ready(function(){
     if( screenWidth <= 400 ){
 
         /**
-         * Slick slider - Homepage
-         */
-        jQuery('.articleHome__wrapperSlider').slick({
-            dots: true,
-            arrows: false,
-            infinite: false,
-            slidesToShow: 1,
-            slidesToScroll: 1
-        });
-
-        /**
          * Slick slider - Vantagens
          */
         jQuery('.sct__benefits > .sct__contentWrapper').slick({
@@ -54,17 +43,6 @@ jQuery(document).ready(function(){
      */
     if( screenWidth >= 860 ){
         /**
-         * Slick slider - Homepage
-         */
-        jQuery('.articleHome__wrapperSlider').slick({
-            dots: true,
-            arrows: true,
-            infinite: false,
-            slidesToShow: 1,
-            slidesToScroll: 1
-        });
-
-        /**
          * Slick slider - Planos desktop
          */
         jQuery('.sct__plans > .sct__contentWrapper').slick({
@@ -92,4 +70,27 @@ jQuery(document).ready(function(){
     jQuery('.slick-prev').text('').append(iconPrev);
     jQuery('.slick-next').text('').append(iconNext);
     eva.replace(); // Chamanda para dar replace nos ícones
+
+
+
+    // Configurações Swiper Home
+    var swiperHomeSection = new Swiper ('.swiper-container', 
+    {
+        direction: 'vertical',
+        effect: 'coverflow',
+
+        autoplay: {
+            delay: 5800,
+            disableOnInteraction: true
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        }
+    });
 });
