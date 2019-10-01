@@ -182,7 +182,7 @@ a, a:hover {
     @media (max-width: 991px) {
       .articleHome:before, .articleHome:after {
         width: 100%;
-        height: calc((100% - 360px) / 2); } }
+        height: calc((100% - 280px) / 2); } }
     @media (min-width: 992px) {
       .articleHome:before, .articleHome:after {
         width: 100%;
@@ -199,8 +199,8 @@ a, a:hover {
     z-index: 9; }
     @media (max-width: 991px) {
       .articleHome__content {
-        height: 360px;
-        padding-top: 40px; } }
+        height: 280px;
+        padding: 20px 0; } }
     @media (min-width: 992px) {
       .articleHome__content {
         height: 380px;
@@ -239,7 +239,7 @@ a, a:hover {
     @media (max-width: 991px) {
       .articleHome__title {
         width: 100%;
-        font-size: 2.4em;
+        font-size: 2.1em;
         margin-bottom: 10px; } }
     @media (min-width: 992px) {
       .articleHome__title {

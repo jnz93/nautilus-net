@@ -36,7 +36,7 @@
         opacity: .1
         @include respond-below(md)
             width: 100%
-            height: calc((100% - 360px) / 2)
+            height: calc((100% - 280px) / 2)
         @include respond-above(md)
             width: 100%
             height: calc((100% - 380px) / 2)
@@ -56,8 +56,9 @@
         position: relative
         z-index: 9
         @include respond-below(md)
-            height: 360px
-            padding-top: 40px
+            height: 280px
+            padding: 20px 0
+
         @include respond-above(md)
             height: 380px
             padding-top: 40px
@@ -106,7 +107,7 @@
         
         @include respond-below('md')
             width: 100%
-            font-size: $fs-24
+            font-size: $fs-21
             margin-bottom: 10px
 
         @include respond-above('md')
