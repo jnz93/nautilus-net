@@ -320,7 +320,7 @@ a, a:hover {
           justify-content: center; } }
       @media (min-width: 992px) {
         .masterMenu .menu-item a {
-          font-size: 1.8em;
+          font-size: 1.6em;
           font-weight: 500;
           color: #2e3a59;
           text-decoration: none; } }
