@@ -200,3 +200,14 @@ function openSimpleSupport(el){
     el.toggleClass('simpleContact__buttonSelect--clickOnline').find('.simpleContact__buttonIcon').toggleClass('simpleContact__buttonIcon--clickOnline');
     jQuery('.simpleContact__list--hide').toggleClass('simpleContact__list--show');
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// Função showLabelShareButton() - Mostrar o texto descritivo do botão de compartilhamento
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+function showLabelShareButton(el){
+    el.find('.shareList__text').removeClass('shareList__text--hide').addClass('shareList__text--show');
+}
+
+function hideLabelShareButton(el){
+    el.find('.shareList__text').removeClass('shareList__text--show').addClass('shareList__text--hide');
+}

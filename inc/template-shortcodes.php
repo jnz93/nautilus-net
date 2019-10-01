@@ -682,7 +682,7 @@ if( !function_exists('create_widget_share_options') )
         $image      = urlencode(get_the_post_thumbnail_url());
         ?>
         <ul class="shareList">
-            <li class="shareList__item">
+            <li class="shareList__item" onmouseover="showLabelShareButton(jQuery(this))" onmouseout="hideLabelShareButton(jQuery(this))">
             
                 <script>
                 function open_dialog_share(){
@@ -692,19 +692,19 @@ if( !function_exists('create_widget_share_options') )
 
                 <a onclick="open_dialog_share()" href="javascript: void(0)" class="shareList__link">
                     <i class="shareList__icon" data-eva="undo"></i>
-                    <span class="shareList__text">Compartilhar no facebook</span>
+                    <span class="shareList__text shareList__text--hide">Compartilhar no facebook</span>
                 </a>
             </li>
-            <li class="shareList__item">
+            <li class="shareList__item" onmouseover="showLabelShareButton(jQuery(this))" onmouseout="hideLabelShareButton(jQuery(this))">
                 <a href="https://twitter.com/share?ref_src=<?php echo $url ?>" class="shareList__link" target="_blank" data-text="<?php echo $excerpt; ?>" data-hashtags="nautilusnet" data-show-count="false">
                     <i class="shareList__icon" data-eva="repeat"></i>
-                    <span class="shareList__text">Tweetar</span>
+                    <span class="shareList__text shareList__text--hide">Tweetar</span>
                 </a>
             </li>
-            <li class="shareList__item">
+            <li class="shareList__item" onmouseover="showLabelShareButton(jQuery(this))" onmouseout="hideLabelShareButton(jQuery(this))">
                 <a href="https://wa.me/?text=<?php echo $url ?>" data-action="share/whatsapp" class="shareList__link" target="_blank">
                     <i class="shareList__icon" data-eva="message-square"></i>
-                    <span class="shareList__text">Enviar no WhatsApp</span>
+                    <span class="shareList__text shareList__text--hide">Enviar no WhatsApp</span>
                 </a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </li>
