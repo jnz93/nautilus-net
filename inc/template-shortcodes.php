@@ -166,7 +166,7 @@ if( !function_exists('get_article_sliders') ){
                                 <div class="col-lg-6 articleHome__content--desktop">
                                     <h1 class="articleHome__title"><?php echo $post_title ?></h1>
                                     <p class="articleHome__excerpt"><?php echo $post_excerpt ?></p>
-                                    <a href="<?php echo $post_link ?>" class="btn btn__primary btn__primary--normal">Saiba mais</a>
+                                    <a href="<?php echo $post_link ?>" class="btn btn__primary btn__primary--big">Ler publicação</a>
                                 </div> <!-- /End title, excerpt and button container desktop-->
                                 <div class="col-xs-10 col-sm-10 articleHome__content--mobile">
                                     <a href="<?php echo $post_link ?>">
