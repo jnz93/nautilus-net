@@ -187,17 +187,21 @@
     
 // Menu nagegação singlepage
 .navSinglepage
+    background: $white
     position: absolute
     z-index: 999
+    overflow: hidden
     @include respond-below(md)
-        display: none
+        width: 100%
+        bottom: 0
+        border-top-left-radius: 6px
+        border-top-right-radius: 6px
+
     @include respond-above(md)
-        background: $white
+        border-radius: 6px
         bottom: 20px
         left: calc(100% / 2 - 280px)
         // box-shadow: 0px 5px 6px $graySecondary
-        border-radius: 6px
-        overflow: hidden
 
 .navList
     list-style: none
@@ -212,21 +216,37 @@
     justify-content: space-between
 
     .menu-item
-        height: 64px
-        padding: 0 32px
         display: flex
-        align-items: center
         border-right: 1px solid $graySecondary
         transition: .2s all
+        @include respond-below(md)
+            height: 48px
+            padding: 0 22px
+
+        @include respond-above(md)
+            height: 64px
+            padding: 0 32px
+            align-items: center
 
         a
-            font-size: $fs-16
-            font-weight: $regular
             color: $text-dark
+            @include respond-below(md)
+                display: flex
+                align-items: center
+                font-size: $fs-12
+
+            @include respond-above(md)
+                font-size: $fs-16
+                font-weight: $regular
 
             .menu-image
-                width: 20px
-                height: 20px
+                @include respond-below(md)
+                    width: 16px
+                    height: 16px
+
+                @include respond-above(md)
+                    width: 20px
+                    height: 20px
 
             .menu-image-title
                 padding: 0
