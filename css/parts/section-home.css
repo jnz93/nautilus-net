@@ -315,15 +315,15 @@ a, a:hover {
   align-items: center;
   justify-content: space-between; }
   .navList .menu-item {
-    height: 80px;
-    padding: 0 40px;
+    height: 64px;
+    padding: 0 32px;
     display: flex;
     align-items: center;
     border-right: 1px solid #F2F2F2;
     transition: .2s all; }
     .navList .menu-item a {
       font-size: 1.6em;
-      font-weight: 600;
+      font-weight: 500;
       color: #2e3a59; }
       .navList .menu-item a .menu-image {
         width: 20px;
