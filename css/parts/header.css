@@ -273,7 +273,7 @@ a, a:hover {
   @media (max-width: 767px) {
     .logo__image {
       width: auto;
-      height: 45px; } }
+      height: 43px; } }
   @media (min-width: 992px) {
     .logo__image {
       width: auto; } }
