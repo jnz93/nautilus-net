@@ -621,9 +621,12 @@ if (!function_exists('get_custom_logotipo'))
             $logo_id        = get_theme_mod('custom_logo');
             $logo_url       = wp_get_attachment_image_src($logo_id, 'medium');
             $site_name      = get_bloginfo('name');
+            $site_url       = get_bloginfo('url');
 
             $output =   '<figure id="" class="logo">
+                            <a href="'. $site_url .'" target="_parent">
                             <img src="'. $logo_url[0] .'" id="" class="logo__image" alt="'. $site_name .'">
+                            </a>
                         </figure>';
             
             echo $output;
