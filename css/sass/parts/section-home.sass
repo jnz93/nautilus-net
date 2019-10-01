@@ -243,26 +243,35 @@
 
     .swiper-pagination-bullet
         background: $white
-        width: 10px
-        height: 10px
-        margin: 22px 0 !important
         position: relative
+        @include respond-below(md)
+            width: 6px
+            height: 6px
+            margin: 16px 0 !important
+
+        @include respond-above(md)
+            width: 10px
+            height: 10px
+            margin: 22px 0 !important
 
     .swiper-pagination-bullet-active
         background: $tertiary-color
-        transition: .5s all
+        transition: .3s all
         &:before
             content: ''
             background: none
             border: 1px solid $tertiary-color
             border-radius: 100%
-            padding: 10px
+            transition: .3s all
+            position: absolute
             top: -6px
             left: -6px
-            position: absolute
+            @include respond-below(md)
+                padding: 8px
 
-            transition: .5s all
-
+            @include respond-above(md)
+                padding: 10px
+                
 .swiper-button-prev
     transform: rotate(90deg)
     left: auto

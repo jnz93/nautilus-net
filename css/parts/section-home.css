@@ -363,24 +363,36 @@ a, a:hover {
 
 .paginationSlider .swiper-pagination-bullet {
   background: #FFFFFF;
-  width: 10px;
-  height: 10px;
-  margin: 22px 0 !important;
   position: relative; }
+  @media (max-width: 991px) {
+    .paginationSlider .swiper-pagination-bullet {
+      width: 6px;
+      height: 6px;
+      margin: 16px 0 !important; } }
+  @media (min-width: 992px) {
+    .paginationSlider .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      margin: 22px 0 !important; } }
 
 .paginationSlider .swiper-pagination-bullet-active {
   background: #4776CD;
-  transition: .5s all; }
+  transition: .3s all; }
   .paginationSlider .swiper-pagination-bullet-active:before {
     content: '';
     background: none;
     border: 1px solid #4776CD;
     border-radius: 100%;
-    padding: 10px;
-    top: -6px;
-    left: -6px;
+    transition: .3s all;
     position: absolute;
-    transition: .5s all; }
+    top: -6px;
+    left: -6px; }
+    @media (max-width: 991px) {
+      .paginationSlider .swiper-pagination-bullet-active:before {
+        padding: 8px; } }
+    @media (min-width: 992px) {
+      .paginationSlider .swiper-pagination-bullet-active:before {
+        padding: 10px; } }
 
 .swiper-button-prev {
   transform: rotate(90deg);
