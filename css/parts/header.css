@@ -160,7 +160,9 @@ a, a:hover {
     border-bottom: 1px solid #F2F2F2; }
     @media (max-width: 991px) {
       .masterHeader__top {
-        height: 30px; } }
+        height: 30px;
+        margin: 0;
+        padding: 0; } }
     @media (min-width: 992px) {
       .masterHeader__top {
         height: 40px; } }
@@ -168,7 +170,9 @@ a, a:hover {
     border-bottom: 1px solid #F2F2F2; }
     @media (max-width: 991px) {
       .masterHeader__bottom {
-        height: 90px; } }
+        height: 90px;
+        margin: 0;
+        padding: 0; } }
     @media (min-width: 992px) {
       .masterHeader__bottom {
         height: 120px; } }
