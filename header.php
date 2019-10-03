@@ -41,22 +41,7 @@
                 </div> <!-- #End horário comercial loja -->
 
                 <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
-                    <ul class="infoList">
-                        <li class="infoList__item">
-                            <i class="infoList__icon" data-eva="pin"></i>
-                            <span class="infoList__text">Av. Iguaçu, 445 - Centro, Capitão Leônidas Marques</span>
-                        </li>
-
-                        <li class="infoList__item">
-                            <i class="infoList__icon" data-eva="message-circle"></i>
-                            <span class="infoList__text">(45) 99831-3997</span>
-                        </li>
-
-                        <li class="infoList__item">
-                            <i class="infoList__icon" data-eva="phone-call"></i>
-                            <span class="infoList__text">(45) 3286-2985</span>
-                        </li>
-                    </ul> <!-- #End informações top -->
+                    <?php do_shortcode('[menu_contact_infos]'); ?><!-- #End informações top -->
                 </div>
             </div> <!-- #End parte de cima -->
 

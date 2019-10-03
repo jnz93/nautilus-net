@@ -221,6 +221,8 @@ a, a:hover {
   padding: 0;
   display: flex;
   justify-content: flex-end; }
+  .infoList a {
+    display: flex; }
   .infoList__item {
     display: flex;
     align-items: center;

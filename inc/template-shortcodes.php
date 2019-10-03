@@ -832,3 +832,50 @@ if (!function_exists("store_comercial_hour"))
     }
     add_shortcode('store_comercial_attendance', 'store_comercial_hour');
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Widget informações para contato
+////////////////////////////////////////////////////////////////////////////////////////////////
+if (!function_exists("widget_contact_infos"))
+{
+    function widget_contact_infos()
+    {
+        $telephoneNumber      = get_option('contact_phone');
+        $callAppsNumber       = get_option('contact_whatsapp');
+        
+        $arr_caracteres     = array('-', ' ', '(', ')');
+        $sanitized_phoneNumber = str_replace($arr_caracteres, '', $telephoneNumber);
+        $sanitized_appNumber = str_replace($arr_caracteres, '', $callAppsNumber);
+        
+        $address              = get_option('contact_street');
+        $city                 = get_option('contact_city');
+
+        $parameters           = $address . ',' . $city;
+        $place_id             = 'ChIJ32l0tncR8ZQR-hGkFGb2frY';
+        ?>
+        <ul class="infoList">
+            <li class="infoList__item">
+                <a href="https://www.google.com/maps/search/?api=1&query=<?php echo $parameters ?>&query_place_id=<?php echo $place_id ?>" target="_blank" title="Ver no Google Maps">
+                    <i class="infoList__icon" data-eva="pin"></i>
+                    <span class="infoList__text"><?php echo $address ?> - <?php echo $city ?></span>
+                </a>
+            </li>
+
+            <li class="infoList__item">
+                <a href="https://wa.me/55<?php echo $sanitized_appNumber ?>" target="_blank" title="Conversar no Whatsapp">
+                    <i class="infoList__icon" data-eva="message-circle"></i>
+                    <span class="infoList__text"><?php echo $callAppsNumber ?></span>
+                </a>
+            </li>
+
+            <li class="infoList__item">
+                <a href="tel:+55<?php echo $sanitized_phoneNumber ?>" title="Ligar para o suporte">
+                    <i class="infoList__icon" data-eva="phone-call"></i>
+                    <span class="infoList__text"><?php echo $telephoneNumber ?></span>
+                </a>
+            </li>
+        </ul> 
+        <?php
+    }
+    add_shortcode('menu_contact_infos', 'widget_contact_infos');
+}
