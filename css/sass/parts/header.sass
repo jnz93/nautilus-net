@@ -186,13 +186,12 @@
     .menu-item
         display: flex
         align-items: center
-
+        border-radius: 100%
         @include respond-below('sm')
             background: $graySecondary
             width: 36px
             height: 36px
             margin: 5px
-            border-radius: 4px
 
         @include respond-above('md')
             height: 64px
@@ -222,6 +221,7 @@
     .menu-image
         padding: 0 !important
         margin: 0 !important
+        border-radius: 100%
         @include respond-below(md)
             width: 20px
             height: 20px
@@ -230,7 +230,6 @@
             background: $graySecondary
             width: 24px
             height: 24px
-            border-radius: 4px
             padding: 10px !important
             margin-right: 6px !important
 

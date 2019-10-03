@@ -301,14 +301,14 @@ a, a:hover {
       height: 100%; } }
   .masterMenu .menu-item {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    border-radius: 100%; }
     @media (max-width: 767px) {
       .masterMenu .menu-item {
         background: #F2F2F2;
         width: 36px;
         height: 36px;
-        margin: 5px;
-        border-radius: 4px; } }
+        margin: 5px; } }
     @media (min-width: 992px) {
       .masterMenu .menu-item {
         height: 64px;
@@ -335,7 +335,8 @@ a, a:hover {
         color: #3C19A6; }
   .masterMenu .menu-image {
     padding: 0 !important;
-    margin: 0 !important; }
+    margin: 0 !important;
+    border-radius: 100%; }
     @media (max-width: 991px) {
       .masterMenu .menu-image {
         width: 20px;
@@ -345,7 +346,6 @@ a, a:hover {
         background: #F2F2F2;
         width: 24px;
         height: 24px;
-        border-radius: 4px;
         padding: 10px !important;
         margin-right: 6px !important; } }
   .masterMenu .menu-image-title {

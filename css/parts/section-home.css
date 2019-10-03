@@ -317,10 +317,10 @@ a, a:hover {
   overflow: hidden; }
   @media (max-width: 991px) {
     .navSinglepage {
-      width: 100%;
-      bottom: 0;
-      border-top-left-radius: 6px;
-      border-top-right-radius: 6px; } }
+      width: 96%;
+      bottom: 10px;
+      left: 2%;
+      border-radius: 6px; } }
   @media (min-width: 992px) {
     .navSinglepage {
       border-radius: 6px;
@@ -343,7 +343,7 @@ a, a:hover {
     @media (max-width: 991px) {
       .navList .menu-item {
         height: 48px;
-        padding: 0 22px; } }
+        padding: 0 20px; } }
     @media (min-width: 992px) {
       .navList .menu-item {
         height: 64px;
@@ -362,8 +362,8 @@ a, a:hover {
           font-weight: 500; } }
       @media (max-width: 991px) {
         .navList .menu-item a .menu-image {
-          width: 16px;
-          height: 16px; } }
+          width: 14px;
+          height: 14px; } }
       @media (min-width: 992px) {
         .navList .menu-item a .menu-image {
           width: 20px;
