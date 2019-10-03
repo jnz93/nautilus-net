@@ -715,6 +715,9 @@ if( !function_exists('create_widget_share_options') )
     add_shortcode('widget_share_options', 'create_widget_share_options');
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Menu de navegação da singlepage
+////////////////////////////////////////////////////////////////////////////////////////////////
 if (!function_exists('get_navigation_singlepage'))
 {
     function get_navigation_singlepage()
@@ -741,4 +744,91 @@ if (!function_exists('get_navigation_singlepage'))
         return wp_nav_menu($args_menu);
     }
     add_shortcode('navigation_singlepage', 'get_navigation_singlepage');
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Widget para mostrar horário comercial da loja
+////////////////////////////////////////////////////////////////////////////////////////////////
+if (!function_exists("store_comercial_hour"))
+{
+    function store_comercial_hour(){
+        // Horários de funcionamento
+        $get_week_comercial_hour        = get_option('contact_hours_business_day');
+        $get_saturdary_comercial_hour   = get_option('contact_hours_saturday');
+
+        // Tratamento dos horários da semana
+        $get_week_comercial_hour        = explode('~', $get_week_comercial_hour);
+        $morning_comercial_hour         = $get_week_comercial_hour[0];
+        $afternoon_comercial_hour       = $get_week_comercial_hour[1];
+
+        $morning_hour_arr               = explode('-', $morning_comercial_hour);
+        $morning_start_hour             = trim($morning_hour_arr[0]);
+        $morning_end_hour               = trim($morning_hour_arr[1]);
+        $morning_start_hour             = explode(':', $morning_start_hour);
+        $morning_end_hour               = explode(':', $morning_end_hour);
+        $start_morning                  = trim($morning_start_hour[0]);
+        $end_morning                    = trim($morning_end_hour[0]);
+
+        $afternoon_hour_arr             = explode('-', $afternoon_comercial_hour);
+        $afternoon_start_hour           = trim($afternoon_hour_arr[0]);
+        $afternoon_end_hour             = trim($afternoon_hour_arr[1]);
+        $afternoon_start_hour           = explode(':', $afternoon_start_hour);
+        $afternoon_end_hour             = explode(':', $afternoon_end_hour);
+        $start_afternoon                = trim($afternoon_start_hour[0]);
+        $end_afternoon                  = trim($afternoon_end_hour[0]);
+
+        // Tratamento com horários de sábado
+        $saturday_comercial_hour        = explode('-', $get_saturdary_comercial_hour);
+        $saturday_start_hour            = trim($saturday_comercial_hour[0]);
+        $saturday_start_hour_arr        = explode(':', $saturday_start_hour);
+        $saturday_start_hour            = $saturday_start_hour_arr[0];
+
+        $saturday_end_hour              = trim($saturday_comercial_hour[1]);
+        $saturday_end_hour_arr          = explode(':', $saturday_end_hour);
+        $saturday_end_hour              = $saturday_end_hour_arr[0];
+        
+
+        // Hora e configurações para comparação
+        $curr_hour = date('H') - 3;
+        $curr_day  = date('l');
+        
+        if ($curr_day == 'Sunday')
+        {
+            echo 
+            '<div class="infoWrapper">
+                <i class="infoWrapper__icon infoWrapper__icon--offline" data-eva="radio-button-on"></i><p class="infoWrapper__text infoWrapper__text--offline"> A loja está fechada</p>
+            </div>';
+        } 
+        else if ($curr_day == 'Saturday')
+        {
+            if ($curr_hour >= $saturday_start_hour && $curr_hour <= $saturday_end_hour)
+            {
+                echo '<i class="infoWrapper__icon infoWrapper__icon--online" data-eva="radio-button-on"></i><p class="infoWrapper__text infoWrapper__text--online"> A loja está aberta</p>';
+            }
+            else 
+            {
+                echo '<i class="infoWrapper__icon infoWrapper__icon--offline" data-eva="radio-button-on"></i><p class="infoWrapper__text infoWrapper__text--offline"> A loja está fechada</p>';
+            }
+        } 
+        else 
+        {
+            if ($curr_hour > $end_morning && $curr_hour < $start_afternoon)
+            {
+                echo '<i class="infoWrapper__icon infoWrapper__icon--offline" data-eva="radio-button-on"></i><p class="infoWrapper__text infoWrapper__text--offline"> Horário de almoço. Voltaremos as 14:00 Horas.</p>';
+            }
+            else if ($curr_hour >= $start_morning && $curr_hour <= $end_morning)
+            {
+                echo '<i class="infoWrapper__icon infoWrapper__icon--online" data-eva="radio-button-on"></i><p class="infoWrapper__text infoWrapper__text--online"> A loja está aberta</p>';
+            }
+            else if ($curr_hour >= $start_afternoon && $curr_hour <= $end_afternoon)
+            {
+                echo '<i class="infoWrapper__icon infoWrapper__icon--online" data-eva="radio-button-on"></i><p class="infoWrapper__text infoWrapper__text--online"> A loja está aberta</p>';
+            }
+            else
+            {
+                echo '<i class="infoWrapper__icon infoWrapper__icon--offline" data-eva="radio-button-on"></i><p class="infoWrapper__text infoWrapper__text--offline"> A loja está fechada</p>';
+            }
+        }
+    }
+    add_shortcode('store_comercial_attendance', 'store_comercial_hour');
 }

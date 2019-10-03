@@ -36,8 +36,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row masterHeader__top">
                 <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
                     <div class="infoWrapper">
-                        <i class="infoWrapper__icon infoWrapper__icon--online" data-eva="radio-button-on"></i><p class="infoWrapper__text infoWrapper__text--online"> A loja está aberta</p>
-                        <!-- <p class="infoWrapper__text"><i class="infoWrapper__icon"></i> A loja está fechada</p> -->
+                        <?php do_shortcode('[store_comercial_attendance]'); ?>
                     </div>
                 </div> <!-- #End horário comercial loja -->
 
