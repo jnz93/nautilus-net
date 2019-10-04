@@ -19,19 +19,20 @@
     @include respond-below('sm')
         background-position: center
         background-size: auto 100%
-        padding: 0 15px
+        padding: 0
 
     @include respond-above('md')
         background-size: 100%
         margin: auto
-        padding: 0 75px
+        padding: 0
 
     // Teste elements with pseudo elementos
     &:before,
     &:after
         content: ''
         position: absolute
-        background: url('../../images/pixel-dots.svg')
+        // background: url('../../images/pixel-dots.svg')
+        background: url('../../images/rain.svg')
         z-index: 0
         opacity: .1
         @include respond-below(md)
@@ -52,16 +53,16 @@
 
     // Container content
     &__content
-        background: rgba(0, 0, 0, .5)
+        background: rgba(0, 0, 0, .6)
         position: relative
         z-index: 9
         @include respond-below(md)
             height: 280px
-            padding: 20px 0
+            padding: 20px 15px
 
         @include respond-above(md)
             height: 380px
-            padding-top: 40px
+            padding: 40px 75px
         
         // Hack btn link
         a
@@ -86,7 +87,7 @@
         &:before,
         &:after
             content: ''
-            background: rgba(0, 0, 0, .5)
+            background: rgba(0, 0, 0, .6)
             width: 100%
             height: 100%
             position: absolute
@@ -129,7 +130,7 @@
             
         @include respond-above('md')
             font-size: $fs-18
-            margin-bottom: 35px
+            margin-bottom: 15px
 
             width: 100%
             display: block
