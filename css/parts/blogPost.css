@@ -17,60 +17,50 @@ p, ul, ol, li, span, input, label, textarea, button, a {
 a, a:hover {
   text-decoration: none; }
 
-@media (max-width: 991px) {
-  .content {
-    margin-top: 80px; } }
-
-@media (min-width: 768px) {
-  .content {
-    margin-top: 90px; } }
-
-.content__cover {
-  background-size: cover;
-  background-attachment: fixed; }
-  @media (max-width: 991px) {
-    .content__cover {
-      height: 470px; } }
+.content {
+  margin: 0; }
+  .content__cover {
+    background-size: cover;
+    background-attachment: fixed; }
+    @media (max-width: 991px) {
+      .content__cover {
+        height: 470px; } }
+    @media (min-width: 992px) {
+      .content__cover {
+        height: 490px; } }
+    @media (min-width: 1200px) {
+      .content__cover {
+        height: 560px; } }
+  @media (min-width: 768px) {
+    .content__wrapperMain {
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative; } }
   @media (min-width: 992px) {
-    .content__cover {
-      height: 490px; } }
+    .content__wrapperMain {
+      max-width: 1130px; } }
   @media (min-width: 1200px) {
-    .content__cover {
-      height: 560px; } }
-
-@media (min-width: 768px) {
-  .content__wrapperMain {
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative; } }
-
-@media (min-width: 992px) {
-  .content__wrapperMain {
-    max-width: 1130px; } }
-
-@media (min-width: 1200px) {
-  .content__wrapperMain {
-    max-width: 1280px; } }
-
-.content__main {
-  background: #FFFFFF;
-  border-radius: 6px;
-  position: relative;
-  box-shadow: 0px 0px 5px #F2F2F2; }
-  @media (max-width: 991px) {
-    .content__main {
-      top: -120px;
-      padding: 15px 10px;
-      margin: auto; } }
-  @media (min-width: 992px) {
-    .content__main {
-      top: -100px;
-      padding: 40px 20px; } }
-  @media (min-width: 1200px) {
-    .content__main {
-      top: -150px;
-      padding: 55px 30px; } }
+    .content__wrapperMain {
+      max-width: 1280px; } }
+  .content__main {
+    background: #FFFFFF;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0px 0px 5px #F2F2F2; }
+    @media (max-width: 991px) {
+      .content__main {
+        top: -120px;
+        padding: 15px 10px;
+        margin: auto; } }
+    @media (min-width: 992px) {
+      .content__main {
+        top: -100px;
+        padding: 40px 20px; } }
+    @media (min-width: 1200px) {
+      .content__main {
+        top: -150px;
+        padding: 55px 30px; } }
 
 .post__informations {
   background: #F9FBFF;
