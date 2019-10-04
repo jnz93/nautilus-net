@@ -230,7 +230,7 @@
             align-items: center
 
         a
-            color: $text-dark
+            color: $test-color
             @include respond-below(md)
                 display: flex
                 align-items: center
@@ -277,12 +277,12 @@
             margin: 22px 0 !important
 
     .swiper-pagination-bullet-active
-        background: $tertiary-color
+        background: $test-color
         transition: .3s all
         &:before
             content: ''
             background: none
-            border: 1px solid $tertiary-color
+            border: 1px solid $test-color
             border-radius: 100%
             transition: .3s all
             position: absolute
@@ -306,6 +306,7 @@
         right: 42px
     &:after
         font-size: $fs-16
+        color: $test-color
 
 .swiper-button-next
     transform: rotate(90deg)
@@ -319,4 +320,5 @@
 
     &:after
         font-size: $fs-18
+        color: $test-color
         

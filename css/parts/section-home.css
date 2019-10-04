@@ -214,7 +214,7 @@ a, a:hover {
         padding: 0 32px;
         align-items: center; } }
     .navList .menu-item a {
-      color: #2e3a59; }
+      color: #4452E3; }
       @media (max-width: 991px) {
         .navList .menu-item a {
           display: flex;
@@ -261,12 +261,12 @@ a, a:hover {
       margin: 22px 0 !important; } }
 
 .paginationSlider .swiper-pagination-bullet-active {
-  background: #4776CD;
+  background: #4452E3;
   transition: .3s all; }
   .paginationSlider .swiper-pagination-bullet-active:before {
     content: '';
     background: none;
-    border: 1px solid #4776CD;
+    border: 1px solid #4452E3;
     border-radius: 100%;
     transition: .3s all;
     position: absolute;
@@ -291,7 +291,8 @@ a, a:hover {
       top: 35%;
       right: 42px; } }
   .swiper-button-prev:after {
-    font-size: 1.6em; }
+    font-size: 1.6em;
+    color: #4452E3; }
 
 .swiper-button-next {
   transform: rotate(90deg);
@@ -305,4 +306,5 @@ a, a:hover {
       bottom: 33%;
       right: 42px; } }
   .swiper-button-next:after {
-    font-size: 1.8em; }
+    font-size: 1.8em;
+    color: #4452E3; }
