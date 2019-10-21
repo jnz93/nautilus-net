@@ -5,7 +5,7 @@
  * @package nautilusnet
  */
 
-$page               = get_page_by_title('Estamos disponíveis em várias plataformas para te atender melhor');
+$page               = get_post('662');
 // $page               = get_post('19');
 $page_id            = $page->ID;
 $page_title         = $page->post_title;
