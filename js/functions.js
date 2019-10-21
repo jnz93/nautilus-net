@@ -197,7 +197,10 @@ function clickOpenMenuMobile(){
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 function openSimpleSupport(el){
     // el.toggleClass('simpleContact__buttonSelect--clickOnline').find('span.simpleContact__bubble').toggleClass('simpleContact__bubble--clickOnline');
-    el.toggleClass('simpleContact__buttonSelect--clickOnline').find('.simpleContact__buttonIcon').toggleClass('simpleContact__buttonIcon--clickOnline');
+    el.toggleClass('simpleContact__buttonSelect--clickOnline')
+        .find('.simpleContact__buttonIcon')
+        .toggleClass('simpleContact__buttonIcon--clickOnline');
+
     jQuery('.simpleContact__list--hide').toggleClass('simpleContact__list--show');
 }
 

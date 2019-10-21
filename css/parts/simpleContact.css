@@ -27,38 +27,32 @@ a, a:hover {
   @media (max-width: 991px) {
     .simpleContact {
       right: 10px;
-      bottom: 10px; } }
+      bottom: 70px; } }
   @media (min-width: 992px) {
     .simpleContact {
       right: 25px;
       bottom: 25px; } }
   .simpleContact__buttonSelect {
     outline: none;
-    background: none; }
+    border: none;
+    background: #062573;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
     @media (max-width: 991px) {
       .simpleContact__buttonSelect {
         width: 48px;
-        height: 48px;
-        border-radius: 100%;
-        overflow: hidden; } }
+        height: 48px; } }
     @media (min-width: 992px) {
       .simpleContact__buttonSelect {
-        height: 48px;
-        border-radius: 14px;
-        padding-left: 24px;
-        padding-right: 24px;
-        font-size: 1.6em;
-        line-height: 1.5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 56px;
+        height: 56px;
         cursor: pointer; } }
     .simpleContact__buttonSelect--online {
-      border: 1px solid #45B441;
       color: #45B441;
       transition: .2s all; }
     .simpleContact__buttonSelect--offline {
-      background: 1px solid #C3544A;
       color: #C3544A; }
     .simpleContact__buttonSelect--clickOnline {
       background: #45B441;
@@ -67,29 +61,27 @@ a, a:hover {
     .simpleContact__buttonSelect:hover {
       box-shadow: 0px 0px 3px #45B441;
       transition: .2s all; }
-  @media (min-width: 992px) {
-    .simpleContact__information {
-      font-size: 1.2em;
-      color: #757575;
-      width: 100%;
-      margin-bottom: 10px;
-      display: block; } }
-  .simpleContact__information--hide {
-    opacity: 0;
+  .simpleContact__information {
     display: none; }
-  @media (max-width: 991px) {
-    .simpleContact__buttonIcon {
-      margin-top: 10px;
-      margin-bottom: 10px; } }
-  @media (min-width: 992px) {
-    .simpleContact__buttonIcon {
-      margin-right: 6px; } }
-  .simpleContact__buttonIcon--online {
-    fill: #45B441; }
-  .simpleContact__buttonIcon--offline {
-    fill: #C3544A; }
-  .simpleContact__buttonIcon--clickOnline {
+    @media (min-width: 992px) {
+      .simpleContact__information {
+        font-size: 1.4em;
+        color: #FFFFFF;
+        width: 130px;
+        position: absolute;
+        top: 22px;
+        left: -135px;
+        opacity: 0;
+        display: none; } }
+    .simpleContact__information--show {
+      opacity: 1;
+      display: block; }
+  .simpleContact__buttonIcon {
     fill: #FFFFFF; }
+    .simpleContact__buttonIcon--show {
+      display: inline-block; }
+    .simpleContact__buttonIcon--hide {
+      display: none; }
   @media (min-width: 992px) {
     .simpleContact__selectedItem {
       font-size: 1.4em;
@@ -98,6 +90,7 @@ a, a:hover {
   .simpleContact__list {
     padding: 0;
     list-style: none;
+    border-radius: 4px;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -108,10 +101,6 @@ a, a:hover {
     @media (max-width: 991px) {
       .simpleContact__list {
         width: 130px;
-        height: 120px; } }
-    @media (min-width: 992px) {
-      .simpleContact__list {
-        width: 200px;
         height: 120px; } }
     .simpleContact__list--hide {
       top: 0px;
@@ -124,14 +113,24 @@ a, a:hover {
       transition: .2s all; }
       @media (max-width: 991px) {
         .simpleContact__list--show {
-          top: -120px; } }
+          top: -130px; } }
       @media (min-width: 992px) {
         .simpleContact__list--show {
-          top: -160px; } }
+          top: -130px; } }
   .simpleContact__listItem {
+    background: #FFFFFF;
     width: 100%;
     display: flex;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    border-radius: 5px; }
+    @media (max-width: 767px) {
+      .simpleContact__listItem {
+        padding: 0 10px;
+        margin-bottom: 4px; } }
+    @media (min-width: 768px) {
+      .simpleContact__listItem {
+        margin-bottom: 8px;
+        padding: 5px 15px; } }
     @media (min-width: 992px) {
       .simpleContact__listItem:first-child {
         border-bottom: 1px solid #F2F2F2; } }
@@ -146,9 +145,9 @@ a, a:hover {
         color: #2e3a59; } }
     @media (min-width: 992px) {
       .simpleContact__link {
-        padding: 15px 5px;
         font-size: 1.4em;
-        color: #2e3a59; } }
+        color: #2e3a59;
+        font-weight: 500; } }
   .simpleContact__icon {
     fill: #FFFFFF;
     background: #45B441;
